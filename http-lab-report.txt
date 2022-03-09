@@ -1,0 +1,23 @@
+1) HTTP 1.1
+2) English language only(en_us, en)
+3) My current ip is - 10.100.106.14
+4) 200 OK, 404 not found
+5) 7 March, 2022
+6) 128
+7) No difference
+
+8) No, there is no if-modified-since in first get message.
+9) Yes, server sent the exact contents in first response message.
+10) Yes, there is if-modified-since in second get message. the date was: 7 march 2022
+11) 306 NOT MODIFIED. It did not return the website content this time.
+
+12) 1 HTTP Get. HTTP Response message contains it - 233.
+13) packet 233
+14) 200 OK
+15) 3 TCP Segments Reassembled
+
+16) 128.119.245.12 and 178.79.137.164 and 3 parallel GET 
+17) Parallely.
+
+18) Status code 401, unauthorized
+19) Authorization was the new field
