@@ -1,5 +1,9 @@
 #include<iostream>
 #include<vector>
+<<<<<<< HEAD
+=======
+#include<string>
+>>>>>>> 04655eef5311839a1cc71778f86dfb8b3e1fc8d7
 using namespace std;
 
 
@@ -41,12 +45,21 @@ void take_input(){
 
     cout<<"Enter transition table: ";
     for(int i=0; i<number_of_states; i++){
+<<<<<<< HEAD
         vector<vector<string>> curr_transition_row;
 	string input;
 	for(int i=0; i<alphabets.size(); i++){
 		cin>>input;
 	}
 	
+=======
+        vector<string> curr_transition_row;
+        string transition_state;
+        for(int j=0; j<number_of_alphabets; j++){
+            cin>>transition_state;
+            curr_transition_row.push_back(transition_state);
+        }
+>>>>>>> 04655eef5311839a1cc71778f86dfb8b3e1fc8d7
         transition_table.push_back(curr_transition_row);
     }
 }
