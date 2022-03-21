@@ -1,8 +1,0 @@
-3
-a b c
-2
-0 1
-ab a
-NULL c
-NULL NULL
-a
