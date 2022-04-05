@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Linux Introduction</title>
+<meta name="author" content="(Abhijit Paul)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Linux Introduction</h1><h2 class="author">Abhijit Paul</h2>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-org6224364">Acknowledgement of Ignorance</a></li>
+<li><a href="#/slide-org1772efa">Linux - Startup Task</a></li>
+<li><a href="#/slide-org7aad26b">Login as IIT</a></li>
+<li><a href="#/slide-orge82e43d">Create a new User for you!</a></li>
+<li><a href="#/slide-org7b2408f">Things you need as a first year</a></li>
+<li><a href="#/slide-org39b7ad9">Some useful commands</a></li>
+<li><a href="#/slide-org9b818ce">Some Touring if we have time</a></li>
+<li><a href="#/slide-org547c2d8">Conclusion</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org6224364">
+<h2 id="org6224364">Acknowledgement of Ignorance</h2>
+<ul>
+<li>Operating System and System Programming(<a href="http://www.iit.du.ac.bd/academic/undergraduate_first">4th Semester</a>)</li>
+
+</ul>
+<p>
+This guide will help you get started.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org1772efa">
+<h2 id="org1772efa">Linux - Startup Task</h2>
+<ul>
+<li>Boot up linux in your computer. In the <code>grub</code> menu, choose <code>Ubuntu</code>.
+<img src="image-source/ubuntu-boot-up-menu.png" alt="ubuntu-boot-up-menu.png" /></li>
+
+</ul>
+</section>
+<section id="slide-org1772efa-split">
+<p>
+If your computer do not have linux yet, follow the instructions with your friend who has it. 
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org7aad26b">
+<h2 id="org7aad26b">Login as IIT</h2>
+<p>
+Every computer has a default computer named <code>IIT</code>. Our staffs create it as a default user. So login as user <code>IIT</code>. Later, we will create a <code>user account</code> for you.
+<a href="https://linuxtect.com/how-to-login-as-root-user-in-linux/">Detailed Guide</a>
+</p>
+
+
+<div id="org54ddb66" class="figure">
+<p><img src="image-source/login-ubuntu.png" alt="login-ubuntu.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgf0d4883">
+<h3 id="orgf0d4883">Navigate Around a bit!</h3>
+<p>
+Explore linux!
+</p>
+<ul>
+<li>Open the file browser.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orge82e43d">
+<h2 id="orge82e43d">Create a new User for you!</h2>
+<ul>
+<li><p>
+Security and Management issue
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>If everyone uses the same IIT account, what will happen?
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org144f7cf">
+<h3 id="org144f7cf">Creating User Account using GUI</h3>
+<p>
+Settings -&gt; Search <code>Users</code> -&gt; Add or Remove Users
+<a href="https://linuxize.com/post/how-to-add-and-delete-users-on-ubuntu-18-04/">Detailed Guide</a>
+</p>
+</section>
+<section id="slide-org54d16c9">
+<h3 id="org54d16c9">Using Terminal</h3>
+<ul>
+<li>Don't use any space in your user name!</li>
+<li>Remember your username and password!</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>sudo adduser YOUR_NAME
+</code></pre>
+</div>
+<p>
+Press Enter if you wish to accept the default.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>sudo deluser --remove-home test // Personal Note
+</code></pre>
+</div>
+</section>
+<section id="slide-org3d167bd">
+<h3 id="org3d167bd">Giving Administrator Rights</h3>
+<p>
+In linux, we need administrator rights/root access to install anything, to change any important system setting. And as we go, we will install IntellIJ, wireshark, vscode etc. So we need root access.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>sudo usermod -aG sudo USER_NAME
+</code></pre>
+</div>
+</section>
+<section id="slide-org188cad9">
+<h3 id="org188cad9">Changing Password</h3>
+<p>
+You can change your password anytime with sudo.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>sudo passwd USER_NAME
+</code></pre>
+</div>
+</section>
+<section id="slide-org6ab2662">
+<h3 id="org6ab2662">Logout and Login!</h3>
+<p>
+Now logout from user IIT and login to your account!
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org7b2408f">
+<h2 id="org7b2408f">Things you need as a first year</h2>
+<div class="outline-text-2" id="text-org7b2408f">
+</div>
+</section>
+<section id="slide-org0b18da1">
+<h3 id="org0b18da1">ls command</h3>
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>ls
+</code></pre>
+</div>
+<p>
+Output:
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>1647085180.png  a.out    Documents  gdrive-mount-point     Local  NLP-Library     Pictures  read.txt   Templates  Videos
+alice.txt       Desktop  Downloads  install-arch-packages  Music  Org-Roam-Files  Public    temp2.cpp  Temporary  write.txt
+</code></pre>
+</div>
+</section>
+<section id="slide-org4515e9e">
+<h3 id="org4515e9e">Task</h3>
+<p>
+Getting acquianted with terminal! Lets make a simple program that adds two number.
+</p>
+<ul>
+<li>Open terminal (Shortcut: Ctrl + Alt + t)</li>
+<li>Create a file</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>touch add-numbers.c
+</code></pre>
+</div>
+<ul>
+<li>Open the file in gedit/"notepad" to write code in it.</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>gedit add-numbers.c // PRESS TAB for autocompletion
+</code></pre>
+</div>
+</section>
+<section id="slide-org4515e9e-split">
+<ul>
+<li>Compile it using gcc.</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>gcc add-numbers.c // PRESS TAB for autocompletion
+</code></pre>
+</div>
+<ul>
+<li>Run the program.</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-bash"   ><code trim>  ls
+./a.out
+</code></pre>
+</div>
+</section>
+<section id="slide-org3c28237">
+<h3 id="org3c28237">Code</h3>
+<div class="org-src-container">
+
+<pre  class="src src-c"   ><code trim>   #include&lt;stdio.h&gt;
+   int main(){
+int a = 3, b=4;
+printf("3+4=%d\n",a+b);
+     return 0;
+   }
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org39b7ad9">
+<h2 id="org39b7ad9">Some useful commands</h2>
+<ul>
+<li>cd</li>
+<li>clear/ Ctrl+L</li>
+<li>mkdir</li>
+<li>rm</li>
+<li>mv</li>
+<li>cp</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9b818ce">
+<h2 id="org9b818ce">Some Touring if we have time</h2>
+<div class="outline-text-2" id="text-org9b818ce">
+</div>
+</section>
+<section id="slide-orge814ba1">
+<h3 id="orge814ba1">Why Linux?</h3>
+<ul>
+<li>As a developer, you will eventually shift to it. The faster, the better.</li>
+<li>Support opensource and disregard propietary garbage.</li>
+<li>Faster.</li>
+
+</ul>
+</section>
+<section id="slide-org5ec47f6">
+<h3 id="org5ec47f6">Dual Boot</h3>
+<p>
+<a href="https://www.tecmint.com/install-ubuntu-alongside-with-windows-dual-boot/">Website for detailed guide</a>
+</p>
+<ul>
+<li>Analogy of Music</li>
+
+</ul>
+</section>
+<section id="slide-orgc49a48c">
+<h3 id="orgc49a48c">What are distribution?</h3>
+<p>
+Which should you choose?
+</p>
+<ul>
+<li>Ubuntu</li>
+<li>Linux Mint</li>
+<li>CentOS</li>
+<li>Arch Linux</li>
+<li>Zorin OS</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org547c2d8">
+<h2 id="org547c2d8">Conclusion</h2>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>The way to master linux is using it.
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
