@@ -1,0 +1,18 @@
+package stack_example;
+
+public class StackTest {
+	public static void main(String[] args) {
+		
+	}
+	
+	void test() {
+		
+	}
+	
+	<T> void test_push(T[] arr, Stack<T> stack){
+		
+		for(T element: arr) {
+			stack.push(element);
+		}
+	}
+}

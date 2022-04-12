@@ -1,0 +1,8 @@
+package basic.threading;
+
+public class Tasks implements Runnable{
+	@Override
+	public void run() {
+		Printer printer = new Printer();
+	}
+}

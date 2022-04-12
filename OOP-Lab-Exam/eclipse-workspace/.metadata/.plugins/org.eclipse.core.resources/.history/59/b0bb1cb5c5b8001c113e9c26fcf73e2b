@@ -1,0 +1,24 @@
+package stack_example;
+
+public class StackTest {
+	public static void main(String[] args) {
+		
+	}
+	
+	void test() {
+		
+	}
+	
+	public static <T> void test_push(T[] arr, Stack<T> stack){
+		try {
+		for(T element: arr) {
+			stack.push(element);
+		}
+		}catch(FullStackException e) {e.printStackTrace();}
+	}
+	<T> void test_pop(Stack<T>stack) {
+		while(true) {
+			stack.pop();
+		}
+	}
+}

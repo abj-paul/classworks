@@ -1,0 +1,22 @@
+package Basic;
+
+import java.lang.reflect.Constructor;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void test() {
+		Belief belief = new Belief("China");
+		
+		Class cls = belief.getClass());
+		System.out.println("The class name is="+cls.getName());
+		Constructor[] constructors = cls.getConstructors();
+		
+		for(int i=0; constructors.length; i++)
+			System.out.println("First constructor is: "+constructors[i]);
+	}
+
+}

@@ -1,0 +1,12 @@
+package producer.consumer.relationship;
+
+import java.util.ArrayList;
+
+public class Storage {
+	ArrayList<Integer> storage;
+	Storage(){}
+	Storage(Integer[] arr){
+		for(Integer element: arr) storage.add(element);
+	}
+	
+}

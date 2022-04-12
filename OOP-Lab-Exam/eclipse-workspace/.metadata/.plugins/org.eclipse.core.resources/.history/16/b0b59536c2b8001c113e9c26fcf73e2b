@@ -1,0 +1,13 @@
+package stack_example;
+
+public class Stack<T>{
+	private T[] storage;
+	int capacity;
+	Stack(int capacity){
+		this.capacity = (capacity>10)?capacity:10;
+	}
+	
+	void push(T element) {
+		
+	}
+}

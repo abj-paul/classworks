@@ -1,0 +1,11 @@
+package stack_example;
+
+public class StackTest {
+	public static void main(String[] args) {
+		
+	}
+	
+	void test() {
+		
+	}
+}

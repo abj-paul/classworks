@@ -1,0 +1,16 @@
+package synchronization;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Application starts.");
+		Printer printer1 = new Printer(1);
+		Printer printer2 = new Printer(2);
+		
+		Tasks task = new Tasks(printer1);
+		Thread t1 = new Thread(task);
+		Thread t2 = new Thread(new Tasks(printer2));
+		
+		
+		System.out.println("Application ends.");
+	}
+}

@@ -1,0 +1,13 @@
+package basic.threading;
+
+public class Main {
+	public static void main(String[] args) {
+		Printer printer = new Printer();
+		Tasks task = new Tasks(printer);
+		Thread t1 = new Thread(task);
+		t1.start();
+		
+		Thread t2 = new Thread(new Tasks(printer));
+		t2.start();
+	}
+}

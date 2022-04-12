@@ -1,0 +1,22 @@
+package sort.customClass;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Player p1 = new Player("A",19);
+		Player p2 = new Player("B",14);
+		Player p3 = new Player("C",15);
+		Player p4 = new Player("D",13);
+		Player p5 = new Player("E",20);
+		
+		Player[] pArr = {p1, p2, p3, p4, p5};
+		Sort<Player> pSort = new Sort<Player>(pArr);
+		pSort.print();
+		pSort.sort();
+		pSort.print();
+
+
+	}
+
+}

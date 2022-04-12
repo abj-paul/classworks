@@ -1,0 +1,21 @@
+package producer.consumer.v2;
+import java.util.Random;
+
+public class Producer implements Runnable{
+	private final static Random randomGenerator = new Random();
+	private Buffer sharedBuffer;
+	
+	Producer(Buffer sharedBuffer){
+		this.sharedBuffer=sharedBuffer;
+	}
+	
+	public void run() {
+		try {
+			for(int count=0; count<=10; count++) {
+				sharedBuffer.set(count);
+				sum+=count;
+				Thread.sleep(this.randomGenerator.nextInt());
+			}
+		}catch(InterruptedException e) {e.printStackTrace();}
+	}
+}

@@ -1,0 +1,7 @@
+package sort.customClass;
+
+public class Sort<T>{
+	T[] storage;
+	
+	
+}

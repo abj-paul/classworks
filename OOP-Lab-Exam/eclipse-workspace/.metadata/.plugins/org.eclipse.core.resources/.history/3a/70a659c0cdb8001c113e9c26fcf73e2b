@@ -1,0 +1,17 @@
+package first.socket;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+	ServerSocket serverSocket;
+	Socket socket;
+	
+	Server(int port){
+		try {
+			this.serverSocket = new ServerSocket(port);
+			socket = serverSocket.accept();
+		}catch(IOException e) {e.printStackTrace();}
+	}
+}

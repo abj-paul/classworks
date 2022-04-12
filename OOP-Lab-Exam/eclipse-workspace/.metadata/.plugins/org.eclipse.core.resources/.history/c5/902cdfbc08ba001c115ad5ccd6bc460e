@@ -1,0 +1,23 @@
+package socket;
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+public class Client {
+	private Socket socket = null;
+	private DataInputStream socket_input_stream = null;
+	private DataInputStream console_input_stream = null;
+	private DataOutputStream socket_output_stream = null;
+	
+	Client(String ip_addr, int port){
+		try {
+			this.socket = new Socket(ip_addr, port);
+			this.socket_input_stream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+			this.socket_output_stream = new DataOutputStream(socket.getOutputStream());
+			this.console_input_stream = new DataInputStream(System.in);
+			
+		}catch(IOException e) {e.printStackTrace();}
+	}
+}

@@ -1,0 +1,26 @@
+package producer.consumer;
+
+import java.util.Random;
+
+public class Producer implements Runnable{
+	private Buffer buffer;
+	private final Random randomGenerator = new Random();
+	
+	Producer(Buffer buffer){
+		this.buffer = buffer;
+	}
+	
+	@Override
+	public void run() {
+		try {
+			int sum=0;
+		for(int count=1; count<=10; count++) {
+			Thread.sleep(randomGenerator.nextInt(500));
+			this.buffer.set(count);
+			sum +=count;
+			System.out.printf(" Sum=%d\n",sum);
+		}
+		}catch(InterruptedException e) {e.printStackTrace();}
+	}
+	
+}

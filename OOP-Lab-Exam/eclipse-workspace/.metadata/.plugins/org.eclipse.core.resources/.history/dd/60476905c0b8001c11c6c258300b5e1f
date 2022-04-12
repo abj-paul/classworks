@@ -1,0 +1,15 @@
+package defaultPackage;
+
+public class GenericClass<T>{
+	T[] arr;
+	GenericClass(T[] arr){
+		this.arr = arr;
+	}
+	void print() {
+		GenericArray.printArray(this.arr);
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

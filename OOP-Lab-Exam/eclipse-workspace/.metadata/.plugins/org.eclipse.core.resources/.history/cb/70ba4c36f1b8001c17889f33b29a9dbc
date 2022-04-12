@@ -1,0 +1,9 @@
+package basic.threading;
+
+public class Main {
+	public static void main(String[] args) {
+		Tasks task = new Tasks();
+		Thread t1 = new Thread(task);
+		t1.run();
+	}
+}

@@ -1,0 +1,37 @@
+package producer.consumer.relationship;
+
+import java.util.ArrayList;
+
+public class Storage {
+	final int default_size = 30;
+	ArrayList<Integer> storage;
+	int top_index;
+	int size;
+	
+	Storage(){
+		this.top_index=0;
+		this.storage = new ArrayList<Integer>(default_size);
+		this.size = this.default_size;
+	}
+	Storage(Integer[] arr){
+		int size = (this.default_size<arr.length)?arr.length:this.default_size;
+		this.size = size;
+		this.storage = new ArrayList<Integer>(size);
+		this.top_index = 0;
+		for(Integer element: arr) storage.add(element);
+	}
+	
+	void read() {
+		System.out.printf("Reading %d from storage.\n",storage.get(top_index));
+		top_index++;
+	}
+	void write(int x) {
+		if(this.top_index<this.storage.size()) this.storage.set(top_index, x);
+		System.out.printf("Writing %d to storage.\n",x);
+		top_index++;
+	}
+	int get_size() {
+		return this.size;
+	}
+	
+}

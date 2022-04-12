@@ -1,0 +1,7 @@
+package producer.consumer.v2;
+import java.util.random.*;
+
+public class Producer {
+	private final static Random randomGenerator = new Random();
+	private Buffer sharedBuffer;
+}

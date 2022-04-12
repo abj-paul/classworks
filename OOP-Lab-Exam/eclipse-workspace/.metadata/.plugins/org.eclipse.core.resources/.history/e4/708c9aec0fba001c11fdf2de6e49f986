@@ -1,0 +1,11 @@
+package sort.customClass;
+
+public class Player {
+	String Name;
+	int age;
+	
+	Player(String name, int age){
+		this.Name = name;
+		this.age = age;
+	}
+}

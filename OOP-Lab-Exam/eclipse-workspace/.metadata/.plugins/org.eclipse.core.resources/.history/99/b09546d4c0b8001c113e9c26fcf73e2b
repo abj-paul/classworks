@@ -1,0 +1,8 @@
+package defaultPackage;
+
+public class MaximumTest {
+	public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
+		T max = a;
+		return max;
+x	}
+}

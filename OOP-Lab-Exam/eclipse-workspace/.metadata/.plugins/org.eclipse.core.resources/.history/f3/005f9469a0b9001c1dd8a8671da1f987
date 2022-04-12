@@ -1,0 +1,6 @@
+package Basic;
+
+public class Belief {
+	private int age;
+	prvate String country;
+}

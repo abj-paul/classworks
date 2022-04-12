@@ -1,0 +1,26 @@
+package sort.customClass;
+
+public class Player implements Comparable{
+	String Name;
+	int age;
+	
+	Player(String name, int age){
+		this.Name = name;
+		this.age = age;
+	}
+	
+	int compare(Player p1, Player p2) {
+	}
+	
+	@Override
+	public String toString() {
+		String line = "("+this.Name+","+this.age+")";
+		return line;
+		
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		return p1.age - p2.age;
+	}
+}

@@ -1,0 +1,22 @@
+package WildCards;
+
+import java.util.ArrayList;
+
+public class NumberArray {
+	public static void main(String[] args) {
+		
+	}
+	
+	void test_cases() {
+		Integer[] integerArr = {2,3,4,5,6};
+		ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
+		for(Integer element: integerArr) integerArrayList.add(element);
+		print(integerArrayList);
+	}
+	
+	static void print(ArrayList<? extends Number> arrayList) {
+		for(Number number: arrayList) {
+			System.out.println(number.doubleValue()+" ");
+		}
+	}
+}

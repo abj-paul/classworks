@@ -1,0 +1,15 @@
+package producer.consumer.relationship;
+
+public class ReadFile implements Runnable{
+	Storage storageRef;
+	ReadFile(Storage storageRef){
+		this.storageRef = storageRef;
+	}
+	
+	public void run() {
+		for(int i=0; i<storageRef.get_size(); i++) {
+			this.storageRef.read();
+			Thread.sleep(500);
+		}
+	}
+}

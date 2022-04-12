@@ -1,0 +1,12 @@
+package basic.threading;
+
+public class Tasks implements Runnable{
+	Printer pRef;
+	Tasks(Printer printer){
+		pRef = printer;
+	}
+	@Override
+	public void run() {
+		Printer printer = new Printer();
+	}
+}

@@ -1,0 +1,15 @@
+package sort.customClass;
+
+public class Sort<T>{
+	T[] storage;
+	
+	Sort(T[] initializer){
+		this.storage = (T[])new Object[initializer.length];
+	}
+	
+	void sort() {
+		for(int i=0; i<this.storage.size(); i++) {
+			
+		}
+	}
+}

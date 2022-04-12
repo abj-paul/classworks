@@ -1,0 +1,26 @@
+package producer.consumer;
+
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class BlockingBuffer implements Buffer{
+	private ArrayBlockingQueue<Integer> buffer;
+
+	BlockingBuffer() throws InterruptedException{
+		this.buffer = new ArrayBlockingQueue<Integer>(1);
+		buffer.put(-1);
+	}
+	@Override
+	public void set(int value) throws InterruptedException {
+		// TODO Auto-generated method stub
+		buffer.put(value);
+		System.out.printf("Write %d to buffer. ",value);
+	}
+
+	@Override
+	public int get() {
+		// TODO Auto-generated method stub
+		int value = this.buffer.take();
+		return 0;
+	}
+
+}

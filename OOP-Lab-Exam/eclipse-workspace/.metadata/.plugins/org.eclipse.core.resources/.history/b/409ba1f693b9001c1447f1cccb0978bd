@@ -1,0 +1,23 @@
+package producer.consumer.relationship;
+
+import java.util.ArrayList;
+
+public class Storage {
+	ArrayList<Integer> storage;
+	int top_index;
+	
+	Storage(){
+		this.top_index=0;
+		this.storage = new ArrayList<Integer>(10);
+	}
+	Storage(Integer[] arr){
+		this.storage = new ArrayList<Integer>(arr.length);
+		this.top_index = 0;
+		for(Integer element: arr) storage.add(element);
+	}
+	
+	void read() {
+		System.out.println("Reading ")
+	}
+	
+}

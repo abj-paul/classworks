@@ -1,0 +1,34 @@
+package stack_example;
+
+public class Stack<T>{
+	private T[] storage;
+	int capacity;
+	int top_index;
+	Stack(){
+		this(10);
+	}
+	
+	Stack(int capacity){
+		this.capacity = (capacity>10)?capacity:10;
+		this.top_index = 0;
+		storage = new Object[capacity];
+	}
+	
+	void push(T element) {
+		if(this.top_index+1>=this.capacity) {
+			throw new FullStackException();
+		}else {
+			storage[++top_index] = element; 
+		}
+	}
+	
+	T pop() {
+		if(top_index==-1) throw new EmptyStackException();
+		else {
+			T element = this.storage[this.top_index];
+			top_index--;
+			return element;
+		}
+		
+	}
+}

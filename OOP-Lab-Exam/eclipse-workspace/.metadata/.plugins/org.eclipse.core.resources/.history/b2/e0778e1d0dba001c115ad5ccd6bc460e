@@ -1,0 +1,5 @@
+package producer.consumer;
+
+public class BlockingBuffer {
+
+}

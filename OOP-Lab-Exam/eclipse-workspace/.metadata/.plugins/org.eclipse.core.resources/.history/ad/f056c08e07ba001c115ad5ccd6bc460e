@@ -1,0 +1,14 @@
+package socket;
+
+public class Server {
+	private ServerSocket serverSocket = null;
+	private Socket socket = null;
+	private DataInputStream socket_input_stream = null;
+	private DataOutputStream socket_output_stream = null;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package stack_example;
+
+public class StackTest {
+	public static void main(String[] args) {
+		
+	}
+	
+	void test() {
+		
+	}
+	
+	<T> void test_push(Stack<T> stack){
+		
+	}
+}

@@ -1,0 +1,15 @@
+package WildCards;
+
+import java.util.ArrayList;
+
+public class NumberArray {
+	public static void main(String[] args) {
+		
+	}
+	
+	void test_cases() {
+		Integer[] integerArr = {2,3,4,5,6};
+		ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
+		for(Integer x: integerArr) integerArrayList.add(x);
+	}
+}

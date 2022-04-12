@@ -1,0 +1,13 @@
+package WildCards;
+
+import java.util.ArrayList;
+
+public class NumberArray {
+	ArrayList<Number> storage;
+	NumberArray(){
+		this.storage = new ArrayList<Number>();
+	}
+	void push(Number x) {
+		this.storage.add(x);
+	}
+}

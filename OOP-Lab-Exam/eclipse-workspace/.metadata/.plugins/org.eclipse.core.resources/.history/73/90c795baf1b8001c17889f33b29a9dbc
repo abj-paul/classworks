@@ -1,0 +1,9 @@
+package basic.threading;
+
+public class Printer{
+	void printFile(String filename, int number_of_copies) {
+		for(int i=0; i<number_of_copies; i++) {
+			System.out.println(">> Printing "+i+"th copy of "+filename + "with Printer 1");
+		}
+	}
+}

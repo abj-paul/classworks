@@ -1,0 +1,22 @@
+package sort.customClass;
+
+public class Player {
+	String Name;
+	int age;
+	
+	Player(String name, int age){
+		this.Name = name;
+		this.age = age;
+	}
+	
+	int compare(Player p1, Player p2) {
+		return p1.age - p2.age;
+	}
+	
+	@Override
+	public String toString() {
+		String line = "("+this.Name+","+this.age+")";
+		return line;
+		
+	}
+}

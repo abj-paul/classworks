@@ -1,0 +1,5 @@
+package producer.consumer.v2;
+
+public class Consumer {
+
+}
