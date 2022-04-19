@@ -1,4 +1,5 @@
-3
-S AB
+4
+S ABC
 A aAAA|NULL
 B bBB|NULL
+C bC|NULL
