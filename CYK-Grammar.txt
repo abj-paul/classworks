@@ -1,0 +1,69 @@
+
+
+S -> AB | BC
+A -> BA | a
+B -> CC | b
+C -> AB | a
+
+a -> {A,C}
+
+X13 X24 X35
+X12 X23 X34 X45
+X11 X22 X3
+
+L should remain unchanged. (Intuition)
+j = i+l-1 = 3 + 2 - 1 = 5 - 1 = 4
+= 2 + 1 -1 = 2
+
+5-2
+i = 0....3
+
+   (l=2, i=1, j=2)
+01 12 23 34  (i=3, l=2)
+00 11 22 33 44
+
+04
+03 14
+02 13 24
+01 12 23 34
+00 11 22 33 44
+
+
+X23 = {X22, X33} = {A,C}*{B} = {AB, CB}
+Arnab -> Vector multiplication operator overload
+      -> Concatenation
+
+(Xik, Xk+1,j)
+X13 = {X11,X23} union {X12, X33}
+    = {B}*{B} union {S,A}{A}
+    = {BB,SA} union {SA, AA}
+    = BB, SA, SA, AA
+Ans = fetch(BB), fetch(SA), fetch(AA) = {S,B}
+
+cyk = NULL // IT DOES NOT EXIST
+cyk+=BB SA
+cyk = BB SA
+cyk += SA AA
+cyk= BB SA SA AA
+   {S,A}
+
+
+{A,S} * {e,F}
+= AF SF
+
+kartesian_product
+Fetch Set X,Y  [ik,kj]
+
+{A,B}, {C,D} = AC AD BC BD
+
+for(X={A,C}){
+	for(Y={B,E}){
+		kartesian_product = X con Y
+}
+}
+Multiplication
+
+CYK [][][]
+
+
+

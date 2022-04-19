@@ -1,0 +1,52 @@
+
+
+Task 1
+- Eliminate epsilon productions
+- Elimianate Unit Production
+- Elimiate Useless symbols (Generative(e), Reachable)
+- Rename large symbols to smaller symbols (S->ABC to S->AE, E->BC)
+
+
+Given Grammar:
+S -> ASB | e
+A -> aAS | a
+B -> SbS | A | bb
+
+-> Eliminating Epsilon Productions:
+S -> ASB | AB
+A -> aAS | aA
+B -> b | bS | Sb | A | bb
+
+-> Eliminate Unit Productios:
+S -> A | aSa
+A -> B | aB
+B -> c | cBc
+
+Herem B is a unit production
+S -> A | aSa
+A -> c | cBc | aB
+B -> c | cBc
+
+-> Eliminate Useless Symbols
+NonGenerative, Unreachable
+S -> AB | C
+A -> aA | a
+B -> bB
+C -> c
+Here, B is not generatative
+S -> C
+A -> aA | a
+C -> c
+Reachable: Productions that we can reach from Start Symbol
+Here, A is not reachable.
+S -> C
+C -> c
+-> Rename
+- If a state is greater than 2, than split it.
+
+let[] = X Y Z
+S -> ABCD | DEF
+S -> AX | DZ
+X -> BY
+Y -> CD
+Z -> EF
