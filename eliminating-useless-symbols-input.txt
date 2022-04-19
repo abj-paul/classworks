@@ -1,0 +1,7 @@
+2
+S AB|a
+A b
+2
+a b
+3
+S A B
