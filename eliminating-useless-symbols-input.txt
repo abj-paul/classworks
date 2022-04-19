@@ -5,3 +5,4 @@ A b
 a b
 3
 S A B
+S
