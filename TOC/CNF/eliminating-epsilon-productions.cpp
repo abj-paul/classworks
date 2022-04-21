@@ -77,11 +77,12 @@ void update_nullable_nonTerminals(){
 
         for(int r1=0; r1<rightRules.size(); r1++){
             for(int r2=0; r2<rightRules[r1].size(); r2++){
-                int index = rightRules[r1][r2].find(target);
-                if(index!=-1){
+                auto index = rightRules[r1][r2].begin();
+                while(index!=rightRules[r1][r2].end()){
                     string new_nonTerminal = rightRules[r1][r2];
                     new_nonTerminal.replace(new_nonTerminal.find(target), 1, "");
                     rightRules[r1].push_back(new_nonTerminal);
+                    index = find(index, rightRules[r1][r2].end());
                 }
             }
         }

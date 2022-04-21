@@ -1,0 +1,4 @@
+3
+S ASB|NULL
+A aAS|a
+B SbS|A|bb
