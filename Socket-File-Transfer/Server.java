@@ -7,6 +7,7 @@ public class Server {
     private DataInputStream dataInputStream;
     private DataOutputStream dataOutputStream;
     private Socket socket;
+    private String totalString="";
 
     private int port;
 
@@ -31,6 +32,7 @@ public class Server {
         while(!line.equals("Over")){
             System.out.println("Client:"+line);
             try {
+                totalString+=line+"\n";
                 line = this.dataInputStream.readUTF();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -50,10 +52,16 @@ public class Server {
         System.out.println("Connection has been closed.");
     }
 
+    public String getTotalString(){
+        return this.totalString;
+    }
     public static void main(String[] args) {
         Server server = new Server(20234);
         server.start();
         server.receiveData();
         server.closeConnection();
+
+        System.out.println(server.getTotalString());
     }
 }
+
