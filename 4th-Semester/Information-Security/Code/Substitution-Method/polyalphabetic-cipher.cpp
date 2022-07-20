@@ -3,11 +3,12 @@
 
 using namespace std;
 
-#define POSITION_COUNT 4
+#define POSITION_COUNT 20
 #define CHARACTER_COUNT 128
 #define START_CHARATER '\0'
 
 char mapping[CHARACTER_COUNT][POSITION_COUNT];
+int KEY = 0;
 
 void generate_mapping_table();
 void print_mapping_table();
@@ -17,12 +18,16 @@ char findSubstitution(int position, char decryptedCharacter);
 string decrypt(string encryptedText);
 
 int main(){
-    generate_mapping_table();
-    print_mapping_table();
-
+    
     printf("Enter a string to encrypt: ");
     string input; 
     getline(cin, input);
+    printf("Enter key: ");
+    cin>>KEY;
+
+    generate_mapping_table();
+    print_mapping_table();
+
 
     string encryptedText = encrypt(input);
     cout<<"Encrypted Text = "<< encryptedText<<endl;
@@ -38,7 +43,7 @@ int main(){
 void generate_mapping_table(){
     for(int i=0; i<POSITION_COUNT; i++){
         for(int j=0; j<CHARACTER_COUNT; j++){
-            mapping[j][i] = START_CHARATER + (j + i)%CHARACTER_COUNT ;
+            mapping[j][i] = START_CHARATER + (j + i + KEY)%CHARACTER_COUNT ;
         }
     }
 }
