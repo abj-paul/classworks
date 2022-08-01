@@ -3,19 +3,26 @@
 
 using namespace std;
 
-#define POSITION_COUNT 20
+#define POSITION_COUNT 20 // How many indices/position of character should the mappping table include. e.g. [0-19], [0-5]
 #define CHARACTER_COUNT 128
 #define START_CHARATER '\0'
 
-char mapping[CHARACTER_COUNT][POSITION_COUNT];
-int KEY = 0;
+int KEY = 0; // This key will also be used to generate mapping table. new_char = plainText[i]+index+key
+
+char mapping[CHARACTER_COUNT][POSITION_COUNT]; 
+/* Its the mapping table of polyalphabetic encription. For example,
+ | Character | Index 0 | Index 1 | 
+ | a         | e       | l       |
+ | b         | x       | h       |
+ etc */
+					
 
 void generate_mapping_table();
 void print_mapping_table();
 
 string encrypt(string plainText);
-char findSubstitution(int position, char decryptedCharacter);
 string decrypt(string encryptedText);
+char findSubstitution(int position, char decryptedCharacter); // Its an auxiliary function. Given (position,character), it iterates through the mapping table to find the appropriate substitution.
 
 int main(){
     

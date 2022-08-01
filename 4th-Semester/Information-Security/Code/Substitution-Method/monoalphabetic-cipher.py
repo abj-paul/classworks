@@ -1,16 +1,14 @@
-from pydoc import plain
+DIVISION_FACTOR = 128 # We wish to cover all 128 ascii character so we must keep the sum=plaintext[i]+key within [0,127] so we divide the sum by DIVISION_FACTOR
 
-encryptionTable = ['i','m','p','j','k','l','f','y','v','t','z','o','n','x','w','c','h','u','g','r','e','d','s','a','b','q']
-DIVISION_FACTOR = 256
 
-def encrypt(plainText, key):
+def encrypt_text_with_key(plainText, key):
     encryptedText = ""
     for character in plainText:
         encryptedText = encryptedText + str(chr((ord(character)+key)%DIVISION_FACTOR))
 
     return encryptedText
 
-def decrypt(encryptedText, key):
+def decrypt_text_with_key(encryptedText, key):
     plainText = ""
     for character in encryptedText:
         intValue = ord(character) - key;
@@ -21,8 +19,8 @@ def decrypt(encryptedText, key):
 def main():
     plainText = input("Enter your message to encrypt: ")
     key = int(input("Enter key: "))
-    encryptedText = encrypt(plainText, key)
-    decryptedText = decrypt(encryptedText, key)
+    encryptedText = encrypt_text_with_key(plainText, key)
+    decryptedText = decrypt_text_with_key(encryptedText, key)
 
     print("Cipher Text: " + encryptedText)
     print("Plain Text: " + decryptedText)
