@@ -1,23 +1,29 @@
-#include<iostream>
-#include<vector>
-#include "../global_constants.h"
+#include "substitution.h"
 
-std::vector<abj::byte> take_input(){
-  std::string temp;
-  getline(std::cin, temp);
+byte substitute_byte(byte old_byte){
+  int row = (old_byte & (15<<4))>>4;
+  int col = old_byte & 15;
 
-  std::vector<abj::byte> input_in_bytes;
-  for(int i=0; i<temp.size(); i++) input_in_bytes.push_back(temp[i]);
-
-  return input_in_bytes;
+  /*
+  print_bits_of_byte(old_byte);
+  printf("\nRow=%d\n",row);
+  printf("Col=%d\n",col);
+  */
+  return s_box[row][col];
 }
 
-void print_byte_vector(std::vector<abj::byte> vb){
-  for(int i=0; i<vb.size(); i++) std::cout<<vb[i]<<" ";
-  std::cout<<"\n";
+byte inverse_substitute_byte(byte old_byte){
+  int row = (old_byte & (15<<4))>>4;
+  int col = old_byte & 15;
+  /*
+  print_bits_of_byte(old_byte);
+  printf("\nRow=%d\n",row);
+  printf("Col=%d\n",col);
+  */
+  return inverse_s_box[row][col];
 }
 
-abj::byte s_box[16][16] = {
+byte s_box[16][16] = {
 0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
 0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0, 
 0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc, 0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15, 
@@ -36,30 +42,7 @@ abj::byte s_box[16][16] = {
 0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
 };
 
-void print_s_box(abj::byte s_box[16][16]){
-  for(int i=0; i<16; i++){
-    for(int j=0; j<16; j++){
-      //     std::cout<<std::hex<<s_box[i][j];
-      printf("%x ", s_box[i][j]);
-    }
-    std::cout<<"\n";
-  }
-}
-
-abj::byte substitute_byte(abj::byte old_byte){
-  int row = (old_byte & (15<<4))>>4;
-  int col = old_byte & 15;
-
-  abj::print_bits_of_byte(old_byte);
-  printf("\nRow=%d\n",row);
-  printf("Col=%d\n",col);
-
-  return s_box[row][col];
-}
-
-
-
-abj::byte inverse_s_box[16][16] = {
+byte inverse_s_box[16][16] = {
 0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0xa5, 0x38, 0xbf, 0x40, 0xa3, 0x9e, 0x81, 0xf3, 0xd7, 0xfb, 
 0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0xff, 0x87, 0x34, 0x8e, 0x43, 0x44, 0xc4, 0xde, 0xe9, 0xcb, 
 0x54, 0x7b, 0x94, 0x32, 0xa6, 0xc2, 0x23, 0x3d, 0xee, 0x4c, 0x95, 0x0b, 0x42, 0xfa, 0xc3, 0x4e, 
@@ -79,34 +62,8 @@ abj::byte inverse_s_box[16][16] = {
 };
 
 
-abj::byte inverse_substitute_byte(abj::byte old_byte){
-  int row = (old_byte & (15<<4))>>4;
-  int col = old_byte & 15;
-
-  abj::print_bits_of_byte(old_byte);
-  printf("\nRow=%d\n",row);
-  printf("Col=%d\n",col);
-
-  return inverse_s_box[row][col];
-}
-
-int main(){
-  /* Checking if read-write byte works
-  std::cout<<"Enter Plain Text: ";
-  std::vector<abj::byte> input = take_input();
-  std::cout<<"Enter Key: ";
-  std::vector<abj::byte> key = take_input();
-
-  print_byte_vector(input);
-  print_byte_vector(key);
-  */
-
-  // Checking s-box
-  //print_s_box(s_table);
+void test_substitution(){
+  printf("Testing substitution: ------------\n");
   printf("%x-->%x\n", 0x26, substitute_byte(0x26));
-  //print_s_box(inverse_s_box);
   printf("%x-->%x\n", 0xf7, inverse_substitute_byte(0xf7));
-
-  
-  return 0;
 }
