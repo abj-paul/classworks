@@ -1,0 +1,219 @@
+* Theoratical Division
+** Make register structure
+- [X] Xor Register
+- [X] ch
+- [X] maj
+- [X] ROTR
+- [X] sum
+** Message Schedeuling 
+- [X] ROTR
+- [X] Sigma functions
+- [X] SHR
+** Round
+- Swap Register
+- ch
+- maj
+- sum
+* Sources
+[[https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/SHA512.pdf][BEST SOURCE EVER - sha512 result for each step]]
+[[https://www.slideshare.net/sharifulr/secure-hash-algorithm-sha512][Standard SHA512 output (from slide 16)]]
+[[https://en.wikipedia.org/wiki/SHA-2][Wikipedia]]
+** StackOverflow
+[[https://stackoverflow.com/questions/9606455/how-to-specify-64-bit-integers-in-c][How to specify 64bit integer]]
+[[https://stackoverflow.com/questions/40104897/bitwise-xor-in-c-using-64bit-instead-of-8bits][XOR in 65 bit integers]]
+* Steps
+- First, find a standard implementation of SHA512 to compare to.
+- Bottom up approach
+- Make smol functions
+- Make message schedeuling
+- Make Round Function
+** Coding Steps
+- Make register class
+- Make message schedeuling class
+- Make round class
+* Take Input
+** Temp
+1024 bit
+128 byte
+
+128 bit data size
+
+1024*N = Constant + x
+
+1024*N - Constant = x
+
+1024*N >= Constant
+
+for(int n=1; n<INF; n++)
+  if(1024*n>=constant) x=1024*n-constant, break;
+** Code to find how much padding is needed
+x= padding
+for(int n=1; n<INF; n++)
+  if(1024*n>=constant) x=1024*n-constant, break;
+*** Temp
+itr=0
+abcd
+itr=4
+4...<90
+** How to add padding?
+char* input;
+
+stream = input + for(1....0000 for x times) + string_len converted to128bit (__int128)
+** Big-endian format
+abcdefgh = a 64bit integer
+a= MSB
+h=LSB
+
+301 is stored as
+| Data |    1 |    0 |    3 |
+| Addr | 1004 | 1005 | 1006 |
+
+in memory as All new systems (e.g. windows linux) stores data in little endian. (Little end/LSB is places as the lowest address)
+
+So our string should be stored as:
+| Data |    a |    b |    c |    d |    e |    f |    g |    h |
+| Addr | 1004 | 1005 | 1006 | 1007 | 1008 | 1009 | 1010 | 1011 |
+This is Big endian because Big end/MSB is at the lowest address.
+** Steps
+- [ ] First convert string to uint64_t.
+- [ ] Then add padding and do it again
+- [ ] Then verify
+** Input Validation
+
+Size = 128byte = 1024 bit
+
+Text:
+isthenumberofbitsincharsois8mostlyInCyoudon'thandlthequickbrownfisthenumberofbitsincharsois8mostlyInCyoudon'thandlthequickbrownf
+
+Hex:
+69 73 74 68 65 6E 75 6D
+62 65 72 6F 66 62 69 74
+73 69 6E 63 68 61 72 73
+6F 69 73 38 6D 6F 73 74
+6C 79 49 6E 43 79 6F 75
+64 6F 6E 27 74 68 61 6E
+64 6C 74 68 65 71 75 69
+63 6B 62 72 6F 77 6E 66
+69 73 74 68 65 6E 75 6D
+62 65 72 6F 66 62 69 74
+73 69 6E 63 68 61 72 73
+6F 69 73 38 6D 6F 73 74
+6C 79 49 6E 43 79 6F 75
+64 6F 6E 27 74 68 61 6E
+64 6C 74 68 65 71 75 69
+63 6B 62 72 6F 77 6E 66
+* Old Code
+** take_input
+#+begin_src c++
+ #include "take_input.h"
+#include<string.h>
+
+#ifndef BYTE_SIZE
+#define BYTE_SIZE 8 //in bits
+#endif
+
+
+char* take_input(){
+  int sz = BLOCK_SIZE/sizeof(char);
+  char* input = (char*)malloc(sz*sizeof(char));
+  //for(int i=0; i<sz; i++) scanf("%c",&input[i]);
+  //scanf("%[^\n]s",input);
+  scanf("%[^\n]%*c", input);
+  return input;
+}
+
+char* add_padding(char* input){
+  int constant = strlen(input)*BYTE_SIZE + 128;
+  
+  int pad_length=0, n;
+  for(n=0; ; n++){
+    if(1024*n>=constant) {
+      pad_length=1024*n-constant;
+      break;
+    }
+  }
+
+  char* padded_str = (char*)malloc(1024*n/BYTE_SIZE);
+
+  int itr = 0; //in bytes
+  for(itr=0; itr<strlen(input); itr++) padded_str[itr] = input[itr];
+
+  for(int pad_index=0; pad_index<pad_length/BYTE_SIZE; pad_index++){
+    if(pad_index==0) padded_str[itr] = 0b1;
+    else padded_str[itr]=0b0;
+    itr++;
+  }
+  // OK!! SO FAR----------------
+  __uint128_t *str_len = (__uint128_t*)malloc(sizeof(__uint128_t));
+  *str_len = strlen(input)*8; //bits
+  printf("STRLEN=%lld\n",*str_len);
+
+   //Writing length at the end
+   BYTE* addr = (BYTE*)str_len + sizeof(__uint128_t)-1;
+   for(int i=0; i<sizeof(__uint128_t); i++){
+     BYTE b = *addr;
+     addr--;
+
+     padded_str[itr] = b;
+     itr++;
+   }
+
+   return padded_str;
+  
+}
+
+std::uint64_t* convert_char_stream_to_uint64_array(char* char_stream){
+ std::uint64_t* m = (std::uint64_t*)malloc(sizeof(std::uint64_t)*16); //16*64 = 1024
+  
+  BYTE* addr = (BYTE*)m;
+  for(int i=0; i<(BLOCK_SIZE/BYTE_SIZE)/8; i++){ //128bytes / 8byte = 16 words = used in first 16 rounds out of 80 rounds
+    addr = addr + 8-1;
+    *addr = (BYTE)char_stream[i]; addr--;
+    *addr = (BYTE)char_stream[i+1]; addr--;
+    *addr = (BYTE)char_stream[i+2]; addr--;
+    *addr = (BYTE)char_stream[i+3]; addr--;
+
+    *addr = (BYTE)char_stream[i+4]; addr--;
+    *addr = (BYTE)char_stream[i+5]; addr--;
+    *addr = (BYTE)char_stream[i+6]; addr--;
+    *addr = (BYTE)char_stream[i+7]; addr--;
+    addr = addr + 8;
+  }
+  return m;
+}
+
+int test_input(){
+  printf("Input module:%s\n",DIVIDER);
+  printf("Insert message to hash:\n");
+
+  /*int itr=0;
+  for(int i=0; i<16; i++){
+    printf("%dth Word(64bytes)\n",i);
+    printf("%llx\n",m[i]);
+    for(int j=0; j<8; j++){
+      printf("%x",input[itr]);
+      itr++;
+    }
+    printf("\n");
+  }*/
+
+  char* msg = take_input();
+  char* padded_msg = add_padding(msg);
+  printf("Padded message is of size=%d\n",strlen(padded_msg));
+  for(int i=0; i<PADDED_MSG_LENGTH/sizeof(BYTE); i++){
+    printf("%x ",padded_msg[i]);
+  }
+  printf("\n");
+
+  std::uint64_t* m = convert_char_stream_to_uint64_array(padded_msg);
+  for(int i=0; i<16; i++){
+    printf("%dth Word(64bytes)\t",i);
+    printf("%llx\n",m[i]);
+  }
+  return 0;
+}
+#+end_src
+* TODO
+convert uint128 to char*
+print the char* to see the endianess
+
