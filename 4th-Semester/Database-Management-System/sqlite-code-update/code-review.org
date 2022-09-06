@@ -1,0 +1,274 @@
+[[https://github.com/endlesssoftware/sqlite3][Best source code for sqlite3]]
+* Uses of Random Number
+Random numbers are used by some of the database backends in order to generate random integer keys 
+for
+- tables or
+- random filenames.
+* RC4 Algorithm
+It's a pseudo random number generator algorithm. [[https://people.cs.clemson.edu/~jmarty/courses/commonCourseContent/AdvancedModule-SecurityConceptsAndApplicationToLinux/StudyofRC4.pdf][RC4 Algorithm]]
+* Code
+[[https://github.com/endlesssoftware/sqlite3/blob/master/random.c][Total Code with dependency]]
+** sqlite3_wsd_find(0)
+#+begin_src c
+  void *sqlite3_wsd_find(void *K, int L){
+  int i;
+  int iHash = 0;
+  ProcessLocalVar *pVar;
+
+  /* Calculate a hash of K */
+  for(i=0; i<sizeof(void*); i++){
+    iHash = (iHash<<3) + ((unsigned char *)&K)[i];
+  }
+  iHash = iHash%PLS_HASHSIZE;
+
+  /* Search the hash table for K. */
+  for(pVar=pGlobal->aData[iHash]; pVar && pVar->pKey!=K; pVar=pVar->pNext);
+
+  /* If no entry for K was found, create and populate a new one. */
+  if( !pVar ){
+    int nByte = ROUND8(sizeof(ProcessLocalVar) + L);
+    assert( pGlobal->nFree>=nByte );
+    pVar = (ProcessLocalVar *)pGlobal->pFree;
+    pVar->pKey = K;
+    pVar->pNext = pGlobal->aData[iHash];
+    pGlobal->aData[iHash] = pVar;
+    pGlobal->nFree -= nByte;
+    pGlobal->pFree += nByte;
+    memcpy(&pVar[1], K, L);
+  }
+
+  return (void *)&pVar[1];
+}
+#+end_src
+** TODO sqlite3OsRandomness()
+
+#+begin_src C
+  SQLITE_PRIVATE int sqlite3OsRandomness(sqlite3_vfs *pVfs, int nByte, char *zBufOut){
+  if( sqlite3Config.iPrngSeed ){
+    memset(zBufOut, 0, nByte);
+    if( ALWAYS(nByte>(signed)sizeof(unsigned)) ) nByte = sizeof(unsigned int);
+    memcpy(zBufOut, &sqlite3Config.iPrngSeed, nByte);
+    return SQLITE_OK;
+  }else{
+    return pVfs->xRandomness(pVfs, nByte, zBufOut);
+  }
+}
+#+end_src
+** sqlite3_vfs_find()
+A virtual filesystem (VFS) is an sqlite3_vfs object that SQLite uses to interact with the underlying operating system. Most SQLite builds come with a single default VFS that is appropriate for the host computer. New VFSes can be registered and existing VFSes can be unregistered. The following interfaces are provided.
+The sqlite3_vfs_find() interface returns a pointer to a VFS given its name. Names are case sensitive. Names are zero-terminated UTF-8 strings. If there is no match, a NULL pointer is returned. If zVfsName is NULL then the default VFS is returned.
+
+#+begin_src C
+sqlite3_vfs *sqlite3_vfs_find(const char *zVfs){
+  sqlite3_vfs *pVfs = 0;
+#if SQLITE_THREADSAFE
+  sqlite3_mutex *mutex;
+#endif
+#ifndef SQLITE_OMIT_AUTOINIT
+  int rc = sqlite3_initialize();
+  if( rc ) return 0;
+#endif
+#if SQLITE_THREADSAFE
+  mutex = sqlite3MutexAlloc(SQLITE_MUTEX_STATIC_MASTER);
+#endif
+  sqlite3_mutex_enter(mutex);
+  for(pVfs = vfsList; pVfs; pVfs=pVfs->pNext){
+    if( zVfs==0 ) break;
+    if( strcmp(zVfs, pVfs->zName)==0 ) break;
+  }
+  sqlite3_mutex_leave(mutex);
+  return pVfs;
+}
+
+#+end_src
+** randomByte()
+sqliteint.h:659:  #define SQLITE_WSD const
+#+begin_src C
+  static u8 randomByte(void){
+  unsigned char t;
+
+
+  /* The "wsdPrng" macro will resolve to the pseudo-random number generator
+  ** state vector.  If writable static data is unsupported on the target,
+  ** we have to locate the state vector at run-time.  In the more common
+  ** case where writable static data is supported, wsdPrng can refer directly
+  ** to the "sqlite3Prng" state vector declared above.
+  */
+#ifdef SQLITE_OMIT_WSD
+  struct sqlite3PrngType *p = &GLOBAL(struct sqlite3PrngType, sqlite3Prng);
+# define wsdPrng p[0]
+#else
+# define wsdPrng sqlite3Prng
+#endif
+
+
+  /* Initialize the state of the random number generator once,
+  ** the first time this routine is called.  The seed value does
+  ** not need to contain a lot of randomness since we are not
+  ** trying to do secure encryption or anything like that...
+  **
+  ** Nothing in this file or anywhere else in SQLite does any kind of
+  ** encryption.  The RC4 algorithm is being used as a PRNG (pseudo-random
+  ** number generator) not as an encryption device.
+  */
+  if( !wsdPrng.isInit ){
+    int i;
+    char k[256];
+    wsdPrng.j = 0;
+    wsdPrng.i = 0;
+    sqlite3OsRandomness(sqlite3_vfs_find(0), 256, k);
+    for(i=0; i<256; i++){
+      wsdPrng.s[i] = (u8)i;
+    }
+    for(i=0; i<256; i++){
+      wsdPrng.j += wsdPrng.s[i] + k[i];
+      t = wsdPrng.s[wsdPrng.j];
+      wsdPrng.s[wsdPrng.j] = wsdPrng.s[i];
+      wsdPrng.s[i] = t;
+    }
+    wsdPrng.isInit = 1;
+  }
+
+  /* Generate and return single random byte
+  */
+  wsdPrng.i++;
+  t = wsdPrng.s[wsdPrng.i];
+  wsdPrng.j += t;
+  wsdPrng.s[wsdPrng.i] = wsdPrng.s[wsdPrng.j];
+  wsdPrng.s[wsdPrng.j] = t;
+  t += wsdPrng.s[wsdPrng.i];
+  return wsdPrng.s[t];
+}
+
+#+end_src
+*** SQLITE3_WSD
+WHEN SQLITE_OMIT_WSD is defined, it means that the target platform does not support Writable Static Data (WSD) such as global and static variables. All variables must either be on the stack or dynamically allocated from the heap.  When WSD is unsupported, the variable declarations scattered
+throughout the SQLite code must become constants instead. The SQLITE_WSD macro is used for this purpose.  And instead of referencing the variable directly, we use its constant as a key to lookup the run-time allocated buffer that holds real variable.  The constant is also the initializer for the run-time allocated buffer.
+
+In the usual case where WSD is supported, the SQLITE_WSD and GLOBAL
+macros become no-ops and have zero performance impact.
+
+#ifdef SQLITE_OMIT_WSD
+  #define SQLITE_WSD const
+  #define GLOBAL(t,v) (*(t*)sqlite3_wsd_find((void*)&(v), sizeof(v)))
+  #define sqlite3GlobalConfig GLOBAL(struct Sqlite3Config, sqlite3Config)
+  int sqlite3_wsd_init(int N, int J);
+  void *sqlite3_wsd_find(void *K, int L);
+#else
+  #define SQLITE_WSD 
+  #define GLOBAL(t,v) v
+  #define sqlite3GlobalConfig sqlite3Config
+#endif
+*** sqlite_prngType
+#+begin_src c
+static SQLITE_WSD struct sqlite3PrngType {
+  unsigned char isInit;
+  unsigned char i, j;  
+  unsigned char s[256];
+} sqlite3Prng;
+#+end_src
+** Global
+#+begin_src C
+  #ifdef SQLITE_OMIT_WSD
+  #define SQLITE_WSD const
+  #define GLOBAL(t,v) (*(t*)sqlite3_wsd_find((void*)&(v), sizeof(v)))
+  #define sqlite3GlobalConfig GLOBAL(struct Sqlite3Config, sqlite3Config)
+SQLITE_API int sqlite3_wsd_init(int N, int J);
+SQLITE_API void *sqlite3_wsd_find(void *K, int L);
+#else
+  #define SQLITE_WSD
+  #define GLOBAL(t,v) v
+  #define sqlite3GlobalConfig sqlite3Config
+#endif
+#+end_src
+** TODO sqlite4_mutex_alloc
+#+begin_src C
+sqlite3_mutex *sqlite3MutexAlloc(int id){
+  if( !sqlite3GlobalConfig.bCoreMutex ){
+    return 0;
+  }
+  assert( GLOBAL(int, mutexIsInit) );
+  return sqlite3GlobalConfig.mutex.xMutexAlloc(id);
+}
+#+end_src
+** Mutex Structure
+[[https://github.com/endlesssoftware/sqlite3/blob/master/mutex_unix.c][source]]
+sqlite3.c:27929:# define SQLITE_MUTEX_NREF 1
+#+begin_src C
+  struct sqlite3_mutex {
+    pthread_mutex_t mutex;     /* Mutex controlling the lock */
+  #if SQLITE_MUTEX_NREF ||
+  defined(SQLITE_ENABLE_API_ARMOR)
+    int id;                    /* Mutex type */
+  #endif
+  #if SQLITE_MUTEX_NREF
+    volatile int nRef;         /* Number of entrances */
+    volatile pthread_t owner;  /* Thread that is within this mutex */
+    int trace;                 /* True to trace changes */
+  #endif
+  };
+#+end_src
+** sqlite_mutex_alloc()
+#+begin_src C
+sqlite3_mutex *sqlite3_mutex_alloc(int id){
+#ifndef SQLITE_OMIT_AUTOINIT
+  if( sqlite3_initialize() ) return 0;
+#endif
+  return sqlite3GlobalConfig.mutex.xMutexAlloc(id);
+}
+#+end_src
+** sqlite3GlobalConfig
+sqliteint.h:667:  #define sqlite3GlobalConfig sqlite3Config
+global.c:144:SQLITE_WSD struct Sqlite3Config sqlite3Config = {
+
+ The following singleton contains the global configuration for the SQLite library.
+
+* Seeding
+** Info from online
+Looking at the source of this xRandomness method, you can see that it reads from /dev/urandom on Unix. On Windows, it just returns the return values of some time functions. So it seems that your only option is to start hacking on the SQLite source code. [[https://idqna.madreview.net/][Link]]
+
+* VFS
+[[https://www.sqlite.org/c3ref/vfs.html][Documentation]]
+* Concepts
+** Why does it manually creates a random number generator instead of using default random number generator libraries?
+It uses RC4 instead of library random generators like lrand48() because it depends on having a very good source of random numbers. To minimize the risk of problems due to bad lrand48() implementations, SQLite uses this random number generator based on RC4, which we know works very well.
+** What is Writable Static Data(WSD)?
+WSD is a high level concept related to the use of library dl and is at process-memory structure level. The function sqlite3_wsd_find tries to find the WSD allocated for the process. If not found, it creates one in the variable location we have passed.
+[[https://github.com/mackyle/sqlite/blob/master/src/test_wsd.c][Implementation of sqlite3_wsd_find and sqlite3_wsd_init]]
+[[https://www.25yearsofprogramming.com/programming-for-smartphones/writable-static-data.html][25yearsofprogramming - what is Writable Static Data]]
+** Mutex in Random Number Generator
+Mutex must be held when executing random generator because all threads shares the same random number generator.
+* Note to Self
+WSD: writable static data
+Prng: Pseudo Random Number Generator
+Mutex must be held when executing random generator because all threads shares the same random number generator.
+
+sqlite3_randomness was defined around 32k line
+* Todo for me
+** Check where the shell.c makes the default VFS
+** Sir may a "what is WSD?"
+** Google on "memcpy"
+** Google on "static SQLITE_WSD struct sqlite3PrngType {"
+** Search on which definition of "GLOBAL" we are using
+** "sqlite3GlobalConfig" what does it do?
+
+
+The sqlite3_mutex.id, sqlite3_mutex.nRef, and sqlite3_mutex.owner fields are necessary under two condidtions:  (1) Debug builds and (2) using home-grown mutexes
+
+
+#ifndef SQLITE_OMIT_WSD
+define wsdPrng sqlite3Prng
+  unsigned char t;
+
+include "sqlite3.h"
+
+int main(){
+	sqlite3_vfs vfs;
+
+	vfs.xFullPathname = SQLITE_OK;
+	vfs.xOpen = SQLITE_OK;
+
+	int* buffer = (int*)malloc(sizeof(int));
+	sqlite3_randomness(4, buffer);
+	printf("Random: %d\n",*buffer);
+return 0;
