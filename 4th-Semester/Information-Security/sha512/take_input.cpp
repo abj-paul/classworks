@@ -40,8 +40,44 @@ char* add_inputSize_in_end(char* str_stream, int input_size){
   return final_str; 
 }
 
+void reverse(char* int_stream){
+  unsigned char a = int_stream[0];
+  unsigned char b = int_stream[1];
+  unsigned char c = int_stream[2];
+  unsigned char d = int_stream[3];
+
+  unsigned char e = int_stream[4];
+  unsigned char f = int_stream[5];
+  unsigned char g = int_stream[6];
+  unsigned char h = int_stream[7];
+
+
+  int_stream[0] = h;
+  int_stream[1] = g;
+  int_stream[2] = f;
+  int_stream[3] = e;
+
+  int_stream[4] = d;
+  int_stream[5] = c;
+  int_stream[6] = b;
+  int_stream[7] = a;
+}
+
 std::uint64_t* convert_char_stream_to_uint64_array(char* char_stream){
-  
+  std::uint64_t* num = (std::uint64_t*)malloc(sizeof(std::uint64_t));
+  char* addr = (char*)num;
+
+  for(int i=0; i<8; i++){
+    *addr = str[i];
+    addr++;
+  }
+
+  addr = (char*)num;
+  //Now reverse it
+  reverse(addr);
+
+  //printf("%llx\n",*num);
+ 	 
 }
 
 int test_input(){
