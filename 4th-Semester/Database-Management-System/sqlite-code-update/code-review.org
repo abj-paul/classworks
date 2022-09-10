@@ -1,4 +1,5 @@
 [[https://github.com/endlesssoftware/sqlite3][Best source code for sqlite3]]
+[[https://docs.google.com/presentation/d/1l7OStOILF-bmBk85kJ5eSEodM_gqjrSw-qdoqchcraY/edit#slide=id.g1f88252dc4_0_162][slide link]]
 * Uses of Random Number
 Random numbers are used by some of the database backends in order to generate random integer keys 
 for
