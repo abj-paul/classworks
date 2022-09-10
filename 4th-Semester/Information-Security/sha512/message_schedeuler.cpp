@@ -25,6 +25,6 @@ void print_message_schedeule(){
 
 void test_message_schedeule(){
   printf("Testing message schedeule module: %s\n",DIVIDER);
-  message_schedeule(convert_char_stream_to_uint64_array(take_input()));
+  //message_schedeule(convert_char_stream_to_uint64_array(take_input()));
   print_message_schedeule();
 }

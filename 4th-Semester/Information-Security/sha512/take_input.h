@@ -44,7 +44,9 @@ char* take_input();
 char* pad_a_block(char* str_stream);
 char* add_inputSize_in_end(char* str_stream, int input_size);
 
-std::uint64_t* convert_char_stream_to_uint64_array(char* char_stream);
+std::uint64_t* convert_char_stream_to_uint64_array(const char* char_stream);
+
+std::uint64_t** convert_char_stream_to_uint64_char(const char* char_stream);
 int test_input();
 
 #endif

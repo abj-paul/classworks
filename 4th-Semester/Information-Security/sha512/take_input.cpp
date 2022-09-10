@@ -63,12 +63,12 @@ void reverse(char* int_stream){
   int_stream[7] = a;
 }
 
-std::uint64_t* convert_char_stream_to_uint64_array(char* char_stream){
+std::uint64_t* convert_char_stream_to_uint64(const char* char_stream){
   std::uint64_t* num = (std::uint64_t*)malloc(sizeof(std::uint64_t));
   char* addr = (char*)num;
 
   for(int i=0; i<8; i++){
-    *addr = str[i];
+    *addr = char_stream[i];
     addr++;
   }
 
@@ -77,7 +77,19 @@ std::uint64_t* convert_char_stream_to_uint64_array(char* char_stream){
   reverse(addr);
 
   //printf("%llx\n",*num);
- 	 
+
+  return num;
+}
+
+std::uint64_t** convert_char_stream_to_uint64_char(const char* char_stream){
+  int num_of_uint64 = BLOCK_SIZE_IN_BIT/UINT64_DATA_SIZE_IN_BIT;
+  uint64_t** arr = (uint64_t**)malloc(num_of_uint64*sizeof(uint64_t*));
+  for(int i=0; i<num_of_uint64; i++){
+    arr[i] = convert_char_stream_to_uint64(char_stream);
+    char_stream = char_stream + 8;
+  }
+
+  return arr;
 }
 
 int test_input(){
@@ -93,6 +105,10 @@ int test_input(){
     printf("\n");
   }
   for(int i=0; i<128; i++) printf("%x ",final_str[i]);
+  printf("\n");
+  std::uint64_t** arr = convert_char_stream_to_uint64_char(final_str);
+
+  for(int i=0; i<128/8; i++) printf("%lx ",*arr[i]);
   printf("\n");
 
   return 0;
