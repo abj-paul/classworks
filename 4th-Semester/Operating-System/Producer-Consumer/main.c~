@@ -1,0 +1,40 @@
+// Thread
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_JOB 100
+int job_list[MAX_JOB];
+int latest_job_index = 0;
+
+void* producer(void* temp){
+  int rand_num = rand() % 1000;
+
+  job_list[latest_job_index] = rand_num;
+  latest_job_index++;
+  printf("Producer has produced %d\n",rand_num);
+
+  // Sleep
+  int rand_sleep_time = (rand() % 10)/10;
+  printf("Producer will sleep for %d.\n",rand_sleep_time)
+  sleep(rand_sleep_time);
+}
+void* consumer(void* temp){
+  int consumedValue = job_list[latest_job_index];
+  latest_job_index--;
+  printf("Consumer has consumed %d\n",consumedValue);
+
+  // Sleep
+  int rand_sleep_time = (rand() % 10)/10;
+  printf("Consumer will sleep for %d.\n",rand_sleep_time);
+  sleep(rand_sleep_time);
+}
+
+int main(){
+
+  int thread_id[2];
+  pthread_create(&thread_id[0], NULL, producer, void*);
+  pthread_create(&thread_id[1], NULL, consumer, void*);
+  
+  return 0;
+}

@@ -1,0 +1,1194 @@
+Producer has produced 383
+Jobs: 
+Producer has produced 886
+Jobs: 886 
+Producer has produced 777
+Jobs: 886 777 
+Producer has produced 915
+Jobs: 886 777 915 
+Producer has produced 793
+Jobs: 886 777 915 793 
+Producer has produced 335
+Jobs: 886 777 915 793 335 
+Producer has produced 386
+Consumer has consumed 383
+Jobs: 886 777 915 793 335 386 
+Consumer has consumed 386
+Jobs: 886 777 915 793 335 
+Consumer has consumed 335
+Jobs: 886 777 915 793 
+Consumer has consumed 793
+Jobs: 886 777 915 793 335 386 
+Producer has produced 492
+Jobs: 886 777 915 492 
+Producer has produced 649
+Jobs: 886 777 915 492 649 Jobs: 
+Producer has produced 421
+Jobs: 886 777 915 492 649 421 
+Producer has produced 362
+Jobs: 886 777 915 492 649 421 362 
+Producer has produced 27
+Jobs: 886 777 915 492 649 421 362 27 
+Producer has produced 690
+Jobs: 886 777 915 492 649 421 362 27 690 
+Producer has produced 59
+Jobs: 886 886 777 777 915 
+Consumer has consumed 59
+Jobs: 886 777 915 492 649 421 362 27 690 
+Consumer has consumed 690
+Jobs: 886 777 915 492 649 421 362 27 
+Consumer has consumed 27
+Jobs: 886 777 915 492 649 421 362 
+Consumer has consumed 362
+Jobs: 886 777 915 492 649 421 
+Consumer has consumed 421
+Jobs: 886 777 915 492 649 
+Consumer has consumed 649
+Jobs: 886 777 915 492 
+Consumer has consumed 492
+Jobs: 886 777 915 
+Consumer has consumed 915
+Jobs: 886 777 
+Consumer has consumed 777
+Jobs: 886 
+Consumer has consumed 886
+Jobs: 
+915 Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209641480
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747768928
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747882560
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747765408
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747438288
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747444544
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747658896
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1746782432
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747518976
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 15776
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 3
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048185
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626572
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048176
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048191
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1512
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048190
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 134217729
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048187
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 30
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 24
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 9
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 192
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626664
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 7
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209641480
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747768928
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747882560
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747765408
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747438288
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747444544
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747658896
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1746782432
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747518976
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 15776
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 3
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048185
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626572
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048176
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048191
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1512
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048190
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 134217729
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048187
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 30
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 24
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 9
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 192
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626664
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 7
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+492 649 421 362 27 690 59 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 763
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209641480
+Jobs: 
+Consumer has consumed 0
+Producer has produced 763
+Jobs: 
+Producer has produced 926
+Jobs: Jobs: 
+Consumer has consumed 926
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747768928
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747882560
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747765408
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747438288
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747444544
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747658896
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1746782432
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747518976
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 15776
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 3
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048185
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626572
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048176
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048191
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1512
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048190
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 134217729
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048187
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 30
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 24
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 9
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 192
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626664
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 7
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 763
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209641480
+Jobs: 
+Consumer has consumed 926
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747768928
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747882560
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747765408
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747438288
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747444544
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747658896
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1746782432
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747518976
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 15776
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 3
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048185
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626572
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048176
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048191
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1512
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048190
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 134217729
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048187
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 30
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 24
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 9
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 192
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626664
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 7
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 763
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209641480
+Jobs: 
+Consumer has consumed 926
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747768928
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747882560
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747765408
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747438288
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747444544
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747658896
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1746782432
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747518976
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 15776
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 3
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048185
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626572
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048176
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048191
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1512
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048190
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 134217729
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 1879048187
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 30
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 24
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 9
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 192
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 8
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209626664
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 7
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 763
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 21913
+Jobs: 
+Consumer has consumed 209641480
+Jobs: 
+Consumer has consumed 926
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747768928
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747882560
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747765408
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747438288
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747444544
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747658896
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1746782432
+Jobs: 
+Consumer has consumed 32610
+Jobs: 
+Consumer has consumed -1747518976
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 15776
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+Jobs: 
+Consumer has consumed 0
+segmentation fault (core dumped)
