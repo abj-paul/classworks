@@ -39,9 +39,6 @@ uint64** SHA::preprocess(char* input, int* number_of_buffers){
 
 	// Append the length to the last two 64-bit blocks
 	add_length_to_end(message_len_in_bits, blocks[*number_of_buffers-1][16-1], blocks[*number_of_buffers-1][16-2]);
-
-	printf("Printing numerified text: \n");
-	for(int i=0; i<*number_of_buffers; i++) printf("%d) %llx\n",i,*blocks[i]);
 	return blocks;
 }
 
