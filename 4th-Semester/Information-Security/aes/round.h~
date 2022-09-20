@@ -21,7 +21,7 @@ void round(int round_number); //changes the global variable
 void inverse_round(int round_number); //changes the global variable
 
  public:
- static const char PAD_CHAR = '\0';
+ static const char PAD_CHAR = '*';
 
  void encryption_algorithm();
  void decryption_algorithm();

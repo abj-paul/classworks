@@ -1,8 +1,0 @@
-
-void encrypryption(){
-  
-}
-
-void decryption(){
-
-}

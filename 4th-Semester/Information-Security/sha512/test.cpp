@@ -1,59 +1,30 @@
 #include<iostream>
-#include<stdint.h>
-
-void temp1(){
-__uint128_t x = 24;
-
-  char* arr = (char*)&x;
-  for(int i=16-1; i>=0; i--) printf("%x ",arr[i]);
-  printf("\n");
-}
-
-void reverse(char* int_stream){
-  unsigned char a = int_stream[0];
-  unsigned char b = int_stream[1];
-  unsigned char c = int_stream[2];
-  unsigned char d = int_stream[3];
-
-  unsigned char e = int_stream[4];
-  unsigned char f = int_stream[5];
-  unsigned char g = int_stream[6];
-  unsigned char h = int_stream[7];
-
-
-  int_stream[0] = h;
-  int_stream[1] = g;
-  int_stream[2] = f;
-  int_stream[3] = e;
-
-  int_stream[4] = d;
-  int_stream[5] = c;
-  int_stream[6] = b;
-  int_stream[7] = a;
-}
+#include<string>
+#include<cmath>
+#include<vector>
 
 int main(){
-  // Storing characters in a number
-  char str[100]={'a','b','c','d','e','f','g','h'};
+  std::string str;
+  std::cin>>str;
 
-  std::uint64_t* num = (std::uint64_t*)malloc(sizeof(std::uint64_t));
+  int number_of_blocks = ceil(str.size()/128);
+  std::vector<char*> blocks;
 
-  char* addr = (char*)num;
-
-  for(int i=0; i<8; i++){
-    *addr = str[i];
-    addr++;
+  std::cout<<str<<std::endl;
+  std::cout<<"Number of blocks: "<<number_of_blocks<<std::endl;
+  
+  int i=0;
+  for(i=0; i<number_of_blocks-1; i++) {
+    char* curr_block = (char*)malloc(sizeof(char)*128);
+    for(int j=0; j<128; j++) curr_block[j] = str[i*128+j];
+    blocks.push_back(curr_block);
   }
 
-  addr = (char*)num;
-  //Now reverse it
-  reverse(addr);
- 
-
-  for(int i=0; i<8; i++) printf("%x ",str[i]);
-  printf("\n");
-  for(int i=0; i<8; i++) printf("%x ",addr[i]);
-  printf("\n");
-  printf("%llx\n",*num);
+  int last_block_size = str.size() % 128;
+  char* curr_block = (char*)malloc(sizeof(char)*128);
+  for(int j=0; j<last_block_size; j++) curr_block[j] = str[i*128+j];
+  
+  for(int i=0; i<blocks.size(); i++) printf("%d) %s\n",i+1, blocks[i]);
+  
   return 0;
 }
