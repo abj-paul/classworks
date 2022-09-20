@@ -53,7 +53,7 @@ Register Register::maj(Register a, Register b, Register c){
 }
 
 Register Register::SHR(int n, Register x){
-  std::uint64_t val = x.get_data_dump()<<n;
+  std::uint64_t val = x.get_data_dump()>>n;
 
   Register r;
   r.store(val);
@@ -63,7 +63,7 @@ Register Register::SHR(int n, Register x){
 
 
 Register Register::ROTR(int n, Register x){
-  std::uint64_t ans = x.get_data_dump()<<n | x.get_data_dump()>>(DATA_SIZE-n);
+  std::uint64_t ans = x.get_data_dump()>>n | x.get_data_dump()<<(DATA_SIZE-n);
 
   Register r;
   r.store(ans);
