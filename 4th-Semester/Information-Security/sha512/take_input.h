@@ -47,6 +47,8 @@ char* add_inputSize_in_end(char* str_stream, int input_size);
 std::uint64_t* convert_char_stream_to_uint64_array(const char* char_stream);
 
 std::uint64_t** convert_char_stream_to_uint64_char(const char* char_stream);
+
+std::uint64_t* convert_input_to_int64_arr(char* input); //service
 int test_input();
 
 #endif

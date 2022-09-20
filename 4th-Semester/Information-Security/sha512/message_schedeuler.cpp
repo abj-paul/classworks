@@ -10,7 +10,7 @@ void message_schedeule(std::uint64_t* message){
   }
 
   for(int t=16; t<80; t++){
-    w[t] = Register::sigma_0(w[t-15]) ^ Register::sigma_1(w[t-2]) ^ w[t-7] ^ w[t-16];
+    w[t].store(Register::sigma_0(w[t-15]).get_data_dump() + Register::sigma_1(w[t-2]).get_data_dump() + w[t-7].get_data_dump() + w[t-16].get_data_dump());
   }
 }
 
@@ -25,6 +25,6 @@ void print_message_schedeule(){
 
 void test_message_schedeule(){
   printf("Testing message schedeule module: %s\n",DIVIDER);
-  //message_schedeule(convert_char_stream_to_uint64_array(take_input()));
+  message_schedeule(convert_input_to_int64_arr(take_input()));
   print_message_schedeule();
 }

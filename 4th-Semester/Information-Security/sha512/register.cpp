@@ -113,4 +113,33 @@ void Register::test_function(){
   a.store(0xa1cd4ef4ab094134LL);
   a.print_bin();
   ROTR(2,a).print_bin();
+
+  a.store(0x510E527FADE682D1);
+  printf("Testing sum(512,0):\n");
+  a.print_hex();
+  a.print_bin();
+  Register temp;
+  temp.store(a.get_data_dump());
+  sum(512,0,a).print_bin();
+  sum(512,0,a).print_hex();
+
+  printf("Manually doing it:\n");
+  ROTR(28,temp).print_bin();
+  ROTR(34,temp).print_bin();
+  ROTR(39,temp).print_bin();
+  printf("Do they match?They do!\n");
+
+  printf("Testing sum(512,1):\n");
+  a.print_bin();
+  temp.store(a.get_data_dump());
+  sum(512,1,a).print_bin();
+  sum(512,1,a).print_hex();
+
+  printf("Manually doing it:\n");
+  ROTR(14,temp).print_bin();
+  ROTR(18,temp).print_bin();
+  ROTR(41,temp).print_bin();
+  printf("Do they match?They do!\n");
+
+  
 }

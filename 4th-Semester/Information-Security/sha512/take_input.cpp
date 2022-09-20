@@ -113,3 +113,23 @@ int test_input(){
 
   return 0;
 }
+
+
+std::uint64_t* convert_input_to_int64_arr(char* input_str){
+  char* pad_str = pad_a_block(input_str);
+  char* final_str = add_inputSize_in_end(pad_str, strlen(input_str)*8);
+
+  std::uint64_t** arr = convert_char_stream_to_uint64_char(final_str);
+
+  int num_of_uint64 = BLOCK_SIZE_IN_BIT/UINT64_DATA_SIZE_IN_BIT;
+  uint64_t* new_arr = (uint64_t*)malloc(num_of_uint64*sizeof(uint64_t));
+
+  for(int i=0; i<num_of_uint64; i++) new_arr[i] = *arr[i];
+
+  printf("Input message(padded):\n");
+  for(int i=0; i<num_of_uint64; i++) printf("%lx ",new_arr[i]);
+  printf("\n");
+  
+
+  return new_arr;
+}

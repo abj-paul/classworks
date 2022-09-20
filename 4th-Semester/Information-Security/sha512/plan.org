@@ -18,6 +18,7 @@
 [[https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/SHA512.pdf][BEST SOURCE EVER - sha512 result for each step]]
 [[https://www.slideshare.net/sharifulr/secure-hash-algorithm-sha512][Standard SHA512 output (from slide 16)]]
 [[https://en.wikipedia.org/wiki/SHA-2][Wikipedia]]
+[[https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/example-values][standard source for all cryptographic algorithm]]
 ** StackOverflow
 [[https://stackoverflow.com/questions/9606455/how-to-specify-64-bit-integers-in-c][How to specify 64bit integer]]
 [[https://stackoverflow.com/questions/40104897/bitwise-xor-in-c-using-64bit-instead-of-8bits][XOR in 65 bit integers]]
