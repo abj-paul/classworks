@@ -139,11 +139,11 @@ void all_80_rounds(){
   for(int i=0; i<8; i++) previous_hash[i].store(H[i].get_data_dump());
   
   for(int i=0; i<80; i++){
-    print_8_registers(i);
     single_round(i);
+	print_8_registers(i);
   }
 
-  for(int i=0; i<8; i++) H[i] = previous_hash[i] ^ H[i];
+  for(int i=0; i<8; i++) H[i].store( previous_hash[i].get_data_dump() + H[i].get_data_dump());
 }
 
 void round_test_function(){
@@ -157,5 +157,7 @@ void round_test_function(){
 
     print_message_schedeule();
     all_80_rounds(); 
-
+    
+	printf("Final message digest:\n");
+	print_8_registers(-1);
 }
