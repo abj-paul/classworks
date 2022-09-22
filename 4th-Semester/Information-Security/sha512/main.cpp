@@ -5,8 +5,9 @@
 
 int main(){
   // test_input();
-  Register::test_function();
+  //Register::test_function();
   //test_message_schedeule();
-  round_test_function();
+  //round_test_function();
+  block_test_function();
   return 0;
 }

@@ -25,6 +25,12 @@ void print_message_schedeule(){
 
 void test_message_schedeule(){
   printf("Testing message schedeule module: %s\n",DIVIDER);
-  message_schedeule(convert_input_to_int64_arr(take_input()));
+  printf("Enter text to hash: ");
+  std::string temp;
+  std::getline(std::cin, temp);
+  char* input = temp.data();
+  
+  HashInput hi;
+  message_schedeule(hi.convert_input_to_uint64_array(input));
   print_message_schedeule();
 }

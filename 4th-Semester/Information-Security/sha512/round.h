@@ -20,6 +20,7 @@ Register T1(int round);
 Register T2();
 
 void round_test_function();
+void block_test_function();
 
 #endif
 

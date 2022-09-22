@@ -5,6 +5,8 @@
 
 #include<iostream>
 #include<string.h>
+#include<vector>
+#include<string>
 #include "global.h"
 
 #ifndef BLOCK_SIZE_IN_BIT
@@ -38,17 +40,19 @@
 
 
 
+class HashInput {
+private:
+  char* pad_a_block(char* str_stream);
+  char* add_inputSize_in_end(char* str_stream, int input_size);
+  void reverse(char* int_stream);
+  std::uint64_t* convert_char_stream_to_uint64(const char* char_stream);
+  std::uint64_t* convert_char_stream_to_uint64_array(const char* char_stream);
+  
 
-char* take_input();
-//void divide_input_into_blocks();
-char* pad_a_block(char* str_stream);
-char* add_inputSize_in_end(char* str_stream, int input_size);
-
-std::uint64_t* convert_char_stream_to_uint64_array(const char* char_stream);
-
-std::uint64_t** convert_char_stream_to_uint64_char(const char* char_stream);
-
-std::uint64_t* convert_input_to_int64_arr(char* input); //service
-int test_input();
+public:
+  std::uint64_t* convert_input_to_uint64_array(char* input); //service
+  std::uint64_t** numerify_multiple_block_message(std::vector<std::string> blocks);
+  void test_function();
+};
 
 #endif

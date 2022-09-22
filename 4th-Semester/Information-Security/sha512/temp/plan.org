@@ -217,4 +217,8 @@ int test_input(){
 * TODO
 convert uint128 to char*
 print the char* to see the endianess
+* How to use it
+1. Convert input to unint64_t array
+2. Convert that array to message scheduler
+3. Now do usual rounds
 

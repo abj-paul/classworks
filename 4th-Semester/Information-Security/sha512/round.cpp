@@ -1,12 +1,8 @@
 #include "round.h"
+#include<vector>
+#include<string>
 
-	#define Ch(x,y,z) ((x&y)^(~x&z))
-	#define Maj(x,y,z) ((x&y)^(x&z)^(y&z))
-	#define RotR(x, n) ((x>>n)|(x<<((sizeof(x)<<3)-n)))
-	#define Sig0(x) ((RotR(x, 28))^(RotR(x,34))^(RotR(x, 39)))
-	#define Sig1(x) ((RotR(x, 14))^(RotR(x,18))^(RotR(x, 41)))
-	#define sig0(x) (RotR(x, 1)^RotR(x,8)^(x>>7))
-	#define sig1(x) (RotR(x, 19)^RotR(x,61)^(x>>6))
+  Register previous_hash[8];
 
 std::uint64_t hash_inital[8] = { 0x6a09e667f3bcc908ULL, 
 								0xbb67ae8584caa73bULL, 
@@ -62,7 +58,7 @@ Register T1(int round){
   (h^Register::ch(e,f,g)^Register::sum(512,1,e)^w[round]^k[round]).print_bin();
   (h^Register::ch(e,f,g)^Register::sum(512,1,e)^w[round]^k[round]).print_hex();
   */
-  std::uint64_t temp1 = H[7].get_data_dump() + Sig1(H[4].get_data_dump()) + Ch(H[4].get_data_dump(), H[5].get_data_dump(), H[6].get_data_dump()) + k[round].get_data_dump() + w[round].get_data_dump();
+  std::uint64_t temp1 = H[7].get_data_dump() + Register::sum(512,1,H[4]).get_data_dump() + Register::ch(H[4], H[5], H[6]).get_data_dump() + k[round].get_data_dump() + w[round].get_data_dump();
   Register ans;
   ans.store(temp1);
   return ans;
@@ -88,7 +84,7 @@ Register T2(){
   /*  (Register::sum(512,0,a) ^ Register::maj(a,b,c)).print_bin();
       (Register::sum(512,0,a) ^ Register::maj(a,b,c)).print_hex();*/
 
-  std::uint64_t temp2 = Sig0(H[0].get_data_dump())+ Maj(H[0].get_data_dump(), H[1].get_data_dump(), H[2].get_data_dump());
+  std::uint64_t temp2 = Register::sum(512,0,H[0]).get_data_dump()+ Register::maj(H[0], H[1], H[2]).get_data_dump();
   Register ans;
   ans.store(temp2);
   return ans;
@@ -133,31 +129,72 @@ static void print_8_registers(int round){
   printf("\n");
 }
 
+static void print_8_registers(){
+  for(int i=0; i<8; i++)
+    printf("%lx ", H[i].get_data_dump());
+  printf("\n");
+}
+
+
 
 void all_80_rounds(){
-  Register previous_hash[8];
   for(int i=0; i<8; i++) previous_hash[i].store(H[i].get_data_dump());
-  
+  initialize();
   for(int i=0; i<80; i++){
     single_round(i);
 	print_8_registers(i);
   }
 
-  for(int i=0; i<8; i++) H[i].store( previous_hash[i].get_data_dump() + H[i].get_data_dump());
+  for(int i=0; i<8; i++) H[i].store( (previous_hash[i].get_data_dump() + H[i].get_data_dump()) & 0xFFFFFFFFFFFFFFFF);
 }
 
+
+
 void round_test_function(){
-    initialize();
-    print_8_registers(-1);
 
-    printf("Testing input module:%s\n",DIVIDER);
     printf("Enter text to hash:\n");
-    char* input_str = take_input();
-    message_schedeule(convert_input_to_int64_arr(input_str));
+    std::string temp ;
+    getline(std::cin, temp);
+    char* input_str = temp.data();
 
+    HashInput hi;
+    message_schedeule(hi.convert_input_to_uint64_array(input_str));
     print_message_schedeule();
+
+    initialize();
+    print_8_registers();
     all_80_rounds(); 
     
-	printf("Final message digest:\n");
-	print_8_registers(-1);
+    printf("Final message digest:\n");
+    print_8_registers();
+}
+
+void block_test_function(){
+
+  // Take Input
+  printf("Enter text to hash:\n");
+  std::string input_str ;
+  getline(std::cin, input_str);
+  
+  // Block
+  std::vector<std::string> blocks;
+  for (unsigned i = 0; i < input_str.length(); i += 128) {
+    blocks.push_back(input_str.substr(i, 128));
+  }
+
+  HashInput hi;
+  std::uint64_t** numerified_msg = hi.numerify_multiple_block_message(blocks);
+  
+  initialize();
+  for(int i=0; i<blocks.size(); i++){
+    printf("BLOCK %d-----------------------------------------------------------------------\n",i);
+    message_schedeule(numerified_msg[i]);
+    print_message_schedeule();
+    
+    print_8_registers();
+    all_80_rounds(); 
+    
+  }
+  printf("Final message digest:\n");
+  print_8_registers();
 }
