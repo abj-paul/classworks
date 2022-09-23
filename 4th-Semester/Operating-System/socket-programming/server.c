@@ -6,7 +6,9 @@
 
 #include<netinet/in.h> //for strucutre inet_addr
 #include<sys/types.h> // for structure sockaddr_in
+#include<sys/stat.h> // for umask 
 #include<sys/socket.h>
+#include <arpa/inet.h> //for inet_htop
 
 
 #define BACKLOG 15
@@ -99,14 +101,15 @@ void server(int port, FILE* fptr){
 
 		if(read(new_connection_socket_fd, buffer, MAX_TRANSFER_DATA_SIZE)<0) show_error_message_and_exit("Error reading from socket!");
 		fprintf(fptr,"%s: %s",get_ip_from_address(&incoming_address),buffer);
+		fflush(fptr);
 		if(buffer[0]=='E' && buffer[1]=='x' && buffer[2]=='i' && buffer[3]=='t' && buffer[4]=='!') break;
 		}
 		fprintf(fptr, "Exiting user %s\n", get_ip_from_address(&incoming_address));
 		fflush(fptr);
 		close(new_connection_socket_fd);
+		if(connection_pid!=0) return;
 	}
 	close(server_socket_fd);
-
 }
 char* get_ip_from_address(struct sockaddr_in* addr){
 	struct in_addr ipAddr = addr->sin_addr;
