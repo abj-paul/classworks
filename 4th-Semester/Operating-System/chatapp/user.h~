@@ -1,0 +1,26 @@
+#ifndef _USER_H_
+#define _USER_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <semaphore.h>
+
+const char* login_credentials_file = "user-pass.txt";
+
+extern sem_t accessMutex;
+
+struct User {
+  char* name;
+  char* passwd;
+  int curr_sockfd;
+};
+
+// Note that user name must not have space.
+void register_user(char* name, char* passwd,int curr_sockfd);
+struct User* login_user(char* name, char* passwd,int curr_sockfd);
+static void save_user(struct User* user);
+void initialize();
+
+void test_user();
+
+#endif

@@ -1,0 +1,11 @@
+admin Successfully logged in!
+admin: umm
+admin: lets hope it works!
+admin: huhu
+admin: Exit!
+Exiting user  admin
+abhijit Successfully logged in!
+abhijit: yeyy loggin as myself
+abhijit: good good good!
+abhijit: Exit!
+Exiting user  abhijit
