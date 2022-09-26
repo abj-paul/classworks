@@ -47,7 +47,6 @@ int main(int argc, char* argv[]){
     show_error_message_and_exit("Not enough paremeter! Server needs port number to run!");
   
   int port = atoi(argv[1]);	
-  /*
   int pid = fork();
   
   
@@ -64,11 +63,10 @@ int main(int argc, char* argv[]){
     exit(EXIT_FAILURE);
   }
   
-  if ((chdir("/home/abhijit/")) < 0) {
+  /*if ((chdir("/home/abhijit/")) < 0) {
     exit(EXIT_FAILURE);
-  }
+    }*/
   
-  */
   FILE* fptr = fopen("chat_record.txt","w");
   if(fptr==NULL) show_error_message_and_exit("Error opening file.");
   
@@ -144,13 +142,22 @@ void communicate(FILE* fptr, struct sockaddr_in incoming_address, int new_connec
 	    user = login_user(username, passwd, new_connection_socket_fd); 
 
 	    if(user->LOGIN_STATUS==1){
-	      prompt_message = "Successfully logged in!\n Type \"Exit!\" to exit.\n";
-	      write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	      fprintf(fptr,"%s %s",user->name,prompt_message);
-
+	      
 	      sem_trywait(&userMutex);
 	      session_users[session_user_index++] = user;
 	      sem_post(&userMutex);
+
+	      for(int i=0; i<session_user_index; i++){
+		if(session_users[i]->curr_sockfd==new_connection_socket_fd){
+		  prompt_message = "Type \"Exit!\" to exit.\n";
+		  write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
+		}else{
+		  prompt_message = " successfully logged in!\n";
+		  char* temp = concatenate_string("\n",concatenate_string(user->name, prompt_message));
+		  write(session_users[i]->curr_sockfd, temp, strlen(temp));
+		}
+	      }
 
 	      loggedIn=1;
 	    }
@@ -160,8 +167,11 @@ void communicate(FILE* fptr, struct sockaddr_in incoming_address, int new_connec
 	      write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	    }
 	  }
-	  prompt_message  = "Please Enter your message: ";
-	  write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
+	  if(loggedIn==1){
+	    prompt_message  = ">> ";
+	    write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
+	    loggedIn++;
+	  }
 	  read(new_connection_socket_fd, buffer, MAX_TRANSFER_DATA_SIZE);
 	  //fprintf(fptr,"%s: %s",get_ip_from_address(&incoming_address),buffer);
 	  // MESSAGE PASSING HERE
@@ -265,21 +275,35 @@ char** tokenize_sentence(char* buffer){
 }
 
 void sendMessage(char* buffer, int sender_sockfd){
-  printf("DEBUG: %s\n",buffer);
+  //  printf("DEBUG: %s\n",buffer);
   char** tokens = tokenize_sentence(buffer);
   if(tokens==NULL) return;
   
   char* prompt_message;
+
+  int curr_user_index=0;
+  for(int i=0; i<session_user_index; i++){
+    if(session_users[i]->curr_sockfd==sender_sockfd) {curr_user_index=i;break;}
+  }
   
   for(int i=0; i<session_user_index; i++){
-    printf("DEBUG: %s==%s?\n",session_users[i]->name, tokens[1]);
+    //printf("DEBUG: %s==%s?\n",session_users[i]->name, tokens[1]);
     if(strcmp(session_users[i]->name,tokens[1])==0) {
-      prompt_message = concatenate_string("\n",concatenate_string(concatenate_string(session_users[i]->name,": "), tokens[2]));
+      prompt_message =concatenate_string("\n",concatenate_string(concatenate_string(session_users[curr_user_index]->name,": "), tokens[2]));
       write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
       return;
     }
   }
-  prompt_message = "The person you are trying to send message to, has not logged in yet!\n";
+
+  if(strcmp("all",tokens[1])==0){
+    for(int i=0; i<session_user_index; i++){
+      if(session_users[i]->curr_sockfd!=sender_sockfd) {
+	prompt_message = buffer;
+	write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
+      }
+    }
+  }
+  else prompt_message = "The person you are trying to send message to, has not logged in yet!\n";
   write(sender_sockfd, prompt_message, strlen(prompt_message));
   return;
 }

@@ -1,8 +1,16 @@
-admin Successfully logged in!
- Type "Exit!" to exit.
+admin Enter Password: admin: @abhijit are you there?
+abhijit Enter Password: abhijit: @admin i am here
+admin: @abhijit i can see that
+iit Enter Password: iit: @admin i am also here!
+iit: @all I can see everyone
+admin: @iit dont tag me so randomly!
+admin: @all imma go now, bye!
+iit: @all will it work?
 admin: Exit!
 Exiting user admin
-admin Successfully logged in!
- Type "Exit!" to exit.
+iit: @admin can u see it?
+admin Enter Password: iit: @admin can you see it?
 admin: Exit!
 Exiting user admin
+abhijit: Exit!
+Exiting user abhijit
