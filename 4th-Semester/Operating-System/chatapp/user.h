@@ -10,6 +10,9 @@ extern const char* login_credentials_file;
 
 extern sem_t accessMutex;
 
+#define MAX_UNAME_SIZE 26
+#define MAX_MSG_SIZE 100
+
 struct User {
   char* name;
   char* passwd;

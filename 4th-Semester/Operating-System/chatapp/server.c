@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pthread.h>
 
 #include <unistd.h> // Unix Standard Files. Linux based posix & ip adresss, POSIX
 
@@ -20,14 +21,28 @@ void show_error_message_and_exit(const char* msg);
 void server(int port, FILE* fptr);
 char* get_ip_from_address(struct sockaddr_in* addr);
 
+struct User* session_users[BACKLOG];
+int session_user_index=0;
+sem_t userMutex;
+
+struct arg_struct{
+  FILE* fptr;
+  struct sockaddr_in incoming_address;
+  int new_connection_socket_fd;
+};
+
 // Extra
 int create_server(int port);
 struct sockaddr_in receiveIncomingConnection(int server_socket_fd, int* new_connection_socket_fd);
-void communicate(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_address, int new_connection_socket_fd);
-void closeConnection(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_address, int new_connection_socket_fd);
+void communicate(FILE* fptr, struct sockaddr_in incoming_address, int new_connection_socket_fd);
+void closeConnection(FILE* fptr, struct sockaddr_in incoming_address, int new_connection_socket_fd);
+void sendMessage(char* buffer, int sender_sockfd);
+char* concatenate_string(char* a, char* s2);
+void* communicationWrapper(void* args);
 
 
 int main(int argc, char* argv[]){
+  sem_init(&userMutex,0,1);
   if(argc != 2) 
     show_error_message_and_exit("Not enough paremeter! Server needs port number to run!");
   
@@ -70,14 +85,29 @@ void show_error_message_and_exit(const char* msg){
 void server(int port, FILE* fptr){
   int server_socket_fd = create_server(port);
 
+  pthread_t thread_id[BACKLOG];
+  int i=0;
   while(1){	
     int* new_connection_socket_fd = (int*)malloc(sizeof(int));
     struct sockaddr_in incoming_address = receiveIncomingConnection(server_socket_fd, new_connection_socket_fd);
-    int connection_pid = fork();
-    communicate(fptr, connection_pid, incoming_address, *new_connection_socket_fd);
-    closeConnection(fptr, connection_pid, incoming_address, *new_connection_socket_fd);
+
+    struct arg_struct* args= (struct arg_struct*)malloc(sizeof(struct arg_struct));
+    args->incoming_address = incoming_address;
+    args->new_connection_socket_fd = *new_connection_socket_fd;
+    args->fptr = fptr;
+    pthread_create(&thread_id[i++], NULL, communicationWrapper, (void*)args);
   }
   close(server_socket_fd);
+}
+
+void* communicationWrapper(void* val){
+  struct arg_struct* args = (struct arg_struct*)val;
+  FILE* fptr = args->fptr;
+  struct sockaddr_in incoming_address = args->incoming_address;
+  int new_connection_socket_fd = args->new_connection_socket_fd;
+  
+  communicate(fptr, incoming_address, new_connection_socket_fd);
+  closeConnection(fptr,  incoming_address, new_connection_socket_fd);
 }
 
 
@@ -88,18 +118,18 @@ char* get_ip_from_address(struct sockaddr_in* addr){
 	return ip;
 }
 
-void communicate(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_address, int new_connection_socket_fd){
-	int temp=1; // -1 means we have just entered so we should log in
+void communicate(FILE* fptr, struct sockaddr_in incoming_address, int new_connection_socket_fd){
+	int loggedIn=0; // -1 means we have just entered so we should log in
 	printf("Connected to client %s!\n", get_ip_from_address(&incoming_address));
 	// Communicate - Read Write
-	while(connection_pid!=0){
+	while(1){
 
 	  char* prompt_message;
 	  struct User* user;
 	  char buffer[MAX_TRANSFER_DATA_SIZE], username[MAX_TRANSFER_DATA_SIZE], passwd[MAX_TRANSFER_DATA_SIZE];
 	  bzero(buffer,MAX_TRANSFER_DATA_SIZE);
 
-	  if(temp==1){
+	  while(loggedIn==0){
 	    prompt_message = "Enter Username: ";
 	    write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	    read(new_connection_socket_fd, username, MAX_TRANSFER_DATA_SIZE);
@@ -114,11 +144,15 @@ void communicate(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_a
 	    user = login_user(username, passwd, new_connection_socket_fd); 
 
 	    if(user->LOGIN_STATUS==1){
-	      prompt_message = "Successfully logged in!\n";
+	      prompt_message = "Successfully logged in!\n Type \"Exit!\" to exit.\n";
 	      write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	      fprintf(fptr,"%s %s",user->name,prompt_message);
 
-	      temp=0;
+	      sem_trywait(&userMutex);
+	      session_users[session_user_index++] = user;
+	      sem_post(&userMutex);
+
+	      loggedIn=1;
 	    }
 	    else{
 	      printf("Wrong username or password!\n(%s with length %ld,%s with length %ld)\n", username,strlen(username),passwd,strlen(passwd));
@@ -130,6 +164,12 @@ void communicate(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_a
 	  write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	  read(new_connection_socket_fd, buffer, MAX_TRANSFER_DATA_SIZE);
 	  //fprintf(fptr,"%s: %s",get_ip_from_address(&incoming_address),buffer);
+	  // MESSAGE PASSING HERE
+
+	  char* currentText = concatenate_string(concatenate_string(user->name,": "),buffer);
+	  sendMessage(currentText, new_connection_socket_fd);
+
+	  
 	  fprintf(fptr,"%s: %s",user->name,buffer);
 	  fflush(fptr);
 
@@ -142,11 +182,11 @@ void communicate(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_a
 	}
 }
 
-void closeConnection(FILE* fptr, pid_t connection_pid, struct sockaddr_in incoming_address, int new_connection_socket_fd){
+void closeConnection(FILE* fptr, struct sockaddr_in incoming_address, int new_connection_socket_fd){
   printf("Exiting user %s\n", get_ip_from_address(&incoming_address));
   fflush(fptr);
   close(new_connection_socket_fd);
-  if(connection_pid!=0) return;
+   return;
 }
 
 int create_server(int port){
@@ -178,4 +218,96 @@ struct sockaddr_in receiveIncomingConnection(int server_socket_fd, int* new_conn
   if(*new_connection_socket_fd<0) show_error_message_and_exit("Error connecting to unknown.");
 
   return incoming_address;
+}
+
+
+char** tokenize_sentence(char* buffer){
+  char** tokens = (char**)malloc(sizeof(char*)*3);
+
+  int semicolonEncounterd = 0, aroEncountered=0, aroEncounterSave = 0;
+  char* sender = (char*)malloc(sizeof(char)*MAX_UNAME_SIZE);
+  char* receiver = (char*)malloc(sizeof(char)*MAX_UNAME_SIZE);
+  char* msg = (char*)malloc(sizeof(char)*MAX_MSG_SIZE);
+
+  int sender_i=0,receiver_i=0, msg_i=0;
+  for(int i=0; i<(int)strlen(buffer); i++){
+    if(buffer[i]==':') {semicolonEncounterd=1; i++;}
+    else if(buffer[i]=='@') {aroEncountered=1; aroEncounterSave=1;}
+    else if(!semicolonEncounterd) sender[sender_i++] = buffer[i];
+    else if(aroEncountered){
+      if(buffer[i]==' '){ //End of name
+	aroEncountered = 0;
+	continue;
+      }
+      receiver[receiver_i++] = buffer[i];
+    }
+    else msg[msg_i++] = buffer[i];
+  }
+
+  //printf("Size=%ld\n%s\n%s\n",sizeof(buffer),username,msg);
+  
+
+  sender[sender_i] = '\0';
+  receiver[receiver_i] = '\0';
+  if(strlen(msg)!=0)msg[msg_i] = '\0';
+
+  if(aroEncounterSave==0){
+    free(sender);
+    free(receiver);
+    free(msg);
+    free(tokens);
+    return NULL; //Dummy messages. It is not intended for anyone. So we discard it.
+  }
+  tokens[0] = sender;
+  tokens[1] = receiver;
+  tokens[2] = msg;
+  return tokens;
+}
+
+void sendMessage(char* buffer, int sender_sockfd){
+  printf("DEBUG: %s\n",buffer);
+  char** tokens = tokenize_sentence(buffer);
+  if(tokens==NULL) return;
+  
+  char* prompt_message;
+  
+  for(int i=0; i<session_user_index; i++){
+    printf("DEBUG: %s==%s?\n",session_users[i]->name, tokens[1]);
+    if(strcmp(session_users[i]->name,tokens[1])==0) {
+      prompt_message = concatenate_string("\n",concatenate_string(concatenate_string(session_users[i]->name,": "), tokens[2]));
+      write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
+      return;
+    }
+  }
+  prompt_message = "The person you are trying to send message to, has not logged in yet!\n";
+  write(sender_sockfd, prompt_message, strlen(prompt_message));
+  return;
+}
+
+char* concatenate_string(char* a, char* s2){
+  char* s1 = (char*)malloc(sizeof(char)*(MAX_MSG_SIZE+MAX_UNAME_SIZE));
+  int i=0;
+  for(i=0; i<(int)strlen(a); i++)s1[i] = a[i];
+  s1[i] = '\0';
+  
+  int length, j;
+  
+  // store length of s1 in the length variable
+  length = 0;
+  while (s1[length] != '\0') {
+    ++length;
+  }
+  
+  // concatenate s2 to s1
+  for (j = 0; s2[j] != '\0'; ++j, ++length) {
+    s1[length] = s2[j];
+  }
+  
+  // terminating the s1 string
+  s1[length] = '\0';
+  
+  //printf("After concatenation: ");
+  // puts(s1);
+
+  return s1;
 }

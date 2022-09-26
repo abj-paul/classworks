@@ -1,7 +1,8 @@
 admin Successfully logged in!
-admin: @all Did you get this message?
-admin: @abhijit This message is for you
-admin: @all Umm I have something to confess
-admin: @abhijit Should I tell them? >_< But I am scared!
+ Type "Exit!" to exit.
+admin: Exit!
+Exiting user admin
+admin Successfully logged in!
+ Type "Exit!" to exit.
 admin: Exit!
 Exiting user admin
