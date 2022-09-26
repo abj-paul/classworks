@@ -44,7 +44,7 @@ class HashInput {
 private:
   char* pad_a_block(char* str_stream);
   char* add_inputSize_in_end(char* str_stream, int input_size);
-  void reverse(char* int_stream);
+  void reverse(unsigned char* int_stream);
   std::uint64_t* convert_char_stream_to_uint64(const char* char_stream);
   std::uint64_t* convert_char_stream_to_uint64_array(const char* char_stream);
   

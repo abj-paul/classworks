@@ -58,7 +58,7 @@ Register T1(int round){
   (h^Register::ch(e,f,g)^Register::sum(512,1,e)^w[round]^k[round]).print_bin();
   (h^Register::ch(e,f,g)^Register::sum(512,1,e)^w[round]^k[round]).print_hex();
   */
-  std::uint64_t temp1 = H[7].get_data_dump() + Register::sum(512,1,H[4]).get_data_dump() + Register::ch(H[4], H[5], H[6]).get_data_dump() + k[round].get_data_dump() + w[round].get_data_dump();
+  std::uint64_t temp1 = (H[7].get_data_dump() + Register::sum(512,1,H[4]).get_data_dump() + Register::ch(H[4], H[5], H[6]).get_data_dump() + k[round].get_data_dump() + w[round].get_data_dump()) & 0xFFFFFFFFFFFFFFFF;
   Register ans;
   ans.store(temp1);
   return ans;
@@ -84,7 +84,7 @@ Register T2(){
   /*  (Register::sum(512,0,a) ^ Register::maj(a,b,c)).print_bin();
       (Register::sum(512,0,a) ^ Register::maj(a,b,c)).print_hex();*/
 
-  std::uint64_t temp2 = Register::sum(512,0,H[0]).get_data_dump()+ Register::maj(H[0], H[1], H[2]).get_data_dump();
+  std::uint64_t temp2 = (Register::sum(512,0,H[0]).get_data_dump()+ Register::maj(H[0], H[1], H[2]).get_data_dump()) & 0xFFFFFFFFFFFFFFFF;
   Register ans;
   ans.store(temp2);
   return ans;
@@ -106,11 +106,11 @@ void single_round(int round){
   h=g;
   g=f;
   f=e;
-  e.store(d.get_data_dump() + t1.get_data_dump());
+  e.store( (d.get_data_dump() + t1.get_data_dump()) & 0xFFFFFFFFFFFFFFFF);
   d=c;
   c=b;
   b=a;
-  a.store(t1.get_data_dump() + t2.get_data_dump());
+  a.store((t1.get_data_dump() + t2.get_data_dump()) & 0xFFFFFFFFFFFFFFFF);
 
   H[0] = a;
   H[1] = b;
@@ -184,6 +184,9 @@ void block_test_function(){
 
   HashInput hi;
   std::uint64_t** numerified_msg = hi.numerify_multiple_block_message(blocks);
+
+  printf("Printing numerified message: %d\n",DIVIDER);
+  for(int i=0; i< input_str.size()/8; i++) printf("%d\ %lx\n",i+1, numerified_msg[i]);
   
   initialize();
   for(int i=0; i<blocks.size(); i++){

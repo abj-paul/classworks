@@ -34,7 +34,7 @@ char* HashInput::add_inputSize_in_end(char* str_stream, int input_size){
   return final_str; 
 }
 
-void HashInput::reverse(char* int_stream){
+void HashInput::reverse(unsigned char* int_stream){
   unsigned char a = int_stream[0];
   unsigned char b = int_stream[1];
   unsigned char c = int_stream[2];
@@ -59,14 +59,14 @@ void HashInput::reverse(char* int_stream){
 
 std::uint64_t* HashInput::convert_char_stream_to_uint64(const char* char_stream){
   std::uint64_t* num = (std::uint64_t*)malloc(sizeof(std::uint64_t));
-  char* addr = (char*)num;
+  unsigned char* addr = (unsigned char*)num;
 
   for(int i=0; i<8; i++){
     *addr = char_stream[i];
     addr++;
   }
 
-  addr = (char*)num;
+  addr = (unsigned char*)num;
   //Now reverse it
   reverse(addr);
 

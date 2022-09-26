@@ -1,11 +1,7 @@
 admin Successfully logged in!
-admin: umm
-admin: lets hope it works!
-admin: huhu
+admin: @all Did you get this message?
+admin: @abhijit This message is for you
+admin: @all Umm I have something to confess
+admin: @abhijit Should I tell them? >_< But I am scared!
 admin: Exit!
-Exiting user  admin
-abhijit Successfully logged in!
-abhijit: yeyy loggin as myself
-abhijit: good good good!
-abhijit: Exit!
-Exiting user  abhijit
+Exiting user admin
