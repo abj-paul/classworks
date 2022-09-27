@@ -27,8 +27,6 @@ private:
   matrix inverse_substitute();
 
   void transpose();
-  std::string getString();
-  std::string getHexString();
 
   static void test_function();
 };

@@ -9,8 +9,6 @@
 
 class AES {
  private:
-  void round(int round_number); //changes the global variable
- public:
   matrix plaintext;
   matrix ciphertext;
   matrix key;
@@ -19,8 +17,10 @@ class AES {
 
   //convert input into matrix and store it in global variables.
 void initialize(byte byte_input[16], byte byte_key[16]);
+void round(int round_number); //changes the global variable
 void inverse_round(int round_number); //changes the global variable
 
+ public:
  static const char PAD_CHAR = '\0';
 
  static AES single_block(byte byte_input[16], byte byte_key[16]);
