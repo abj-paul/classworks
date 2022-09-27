@@ -167,11 +167,11 @@ void communicate(FILE* fptr, struct sockaddr_in incoming_address, int new_connec
 	      write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	    }
 	  }
-	  if(loggedIn==1){
+	  /*if(loggedIn==1){
 	    prompt_message  = ">> ";
 	    write(new_connection_socket_fd, prompt_message, strlen(prompt_message));
 	    loggedIn++;
-	  }
+	  }*/
 	  read(new_connection_socket_fd, buffer, MAX_TRANSFER_DATA_SIZE);
 	  //fprintf(fptr,"%s: %s",get_ip_from_address(&incoming_address),buffer);
 	  // MESSAGE PASSING HERE
@@ -183,7 +183,7 @@ void communicate(FILE* fptr, struct sockaddr_in incoming_address, int new_connec
 	  fprintf(fptr,"%s: %s",user->name,buffer);
 	  fflush(fptr);
 
-	  if(buffer[0]=='E' && buffer[1]=='x' && buffer[2]=='i' && buffer[3]=='t' && buffer[4]=='!'){
+	  if(buffer[0]=='q' && buffer[1]=='u' && buffer[2]=='i' && buffer[3]=='t'){
 	    prompt_message = "Exiting user";
 	    fprintf(fptr,"%s %s\n",prompt_message,user->name);
 	    fflush(fptr);
@@ -289,7 +289,7 @@ void sendMessage(char* buffer, int sender_sockfd){
   for(int i=0; i<session_user_index; i++){
     //printf("DEBUG: %s==%s?\n",session_users[i]->name, tokens[1]);
     if(strcmp(session_users[i]->name,tokens[1])==0) {
-      prompt_message =concatenate_string("\n",concatenate_string(concatenate_string(session_users[curr_user_index]->name,": "), tokens[2]));
+      prompt_message =concatenate_string(concatenate_string(session_users[curr_user_index]->name,": "), tokens[2]);
       write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
       return;
     }
@@ -297,7 +297,7 @@ void sendMessage(char* buffer, int sender_sockfd){
 
   if(strcmp("all",tokens[1])==0){
     for(int i=0; i<session_user_index; i++){
-      if(session_users[i]->curr_sockfd!=sender_sockfd) {
+      if(i!=curr_user_index) {
 	prompt_message = buffer;
 	write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
       }

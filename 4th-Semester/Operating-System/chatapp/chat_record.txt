@@ -1,7 +1,5 @@
-admin Enter Password: admin: @abhijit are you online?
-iit Enter Password: iit: @admin are you there?
-iit: @all i can also see that!
-iit: Exit!
-Exiting user iit
+admin Enter Password: admin: @all can i see it?
+admin: @all i can no longer see it!
 admin: Exit!
+admin: quit
 Exiting user admin
