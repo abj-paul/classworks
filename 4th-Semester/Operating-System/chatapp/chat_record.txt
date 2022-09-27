@@ -1,5 +1,7 @@
-admin Enter Password: admin: @all can i see it?
-admin: @all i can no longer see it!
-admin: Exit!
+admin Enter Password: iit Enter Password: iit: @all not to me
+iit: @iit its working!
+iit: @admin its working!~
 admin: quit
 Exiting user admin
+iit: quit
+Exiting user iit

@@ -45,8 +45,8 @@ int main(int argc, char* argv[]){
   sem_init(&userMutex,0,1);
   if(argc != 2) 
     show_error_message_and_exit("Not enough paremeter! Server needs port number to run!");
-  
-  int port = atoi(argv[1]);	
+ 
+  int port = atoi(argv[1]);
   int pid = fork();
   
   
@@ -298,13 +298,16 @@ void sendMessage(char* buffer, int sender_sockfd){
   if(strcmp("all",tokens[1])==0){
     for(int i=0; i<session_user_index; i++){
       if(i!=curr_user_index) {
+	printf("DEBUG: Sending @all message to user %d when curr_user_index=%d\n",i,curr_user_index);
 	prompt_message = buffer;
 	write(session_users[i]->curr_sockfd, prompt_message, strlen(prompt_message));
       }
     }
   }
-  else prompt_message = "The person you are trying to send message to, has not logged in yet!\n";
-  write(sender_sockfd, prompt_message, strlen(prompt_message));
+  else{
+    prompt_message = "The person you are trying to send message to, has not logged in yet!\n";
+    write(sender_sockfd, prompt_message, strlen(prompt_message));
+  }
   return;
 }
 
