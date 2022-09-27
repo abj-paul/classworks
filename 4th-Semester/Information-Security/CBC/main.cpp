@@ -49,13 +49,29 @@ int main(){
     std::cout<<"After Encryption: "<<std::endl;
     for(int i=0; i<aes_list.size(); i++)  std::cout<<i<<") "<<aes_list[i].ciphertext.getHexString()<<std::endl;
     
+    /*
     for(int i=aes_list.size()-1; i>=0; i--){
       aes_list[i].decryption_algorithm();
       if(i==0) aes_list[i].ciphertext = aes_list[i].ciphertext ^ IV;
       else aes_list[i-1].ciphertext = aes_list[i].ciphertext ^ aes_list[i-1].ciphertext;
     }
+    */
+
+    std::vector<matrix> old_cipher;
+    for(int i=0; i<aes_list.size(); i++) old_cipher.push_back(aes_list[i].ciphertext);
+    
+    for(int i=1; i<aes_list.size(); i++){
+      aes_list[i].decryption_algorithm();
+
+      //     aes_list[i].plaintext = aes_list[i].ciphertext;
+      //aes_list[i].ciphertext = old_cipher;
+
+      if(i==0) aes_list[i].plaintext = aes_list[i].ciphertext ^ IV;
+      else aes_list[i-1].plaintext = aes_list[i].ciphertext ^ old_cipher[i-1];
+    }
+    
     std::cout<<"After Decryption: "<<std::endl;
-    for(int i=0; i<aes_list.size(); i++)  std::cout<<i<<") "<<aes_list[i].ciphertext.getString()<<std::endl;
+    for(int i=0; i<aes_list.size(); i++)  std::cout<<i<<") "<<aes_list[i].plaintext.getString()<<std::endl;
   
   return 0;
 }

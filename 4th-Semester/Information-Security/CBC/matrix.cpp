@@ -20,6 +20,13 @@ matrix matrix::operator ^ (const matrix& obj){
   return *this;
 }
 
+matrix matrix::operator = (const matrix& obj){
+  for(int i=0; i<4; i++){
+    for(int j=0; j<4; j++) this->storage[i][j] = obj.storage[i][j];
+  }
+  return *this;
+}
+
 
 void matrix::transpose(){
   byte transpose_s[4][4];

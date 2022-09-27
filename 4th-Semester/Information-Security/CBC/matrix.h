@@ -27,6 +27,7 @@ private:
   matrix inverse_substitute();
 
   matrix operator ^ (const matrix& obj);
+  matrix operator = (const matrix& obj);
   void transpose();
   std::string getString();
   std::string getHexString();
