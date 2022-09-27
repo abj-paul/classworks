@@ -11,6 +11,15 @@ void matrix::make_matrix(byte byteInput[16]){ // Column major matrix
     }
   }
 }
+matrix matrix::operator ^ (const matrix& obj){
+  //matrix ans;
+  for(int i=0; i<4; i++){
+    for(int j=0; j<4; j++) this->storage[i][j]  = this->storage[i][j] ^ obj.storage[i][j];
+  }
+
+  return *this;
+}
+
 
 void matrix::transpose(){
   byte transpose_s[4][4];
@@ -32,7 +41,6 @@ void matrix::print(){
     printf("\n");
   }
 }
-
 
 std::string matrix::getString(){
   std::ostringstream stream;

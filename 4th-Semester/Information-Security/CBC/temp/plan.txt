@@ -1,0 +1,9 @@
+First, take input as bytes - 5 minute
+then substitte bytes - 10 minute
+then make the key expansion - 30 minute 
+then matrix form and mix column - 10min + 30min
+then shift rows - 10 min
+
+
+Points:
+1. Matrix form should be an array. This way, shift row operation becomes easier.

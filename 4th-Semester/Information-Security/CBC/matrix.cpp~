@@ -33,7 +33,6 @@ void matrix::print(){
   }
 }
 
-
 std::string matrix::getString(){
   std::ostringstream stream;
 
