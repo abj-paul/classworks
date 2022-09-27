@@ -1,4 +1,5 @@
 #include "matrix.h"
+#include <sstream>
 
 void matrix::make_matrix(byte byteInput[16]){ // Column major matrix
   int input_index=0;
@@ -30,6 +31,28 @@ void matrix::print(){
     }
     printf("\n");
   }
+}
+
+std::string matrix::getString(){
+  std::ostringstream stream;
+
+  this->transpose();
+  for(int i=0; i<4; i++){
+    for(int j=0; j<4; j++) stream << this->storage[i][j];
+  }
+  this->transpose();
+  return stream.str();
+}
+
+std::string matrix::getHexString(){
+  std::ostringstream stream;
+
+  this->transpose();
+  for(int i=0; i<4; i++){
+    for(int j=0; j<4; j++) stream <<std::hex<< (int)this->storage[i][j];
+  }
+  this->transpose();
+  return stream.str();
 }
 
 matrix matrix::multiply_with_mix_column_matrix(){
