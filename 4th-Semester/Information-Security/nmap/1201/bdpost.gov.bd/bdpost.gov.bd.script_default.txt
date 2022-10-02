@@ -1,0 +1,27 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:38:38 2022 as: nmap -sC -oN bdpost.gov.bd.script_default.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.10s latency).
+Not shown: 992 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+389/tcp  closed ldap
+443/tcp  open   https
+| http-robots.txt: 1 disallowed entry 
+|_/cgi-bin/
+|_http-title: \xE0\xA6\xA1\xE0\xA6\xBE\xE0\xA6\x95 \xE0\xA6\x85\xE0\xA6\xA7\xE0\xA6\xBF\xE0\xA6\xA6\xE0\xA6\xAA\xE0\xA7\x8D\xE0\xA6\xA4\xE0\xA6\xB0-\xE0\xA6\x97\xE0\xA6\xA3\xE0\xA6\xAA\xE0\xA7\x8D\xE0\xA6\xB0\xE0\xA6\x9C\xE0\xA6\xBE\xE0\xA6\xA4\xE0\xA6\xA8...
+| ssl-cert: Subject: commonName=bangabhaban.gov.bd
+| Subject Alternative Name: DNS:bangabhaban.gov.bd, DNS:bridgesdivision.gov.bd, DNS:cabinet.gov.bd, DNS:dncc.gov.bd, DNS:emrd.gov.bd, DNS:erd.gov.bd, DNS:fid.gov.bd, DNS:hsd.gov.bd, DNS:ictd.gov.bd, DNS:imed.gov.bd, DNS:ird.gov.bd, DNS:lawjusticediv.gov.bd, DNS:legislativediv.gov.bd, DNS:lgd.gov.bd, DNS:mefwd.gov.bd, DNS:mha.gov.bd, DNS:mhapsd.gov.bd, DNS:mincom.gov.bd, DNS:minland.gov.bd, DNS:moa.gov.bd, DNS:moca.gov.bd, DNS:mocat.gov.bd, DNS:mochta.gov.bd, DNS:mod.gov.bd, DNS:modmr.gov.bd, DNS:moedu.gov.bd, DNS:moef.gov.bd, DNS:mof.gov.bd, DNS:mofa.gov.bd, DNS:mofl.gov.bd, DNS:mofood.gov.bd, DNS:mohpw.gov.bd, DNS:moi.gov.bd, DNS:moind.gov.bd, DNS:mole.gov.bd, DNS:molwa.gov.bd, DNS:mop.gov.bd, DNS:mopa.gov.bd, DNS:mopme.gov.bd, DNS:mor.gov.bd, DNS:mora.gov.bd, DNS:mos.gov.bd, DNS:most.gov.bd, DNS:motj.gov.bd, DNS:mowca.gov.bd, DNS:mowr.gov.bd, DNS:moysports.gov.bd, DNS:msw.gov.bd, DNS:plandiv.gov.bd, DNS:pmo.gov.bd, DNS:powerdivision.gov.bd, DNS:probashi.gov.bd, DNS:ptd.gov.bd, DNS:rdcd.gov.bd, DNS:rthd.gov.bd, DNS:shed.gov.bd, DNS:sid.gov.bd, DNS:ssd.gov.bd, DNS:tmed.gov.bd
+| Not valid before: 2022-08-11T05:36:32
+|_Not valid after:  2022-11-09T05:36:31
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| tls-nextprotoneg: 
+|_  http/1.1
+1503/tcp closed imtc-mcs
+1719/tcp closed h323gatestat
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+5060/tcp closed sip
+
+# Nmap done at Sun Oct  2 11:38:57 2022 -- 1 IP address (1 host up) scanned in 19.17 seconds

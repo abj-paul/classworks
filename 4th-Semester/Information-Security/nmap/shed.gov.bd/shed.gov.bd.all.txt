@@ -1,0 +1,49 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:34:40 2022 as: nmap -A -oN shed.gov.bd.all.txt shed.gov.bd
+Nmap scan report for shed.gov.bd (103.163.210.130)
+Host is up (0.099s latency).
+Not shown: 994 filtered ports
+PORT     STATE  SERVICE      VERSION
+80/tcp   open   http         nginx
+|_http-server-header: *****
+389/tcp  closed ldap
+443/tcp  open   ssl/http     nginx
+| http-robots.txt: 1 disallowed entry 
+|_/cgi-bin/
+| ssl-cert: Subject: commonName=bangabhaban.gov.bd
+| Subject Alternative Name: DNS:bangabhaban.gov.bd, DNS:bridgesdivision.gov.bd, DNS:cabinet.gov.bd, DNS:dncc.gov.bd, DNS:emrd.gov.bd, DNS:erd.gov.bd, DNS:fid.gov.bd, DNS:hsd.gov.bd, DNS:ictd.gov.bd, DNS:imed.gov.bd, DNS:ird.gov.bd, DNS:lawjusticediv.gov.bd, DNS:legislativediv.gov.bd, DNS:lgd.gov.bd, DNS:mefwd.gov.bd, DNS:mha.gov.bd, DNS:mhapsd.gov.bd, DNS:mincom.gov.bd, DNS:minland.gov.bd, DNS:moa.gov.bd, DNS:moca.gov.bd, DNS:mocat.gov.bd, DNS:mochta.gov.bd, DNS:mod.gov.bd, DNS:modmr.gov.bd, DNS:moedu.gov.bd, DNS:moef.gov.bd, DNS:mof.gov.bd, DNS:mofa.gov.bd, DNS:mofl.gov.bd, DNS:mofood.gov.bd, DNS:mohpw.gov.bd, DNS:moi.gov.bd, DNS:moind.gov.bd, DNS:mole.gov.bd, DNS:molwa.gov.bd, DNS:mop.gov.bd, DNS:mopa.gov.bd, DNS:mopme.gov.bd, DNS:mor.gov.bd, DNS:mora.gov.bd, DNS:mos.gov.bd, DNS:most.gov.bd, DNS:motj.gov.bd, DNS:mowca.gov.bd, DNS:mowr.gov.bd, DNS:moysports.gov.bd, DNS:msw.gov.bd, DNS:plandiv.gov.bd, DNS:pmo.gov.bd, DNS:powerdivision.gov.bd, DNS:probashi.gov.bd, DNS:ptd.gov.bd, DNS:rdcd.gov.bd, DNS:rthd.gov.bd, DNS:shed.gov.bd, DNS:sid.gov.bd, DNS:ssd.gov.bd, DNS:tmed.gov.bd
+| Not valid before: 2022-08-11T05:36:32
+|_Not valid after:  2022-11-09T05:36:31
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| tls-nextprotoneg: 
+|_  http/1.1
+1719/tcp closed h323gatestat
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+Device type: general purpose
+Running (JUST GUESSING): Linux 2.6.X (89%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+Aggressive OS guesses: Linux 2.6.18 - 2.6.22 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 14 hops
+
+TRACEROUTE (using port 1720/tcp)
+HOP RTT      ADDRESS
+1   2.62 ms  XiaoQiang (192.168.31.1)
+2   3.09 ms  10.177.1.1
+3   4.68 ms  172.16.101.37
+4   4.66 ms  10.10.50.1
+5   2.92 ms  172.16.250.250
+6   2.89 ms  172.16.250.209
+7   6.26 ms  172.16.250.242
+8   49.71 ms port-channel22.core2.sin1.he.net (184.105.223.133)
+9   49.70 ms ve102.core3.sin1.he.net (184.104.209.213)
+10  48.99 ms level3-carrier-limited.e0-50.switch1.sin1.he.net (184.104.208.66)
+11  96.87 ms 103.124.224.207
+12  97.73 ms 103.124.224.237
+13  ...
+14  97.68 ms 103.163.210.130
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 23:36:10 2022 -- 1 IP address (1 host up) scanned in 89.99 seconds

@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:34:01 2022 as: nmap -sA -oN bdpost.gov.bd.scan_ack_port.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.10s latency).
+Not shown: 994 filtered ports
+PORT     STATE      SERVICE
+389/tcp  unfiltered ldap
+1503/tcp unfiltered imtc-mcs
+1719/tcp unfiltered h323gatestat
+1720/tcp unfiltered h323q931
+2000/tcp unfiltered cisco-sccp
+5060/tcp unfiltered sip
+
+# Nmap done at Sun Oct  2 11:34:10 2022 -- 1 IP address (1 host up) scanned in 8.39 seconds

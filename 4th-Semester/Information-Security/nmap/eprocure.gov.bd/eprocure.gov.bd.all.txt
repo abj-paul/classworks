@@ -1,0 +1,40 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:12:47 2022 as: nmap -A -oN eprocure.gov.bd.all.txt eprocure.gov.bd
+Nmap scan report for eprocure.gov.bd (103.40.82.19)
+Host is up (0.0047s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: BigIP
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+443/tcp open  ssl/http   Apache httpd (JSP/2.3)
+|_http-server-header: Apache
+|_http-title: Error
+| ssl-cert: Subject: commonName=www.eprocure.gov.bd/organizationName=Central Procurement Technical Unit (CPTU)/countryName=BD
+| Subject Alternative Name: DNS:www.eprocure.gov.bd, DNS:eprocure.gov.bd
+| Not valid before: 2022-01-26T00:00:00
+|_Not valid after:  2023-02-26T23:59:59
+|_ssl-date: TLS randomness does not represent time
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|WAP
+Running (JUST GUESSING): Linux 2.6.X (97%), D-Link embedded (94%), TRENDnet embedded (94%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:dlink:dwl-624%2b cpe:/h:dlink:dwl-2000ap cpe:/h:trendnet:tew-432brp
+Aggressive OS guesses: Linux 2.6.18 - 2.6.22 (97%), D-Link DWL-624+ or DWL-2000AP, or TRENDnet TEW-432BRP WAP (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 11 hops
+Service Info: Device: load balancer
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT     ADDRESS
+1   2.64 ms XiaoQiang (192.168.31.1)
+2   4.40 ms 10.177.1.1
+3   4.43 ms 172.16.130.41
+4   4.35 ms 172.16.201.30
+5   5.15 ms 103.151.196.20
+6   ... 7
+8   4.56 ms 202.84.32.134
+9   ... 10
+11  2.90 ms eprocure.gov.bd (103.40.82.19)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 22:14:24 2022 -- 1 IP address (1 host up) scanned in 97.86 seconds

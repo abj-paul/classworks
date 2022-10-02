@@ -1,0 +1,400 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:40:20 2022 as: nmap -n -Pn -p 80 --open -sV -vvv --script banner,http-title -iR 1000 -oN bdpost.gov.bd.random_servers.txt
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Nmap scan report for 2.63.147.22
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-10-02 11:40:24 +06 for 202s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 50 Webs
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Date: Sun, 02 Oct 2022 08:29:58 GMT
+|     Server: Webs
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: no-cache
+|     Content-Length: 166
+|     Content-Type: text/html
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html><head><title>Document Error: Not Found</title></head>
+|     <body><h2>Access Error: 404 -- Not Found</h2>
+|     <p>Can't open URL</p>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Sun, 02 Oct 2022 08:29:51 GMT
+|     Server: Webs
+|     X-Frame-Options: SAMEORIGIN
+|     ETag: "0-5e7-1e0"
+|     Content-Length: 480
+|     Content-Type: text/html
+|     Connection: close
+|     Last-Modified: Mon, 14 Oct 2019 06:56:57 GMT
+|     <!doctype html>
+|     <html>
+|     <head>
+|     <title></title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+|     <meta http-equiv="Pragma" content="no-cache" />
+|     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+|     <meta http-equiv="Expires" content="0" />
+|     </head>
+|     <body>
+|     </body>
+|     <script>
+|     window.location.href = "/doc/page/login.asp?_" + (new Date()).getTime();
+|     </script>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Sun, 02 Oct 2022 08:29:52 GMT
+|     Server: Webs
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Length: 0
+|     Content-Type: text/html
+|     Connection: close
+|_    Allow: OPTIONS,GET,HEAD,POST,PUT,DELETE
+|_http-server-header: Webs
+|_http-title: Site doesn't have a title (text/html).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/2%Time=63392472%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,2C5,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sun,\x2002\x20Oct\x20202
+SF:2\x2008:29:51\x20GMT\r\nServer:\x20Webs\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nETag:\x20\"0-5e7-1e0\"\r\nContent-Length:\x20480\r\nContent-Type:
+SF:\x20text/html\r\nConnection:\x20close\r\nLast-Modified:\x20Mon,\x2014\x
+SF:20Oct\x202019\x2006:56:57\x20GMT\r\n\r\n\xef\xbb\xbf<!doctype\x20html>\
+SF:r\n<html>\r\n<head>\r\n\t<title></title>\r\n\t<meta\x20http-equiv=\"Con
+SF:tent-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<meta
+SF:\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"\x20>\r\n\t<me
+SF:ta\x20http-equiv=\"Pragma\"\x20content=\"no-cache\"\x20/>\r\n\t<meta\x2
+SF:0http-equiv=\"Cache-Control\"\x20content=\"no-cache,\x20must-revalidate
+SF:\"\x20/>\r\n\t<meta\x20http-equiv=\"Expires\"\x20content=\"0\"\x20/>\r\
+SF:n</head>\r\n<body>\r\n</body>\r\n<script>\r\n\twindow\.location\.href\x
+SF:20=\x20\"/doc/page/login\.asp\?_\"\x20\+\x20\(new\x20Date\(\)\)\.getTim
+SF:e\(\);\r\n</script>\r\n</html>")%r(HTTPOptions,CB,"HTTP/1\.0\x20200\x20
+SF:OK\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2008:29:52\x20GMT\r\nServer:\
+SF:x20Webs\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x200\r\nCo
+SF:ntent-Type:\x20text/html\r\nConnection:\x20close\r\nAllow:\x20OPTIONS,G
+SF:ET,HEAD,POST,PUT,DELETE\r\n\r\n")%r(FourOhFourRequest,16A,"HTTP/1\.0\x2
+SF:0404\x20Not\x20Found\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2008:29:58\
+SF:x20GMT\r\nServer:\x20Webs\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache-Co
+SF:ntrol:\x20no-cache\r\nContent-Length:\x20166\r\nContent-Type:\x20text/h
+SF:tml\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head><t
+SF:itle>Document\x20Error:\x20Not\x20Found</title></head>\r\n<body><h2>Acc
+SF:ess\x20Error:\x20404\x20--\x20Not\x20Found</h2>\r\n<p>Can't\x20open\x20
+SF:URL</p>\r\n</body>\r\n</html>\r\n");
+
+Nmap scan report for 80.89.133.26
+Host is up, received user-set (0.30s latency).
+Scanned at 2022-10-02 11:40:53 +06 for 171s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 48 MikroTik router config httpd
+|_http-title: RouterOS router configuration page
+Service Info: OS: RouterOS; Device: router; CPE: cpe:/o:mikrotik:routeros
+
+Nmap scan report for 45.160.216.16
+Host is up, received user-set (0.37s latency).
+Scanned at 2022-10-02 11:40:23 +06 for 201s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 44 Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Site doesn't have a title (text/html).
+
+Nmap scan report for 52.194.92.190
+Host is up, received user-set (0.13s latency).
+Scanned at 2022-10-02 11:40:48 +06 for 176s
+
+PORT   STATE SERVICE    REASON          VERSION
+80/tcp open  tcpwrapped syn-ack ttl 232
+
+Nmap scan report for 184.25.124.110
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-10-02 11:40:51 +06 for 173s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 47 AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+|_http-title: Invalid URL
+
+Nmap scan report for 34.102.135.241
+Host is up, received user-set (0.033s latency).
+Scanned at 2022-10-02 11:40:52 +06 for 171s
+
+PORT   STATE SERVICE    REASON          VERSION
+80/tcp open  tcpwrapped syn-ack ttl 120
+
+Nmap scan report for 176.28.15.10
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-10-02 11:40:50 +06 for 173s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 Apache httpd
+|_http-server-header: Apache
+|_http-title: Did not follow redirect to https://cloud.famre.de/
+Service Info: Host: cloud.famre.de
+
+Nmap scan report for 104.96.207.206
+Host is up, received user-set (0.098s latency).
+Scanned at 2022-10-02 11:40:49 +06 for 174s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+|_http-title: Invalid URL
+
+Nmap scan report for 219.144.82.71
+Host is up, received user-set (0.30s latency).
+Scanned at 2022-10-02 11:40:51 +06 for 172s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 44 LEGO_LMT
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:18 GMT
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:13 GMT
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     X-NWS-LOG-UUID: 9353549171281939501
+|     Connection: close
+|     Server: LEGO_LMT
+|     Date: Sun, 02 Oct 2022 05:41:10 GMT
+|     X-Cache-Lookup: Return Directly
+|     X-ServerIp: 219.144.82.71
+|     Client-Ip: 123.253.65.255
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:11 GMT
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     X-NWS-LOG-UUID: 4298455022992731778
+|     Connection: close
+|     Server: LEGO_LMT
+|     Date: Sun, 02 Oct 2022 05:41:07 GMT
+|     X-Cache-Lookup: Return Directly
+|     X-ServerIp: 219.144.82.71
+|     Client-Ip: 123.253.65.255
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     X-NWS-LOG-UUID: 1802934356282022840
+|     Connection: close
+|     Server: LEGO_LMT
+|     Date: Sun, 02 Oct 2022 05:41:08 GMT
+|     X-Cache-Lookup: Return Directly
+|     X-ServerIp: 219.144.82.71
+|     Client-Ip: 123.253.65.255
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|_    Date: Sun, 02 Oct 2022 05:41:09 GMT
+| http-server-header: 
+|   LEGO_LMT
+|_  Lego Server
+|_http-title: Site doesn't have a title.
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/2%Time=63392473%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,F3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\n
+SF:X-NWS-LOG-UUID:\x204298455022992731778\r\nConnection:\x20close\r\nServe
+SF:r:\x20LEGO_LMT\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:07\x20GMT
+SF:\r\nX-Cache-Lookup:\x20Return\x20Directly\r\nX-ServerIp:\x20219\.144\.8
+SF:2\.71\r\nClient-Ip:\x20123\.253\.65\.255\r\n\r\n")%r(HTTPOptions,F3,"HT
+SF:TP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nX-NWS-LOG-UUI
+SF:D:\x201802934356282022840\r\nConnection:\x20close\r\nServer:\x20LEGO_LM
+SF:T\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:08\x20GMT\r\nX-Cache-L
+SF:ookup:\x20Return\x20Directly\r\nX-ServerIp:\x20219\.144\.82\.71\r\nClie
+SF:nt-Ip:\x20123\.253\.65\.255\r\n\r\n")%r(RTSPRequest,7C,"HTTP/1\.1\x2040
+SF:0\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x200\r\n
+SF:Server:\x20Lego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:4
+SF:1:09\x20GMT\r\n\r\n")%r(X11Probe,7C,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\nContent-Length:\x200\r\nServer:\x20Lego\x20
+SF:Server\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:09\x20GMT\r\n\r\n
+SF:")%r(FourOhFourRequest,F3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-
+SF:Length:\x200\r\nX-NWS-LOG-UUID:\x209353549171281939501\r\nConnection:\x
+SF:20close\r\nServer:\x20LEGO_LMT\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2
+SF:005:41:10\x20GMT\r\nX-Cache-Lookup:\x20Return\x20Directly\r\nX-ServerIp
+SF::\x20219\.144\.82\.71\r\nClient-Ip:\x20123\.253\.65\.255\r\n\r\n")%r(Ge
+SF:nericLines,7C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clo
+SF:se\r\nContent-Length:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun
+SF:,\x2002\x20Oct\x202022\x2005:41:11\x20GMT\r\n\r\n")%r(DNSVersionBindReq
+SF:TCP,7C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nC
+SF:ontent-Length:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun,\x2002
+SF:\x20Oct\x202022\x2005:41:13\x20GMT\r\n\r\n")%r(DNSStatusRequestTCP,7C,"
+SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-L
+SF:ength:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct\
+SF:x202022\x2005:41:18\x20GMT\r\n\r\n");
+
+Nmap scan report for 61.128.151.22
+Host is up, received user-set (0.30s latency).
+Scanned at 2022-10-02 11:40:24 +06 for 200s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 46 Lego Server
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:11 GMT
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:10 GMT
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     X-NWS-LOG-UUID: 5497468798575497642
+|     Connection: close
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:09 GMT
+|     X-Cache-Lookup: Return Directly
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:09 GMT
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     X-NWS-LOG-UUID: 8943092866135021169
+|     Connection: close
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:05 GMT
+|     X-Cache-Lookup: Return Directly
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     X-NWS-LOG-UUID: 905134249101316346
+|     Connection: close
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:05 GMT
+|     X-Cache-Lookup: Return Directly
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|     Date: Sun, 02 Oct 2022 05:41:07 GMT
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 0
+|     Server: Lego Server
+|_    Date: Sun, 02 Oct 2022 05:41:08 GMT
+|_http-server-header: Lego Server
+|_http-title: Site doesn't have a title.
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/2%Time=63392472%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,C0,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\n
+SF:X-NWS-LOG-UUID:\x208943092866135021169\r\nConnection:\x20close\r\nServe
+SF:r:\x20Lego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:05\
+SF:x20GMT\r\nX-Cache-Lookup:\x20Return\x20Directly\r\n\r\n")%r(HTTPOptions
+SF:,BF,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nX-NWS-
+SF:LOG-UUID:\x20905134249101316346\r\nConnection:\x20close\r\nServer:\x20L
+SF:ego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:05\x20GMT\
+SF:r\nX-Cache-Lookup:\x20Return\x20Directly\r\n\r\n")%r(RTSPRequest,7C,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Len
+SF:gth:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct\x2
+SF:02022\x2005:41:07\x20GMT\r\n\r\n")%r(X11Probe,7C,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x200\r\nServer
+SF::\x20Lego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:08\x
+SF:20GMT\r\n\r\n")%r(FourOhFourRequest,C0,"HTTP/1\.1\x20404\x20Not\x20Foun
+SF:d\r\nContent-Length:\x200\r\nX-NWS-LOG-UUID:\x205497468798575497642\r\n
+SF:Connection:\x20close\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun,\x200
+SF:2\x20Oct\x202022\x2005:41:09\x20GMT\r\nX-Cache-Lookup:\x20Return\x20Dir
+SF:ectly\r\n\r\n")%r(GenericLines,7C,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nConnection:\x20close\r\nContent-Length:\x200\r\nServer:\x20Lego\x20Se
+SF:rver\r\nDate:\x20Sun,\x2002\x20Oct\x202022\x2005:41:09\x20GMT\r\n\r\n")
+SF:%r(RPCCheck,7C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20cl
+SF:ose\r\nContent-Length:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Su
+SF:n,\x2002\x20Oct\x202022\x2005:41:10\x20GMT\r\n\r\n")%r(DNSVersionBindRe
+SF:qTCP,7C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n
+SF:Content-Length:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun,\x200
+SF:2\x20Oct\x202022\x2005:41:10\x20GMT\r\n\r\n")%r(DNSStatusRequestTCP,7C,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-
+SF:Length:\x200\r\nServer:\x20Lego\x20Server\r\nDate:\x20Sun,\x2002\x20Oct
+SF:\x202022\x2005:41:11\x20GMT\r\n\r\n");
+
+Nmap scan report for 156.252.254.90
+Host is up, received user-set (0.30s latency).
+Scanned at 2022-10-02 11:40:42 +06 for 182s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 104 nginx
+|_http-title: 404 Not Found
+
+Nmap scan report for 23.27.10.185
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-10-02 11:40:53 +06 for 170s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 41 nginx 1.20.2
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+
+Nmap scan report for 40.76.150.43
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-10-02 11:40:33 +06 for 191s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 102 Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 13.235.208.25
+Host is up, received user-set (0.043s latency).
+Scanned at 2022-10-02 11:40:24 +06 for 199s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 47 nginx 1.16.1
+|_http-server-header: nginx/1.16.1
+|_http-title: Healers on Demand
+
+Nmap scan report for 155.101.89.74
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-10-02 11:40:55 +06 for 177s
+
+PORT   STATE SERVICE    REASON         VERSION
+80/tcp open  tcpwrapped syn-ack ttl 48
+
+Nmap scan report for 104.159.39.133
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-10-02 11:40:46 +06 for 178s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 52 nginx
+|_http-title: 404 Not Found
+
+Nmap scan report for 182.70.254.63
+Host is up, received user-set (0.095s latency).
+Scanned at 2022-10-02 11:40:37 +06 for 188s
+
+PORT   STATE SERVICE  REASON         VERSION
+80/tcp open  ssl/http syn-ack ttl 55
+|_http-title: Site doesn't have a title (text/html).
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct  2 11:43:52 2022 -- 1000 IP addresses (1000 hosts up) scanned in 212.54 seconds

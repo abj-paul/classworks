@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:47:33 2022 as: nmap -D RND -A -oN shed.gov.bd.ids_all.txt shed.gov.bd
+Unknown address family 0 in build_packet.
+QUITTING!
+// AFTER RETRYING MANUALLY
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-10-02 14:25 +06
+Nmap scan report for shed.gov.bd (103.163.210.130)
+Host is up (0.10s latency).
+Not shown: 994 filtered ports
+PORT     STATE      SERVICE
+389/tcp  unfiltered ldap
+1503/tcp unfiltered imtc-mcs
+1719/tcp unfiltered h323gatestat
+1720/tcp unfiltered h323q931
+2000/tcp unfiltered cisco-sccp
+5060/tcp unfiltered sip
+
+Nmap done: 1 IP address (1 host up) scanned in 9.36 seconds

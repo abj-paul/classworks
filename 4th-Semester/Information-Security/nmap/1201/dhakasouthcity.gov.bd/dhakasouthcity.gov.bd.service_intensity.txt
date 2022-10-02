@@ -1,0 +1,27 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:46:59 2022 as: nmap -sV --version-intensity 8 -oN dhakasouthcity.gov.bd.service_intensity.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+Host is up (0.26s latency).
+rDNS record for 170.10.162.208: addwire.com
+Not shown: 983 closed ports
+PORT     STATE    SERVICE    VERSION
+21/tcp   open     ftp        Pure-FTPd
+22/tcp   filtered ssh
+25/tcp   open     smtp?
+26/tcp   open     smtp       Exim smtpd 4.95
+53/tcp   open     domain     PowerDNS Authoritative Server 4.4.1
+80/tcp   open     tcpwrapped
+110/tcp  open     pop3       Dovecot pop3d
+111/tcp  open     rpcbind    2-4 (RPC #100000)
+143/tcp  open     imap       Dovecot imapd
+443/tcp  open     ssl/https
+465/tcp  open     ssl/smtp   Exim smtpd 4.95
+587/tcp  open     smtp       Exim smtpd 4.95
+646/tcp  filtered ldp
+993/tcp  open     imaps?
+995/tcp  open     pop3s?
+2222/tcp open     ssh        OpenSSH 7.4 (protocol 2.0)
+3306/tcp open     mysql      MySQL 5.7.39-cll-lve
+Service Info: Host: altar47.supremepanel47.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 22:53:27 2022 -- 1 IP address (1 host up) scanned in 387.75 seconds

@@ -1,0 +1,385 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:58:21 2022 as: nmap -n -Pn -p 80 --open -sV -vvv --script banner,http-title -iR 1000 -oN dhakasouthcity.gov.bd.random_servers.txt
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #fcfcfc; color: #333333; margin: 0; padding:0; \}\nh1 \{ font-size: 1\.5em; font-weight: normal; background-color: #9999cc; min-height:2em; line-height:2em; border-bottom: 1px inset black; margin: 0; \}\nh1, p \{ padding-left: 10px; \}\ncode\.url \{ background-color: #eeeeee; font-family:monospace; padding:0 2px;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Nmap scan report for 23.203.60.165
+Host is up, received user-set (0.34s latency).
+Scanned at 2022-10-01 22:58:41 +06 for 215s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 43 AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+|_http-title: Invalid URL
+
+Nmap scan report for 81.95.99.41
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-10-01 22:58:26 +06 for 230s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 nginx
+|_http-title: Site doesn't have a title (text/html).
+
+Nmap scan report for 118.101.163.239
+Host is up, received user-set (0.066s latency).
+Scanned at 2022-10-01 22:58:38 +06 for 217s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 50 Hikvision IP camera httpd
+|_http-server-header: App-webs/
+|_http-title: index
+Service Info: Device: webcam
+
+Nmap scan report for 185.54.102.205
+Host is up, received user-set (0.45s latency).
+Scanned at 2022-10-01 22:58:40 +06 for 216s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 52 lighttpd 1.4.39
+|_http-server-header: lighttpd/1.4.39
+| http-title: Error 404 - Page Not Found
+|_Requested resource was /nocookies.html
+
+Nmap scan report for 57.128.10.155
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-10-01 22:58:35 +06 for 221s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 46 OpenResty web app server 1.21.4.1
+|_http-server-header: openresty/1.21.4.1
+|_http-title: 403 Forbidden
+
+Nmap scan report for 67.217.72.143
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-10-01 22:58:34 +06 for 224s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 44
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Pragma: no-cache
+|     Content-Type: text/html
+|     Content-Length: 9
+|_    Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=633871E8%P=x86_64-pc-linux-gnu%r(Four
+SF:OhFourRequest,61,"HTTP/1\.0\x20404\x20Not\x20Found\r\nPragma:\x20no-cac
+SF:he\r\nContent-Type:\x20text/html\r\nContent-Length:\x209\r\n\r\nNot\x20
+SF:Found");
+
+Nmap scan report for 95.123.139.12
+Host is up, received user-set (0.31s latency).
+Scanned at 2022-10-01 22:58:24 +06 for 234s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 42 micro_httpd
+| banner: HTTP/1.1 400 Bad Request\x0D\x0AServer: micro_httpd\x0D\x0ACach
+| e-Control: no-cache\x0D\x0ADate: Wed, 07 Jan 1970 18:34:55 GMT\x0D\x0AC
+| ontent-Type: text/html\x0D\x0AConnection: close\x0D\x0A\x0D\x0A<HTML><H
+| EAD><TITLE>400 Bad Request</TITLE></HEAD>\x0A<BODY BGCOLOR="#cc9999"><H
+|_4>400 Bad Request</H4>\x0ANo
+Service Info: CPE: cpe:/o:acme:micro_httpd
+
+Nmap scan report for 212.85.102.123
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-10-01 22:58:41 +06 for 215s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 50 IdeaWebServer httpd 5.0.0
+|_http-server-header: IdeaWebServer/5.0.0
+
+Nmap scan report for 185.251.183.233
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-10-01 22:58:36 +06 for 220s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 53 nginx 1.18.0
+|_http-server-header: nginx/1.18.0
+|_http-title: \xD0\x9C\xD0\xBE\xD0\xBB\xD1\x8F \xD0\xB8\xD0\xB7\xD1\x87\xD0\xB0\xD0\xBA\xD0\xB0\xD0\xB9\xD1\x82\xD0\xB5, \xD0\xBD\xD0\xB0\xD1\x87\xD0\xB0\xD0\xBB\xD0\xBD\xD0\xB0\xD1\x82\xD0\xB0 \xD1\x81\xD1\x82\xD1\x80\xD0\xB0\xD0\xBD\xD0\xB8\xD1\x86...
+
+Nmap scan report for 149.28.45.169
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-10-01 22:58:42 +06 for 215s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 45 LiteSpeed
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/html
+|     cache-control: private, no-cache, max-age=0
+|     pragma: no-cache
+|     content-length: 1236
+|     date: Sat, 01 Oct 2022 16:59:04 GMT
+|     server: LiteSpeed
+|     connection: close
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title> 404 Not Found
+|     </title></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+|     style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
+|     style="margin-top:20px;font-size: 30px;">Not Found
+|     </h2>
+|     <p>The resource requested could not be found on this server!</p>
+|_    </div></di
+|_http-server-header: LiteSpeed
+|_http-title:  404 Not Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=633871D8%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,5A7,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-type:\x20text/h
+SF:tml\r\ncache-control:\x20private,\x20no-cache,\x20max-age=0\r\npragma:\
+SF:x20no-cache\r\ncontent-length:\x201236\r\ndate:\x20Sat,\x2001\x20Oct\x2
+SF:02022\x2016:59:04\x20GMT\r\nserver:\x20LiteSpeed\r\nconnection:\x20clos
+SF:e\r\n\r\n<!DOCTYPE\x20html>\n<html\x20style=\"height:100%\">\n<head>\n<
+SF:meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-s
+SF:cale=1,\x20shrink-to-fit=no\">\n<title>\x20404\x20Not\x20Found\r\n</tit
+SF:le></head>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20norma
+SF:l\x2014px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x
+SF:20background-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20min-he
+SF:ight:100%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x20cen
+SF:ter;\x20width:800px;\x20margin-left:\x20-400px;\x20position:absolute;\x
+SF:20top:\x2030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20
+SF:style=\"margin:0;\x20font-size:150px;\x20line-height:150px;\x20font-wei
+SF:ght:bold;\">404</h1>\n<h2\x20style=\"margin-top:20px;font-size:\x2030px
+SF:;\">Not\x20Found\r\n</h2>\n<p>The\x20resource\x20requested\x20could\x20
+SF:not\x20be\x20found\x20on\x20this\x20server!</p>\n</div></di")%r(HTTPOpt
+SF:ions,5A7,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-type:\x20text/htm
+SF:l\r\ncache-control:\x20private,\x20no-cache,\x20max-age=0\r\npragma:\x2
+SF:0no-cache\r\ncontent-length:\x201236\r\ndate:\x20Sat,\x2001\x20Oct\x202
+SF:022\x2016:59:04\x20GMT\r\nserver:\x20LiteSpeed\r\nconnection:\x20close\
+SF:r\n\r\n<!DOCTYPE\x20html>\n<html\x20style=\"height:100%\">\n<head>\n<me
+SF:ta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-sca
+SF:le=1,\x20shrink-to-fit=no\">\n<title>\x20404\x20Not\x20Found\r\n</title
+SF:></head>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20normal\
+SF:x2014px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x20
+SF:background-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20min-heig
+SF:ht:100%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x20cente
+SF:r;\x20width:800px;\x20margin-left:\x20-400px;\x20position:absolute;\x20
+SF:top:\x2030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20st
+SF:yle=\"margin:0;\x20font-size:150px;\x20line-height:150px;\x20font-weigh
+SF:t:bold;\">404</h1>\n<h2\x20style=\"margin-top:20px;font-size:\x2030px;\
+SF:">Not\x20Found\r\n</h2>\n<p>The\x20resource\x20requested\x20could\x20no
+SF:t\x20be\x20found\x20on\x20this\x20server!</p>\n</div></di");
+
+Nmap scan report for 183.90.235.9
+Host is up, received user-set (0.13s latency).
+Scanned at 2022-10-01 22:58:24 +06 for 231s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 50 nginx
+|_http-title: \xE7\x84\xA1\xE5\x8A\xB9\xE3\x81\xAAURL\xE3\x81\xA7\xE3\x81\x99
+
+Nmap scan report for 152.92.226.131
+Host is up, received user-set (0.38s latency).
+Scanned at 2022-10-01 22:58:40 +06 for 229s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http?   syn-ack ttl 37
+
+Nmap scan report for 163.69.95.210
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-10-01 22:58:40 +06 for 215s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 48
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     cache-control: no-cache
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///
+|     cache-control: no-cache
+|_    connection: close
+|_http-title: Did not follow redirect to https://163.69.95.210/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=633871D8%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlocatio
+SF:n:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20close\r
+SF:\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:
+SF:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnec
+SF:tion:\x20close\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20r
+SF:equest\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400
+SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
+SF:quest\.\n</body></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20r
+SF:equest\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400
+SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
+SF:quest\.\n</body></html>\n")%r(FourOhFourRequest,8D,"HTTP/1\.1\x20302\x2
+SF:0Found\r\ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C
+SF:/Tri%6Eity\.txt%2ebak\r\ncache-control:\x20no-cache\r\nconnection:\x20c
+SF:lose\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nCon
+SF:tent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20clos
+SF:e\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20re
+SF:quest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</bo
+SF:dy></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20re
+SF:quest\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnect
+SF:ion:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\
+SF:x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20req
+SF:uest\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x
+SF:20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
+SF:alid\x20request\.\n</body></html>\n")%r(Help,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n");
+
+Nmap scan report for 77.38.175.146
+Host is up, received user-set (0.24s latency).
+Scanned at 2022-10-01 22:58:41 +06 for 217s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 48
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, X11Probe: 
+|     HTTP/1.1 500 Internal Server Error
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 130
+|     Set-Cookie: JSESSIONID=deleted; Expires=Thu, 01 Jan 1970 00:00:01 GMT; Path=/; HttpOnly
+|     Connection: close
+|_    <html><head><title>500 Internal Server Error</title></head><body><center><h1>500 Internal Server Error</h1></center></body></html>
+|_http-title: 500 Internal Server Error
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=633871D8%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,151,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nContent-
+SF:Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20130\r\nSet-C
+SF:ookie:\x20JSESSIONID=deleted;\x20Expires=Thu,\x2001\x20Jan\x201970\x200
+SF:0:00:01\x20GMT;\x20Path=/;\x20HttpOnly\r\nConnection:\x20close\r\n\r\n<
+SF:html><head><title>500\x20Internal\x20Server\x20Error</title></head><bod
+SF:y><center><h1>500\x20Internal\x20Server\x20Error</h1></center></body></
+SF:html>")%r(HTTPOptions,151,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Er
+SF:ror\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\
+SF:x20130\r\nSet-Cookie:\x20JSESSIONID=deleted;\x20Expires=Thu,\x2001\x20J
+SF:an\x201970\x2000:00:01\x20GMT;\x20Path=/;\x20HttpOnly\r\nConnection:\x2
+SF:0close\r\n\r\n<html><head><title>500\x20Internal\x20Server\x20Error</ti
+SF:tle></head><body><center><h1>500\x20Internal\x20Server\x20Error</h1></c
+SF:enter></body></html>")%r(RTSPRequest,151,"HTTP/1\.1\x20500\x20Internal\
+SF:x20Server\x20Error\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nC
+SF:ontent-Length:\x20130\r\nSet-Cookie:\x20JSESSIONID=deleted;\x20Expires=
+SF:Thu,\x2001\x20Jan\x201970\x2000:00:01\x20GMT;\x20Path=/;\x20HttpOnly\r\
+SF:nConnection:\x20close\r\n\r\n<html><head><title>500\x20Internal\x20Serv
+SF:er\x20Error</title></head><body><center><h1>500\x20Internal\x20Server\x
+SF:20Error</h1></center></body></html>")%r(X11Probe,151,"HTTP/1\.1\x20500\
+SF:x20Internal\x20Server\x20Error\r\nContent-Type:\x20text/html;\x20charse
+SF:t=utf-8\r\nContent-Length:\x20130\r\nSet-Cookie:\x20JSESSIONID=deleted;
+SF:\x20Expires=Thu,\x2001\x20Jan\x201970\x2000:00:01\x20GMT;\x20Path=/;\x2
+SF:0HttpOnly\r\nConnection:\x20close\r\n\r\n<html><head><title>500\x20Inte
+SF:rnal\x20Server\x20Error</title></head><body><center><h1>500\x20Internal
+SF:\x20Server\x20Error</h1></center></body></html>")%r(FourOhFourRequest,1
+SF:51,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nContent-Type:\x2
+SF:0text/html;\x20charset=utf-8\r\nContent-Length:\x20130\r\nSet-Cookie:\x
+SF:20JSESSIONID=deleted;\x20Expires=Thu,\x2001\x20Jan\x201970\x2000:00:01\
+SF:x20GMT;\x20Path=/;\x20HttpOnly\r\nConnection:\x20close\r\n\r\n<html><he
+SF:ad><title>500\x20Internal\x20Server\x20Error</title></head><body><cente
+SF:r><h1>500\x20Internal\x20Server\x20Error</h1></center></body></html>");
+
+Nmap scan report for 67.180.104.142
+Host is up, received user-set (0.31s latency).
+Scanned at 2022-10-01 22:58:34 +06 for 224s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 39 DNVRS-Webs
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Date: Sat, 01 Oct 2022 09:59:10 GMT
+|     Server: DNVRS-Webs
+|     Cache-Control: no-cache
+|     Content-Length: 166
+|     Content-Type: text/html
+|     Connection: close
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     <!DOCTYPE html>
+|     <html><head><title>Document Error: Not Found</title></head>
+|     <body><h2>Access Error: 404 -- Not Found</h2>
+|     <p>Can't open URL</p>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Sat, 01 Oct 2022 09:59:02 GMT
+|     Server: DNVRS-Webs
+|     ETag: "0-c38-1e0"
+|     Content-Length: 480
+|     Content-Type: text/html
+|     Connection: close
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     Last-Modified: Wed, 20 Dec 2017 02:40:41 GMT
+|     <!doctype html>
+|     <html>
+|     <head>
+|     <title></title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+|     <meta http-equiv="Pragma" content="no-cache" />
+|     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+|     <meta http-equiv="Expires" content="0" />
+|     </head>
+|     <body>
+|     </body>
+|     <script>
+|     window.location.href = "/doc/page/login.asp?_" + (new Date()).getTime();
+|     </script>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Sat, 01 Oct 2022 09:59:03 GMT
+|     Server: DNVRS-Webs
+|     Content-Length: 0
+|     Content-Type: text/html
+|     Connection: close
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|_    Allow: OPTIONS,GET,HEAD,POST,PUT,DELETE
+|_http-server-header: DNVRS-Webs
+|_http-title: Site doesn't have a title (text/html).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=633871D8%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,2CB,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sat,\x2001\x20Oct\x20202
+SF:2\x2009:59:02\x20GMT\r\nServer:\x20DNVRS-Webs\r\nETag:\x20\"0-c38-1e0\"
+SF:\r\nContent-Length:\x20480\r\nContent-Type:\x20text/html\r\nConnection:
+SF:\x20close\r\nX-FRAME-OPTIONS:\x20SAMEORIGIN\r\nLast-Modified:\x20Wed,\x
+SF:2020\x20Dec\x202017\x2002:40:41\x20GMT\r\n\r\n\xef\xbb\xbf<!doctype\x20
+SF:html>\r\n<html>\r\n<head>\r\n\t<title></title>\r\n\t<meta\x20http-equiv
+SF:=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\
+SF:t<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"\x20>\r\
+SF:n\t<meta\x20http-equiv=\"Pragma\"\x20content=\"no-cache\"\x20/>\r\n\t<m
+SF:eta\x20http-equiv=\"Cache-Control\"\x20content=\"no-cache,\x20must-reva
+SF:lidate\"\x20/>\r\n\t<meta\x20http-equiv=\"Expires\"\x20content=\"0\"\x2
+SF:0/>\r\n</head>\r\n<body>\r\n</body>\r\n<script>\r\n\twindow\.location\.
+SF:href\x20=\x20\"/doc/page/login\.asp\?_\"\x20\+\x20\(new\x20Date\(\)\)\.
+SF:getTime\(\);\r\n</script>\r\n</html>")%r(HTTPOptions,D1,"HTTP/1\.0\x202
+SF:00\x20OK\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2009:59:03\x20GMT\r\nSe
+SF:rver:\x20DNVRS-Webs\r\nContent-Length:\x200\r\nContent-Type:\x20text/ht
+SF:ml\r\nConnection:\x20close\r\nX-FRAME-OPTIONS:\x20SAMEORIGIN\r\nAllow:\
+SF:x20OPTIONS,GET,HEAD,POST,PUT,DELETE\r\n\r\n")%r(FourOhFourRequest,170,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nDate:\x20Sat,\x2001\x20Oct\x202022\
+SF:x2009:59:10\x20GMT\r\nServer:\x20DNVRS-Webs\r\nCache-Control:\x20no-cac
+SF:he\r\nContent-Length:\x20166\r\nContent-Type:\x20text/html\r\nConnectio
+SF:n:\x20close\r\nX-FRAME-OPTIONS:\x20SAMEORIGIN\r\n\r\n<!DOCTYPE\x20html>
+SF:\r\n<html><head><title>Document\x20Error:\x20Not\x20Found</title></head
+SF:>\r\n<body><h2>Access\x20Error:\x20404\x20--\x20Not\x20Found</h2>\r\n<p
+SF:>Can't\x20open\x20URL</p>\r\n</body>\r\n</html>\r\n");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 23:02:29 2022 -- 1000 IP addresses (1000 hosts up) scanned in 247.87 seconds

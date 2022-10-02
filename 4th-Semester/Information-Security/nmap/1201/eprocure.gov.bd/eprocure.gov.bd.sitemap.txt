@@ -1,0 +1,23 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:14:24 2022 as: nmap --script=http-sitemap-generator -oN eprocure.gov.bd.sitemap.txt eprocure.gov.bd
+Nmap scan report for eprocure.gov.bd (103.40.82.19)
+Host is up (0.0097s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+443/tcp open  https
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+
+# Nmap done at Sat Oct  1 22:15:21 2022 -- 1 IP address (1 host up) scanned in 56.41 seconds

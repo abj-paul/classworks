@@ -1,0 +1,2 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:35:40 2022 as: nmap -PU53 -oN bdpost.gov.bd.udp_list_targets.txt bdpost.gov.bd
+# Nmap done at Sun Oct  2 11:35:42 2022 -- 1 IP address (0 hosts up) scanned in 2.10 seconds

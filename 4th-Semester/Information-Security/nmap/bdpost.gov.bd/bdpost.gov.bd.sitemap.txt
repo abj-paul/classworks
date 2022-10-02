@@ -1,0 +1,30 @@
+# Nmap 7.80 scan initiated Sun Oct  2 10:44:32 2022 as: nmap --script=http-sitemap-generator -oN bdpost.gov.bd.sitemap.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.097s latency).
+Not shown: 993 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+389/tcp  closed ldap
+443/tcp  open   https
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+1503/tcp closed imtc-mcs
+1719/tcp closed h323gatestat
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+
+# Nmap done at Sun Oct  2 11:22:28 2022 -- 1 IP address (1 host up) scanned in 2276.12 seconds

@@ -1,0 +1,32 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:41:58 2022 as: nmap --script=dns-brute -oN dhakasouthcity.gov.bd.domain.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+Host is up (0.26s latency).
+rDNS record for 170.10.162.208: addwire.com
+Not shown: 983 closed ports
+PORT     STATE    SERVICE
+21/tcp   open     ftp
+22/tcp   filtered ssh
+25/tcp   open     smtp
+26/tcp   open     rsftp
+53/tcp   open     domain
+80/tcp   open     http
+110/tcp  open     pop3
+111/tcp  open     rpcbind
+143/tcp  open     imap
+443/tcp  open     https
+465/tcp  open     smtps
+587/tcp  open     submission
+646/tcp  filtered ldp
+993/tcp  open     imaps
+995/tcp  open     pop3s
+2222/tcp open     EtherNetIP-1
+3306/tcp open     mysql
+
+Host script results:
+| dns-brute: 
+|   DNS Brute-force hostnames: 
+|     testing.gov.bd - 123.49.12.132
+|     lab.gov.bd - 103.163.210.131
+|_    ntp.gov.bd - 103.163.246.78
+
+# Nmap done at Sat Oct  1 22:42:16 2022 -- 1 IP address (1 host up) scanned in 18.24 seconds

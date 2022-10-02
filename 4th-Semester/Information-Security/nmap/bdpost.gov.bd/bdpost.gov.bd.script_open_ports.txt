@@ -1,0 +1,10 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:39:28 2022 as: nmap --open -oN bdpost.gov.bd.script_open_ports.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.10s latency).
+Not shown: 992 filtered ports, 6 closed ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Sun Oct  2 11:39:35 2022 -- 1 IP address (1 host up) scanned in 6.76 seconds

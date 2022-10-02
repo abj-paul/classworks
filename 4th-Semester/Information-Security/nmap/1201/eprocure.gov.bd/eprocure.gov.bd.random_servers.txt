@@ -1,0 +1,869 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:21:26 2022 as: nmap -n -Pn -p 80 --open -sV -vvv --script banner,http-title -iR 1000 -oN eprocure.gov.bd.random_servers.txt
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #fcfcfc; color: #333333; margin: 0; padding:0; \}\nh1 \{ font-size: 1\.5em; font-weight: normal; background-color: #9999cc; min-height:2em; line-height:2em; border-bottom: 1px inset black; margin: 0; \}\nh1, p \{ padding-left: 10px; \}\ncode\.url \{ background-color: #eeeeee; font-family:monospace; padding:0 2px;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #fcfcfc; color: #333333; margin: 0; padding:0; \}\nh1 \{ font-size: 1\.5em; font-weight: normal; background-color: #9999cc; min-height:2em; line-height:2em; border-bottom: 1px inset black; margin: 0; \}\nh1, p \{ padding-left: 10px; \}\ncode\.url \{ background-color: #eeeeee; font-family:monospace; padding:0 2px;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #fcfcfc; color: #333333; margin: 0; padding:0; \}\nh1 \{ font-size: 1\.5em; font-weight: normal; background-color: #9999cc; min-height:2em; line-height:2em; border-bottom: 1px inset black; margin: 0; \}\nh1, p \{ padding-left: 10px; \}\ncode\.url \{ background-color: #eeeeee; font-family:monospace; padding:0 2px;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Nmap scan report for 23.8.232.240
+Host is up, received user-set (0.060s latency).
+Scanned at 2022-10-01 22:21:35 +06 for 179s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+|_http-title: Invalid URL
+
+Nmap scan report for 45.155.38.225
+Host is up, received user-set (0.24s latency).
+Scanned at 2022-10-01 22:21:41 +06 for 173s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 43 LiteSpeed
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: close
+|     content-type: text/html
+|     date: Sat, 01 Oct 2022 16:21:55 GMT
+|     server: LiteSpeed
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+|     <meta http-equiv="Cache-control" content="no-cache">
+|     <meta http-equiv="Pragma" content="no-cache">
+|     <meta http-equiv="Expires" content="0">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>404 Not Found</title>
+|     <style type="text/css">
+|     body {
+|     font-family: Arial, Helvetica, sans-serif;
+|     font-size: 14px;
+|     line-height: 1.428571429;
+|     background-color: #ffffff;
+|     color: #2F3230;
+|     padding: 0;
+|     margin: 0;
+|     section, footer {
+|     display: block;
+|     padding: 0;
+|     margin: 0;
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     content-type: text/html
+|     last-modified: Wed, 17 Jun 2020 20:01:33 GMT
+|     accept-ranges: bytes
+|     content-length: 163
+|     date: Sat, 01 Oct 2022 16:21:49 GMT
+|     server: LiteSpeed
+|     <html><head><META HTTP-EQUIV="Cache-control" CONTENT="no-cache"><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     allow: OPTIONS,HEAD,GET,POST
+|     content-length: 0
+|     date: Sat, 01 Oct 2022 16:21:49 GMT
+|     server: LiteSpeed
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     cache-control: private, no-cache, no-store, must-revalidate, max-age=0
+|     pragma: no-cache
+|     content-type: text/html
+|     content-length: 681
+|     date: Sat, 01 Oct 2022 16:21:50 GMT
+|     server: LiteSpeed
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+|     <title> 400 Bad Request
+|     </title></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+|     style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">400</h1>
+|     style="margin-top:20px;font-size: 30px;">Bad Request
+|     </h2>
+|     <p>It is not a valid request!</p>
+|_    </div><
+| http-server-header: 
+|   LiteSpeed
+|_  imunify360-webshield/1.18
+|_http-title:  406 Not Acceptable
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,173,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\ncontent-t
+SF:ype:\x20text/html\r\nlast-modified:\x20Wed,\x2017\x20Jun\x202020\x2020:
+SF:01:33\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20163\r\nda
+SF:te:\x20Sat,\x2001\x20Oct\x202022\x2016:21:49\x20GMT\r\nserver:\x20LiteS
+SF:peed\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"Cache-control\"\x20CONTEN
+SF:T=\"no-cache\"><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL=/cgi-
+SF:sys/defaultwebpage\.cgi\"></head><body></body></html>\n")%r(HTTPOptions
+SF:,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nallow:\x20OPTION
+SF:S,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\x20Sat,\x2001\x20Oct\x
+SF:202022\x2016:21:49\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n")%r(RTSPReque
+SF:st,398,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nc
+SF:ache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate,
+SF:\x20max-age=0\r\npragma:\x20no-cache\r\ncontent-type:\x20text/html\r\nc
+SF:ontent-length:\x20681\r\ndate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:50
+SF:\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\x20sty
+SF:le=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"\x20content=\"wi
+SF:dth=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\"\x20/>\n<tit
+SF:le>\x20400\x20Bad\x20Request\r\n</title></head>\n<body\x20style=\"color
+SF::\x20#444;\x20margin:0;font:\x20normal\x2014px/20px\x20Arial,\x20Helvet
+SF:ica,\x20sans-serif;\x20height:100%;\x20background-color:\x20#fff;\">\n<
+SF:div\x20style=\"height:auto;\x20min-height:100%;\x20\">\x20\x20\x20\x20\
+SF:x20<div\x20style=\"text-align:\x20center;\x20width:800px;\x20margin-lef
+SF:t:\x20-400px;\x20position:absolute;\x20top:\x2030%;\x20left:50%;\">\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\"margin:0;\x20font-size:150
+SF:px;\x20line-height:150px;\x20font-weight:bold;\">400</h1>\n<h2\x20style
+SF:=\"margin-top:20px;font-size:\x2030px;\">Bad\x20Request\r\n</h2>\n<p>It
+SF:\x20is\x20not\x20a\x20valid\x20request!</p>\n</div><")%r(FourOhFourRequ
+SF:est,27C0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nc
+SF:ontent-type:\x20text/html\r\ndate:\x20Sat,\x2001\x20Oct\x202022\x2016:2
+SF:1:55\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n\n\n\n<!DOCTYPE\x20html>\n<h
+SF:tml>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Con
+SF:tent-type\"\x20content=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x
+SF:20<meta\x20http-equiv=\"Cache-control\"\x20content=\"no-cache\">\n\x20\
+SF:x20\x20\x20<meta\x20http-equiv=\"Pragma\"\x20content=\"no-cache\">\n\x2
+SF:0\x20\x20\x20<meta\x20http-equiv=\"Expires\"\x20content=\"0\">\n\x20\x2
+SF:0\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x2
+SF:0initial-scale=1\.0\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</tit
+SF:le>\n\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:font-family:\x20Arial,\x20Helvetica,\x20sans-serif;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20line-height:\x201\.428571429;\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#ffffff;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20section,\x20footer\x20{\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20");
+
+Nmap scan report for 2.20.235.124
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-10-01 22:21:33 +06 for 181s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 46 AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+|_http-title: Invalid URL
+
+Nmap scan report for 178.159.69.87
+Host is up, received user-set (0.29s latency).
+Scanned at 2022-10-01 22:21:32 +06 for 182s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 52 nginx
+|_http-title: 404 Not Found
+
+Nmap scan report for 106.75.209.242
+Host is up, received user-set (0.24s latency).
+Scanned at 2022-10-01 22:21:39 +06 for 174s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 43
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Oct 2022 16:21:57 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 204 No Content
+|     Date: Sat, 01 Oct 2022 16:21:51 GMT
+|     Connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 204 No Content
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Connection: close
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Oct 2022 16:21:56 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Oct 2022 16:21:50 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|_    </html>
+|_http-title: Site doesn't have a title.
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,53,"HTTP/1\.1\x20204\x20No\x20Content\r\nDate:\x20Sat,\x2001\x20
+SF:Oct\x202022\x2016:21:49\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(HTTP
+SF:Options,53,"HTTP/1\.1\x20204\x20No\x20Content\r\nDate:\x20Sat,\x2001\x2
+SF:0Oct\x202022\x2016:21:49\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTS
+SF:PRequest,CC,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
+SF:\.0//EN\">\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></hea
+SF:d>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr>
+SF:<center>tengine</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,15D,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2001\x20Oct\x202022\
+SF:x2016:21:50\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nC
+SF:ontent-Length:\x20204\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\
+SF:x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><
+SF:title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400
+SF:\x20Bad\x20Request</h1></center>\r\n<hr><center>tengine</center>\r\n</b
+SF:ody>\r\n</html>\r\n")%r(FourOhFourRequest,53,"HTTP/1\.1\x20204\x20No\x2
+SF:0Content\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:51\x20GMT\r\nCo
+SF:nnection:\x20close\r\n\r\n")%r(RPCCheck,15D,"HTTP/1\.1\x20400\x20Bad\x2
+SF:0Request\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:56\x20GMT\r\nCo
+SF:ntent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20204\r\
+SF:nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
+SF:DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><title>400\x20Bad\x20Requ
+SF:est</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1><
+SF:/center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n")%r(
+SF:DNSVersionBindReqTCP,15D,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x
+SF:20Sat,\x2001\x20Oct\x202022\x2016:21:57\x20GMT\r\nContent-Type:\x20text
+SF:/html;\x20charset=utf-8\r\nContent-Length:\x20204\r\nConnection:\x20clo
+SF:se\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0
+SF://EN\">\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\
+SF:r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><ce
+SF:nter>tengine</center>\r\n</body>\r\n</html>\r\n");
+
+Nmap scan report for 51.140.191.228
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-10-01 22:21:41 +06 for 174s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 106
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 404 Site Not Found
+|     Content-Length: 2667
+|     Connection: close
+|     Content-Type: text/html
+|     Date: Sat, 01 Oct 2022 16:21:48 GMT
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>Microsoft Azure Web App - Error 404</title>
+|     <style type="text/css">
+|     html {
+|     height: 100%;
+|     width: 100%;
+|     #feature {
+|     width: 960px;
+|     margin: 75px auto 0 auto;
+|     overflow: auto;
+|     #content {
+|     font-family: "Segoe UI";
+|     font-weight: normal;
+|     font-size: 22px;
+|     color: #ffffff;
+|     float: left;
+|     margin-top: 68px;
+|     margin-left: 0px;
+|     vertical-align: middle;
+|     #content h1 {
+|     font-family: "Segoe UI Light";
+|     color: #ffffff;
+|     font-weight: normal;
+|   HTTPOptions: 
+|     HTTP/1.1 404 Site Not Found
+|     Content-Length: 2667
+|     Connection: close
+|     Content-Type: text/html
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>Microsoft Azure Web App - Error 404</title>
+|     <style type="text/css">
+|     html {
+|     height: 100%;
+|     width: 100%;
+|     #feature {
+|     width: 960px;
+|     margin: 75px auto 0 auto;
+|     overflow: auto;
+|     #content {
+|     font-family: "Segoe UI";
+|     font-weight: normal;
+|     font-size: 22px;
+|     color: #ffffff;
+|     float: left;
+|     margin-top: 68px;
+|     margin-left: 0px;
+|     vertical-align: middle;
+|     #content h1 {
+|     font-family: "Segoe UI Light";
+|     color: #ffffff;
+|_    font-weight: normal;
+|_http-title: Microsoft Azure Web App - Error 404
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,AF1,"HTTP/1\.1\x20404\x20Site\x20Not\x20Found\r\nContent-Length:
+SF:\x202667\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\nDate:
+SF:\x20Sat,\x2001\x20Oct\x202022\x2016:21:48\x20GMT\r\n\r\n<!DOCTYPE\x20ht
+SF:ml>\r\n<html>\r\n<head>\r\n\x20\x20\x20\x20<title>Microsoft\x20Azure\x2
+SF:0Web\x20App\x20-\x20Error\x20404</title>\r\n\x20\x20\x20\x20<style\x20t
+SF:ype=\"text/css\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\r\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\r\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20}\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20#feature\x
+SF:20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20960px;
+SF:\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2075px\x20
+SF:auto\x200\x20auto;\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20o
+SF:verflow:\x20auto;\r\n\x20\x20\x20\x20\x20\x20\x20\x20}\r\n\r\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20#content\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20font-family:\x20\"Segoe\x20UI\";\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20normal;\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2022px;\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ffffff;\r\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20float:\x20left;\r\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20margin-top:\x2068px;\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20margin-left:\x200px;\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20vertical-align:\x20middle;\r\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20}\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20#content\x20h1\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20font-family:\x20\"Segoe\x20UI\x20Light\";\r\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x2
+SF:0#ffffff;\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20font-weight:\x20normal;\r\n\x20\x20\x20")%r(HTTPOptions,AF1,"HTTP
+SF:/1\.1\x20404\x20Site\x20Not\x20Found\r\nContent-Length:\x202667\r\nConn
+SF:ection:\x20close\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x2001\x
+SF:20Oct\x202022\x2016:21:49\x20GMT\r\n\r\n<!DOCTYPE\x20html>\r\n<html>\r\
+SF:n<head>\r\n\x20\x20\x20\x20<title>Microsoft\x20Azure\x20Web\x20App\x20-
+SF:\x20Error\x20404</title>\r\n\x20\x20\x20\x20<style\x20type=\"text/css\"
+SF:>\r\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\r\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20height:\x20100%;\r\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20width:\x20100%;\r\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20}\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20#feature\x20{\r\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20960px;\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2075px\x20auto\x200\x20aut
+SF:o;\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20auto
+SF:;\r\n\x20\x20\x20\x20\x20\x20\x20\x20}\r\n\r\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20#content\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0font-family:\x20\"Segoe\x20UI\";\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20font-weight:\x20normal;\r\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20font-size:\x2022px;\r\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20color:\x20#ffffff;\r\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20float:\x20left;\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20margin-top:\x2068px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20margin-left:\x200px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20vertical-align:\x20middle;\r\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20}\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#content
+SF:\x20h1\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20font-family:\x20\"Segoe\x20UI\x20Light\";\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ffffff;\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weigh
+SF:t:\x20normal;\r\n\x20\x20\x20");
+
+Nmap scan report for 170.130.41.101
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-10-01 22:21:41 +06 for 173s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 46 Apache httpd 2.2.15
+|_http-server-header: Apache/2.2.15
+|_http-title: Index of /
+
+Nmap scan report for 50.204.127.140
+Host is up, received user-set (0.33s latency).
+Scanned at 2022-10-01 22:21:38 +06 for 179s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 44
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently 
+|     Connection: close
+|     Content-Type: text/html
+|     Location: https://10.1.2.74/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <HTML><HEAD>
+|     <TITLE>301 Moved Permanently </TITLE>
+|     </HEAD><BODY>
+|     <H1>The Document has moved</H1></BODY></HTML>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently 
+|     Connection: close
+|     Content-Type: text/html
+|     Location: https://10.1.2.74/
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <HTML><HEAD>
+|     <TITLE>301 Moved Permanently </TITLE>
+|     </HEAD><BODY>
+|_    <H1>The Document has moved</H1></BODY></HTML>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691E%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,116,"HTTP/1\.1\x20301\x20Moved\x20Permanently\x20\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html\r\nLocation:\x20https://10\.1\.
+SF:2\.74/\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
+SF:2\.0//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Moved\x20Permanently\x20</
+SF:TITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\x20has\x20moved</H1></BO
+SF:DY></HTML>\r\n\r\n")%r(HTTPOptions,116,"HTTP/1\.1\x20301\x20Moved\x20Pe
+SF:rmanently\x20\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n
+SF:Location:\x20https://10\.1\.2\.74/\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x
+SF:20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x
+SF:20Moved\x20Permanently\x20</TITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Docum
+SF:ent\x20has\x20moved</H1></BODY></HTML>\r\n\r\n")%r(FourOhFourRequest,13
+SF:9,"HTTP/1\.1\x20301\x20Moved\x20Permanently\x20\r\nConnection:\x20close
+SF:\r\nContent-Type:\x20text/html\r\nLocation:\x20https://10\.1\.2\.74/nic
+SF:e%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x2
+SF:0\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x2
+SF:0Moved\x20Permanently\x20</TITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Docume
+SF:nt\x20has\x20moved</H1></BODY></HTML>\r\n\r\n");
+
+Nmap scan report for 104.19.226.58
+Host is up, received user-set (0.0016s latency).
+Scanned at 2022-10-01 22:21:35 +06 for 179s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 58 cloudflare
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     Server: cloudflare
+|     CF-RAY: 753688958a1cbc27-DAC
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Oct 2022 16:21:48 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     Server: cloudflare
+|     CF-RAY: 753688940ad5bc2d-DAC
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     Server: cloudflare
+|     CF-RAY: 753688955d0dbc2d-DAC
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|     </html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: cloudflare
+|     Date: Sat, 01 Oct 2022 16:21:54 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     CF-RAY: -
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: cloudflare
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     CF-RAY: -
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|_    </html>
+|_http-server-header: cloudflare
+|_http-title: Site doesn't have a title (text/plain; charset=UTF-8).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,14F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2001\x
+SF:20Oct\x202022\x2016:21:48\x20GMT\r\nContent-Type:\x20text/html\r\nConte
+SF:nt-Length:\x20155\r\nConnection:\x20close\r\nServer:\x20cloudflare\r\nC
+SF:F-RAY:\x20753688940ad5bc2d-DAC\r\n\r\n<html>\r\n<head><title>400\x20Bad
+SF:\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Reque
+SF:st</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(HTTPOptions,14F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:
+SF:\x20Sat,\x2001\x20Oct\x202022\x2016:21:49\x20GMT\r\nContent-Type:\x20te
+SF:xt/html\r\nContent-Length:\x20155\r\nConnection:\x20close\r\nServer:\x2
+SF:0cloudflare\r\nCF-RAY:\x20753688955d0dbc2d-DAC\r\n\r\n<html>\r\n<head><
+SF:title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400
+SF:\x20Bad\x20Request</h1></center>\r\n<hr><center>cloudflare</center>\r\n
+SF:</body>\r\n</html>\r\n")%r(RTSPRequest,9B,"<html>\r\n<head><title>400\x
+SF:20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20
+SF:Request</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n
+SF:</html>\r\n")%r(X11Probe,13C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSer
+SF:ver:\x20cloudflare\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:49\x2
+SF:0GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20155\r\nConnect
+SF:ion:\x20close\r\nCF-RAY:\x20-\r\n\r\n<html>\r\n<head><title>400\x20Bad\
+SF:x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Reques
+SF:t</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html
+SF:>\r\n")%r(FourOhFourRequest,14F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Date:\x20Sat,\x2001\x20Oct\x202022\x2016:21:49\x20GMT\r\nContent-Type:\
+SF:x20text/html\r\nContent-Length:\x20155\r\nConnection:\x20close\r\nServe
+SF:r:\x20cloudflare\r\nCF-RAY:\x20753688958a1cbc27-DAC\r\n\r\n<html>\r\n<h
+SF:ead><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h
+SF:1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>cloudflare</center
+SF:>\r\n</body>\r\n</html>\r\n")%r(RPCCheck,13C,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nServer:\x20cloudflare\r\nDate:\x20Sat,\x2001\x20Oct\x20202
+SF:2\x2016:21:54\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:20155\r\nConnection:\x20close\r\nCF-RAY:\x20-\r\n\r\n<html>\r\n<head><t
+SF:itle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\
+SF:x20Bad\x20Request</h1></center>\r\n<hr><center>cloudflare</center>\r\n<
+SF:/body>\r\n</html>\r\n");
+
+Nmap scan report for 152.199.54.86
+Host is up, received user-set (0.33s latency).
+Scanned at 2022-10-01 22:21:35 +06 for 179s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 44 ECAcc (bog/A714)
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Server: ECAcc (bog/A714)
+|     Content-Length: 345
+|     Connection: close
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>404 - Not Found</title>
+|     </head>
+|     <body>
+|     <h1>404 - Not Found</h1>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: OPTIONS, GET, HEAD, POST
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Server: ECAcc (bog/A714)
+|     Content-Length: 0
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html
+|     Content-Length: 349
+|     Connection: close
+|     Date: Sat, 01 Oct 2022 16:21:50 GMT
+|     Server: ECLF (bog/A724)
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>400 - Bad Request</title>
+|     </head>
+|     <body>
+|     <h1>400 - Bad Request</h1>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.0 501 Not Implemented
+|     Content-Type: text/html
+|     Content-Length: 357
+|     Connection: close
+|     Date: Sat, 01 Oct 2022 16:21:51 GMT
+|     Server: ECLF (bog/A713)
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>501 - Not Implemented</title>
+|     </head>
+|     <body>
+|     <h1>501 - Not Implemented</h1>
+|     </body>
+|_    </html>
+| http-server-header: 
+|   ECAcc (bog/A714)
+|_  ECLF (bog/A724)
+|_http-title: 404 - Not Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,1F3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/h
+SF:tml\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:49\x20GMT\r\nServer:
+SF:\x20ECAcc\x20\(bog/A714\)\r\nContent-Length:\x20345\r\nConnection:\x20c
+SF:lose\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"iso-8859-1\"\?>\n<
+SF:!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Transit
+SF:ional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.w3\.org/
+SF:TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xmlns=\"http://www\
+SF:.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\">\n\t<head>\n\t\
+SF:t<title>404\x20-\x20Not\x20Found</title>\n\t</head>\n\t<body>\n\t\t<h1>
+SF:404\x20-\x20Not\x20Found</h1>\n\t</body>\n</html>\n")%r(HTTPOptions,99,
+SF:"HTTP/1\.0\x20200\x20OK\r\nAllow:\x20OPTIONS,\x20GET,\x20HEAD,\x20POST\
+SF:r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:49\x20GMT\r\nServer:\x20
+SF:ECAcc\x20\(bog/A714\)\r\nContent-Length:\x200\r\nConnection:\x20close\r
+SF:\n\r\n")%r(RTSPRequest,1F8,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20349\r\nConnection:\x20close
+SF:\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:50\x20GMT\r\nServer:\x2
+SF:0ECLF\x20\(bog/A724\)\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"i
+SF:so-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x
+SF:201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"htt
+SF:p://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xm
+SF:lns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\
+SF:">\n\t<head>\n\t\t<title>400\x20-\x20Bad\x20Request</title>\n\t</head>\
+SF:n\t<body>\n\t\t<h1>400\x20-\x20Bad\x20Request</h1>\n\t</body>\n</html>\
+SF:n")%r(X11Probe,204,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nContent-T
+SF:ype:\x20text/html\r\nContent-Length:\x20357\r\nConnection:\x20close\r\n
+SF:Date:\x20Sat,\x2001\x20Oct\x202022\x2016:21:51\x20GMT\r\nServer:\x20ECL
+SF:F\x20\(bog/A713\)\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"iso-8
+SF:859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\
+SF:.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"http://
+SF:www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xmlns=
+SF:\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\">\n
+SF:\t<head>\n\t\t<title>501\x20-\x20Not\x20Implemented</title>\n\t</head>\
+SF:n\t<body>\n\t\t<h1>501\x20-\x20Not\x20Implemented</h1>\n\t</body>\n</ht
+SF:ml>\n");
+
+Nmap scan report for 211.24.73.121
+Host is up, received user-set (0.059s latency).
+Scanned at 2022-10-01 22:21:33 +06 for 180s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 TP-LINK TD-W8968 http admin
+|_http-title: 403 Forbidden
+Service Info: Device: WAP; CPE: cpe:/h:tp-link:td-w8968
+
+Nmap scan report for 35.162.249.32
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-10-01 22:21:30 +06 for 184s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 221 awselb/2.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 16:21:52 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 16:21:49 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 16:21:59 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 16:21:50 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+|_http-server-header: awselb/2.0
+|_http-title: 503 Service Temporarily Unavailable
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\x20Unavailable\r
+SF:\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21
+SF::49\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20162\r\nC
+SF:onnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x20Service\x20Tem
+SF:porarily\x20Unavailable</title></head>\r\n<body>\r\n<center><h1>503\x20
+SF:Service\x20Temporarily\x20Unavailable</h1></center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(HTTPOptions,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\
+SF:x20Unavailable\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\
+SF:x202022\x2016:21:49\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:gth:\x20162\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x
+SF:20Service\x20Temporarily\x20Unavailable</title></head>\r\n<body>\r\n<ce
+SF:nter><h1>503\x20Service\x20Temporarily\x20Unavailable</h1></center>\r\n
+SF:</body>\r\n</html>\r\n")%r(RTSPRequest,7A,"<html>\r\n<head><title>400\x
+SF:20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20
+SF:Request</h1></center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,110,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat
+SF:,\x2001\x20Oct\x202022\x2016:21:50\x20GMT\r\nContent-Type:\x20text/html
+SF:\r\nContent-Length:\x20122\r\nConnection:\x20close\r\n\r\n<html>\r\n<he
+SF:ad><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1
+SF:>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n")%r(Four
+SF:OhFourRequest,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\x20Unavai
+SF:lable\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x
+SF:2016:21:52\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x201
+SF:62\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x20Service
+SF:\x20Temporarily\x20Unavailable</title></head>\r\n<body>\r\n<center><h1>
+SF:503\x20Service\x20Temporarily\x20Unavailable</h1></center>\r\n</body>\r
+SF:\n</html>\r\n")%r(RPCCheck,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nS
+SF:erver:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2016:21:59
+SF:\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20122\r\nConn
+SF:ection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</t
+SF:itle></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cente
+SF:r>\r\n</body>\r\n</html>\r\n");
+
+Nmap scan report for 80.237.133.47
+Host is up, received user-set (0.30s latency).
+Scanned at 2022-10-01 22:21:31 +06 for 183s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 nginx
+|_http-title:   Host Europe GmbH  
+
+Nmap scan report for 111.89.139.122
+Host is up, received user-set (0.13s latency).
+Scanned at 2022-10-01 22:21:33 +06 for 180s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 49 Apache httpd
+|_http-server-header: Apache
+|_http-title: \x93\x8C\x8B\x9E\x81E\x92J\x92\x86\x88\xEA\x92\x9A\x96\xDA\x81y\x89\x84\x9A\xE6\x8E\x9B\x81z\x91\xAB\x95a\x8E\xE7\x8C\xEC\x82\xCC\x8E\x9B\x81E\x93\xFA\x89\xD7\x93\xB0
+
+Nmap scan report for 45.15.67.112
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-10-01 22:21:41 +06 for 173s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 nginx
+|_http-title: Page not found
+
+Nmap scan report for 186.115.225.246
+Host is up, received user-set (0.35s latency).
+Scanned at 2022-10-01 22:21:37 +06 for 180s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 42
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Found
+|     Content-type: text/html;charset=UTF-8
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval';style-src 'self' 'unsafe-inline'
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|_    Location: /cgi-bin/logIn_mhs.cgi
+| http-title: movistar
+|_Requested resource was /cgi-bin/logIn_mhs.cgi
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=6338691D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,13D,"HTTP/1\.0\x20302\x20Found\r\nContent-type:\x20text/html;cha
+SF:rset=UTF-8\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Security-Policy
+SF::\x20default-src\x20'self';\x20script-src\x20'self'\x20'unsafe-inline'\
+SF:x20'unsafe-eval';style-src\x20'self'\x20'unsafe-inline'\r\nX-Content-Ty
+SF:pe-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nLoca
+SF:tion:\x20/cgi-bin/logIn_mhs\.cgi\r\n\r\n");
+
+Nmap scan report for 96.126.15.26
+Host is up, received user-set (0.24s latency).
+Scanned at 2022-10-01 22:21:41 +06 for 179s
+
+PORT   STATE SERVICE    REASON          VERSION
+80/tcp open  tcpwrapped syn-ack ttl 239
+
+Nmap scan report for 137.184.112.10
+Host is up, received user-set (0.36s latency).
+Scanned at 2022-10-01 22:21:28 +06 for 186s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 47 nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: We're sorry, but something went wrong (500)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 22:24:40 2022 -- 1000 IP addresses (1000 hosts up) scanned in 194.30 seconds

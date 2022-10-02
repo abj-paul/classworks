@@ -1,0 +1,332 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:36:34 2022 as: nmap -A -oN dhakasouthcity.gov.bd.all.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+Host is up (0.26s latency).
+rDNS record for 170.10.162.208: addwire.com
+Not shown: 983 closed ports
+PORT     STATE    SERVICE   VERSION
+21/tcp   open     ftp       Pure-FTPd
+| ssl-cert: Subject: commonName=altar47.supremepanel47.com
+| Subject Alternative Name: DNS:altar47.supremepanel47.com, DNS:cpanel.altar47.supremepanel47.com, DNS:cpcalendars.altar47.supremepanel47.com, DNS:cpcontacts.altar47.supremepanel47.com, DNS:mail.altar47.supremepanel47.com, DNS:webmail.altar47.supremepanel47.com, DNS:whm.altar47.supremepanel47.com, DNS:www.altar47.supremepanel47.com
+| Not valid before: 2022-07-31T00:00:00
+|_Not valid after:  2022-10-29T23:59:59
+|_ssl-date: TLS randomness does not represent time
+22/tcp   filtered ssh
+25/tcp   open     smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp   open     smtp      Exim smtpd 4.95
+| smtp-commands: altar47.supremepanel47.com Hello dhakasouthcity.gov.bd [123.253.65.250], SIZE 52428800, 8BITMIME, PIPELINING, PIPE_CONNECT, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+|_ssl-date: TLS randomness does not represent time
+53/tcp   open     domain    PowerDNS Authoritative Server 4.4.1
+| dns-nsid: 
+|   NSID: altar47.supremepanel47.com (616c74617234372e73757072656d6570616e656c34372e636f6d)
+|   id.server: altar47.supremepanel47.com
+|_  bind.version: PowerDNS Authoritative Server 4.4.1 (built May 12 2022 16:30:11 by root@bh-centos-7.dev.cpanel.net)
+80/tcp   open     http      LiteSpeed
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: close
+|     content-type: text/html
+|     date: Sat, 01 Oct 2022 16:37:06 GMT
+|     server: LiteSpeed
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+|     <meta http-equiv="Cache-control" content="no-cache">
+|     <meta http-equiv="Pragma" content="no-cache">
+|     <meta http-equiv="Expires" content="0">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>404 Not Found</title>
+|     <style type="text/css">
+|     body {
+|     font-family: Arial, Helvetica, sans-serif;
+|     font-size: 14px;
+|     line-height: 1.428571429;
+|     background-color: #ffffff;
+|     color: #2F3230;
+|     padding: 0;
+|     margin: 0;
+|     section, footer {
+|     display: block;
+|     padding: 0;
+|     margin: 0;
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     content-type: text/html
+|     last-modified: Wed, 17 Jun 2020 20:01:33 GMT
+|     accept-ranges: bytes
+|     content-length: 163
+|     date: Sat, 01 Oct 2022 16:36:54 GMT
+|     server: LiteSpeed
+|     <html><head><META HTTP-EQUIV="Cache-control" CONTENT="no-cache"><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     allow: OPTIONS,HEAD,GET,POST
+|     content-length: 0
+|     date: Sat, 01 Oct 2022 16:37:00 GMT
+|     server: LiteSpeed
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     cache-control: private, no-cache, no-store, must-revalidate, max-age=0
+|     pragma: no-cache
+|     content-type: text/html
+|     content-length: 681
+|     date: Sat, 01 Oct 2022 16:37:00 GMT
+|     server: LiteSpeed
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+|     <title> 400 Bad Request
+|     </title></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+|     style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">400</h1>
+|     style="margin-top:20px;font-size: 30px;">Bad Request
+|     </h2>
+|     <p>It is not a valid request!</p>
+|_    </div><
+|_http-server-header: LiteSpeed
+110/tcp  open     pop3      Dovecot pop3d
+|_pop3-capabilities: UIDL AUTH-RESP-CODE RESP-CODES CAPA STLS SASL(PLAIN LOGIN) PIPELINING USER TOP
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+111/tcp  open     rpcbind   2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+143/tcp  open     imap      Dovecot imapd
+|_imap-capabilities: capabilities IMAP4rev1 listed IDLE more ENABLE ID OK have Pre-login LITERAL+ post-login NAMESPACE LOGIN-REFERRALS AUTH=LOGINA0001 STARTTLS AUTH=PLAIN SASL-IR
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+443/tcp  open     ssl/https LiteSpeed
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: close
+|     cache-control: private, no-cache, no-store, must-revalidate, max-age=0
+|     pragma: no-cache
+|     content-type: text/html
+|     content-length: 1238
+|     date: Sat, 01 Oct 2022 16:37:04 GMT
+|     server: LiteSpeed
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+|     <title> 404 Not Found
+|     </title></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+|     style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
+|     style="margin-top:20px;font-size: 30px;">Not Found
+|     </h2>
+|     <p>The resource requested could not be found o
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     content-type: text/html
+|     last-modified: Thu, 26 Jul 2018 04:46:15 GMT
+|     accept-ranges: bytes
+|     content-length: 1354
+|     date: Sat, 01 Oct 2022 16:37:01 GMT
+|     server: LiteSpeed
+|     <html>
+|     <head>
+|     <title></title>
+|     </head>
+|     <body>
+|     <div class="w3-code notranslate htmlHigh"><span style="color: brown;"><span style="color: mediumblue;">&lt;</span>!DOCTYPE<span style="color: red;"> html</span><span style="color: mediumblue;">&gt;</span></span><br />
+|     <span style="color: brown;"><span style="color: mediumblue;">&lt;</span>html<span style="color: mediumblue;">&gt;</span></span><br />
+|     <span style="color: brown;"><span style="color: mediumblue;">&lt;</span>body<span style="color: mediumblue;">&gt;</span></span><br />
+|     <span style="color: brown;"><span style="color: mediumblue;">&lt;</span>h1<span style="color: mediumblue;">&gt;</span></span>Test<span style="color: bro
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     allow: OPTIONS,HEAD,GET,POST
+|     content-length: 0
+|     date: Sat, 01 Oct 2022 16:37:03 GMT
+|_    server: LiteSpeed
+|_http-server-header: LiteSpeed
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+465/tcp  open     ssl/smtp  Exim smtpd 4.95
+|_smtp-commands: SMTP EHLO dhakasouthcity.gov.bd: failed to receive data: failed to receive data
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+|_ssl-date: TLS randomness does not represent time
+587/tcp  open     smtp      Exim smtpd 4.95
+| smtp-commands: altar47.supremepanel47.com Hello dhakasouthcity.gov.bd [123.253.65.250], SIZE 52428800, 8BITMIME, PIPELINING, PIPE_CONNECT, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+|_ssl-date: TLS randomness does not represent time
+646/tcp  filtered ldp
+993/tcp  open     imaps?
+|_imap-capabilities: CAPABILITY
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+995/tcp  open     pop3s?
+|_pop3-capabilities: AUTH-RESP-CODE USER UIDL TOP SASL(PLAIN LOGIN) RESP-CODES CAPA PIPELINING
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+2222/tcp open     ssh       OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 38:21:db:0f:92:1d:70:38:39:03:a3:49:f5:2a:78:ec (RSA)
+|   256 14:0e:60:6f:a2:94:49:8a:08:cc:af:ea:d8:bd:e8:97 (ECDSA)
+|_  256 45:ab:1a:22:4a:d7:ae:5b:5b:82:a4:d8:41:65:a0:0b (ED25519)
+3306/tcp open     mysql     MySQL 5.7.39-cll-lve
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.39-cll-lve
+|   Thread ID: 1994977
+|   Capabilities flags: 65535
+|   Some Capabilities: SwitchToSSLAfterHandshake, InteractiveClient, Support41Auth, IgnoreSigpipes, SupportsCompression, SupportsTransactions, SupportsLoadDataLocal, FoundRows, Speaks41ProtocolOld, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolNew, LongPassword, DontAllowDatabaseTableColumn, ConnectWithDatabase, ODBCClient, LongColumnFlag, SupportsMultipleStatments, SupportsMultipleResults, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: Ys<-\x12a|\x06#fMS\x7Fv;5Vg}f
+|_  Auth Plugin Name: mysql_native_password
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=63386CAB%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,173,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\ncontent-t
+SF:ype:\x20text/html\r\nlast-modified:\x20Wed,\x2017\x20Jun\x202020\x2020:
+SF:01:33\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20163\r\nda
+SF:te:\x20Sat,\x2001\x20Oct\x202022\x2016:36:54\x20GMT\r\nserver:\x20LiteS
+SF:peed\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"Cache-control\"\x20CONTEN
+SF:T=\"no-cache\"><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL=/cgi-
+SF:sys/defaultwebpage\.cgi\"></head><body></body></html>\n")%r(HTTPOptions
+SF:,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nallow:\x20OPTION
+SF:S,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\x20Sat,\x2001\x20Oct\x
+SF:202022\x2016:37:00\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n")%r(RTSPReque
+SF:st,398,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nc
+SF:ache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate,
+SF:\x20max-age=0\r\npragma:\x20no-cache\r\ncontent-type:\x20text/html\r\nc
+SF:ontent-length:\x20681\r\ndate:\x20Sat,\x2001\x20Oct\x202022\x2016:37:00
+SF:\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\x20sty
+SF:le=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"\x20content=\"wi
+SF:dth=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\"\x20/>\n<tit
+SF:le>\x20400\x20Bad\x20Request\r\n</title></head>\n<body\x20style=\"color
+SF::\x20#444;\x20margin:0;font:\x20normal\x2014px/20px\x20Arial,\x20Helvet
+SF:ica,\x20sans-serif;\x20height:100%;\x20background-color:\x20#fff;\">\n<
+SF:div\x20style=\"height:auto;\x20min-height:100%;\x20\">\x20\x20\x20\x20\
+SF:x20<div\x20style=\"text-align:\x20center;\x20width:800px;\x20margin-lef
+SF:t:\x20-400px;\x20position:absolute;\x20top:\x2030%;\x20left:50%;\">\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\"margin:0;\x20font-size:150
+SF:px;\x20line-height:150px;\x20font-weight:bold;\">400</h1>\n<h2\x20style
+SF:=\"margin-top:20px;font-size:\x2030px;\">Bad\x20Request\r\n</h2>\n<p>It
+SF:\x20is\x20not\x20a\x20valid\x20request!</p>\n</div><")%r(FourOhFourRequ
+SF:est,27C0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nc
+SF:ontent-type:\x20text/html\r\ndate:\x20Sat,\x2001\x20Oct\x202022\x2016:3
+SF:7:06\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n\n\n\n<!DOCTYPE\x20html>\n<h
+SF:tml>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Con
+SF:tent-type\"\x20content=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x
+SF:20<meta\x20http-equiv=\"Cache-control\"\x20content=\"no-cache\">\n\x20\
+SF:x20\x20\x20<meta\x20http-equiv=\"Pragma\"\x20content=\"no-cache\">\n\x2
+SF:0\x20\x20\x20<meta\x20http-equiv=\"Expires\"\x20content=\"0\">\n\x20\x2
+SF:0\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x2
+SF:0initial-scale=1\.0\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</tit
+SF:le>\n\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:font-family:\x20Arial,\x20Helvetica,\x20sans-serif;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20line-height:\x201\.428571429;\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#ffffff;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20section,\x20footer\x20{\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.80%T=SSL%I=7%D=10/1%Time=63386CAE%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,61B,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nco
+SF:ntent-type:\x20text/html\r\nlast-modified:\x20Thu,\x2026\x20Jul\x202018
+SF:\x2004:46:15\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x2013
+SF:54\r\ndate:\x20Sat,\x2001\x20Oct\x202022\x2016:37:01\x20GMT\r\nserver:\
+SF:x20LiteSpeed\r\n\r\n<html>\n<head>\n\t<title></title>\n</head>\n<body>\
+SF:n<div\x20class=\"w3-code\x20notranslate\x20htmlHigh\"><span\x20style=\"
+SF:color:\x20brown;\"><span\x20style=\"color:\x20mediumblue;\">&lt;</span>
+SF:!DOCTYPE<span\x20style=\"color:\x20red;\">\x20html</span><span\x20style
+SF:=\"color:\x20mediumblue;\">&gt;</span></span><br\x20/>\n<span\x20style=
+SF:\"color:\x20brown;\"><span\x20style=\"color:\x20mediumblue;\">&lt;</spa
+SF:n>html<span\x20style=\"color:\x20mediumblue;\">&gt;</span></span><br\x2
+SF:0/>\n<span\x20style=\"color:\x20brown;\"><span\x20style=\"color:\x20med
+SF:iumblue;\">&lt;</span>body<span\x20style=\"color:\x20mediumblue;\">&gt;
+SF:</span></span><br\x20/>\n<br\x20/>\n<span\x20style=\"color:\x20brown;\"
+SF:><span\x20style=\"color:\x20mediumblue;\">&lt;</span>h1<span\x20style=\
+SF:"color:\x20mediumblue;\">&gt;</span></span>Test<span\x20style=\"color:\
+SF:x20bro")%r(HTTPOptions,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20clo
+SF:se\r\nallow:\x20OPTIONS,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\
+SF:x20Sat,\x2001\x20Oct\x202022\x2016:37:03\x20GMT\r\nserver:\x20LiteSpeed
+SF:\r\n\r\n")%r(FourOhFourRequest,5C4,"HTTP/1\.0\x20404\x20Not\x20Found\r\
+SF:nConnection:\x20close\r\ncache-control:\x20private,\x20no-cache,\x20no-
+SF:store,\x20must-revalidate,\x20max-age=0\r\npragma:\x20no-cache\r\nconte
+SF:nt-type:\x20text/html\r\ncontent-length:\x201238\r\ndate:\x20Sat,\x2001
+SF:\x20Oct\x202022\x2016:37:04\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOC
+SF:TYPE\x20html>\n<html\x20style=\"height:100%\">\n<head>\n<meta\x20name=\
+SF:"viewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shr
+SF:ink-to-fit=no\"\x20/>\n<title>\x20404\x20Not\x20Found\r\n</title></head
+SF:>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20normal\x2014px
+SF:/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x20backgro
+SF:und-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20min-height:100%
+SF:;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x20center;\x20w
+SF:idth:800px;\x20margin-left:\x20-400px;\x20position:absolute;\x20top:\x2
+SF:030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\"m
+SF:argin:0;\x20font-size:150px;\x20line-height:150px;\x20font-weight:bold;
+SF:\">404</h1>\n<h2\x20style=\"margin-top:20px;font-size:\x2030px;\">Not\x
+SF:20Found\r\n</h2>\n<p>The\x20resource\x20requested\x20could\x20not\x20be
+SF:\x20found\x20o");
+Aggressive OS guesses: Linux 3.10 - 4.11 (95%), Linux 3.2 - 4.9 (93%), Linux 3.13 (92%), Linux 3.13 or 4.2 (92%), Linux 4.10 (92%), Linux 4.2 (92%), Linux 4.4 (92%), Asus RT-AC66U WAP (92%), Linux 3.11 - 3.12 (92%), Linux 3.18 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 16 hops
+Service Info: Host: altar47.supremepanel47.com
+
+TRACEROUTE (using port 5900/tcp)
+HOP RTT       ADDRESS
+1   0.41 ms   XiaoQiang (192.168.31.1)
+2   0.81 ms   10.177.1.1
+3   1.42 ms   172.16.101.37
+4   1.55 ms   10.10.50.1
+5   1.38 ms   172.16.250.250
+6   25.73 ms  172.16.250.209
+7   107.26 ms nsg-corporate-21.154.187.122.airtel.in (122.187.154.21)
+8   ...
+9   194.62 ms de-cix.ags0.fra1.he.de.nsfocusglobal.com (80.81.193.174)
+10  189.73 ms 10.103.8.25
+11  197.89 ms 10.103.8.205
+12  ...
+13  272.19 ms 10.104.206.9
+14  267.91 ms ip237.208-100-32.static.steadfastdns.net (208.100.32.237)
+15  ...
+16  261.92 ms addwire.com (170.10.162.208)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 22:41:24 2022 -- 1 IP address (1 host up) scanned in 289.97 seconds

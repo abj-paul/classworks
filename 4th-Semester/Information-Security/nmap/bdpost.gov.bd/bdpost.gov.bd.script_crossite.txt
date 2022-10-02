@@ -1,0 +1,8 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:39:16 2022 as: nmap -p80 --script=http-unsafe-output-escaping -oN bdpost.gov.bd.script_crossite.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.099s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Sun Oct  2 11:39:28 2022 -- 1 IP address (1 host up) scanned in 12.05 seconds

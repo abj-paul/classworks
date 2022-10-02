@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:43:29 2022 as: nmap -sL -oN dhakasouthcity.gov.bd.scan_list_targets.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+rDNS record for 170.10.162.208: addwire.com
+# Nmap done at Sat Oct  1 22:43:29 2022 -- 1 IP address (0 hosts up) scanned in 0.01 seconds

@@ -1,0 +1,3 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:39:35 2022 as: nmap -D RND -A -oN bdpost.gov.bd.ids_all.txt bdpost.gov.bd
+Unknown address family 0 in build_packet.
+QUITTING!

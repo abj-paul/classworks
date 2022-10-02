@@ -1,0 +1,21 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:30:36 2022 as: nmap --script=dns-brute -oN bdpost.gov.bd.domain.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.099s latency).
+Not shown: 993 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+389/tcp  closed ldap
+443/tcp  open   https
+1503/tcp closed imtc-mcs
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+5060/tcp closed sip
+
+Host script results:
+| dns-brute: 
+|   DNS Brute-force hostnames: 
+|     testing.gov.bd - 123.49.12.132
+|     lab.gov.bd - 103.163.210.131
+|_    ntp.gov.bd - 103.163.246.78
+
+# Nmap done at Sun Oct  2 11:31:58 2022 -- 1 IP address (1 host up) scanned in 82.85 seconds

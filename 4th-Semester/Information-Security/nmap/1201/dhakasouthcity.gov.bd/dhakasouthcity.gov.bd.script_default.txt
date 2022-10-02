@@ -1,0 +1,96 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:53:27 2022 as: nmap -sC -oN dhakasouthcity.gov.bd.script_default.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+Host is up (0.26s latency).
+rDNS record for 170.10.162.208: addwire.com
+Not shown: 983 closed ports
+PORT     STATE    SERVICE
+21/tcp   open     ftp
+| ssl-cert: Subject: commonName=altar47.supremepanel47.com
+| Subject Alternative Name: DNS:altar47.supremepanel47.com, DNS:cpanel.altar47.supremepanel47.com, DNS:cpcalendars.altar47.supremepanel47.com, DNS:cpcontacts.altar47.supremepanel47.com, DNS:mail.altar47.supremepanel47.com, DNS:webmail.altar47.supremepanel47.com, DNS:whm.altar47.supremepanel47.com, DNS:www.altar47.supremepanel47.com
+| Not valid before: 2022-07-31T00:00:00
+|_Not valid after:  2022-10-29T23:59:59
+|_ssl-date: TLS randomness does not represent time
+22/tcp   filtered ssh
+25/tcp   open     smtp
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp   open     rsftp
+53/tcp   open     domain
+| dns-nsid: 
+|   NSID: altar47.supremepanel47.com (616c74617234372e73757072656d6570616e656c34372e636f6d)
+|   id.server: altar47.supremepanel47.com
+|_  bind.version: PowerDNS Authoritative Server 4.4.1 (built May 12 2022 16:30:11 by root@bh-centos-7.dev.cpanel.net)
+80/tcp   open     http
+| http-robots.txt: 5 disallowed entries 
+| /app /workshop /workshop/stockers /workshop/languages 
+|_/prevents
+|_http-title: Site doesn't have a title (text/html).
+110/tcp  open     pop3
+|_pop3-capabilities: PIPELINING STLS RESP-CODES SASL(PLAIN LOGIN) USER AUTH-RESP-CODE TOP UIDL CAPA
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+111/tcp  open     rpcbind
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+143/tcp  open     imap
+|_imap-capabilities: LITERAL+ OK IDLE ID STARTTLS listed IMAP4rev1 AUTH=LOGINA0001 post-login ENABLE capabilities SASL-IR Pre-login NAMESPACE more AUTH=PLAIN have LOGIN-REFERRALS
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+443/tcp  open     https
+| http-robots.txt: 5 disallowed entries 
+| /app /workshop /workshop/stockers /workshop/languages 
+|_/prevents
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+465/tcp  open     smtps
+| smtp-commands: altar47.supremepanel47.com Hello dhakasouthcity.gov.bd [123.253.65.250], SIZE 52428800, 8BITMIME, PIPELINING, PIPE_CONNECT, AUTH PLAIN LOGIN, HELP, 
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+|_ssl-date: TLS randomness does not represent time
+587/tcp  open     submission
+| smtp-commands: altar47.supremepanel47.com Hello dhakasouthcity.gov.bd [123.253.65.250], SIZE 52428800, 8BITMIME, PIPELINING, PIPE_CONNECT, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+|_ssl-date: TLS randomness does not represent time
+646/tcp  filtered ldp
+993/tcp  open     imaps
+|_imap-capabilities: LITERAL+ OK IDLE ID LOGIN-REFERRALS listed IMAP4rev1 AUTH=LOGINA0001 post-login ENABLE capabilities SASL-IR Pre-login NAMESPACE AUTH=PLAIN more have
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+995/tcp  open     pop3s
+|_pop3-capabilities: PIPELINING SASL(PLAIN LOGIN) CAPA TOP RESP-CODES AUTH-RESP-CODE UIDL USER
+| ssl-cert: Subject: commonName=dhakasouthcity.gov.bd
+| Subject Alternative Name: DNS:dhakasouthcity.gov.bd, DNS:autodiscover.dhakasouthcity.gov.bd, DNS:cpanel.dhakasouthcity.gov.bd, DNS:cpcalendars.dhakasouthcity.gov.bd, DNS:cpcontacts.dhakasouthcity.gov.bd, DNS:mail.dhakasouthcity.gov.bd, DNS:webdisk.dhakasouthcity.gov.bd, DNS:webmail.dhakasouthcity.gov.bd, DNS:www.dhakasouthcity.gov.bd
+| Not valid before: 2022-09-02T00:00:00
+|_Not valid after:  2022-12-01T23:59:59
+2222/tcp open     EtherNetIP-1
+3306/tcp open     mysql
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.39-cll-lve
+|   Thread ID: 2011121
+|   Capabilities flags: 65535
+|   Some Capabilities: SupportsLoadDataLocal, ODBCClient, SupportsCompression, IgnoreSigpipes, Speaks41ProtocolNew, ConnectWithDatabase, Speaks41ProtocolOld, FoundRows, Support41Auth, LongPassword, InteractiveClient, LongColumnFlag, SupportsTransactions, IgnoreSpaceBeforeParenthesis, DontAllowDatabaseTableColumn, SwitchToSSLAfterHandshake, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: :jCi\x12\x1A>J1~\x1D*q\x1C(\x06n\x01/\x13
+|_  Auth Plugin Name: mysql_native_password
+
+# Nmap done at Sat Oct  1 22:54:36 2022 -- 1 IP address (1 host up) scanned in 69.14 seconds

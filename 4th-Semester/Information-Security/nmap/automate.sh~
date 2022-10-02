@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo nmap -D RND $1 -oN $1.all.txt
+sudo nmap -D RND --script=http-sitemap-generator $1 -oN $1.sitemap.txt
+sudo nmap -D RND --script=dns-brute $1 -oN $1.domain.txt

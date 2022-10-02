@@ -1,0 +1,9 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:16:09 2022 as: nmap -p U:53,T:21-100,443 -oN eprocure.gov.bd.mixed_port_scan.txt eprocure.gov.bd
+Nmap scan report for eprocure.gov.bd (103.40.82.19)
+Host is up (0.0081s latency).
+Not shown: 79 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Sat Oct  1 22:16:11 2022 -- 1 IP address (1 host up) scanned in 1.89 seconds

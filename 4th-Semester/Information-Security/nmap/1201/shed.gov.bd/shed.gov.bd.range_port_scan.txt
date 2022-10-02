@@ -1,0 +1,8 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:43:13 2022 as: nmap -p 21-100 -oN shed.gov.bd.range_port_scan.txt shed.gov.bd
+Nmap scan report for shed.gov.bd (103.163.210.130)
+Host is up (0.099s latency).
+Not shown: 79 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Sat Oct  1 23:43:17 2022 -- 1 IP address (1 host up) scanned in 3.52 seconds

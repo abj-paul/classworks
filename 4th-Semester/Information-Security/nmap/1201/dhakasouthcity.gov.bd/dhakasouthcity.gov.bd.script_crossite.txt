@@ -1,0 +1,9 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:54:59 2022 as: nmap -p80 --script=http-unsafe-output-escaping -oN dhakasouthcity.gov.bd.script_crossite.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+Host is up (0.26s latency).
+rDNS record for 170.10.162.208: addwire.com
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Sat Oct  1 22:55:01 2022 -- 1 IP address (1 host up) scanned in 1.86 seconds

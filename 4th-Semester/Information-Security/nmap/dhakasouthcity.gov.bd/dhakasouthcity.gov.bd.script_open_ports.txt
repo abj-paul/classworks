@@ -1,0 +1,24 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:55:01 2022 as: nmap --open -oN dhakasouthcity.gov.bd.script_open_ports.txt dhakasouthcity.gov.bd
+Nmap scan report for dhakasouthcity.gov.bd (170.10.162.208)
+Host is up (0.26s latency).
+rDNS record for 170.10.162.208: addwire.com
+Not shown: 977 closed ports, 8 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+26/tcp   open  rsftp
+53/tcp   open  domain
+80/tcp   open  http
+110/tcp  open  pop3
+111/tcp  open  rpcbind
+143/tcp  open  imap
+443/tcp  open  https
+465/tcp  open  smtps
+587/tcp  open  submission
+993/tcp  open  imaps
+995/tcp  open  pop3s
+2222/tcp open  EtherNetIP-1
+3306/tcp open  mysql
+
+# Nmap done at Sat Oct  1 22:55:06 2022 -- 1 IP address (1 host up) scanned in 5.52 seconds

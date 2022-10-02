@@ -1,0 +1,27 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:36:10 2022 as: nmap --script=http-sitemap-generator -oN shed.gov.bd.sitemap.txt shed.gov.bd
+Nmap scan report for shed.gov.bd (103.163.210.130)
+Host is up (0.10s latency).
+Not shown: 996 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+389/tcp  closed ldap
+443/tcp  open   https
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+1503/tcp closed imtc-mcs
+
+# Nmap done at Sat Oct  1 23:36:31 2022 -- 1 IP address (1 host up) scanned in 20.88 seconds

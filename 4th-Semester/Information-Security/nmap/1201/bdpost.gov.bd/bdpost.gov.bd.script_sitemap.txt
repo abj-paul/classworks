@@ -1,0 +1,67 @@
+# Nmap 7.80 scan initiated Sun Oct  2 11:38:57 2022 as: nmap -Pn --script=http-sitemap-generator -oN bdpost.gov.bd.script_sitemap.txt bdpost.gov.bd
+Nmap scan report for bdpost.gov.bd (103.163.210.131)
+Host is up (0.10s latency).
+Not shown: 992 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+389/tcp  closed ldap
+443/tcp  open   https
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /site/news/1cbcf744-74a0-4fe1-9d85-31ad8e21ffb5/
+|       Other: 1
+|     /site/news/5f2e1cea-23c7-4f6f-8266-babb5150e105/
+|       Other: 1
+|     /site/notices/9f88b45d-ab20-4b7a-8da7-5b025bbc16bd/
+|       Other: 1
+|     /site/page/2a3e8d6c-0011-4784-a33a-48c895722cb8/
+|       Other: 1
+|     /site/page/32495e81-3fa6-420d-a368-b05587397d0a/
+|       Other: 1
+|     /site/page/3ae109e8-79d5-4712-b44d-84d552feccf6/
+|       Other: 1
+|     /site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/
+|       Other: 1
+|     /site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/
+|       Other: 1
+|     /site/page/6f2ae8cb-fc3b-44e0-a699-b724af9d7644/
+|       Other: 1
+|     /site/page/75256a37-3da0-4886-9d69-fb5f9927bad8/
+|       Other: 1
+|     /site/page/84a7858b-b451-432e-8949-f88bf9bf4e6d/
+|       Other: 1
+|     /site/page/921b98dc-cb15-4be4-8f0d-0125130c19f3/
+|       Other: 1
+|     /site/page/a375dd34-3e14-4021-83f9-736d357d7eda/
+|       Other: 1
+|     /site/page/a9087337-edb6-4c8d-a91d-422ab4740e30/
+|       Other: 1
+|     /site/view/
+|       Other: 1
+|     /site/view/innovation/
+|       Other: 1
+|     /site/view/policies/
+|       Other: 1
+|     /themes/responsive_npf/img/
+|       png: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /site/news/1cbcf744-74a0-4fe1-9d85-31ad8e21ffb5/
+|   Total files found (by extension):
+|_    Other: 18; png: 1
+1503/tcp closed imtc-mcs
+1719/tcp closed h323gatestat
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+5060/tcp closed sip
+
+# Nmap done at Sun Oct  2 11:39:16 2022 -- 1 IP address (1 host up) scanned in 19.14 seconds

@@ -1,0 +1,16 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:15:21 2022 as: nmap --script=dns-brute -oN eprocure.gov.bd.domain.txt eprocure.gov.bd
+Nmap scan report for eprocure.gov.bd (103.40.82.19)
+Host is up (0.016s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Host script results:
+| dns-brute: 
+|   DNS Brute-force hostnames: 
+|     testing.gov.bd - 123.49.12.132
+|     lab.gov.bd - 103.163.210.131
+|_    ntp.gov.bd - 103.163.246.78
+
+# Nmap done at Sat Oct  1 22:15:36 2022 -- 1 IP address (1 host up) scanned in 15.27 seconds

@@ -1,0 +1,21 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:36:31 2022 as: nmap --script=dns-brute -oN shed.gov.bd.domain.txt shed.gov.bd
+Nmap scan report for shed.gov.bd (103.163.210.130)
+Host is up (0.098s latency).
+Not shown: 993 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+443/tcp  open   https
+1503/tcp closed imtc-mcs
+1719/tcp closed h323gatestat
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+5060/tcp closed sip
+
+Host script results:
+| dns-brute: 
+|   DNS Brute-force hostnames: 
+|     testing.gov.bd - 123.49.12.132
+|     ntp.gov.bd - 103.163.246.78
+|_    lab.gov.bd - 103.163.210.131
+
+# Nmap done at Sat Oct  1 23:40:14 2022 -- 1 IP address (1 host up) scanned in 223.62 seconds

@@ -1,0 +1,320 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:49:15 2022 as: nmap -n -Pn -p 80 --open -sV -vvv --script banner,http-title -iR 1000 -oN shed.gov.bd.random_servers.txt
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap scan report for 72.138.158.10
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-10-01 23:49:18 +06 for 185s
+
+PORT   STATE SERVICE    REASON         VERSION
+80/tcp open  http-proxy syn-ack ttl 45 HAProxy http proxy 1.3.1 or later
+|_http-server-header: ConfD
+| http-title: Login
+|_Requested resource was /login.html
+Service Info: Device: load balancer
+
+Nmap scan report for 13.114.7.72
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-10-01 23:49:47 +06 for 155s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 232 awselb/2.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 17:50:29 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 17:50:27 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 17:50:28 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 17:50:35 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 01 Oct 2022 17:50:28 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+|_http-server-header: awselb/2.0
+|_http-title: 503 Service Temporarily Unavailable
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=63387DE4%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\x20Unavailable\r
+SF:\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2017:50
+SF::27\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20162\r\nC
+SF:onnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x20Service\x20Tem
+SF:porarily\x20Unavailable</title></head>\r\n<body>\r\n<center><h1>503\x20
+SF:Service\x20Temporarily\x20Unavailable</h1></center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(HTTPOptions,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\
+SF:x20Unavailable\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\
+SF:x202022\x2017:50:28\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:gth:\x20162\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x
+SF:20Service\x20Temporarily\x20Unavailable</title></head>\r\n<body>\r\n<ce
+SF:nter><h1>503\x20Service\x20Temporarily\x20Unavailable</h1></center>\r\n
+SF:</body>\r\n</html>\r\n")%r(RTSPRequest,7A,"<html>\r\n<head><title>400\x
+SF:20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20
+SF:Request</h1></center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,110,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat
+SF:,\x2001\x20Oct\x202022\x2017:50:28\x20GMT\r\nContent-Type:\x20text/html
+SF:\r\nContent-Length:\x20122\r\nConnection:\x20close\r\n\r\n<html>\r\n<he
+SF:ad><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1
+SF:>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n")%r(Four
+SF:OhFourRequest,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\x20Unavai
+SF:lable\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x
+SF:2017:50:29\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x201
+SF:62\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x20Service
+SF:\x20Temporarily\x20Unavailable</title></head>\r\n<body>\r\n<center><h1>
+SF:503\x20Service\x20Temporarily\x20Unavailable</h1></center>\r\n</body>\r
+SF:\n</html>\r\n")%r(RPCCheck,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nS
+SF:erver:\x20awselb/2\.0\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2017:50:35
+SF:\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20122\r\nConn
+SF:ection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</t
+SF:itle></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cente
+SF:r>\r\n</body>\r\n</html>\r\n");
+
+Nmap scan report for 152.70.105.86
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-10-01 23:49:54 +06 for 148s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 52 nginx
+|_http-title: 403 Forbidden
+
+Nmap scan report for 157.230.35.36
+Host is up, received user-set (0.052s latency).
+Scanned at 2022-10-01 23:50:14 +06 for 128s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 52 nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: 502 Bad Gateway
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 14.198.122.133
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-10-01 23:50:07 +06 for 138s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 47 lighttpd
+|_http-server-header: lighttpd/1.4.35-devel-203426M
+|_http-title: myhome
+
+Nmap scan report for 64.137.125.151
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-10-01 23:50:09 +06 for 136s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 01 Oct 2022 17:50:27 GMT
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 2583
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+|     <title>Home</title>
+|     <meta name="keywords" content="" />
+|     <meta name="description" content="" />
+|     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+|     </head>
+|     <body>
+|     <div id="header">
+|     <div id="logo">
+|     <h1><a href="#">softweb.org.uk</a></h1>
+|     </div>
+|     <!-- end #logo -->
+|     </div>
+|     /><br />
+|     <!-- end #header -->
+|     <!-- end #header-wrapper -->
+|     <div id="wrapper">
+|     <div id="wrapper-bgtop">
+|     <div
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 01 Oct 2022 17:50:28 GMT
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 2583
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+|     <title>Home</title>
+|     <meta name="keywords" content="" />
+|     <meta name="description" content="" />
+|     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+|     </head>
+|     <body>
+|     <div id="header">
+|     <div id="logo">
+|     <h1><a href="#">softweb.org.uk</a></h1>
+|     </div>
+|     <!-- end #logo -->
+|     </div>
+|     /><br />
+|     <!-- end #header -->
+|     <!-- end #header-wrapper -->
+|     <div id="wrapper">
+|     <div id="wrapper-bgtop">
+|_    <div
+|_http-server-header: <empty>
+|_http-title: 500 Internal Server Error
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.80%I=7%D=10/1%Time=63387DE3%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,B0A,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2001\x20Oct\x20202
+SF:2\x2017:50:27\x20GMT\r\nServer:\x20\x20\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\
+SF:x20nosniff\r\nContent-Length:\x202583\r\nConnection:\x20close\r\nConten
+SF:t-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n<!DOCTYPE\x20html\x20PUBL
+SF:IC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w
+SF:3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\"><html\x20xmlns=\"http://www\.
+SF:w3\.org/1999/xhtml\">\n<head>\n<meta\x20http-equiv=\"content-type\"\x20
+SF:content=\"text/html;\x20charset=utf-8\"\x20/>\n<title>Home</title>\n<me
+SF:ta\x20name=\"keywords\"\x20content=\"\"\x20/>\n<meta\x20name=\"descript
+SF:ion\"\x20content=\"\"\x20/>\n<link\x20href=\"style\.css\"\x20rel=\"styl
+SF:esheet\"\x20type=\"text/css\"\x20media=\"screen\"\x20/>\n</head>\n<body
+SF:>\n<div\x20id=\"header\">\n\t<div\x20id=\"logo\">\n\t\t<h1><a\x20href=\
+SF:"#\">softweb\.org\.uk</a></h1>\n\t\t<br\x20/>\n\t</div>\n\t<hr\x20/>\n\
+SF:t<!--\x20end\x20#logo\x20-->\n</div>\n<br\x20/><br\x20/>\n<!--\x20end\x
+SF:20#header\x20-->\n<!--\x20end\x20#header-wrapper\x20-->\n<div\x20id=\"w
+SF:rapper\">\n\t<div\x20id=\"wrapper-bgtop\">\n\t\t<div")%r(HTTPOptions,B0
+SF:A,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2001\x20Oct\x202022\x2017:5
+SF:0:28\x20GMT\r\nServer:\x20\x20\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-X
+SF:SS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nContent-Length:\x202583\r\nConnection:\x20close\r\nContent-Type:\x
+SF:20text/html;\x20charset=UTF-8\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-
+SF://W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR
+SF:/xhtml1/DTD/xhtml1-strict\.dtd\"><html\x20xmlns=\"http://www\.w3\.org/1
+SF:999/xhtml\">\n<head>\n<meta\x20http-equiv=\"content-type\"\x20content=\
+SF:"text/html;\x20charset=utf-8\"\x20/>\n<title>Home</title>\n<meta\x20nam
+SF:e=\"keywords\"\x20content=\"\"\x20/>\n<meta\x20name=\"description\"\x20
+SF:content=\"\"\x20/>\n<link\x20href=\"style\.css\"\x20rel=\"stylesheet\"\
+SF:x20type=\"text/css\"\x20media=\"screen\"\x20/>\n</head>\n<body>\n<div\x
+SF:20id=\"header\">\n\t<div\x20id=\"logo\">\n\t\t<h1><a\x20href=\"#\">soft
+SF:web\.org\.uk</a></h1>\n\t\t<br\x20/>\n\t</div>\n\t<hr\x20/>\n\t<!--\x20
+SF:end\x20#logo\x20-->\n</div>\n<br\x20/><br\x20/>\n<!--\x20end\x20#header
+SF:\x20-->\n<!--\x20end\x20#header-wrapper\x20-->\n<div\x20id=\"wrapper\">
+SF:\n\t<div\x20id=\"wrapper-bgtop\">\n\t\t<div");
+
+Nmap scan report for 20.71.108.109
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-10-01 23:50:13 +06 for 129s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  upnp    syn-ack ttl 105 Microsoft IIS httpd
+|_http-title: Not Found
+
+Nmap scan report for 116.105.219.221
+Host is up, received user-set (0.36s latency).
+Scanned at 2022-10-01 23:50:16 +06 for 127s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 48 Hikvision Network Video Recorder http admin
+|_http-server-header: DNVRS-Webs
+|_http-title: Site doesn't have a title (text/html).
+Service Info: Device: webcam
+
+Nmap scan report for 193.224.219.148
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-10-01 23:50:09 +06 for 134s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 50 Apache httpd 2.4.41
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Did not follow redirect to https://stack.craftit.hu
+Service Info: Host: stack.craftit.hu
+
+Nmap scan report for 162.241.158.245
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-10-01 23:50:12 +06 for 131s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 46 Apache httpd
+|_http-server-header: Apache
+|_http-title: Site doesn't have a title (text/html).
+
+Nmap scan report for 67.199.79.22
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-10-01 23:50:12 +06 for 131s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 110 Microsoft IIS httpd
+|_http-title: Site doesn't have a title (text/html).
+
+Nmap scan report for 104.90.124.112
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-10-01 23:50:04 +06 for 139s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 51 AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+|_http-title: Invalid URL
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  1 23:52:25 2022 -- 1000 IP addresses (1000 hosts up) scanned in 190.55 seconds

@@ -1,0 +1,2 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:16:04 2022 as: nmap -PU53 -oN eprocure.gov.bd.udp_list_targets.txt eprocure.gov.bd
+# Nmap done at Sat Oct  1 22:16:06 2022 -- 1 IP address (0 hosts up) scanned in 2.13 seconds

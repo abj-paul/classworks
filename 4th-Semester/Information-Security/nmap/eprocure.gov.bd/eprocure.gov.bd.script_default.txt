@@ -1,0 +1,15 @@
+# Nmap 7.80 scan initiated Sat Oct  1 22:17:36 2022 as: nmap -sC -oN eprocure.gov.bd.script_default.txt eprocure.gov.bd
+Nmap scan report for eprocure.gov.bd (103.40.82.19)
+Host is up (0.0055s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+|_http-title: Error
+| ssl-cert: Subject: commonName=www.eprocure.gov.bd/organizationName=Central Procurement Technical Unit (CPTU)/countryName=BD
+| Subject Alternative Name: DNS:www.eprocure.gov.bd, DNS:eprocure.gov.bd
+| Not valid before: 2022-01-26T00:00:00
+|_Not valid after:  2023-02-26T23:59:59
+|_ssl-date: TLS randomness does not represent time
+
+# Nmap done at Sat Oct  1 22:19:02 2022 -- 1 IP address (1 host up) scanned in 85.83 seconds

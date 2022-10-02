@@ -1,0 +1,16 @@
+# Nmap 7.80 scan initiated Sat Oct  1 23:07:53 2022 as: nmap -oN moi.gov.bd.target_specification.txt moi.gov.bd
+Nmap scan report for moi.gov.bd (103.163.210.121)
+Host is up (0.098s latency).
+Other addresses for moi.gov.bd (not scanned): 103.163.210.117
+Not shown: 992 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+389/tcp  closed ldap
+443/tcp  open   https
+1503/tcp closed imtc-mcs
+1719/tcp closed h323gatestat
+1720/tcp closed h323q931
+2000/tcp closed cisco-sccp
+5060/tcp closed sip
+
+# Nmap done at Sat Oct  1 23:20:52 2022 -- 1 IP address (1 host up) scanned in 778.55 seconds
