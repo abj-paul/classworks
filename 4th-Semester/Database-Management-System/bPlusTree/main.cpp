@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int FANOUT_VALUE = 3;
+int FANOUT_VALUE = 100;
 
 class Node {
 public:
