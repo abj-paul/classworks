@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" name="userName" id="name" placeholder="Your name">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="emailId" id="email" placeholder="Your email"> 
+        <br>
+        <label for="password">Passowrd: </label>
+        <input type="password" name="setPassword" id="passowrd" required>
+        <br>
+        <label for="phoneNo">Phone Number:</label>
+        <input type="tel" name="phoneNo" id="phoneNo"  pattern="[0-9]{5}-[0-9]{3}-[0-9]{3}" title="Format: 01968-399-154">
+        <br>
+
+        <label>Gender: </label> <!--error?-->
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female">
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other">
+        <br>
+
+        <label for="language">Language: </label>
+        <select name="language" id="language">
+            <option>Select Language</option>
+            <option value="Bangla">Bangla</option>
+            <option value="English">English</option>
+        </select>
+<br>
+        <label for="zipCode">Zip Code</label>
+        <input type="number" name="zipCode" id="zipCode" title="All formats are supported.">
+        
+        <br>
+        <input type="submit" name="Submit" value="register" id="submit">
+    </form>
+    
+</body>
+</html>

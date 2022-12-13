@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <h2>Block Element</h2>
+  <p style="border: 1px dotted;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio odio qui unde labore accusamus asperiores expedita fugit itaque, saepe doloribus totam laboriosam, dicta voluptatum praesentium. Illum eum iste pariatur aperiam? </p>
+  <h4>Inline Element</h4>
+<span style="border: 1px dotted;"> The block is small </span> <span>as it is inline.</span>
+
+  <h2 id="1"> Making a form  </h2>
+
+  <form>
+    <label> First Name </label>
+    <input type="text">
+    <label> Last Name </label>
+    <input type="text">
+  </form>
+
+  <h3>Binding Label with Text Input</h3>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname">
+    <label for="lname"> Last Name </label>
+    <input type="text" name="" id="lname">
+  </form>
+
+  <h3>Adding Submit button</h3>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname">
+    <label for="lname"> Last Name </label>
+    <input type="text" name="" id="lname">
+    <input type="submit" value="Submit Form!">
+  </form>
+
+  <h3>Using <u>name</u> attribute</h3>
+  <p>Name attribute is used in backend. When you submit the form, it goes like this: user_name="Abhijit Paul". Notice the url to see a difference. After submitting, it now includes the form query. Passing data through the URL is called <b>"GET" method.</b></p>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname" name="firstName">
+    <label for="lname"> Last Name </label>
+    <input type="text" id="lname" name="lastName">
+    <input type="submit" value="Submit Form!" name="submitForm">
+  </form>
+
+  <h3>Radio Button</h3>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname" name="firstName">
+    <label for="lname"> Last Name </label>
+    <input type="text" id="lname" name="lastName">
+    <br>
+    <p>Select a gender: </p>
+    <input type="radio" id="male">
+    <label for="male">Male</label> <br>
+    <input type="radio" id="female">
+    <label for="female">Female</label> <br>
+    <input type="radio" id="other">
+    <label for="other">Other</label> <br>
+
+    <input type="submit" value="Submit Form!" name="submitForm">
+  </form>
+
+  <h3>Select single Radio Button</h3>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname" name="firstName"> <br>
+    <label for="lname"> Last Name </label>
+    <input type="text" id="lname" name="lastName"> <br>
+    <p>Select a gender: </p>
+    <input type="radio" id="male" name="gender" value="MALE">
+    <label for="male">Male</label> <br>
+    <input type="radio" id="female" name="gender" value="FEMALE">
+    <label for="female">Female</label> <br>
+    <input type="radio" id="other" name="gender" value="OTHER">
+    <label for="other">Other</label> <br>
+
+    <input type="submit" value="Submit Form!" name="submitForm">
+  </form>
+
+  <h3>Checkbox</h3>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname" name="firstName"> <br>
+    <label for="lname"> Last Name </label>
+    <input type="text" id="lname" name="lastName"> <br>
+    <p>Select a gender: </p>
+    <input type="radio" id="male" name="gender" value="MALE">
+    <label for="male">Male</label> <br>
+    <input type="radio" id="female" name="gender" value="FEMALE">
+    <label for="female">Female</label> <br>
+    <input type="radio" id="other" name="gender" value="OTHER">
+    <label for="other">Other</label> <br>
+
+    <p>Select courses you want to enroll in.</p>
+    <input type="checkbox" name="topic" id="htmlTopic" value="HTML">
+    <label for="htmlTopic"> Html </label>
+    <input type="checkbox" name="topic" id="cssTopic" value="CSS">
+    <label for="cssTopic">Css</label>
+    <input type="checkbox" name="topic" id="javaTopic" value="JAVASCRIPT">
+    <label for="javaTopic">Java Script</label>
+
+    <input type="submit" value="Submit Form!" name="submitForm">
+  </form>
+
+  <h3>Checkbox with backend issue.</h3>
+  <p>name-values/variables are single-valued. They are not arrays. They can only take a single value. When using checkbox, a user may select multiple option. In that case, if we use a single variable, it has to contain multiple values, like an array. But html does not support arrays. So in checkbox, we will have a separate variable/name for each checkbox. </p>
+  <form>
+    <label for="fname"> First Name </label>
+    <input type="text" id="fname" name="firstName"> <br>
+    <label for="lname"> Last Name </label>
+    <input type="text" id="lname" name="lastName"> <br>
+    <p>Select a gender: </p>
+    <input type="radio" id="male" name="gender" value="MALE">
+    <label for="male">Male</label> <br>
+    <input type="radio" id="female" name="gender" value="FEMALE">
+    <label for="female">Female</label> <br>
+    <input type="radio" id="other" name="gender" value="OTHER">
+    <label for="other">Other</label> <br>
+
+    <p>Select courses you want to enroll in.</p>
+    <input type="checkbox" name="topicHTML" id="htmlTopic2" value="ON">
+    <label for="htmlTopic2"> Html </label>
+    <input type="checkbox" name="topicCSS" id="cssTopic2" value="ON">
+    <label for="cssTopic2">Css</label>
+    <input type="checkbox" name="topicJS" id="javaTopic2" value="ON">
+    <label for="javaTopic2">Java Script</label>
+
+    <input type="submit" value="Submit Form!" name="submitForm">
+  </form>
+
+  <h3>Dropdown Box</h3>
+  <form>
+    <label for="eduLevel">Education Level Completed so far:</label>
+    <select name="Education_Level" id="eduLevel">
+      <option value="ssc">SSC</option>
+      <option value="hsc">HSC</option>
+      <option value="undergrad">Undergraduate</option>
+      <option value="grad">Graduate</option>
+    </select>
+    <input type="submit" value="Submit Form!" name="submitForm">
+  </form>
+
+  <h3>Text Area</h3>
+  <p>Textbox can not take multiline input so we require text area.</p>
+  <form>
+    <textarea name="aboutYourself" id="about" cols="30" rows="10">Write something about yourself! uwu</textarea>
+    <input type="submit" value="Submit About!" name="submitAbout">
+  </form>
+
+</html>

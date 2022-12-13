@@ -1,0 +1,9 @@
+No Solution is possible because in the following relation:
+
+Shape --> Rectangle --> Square
+
+By philosophy, Rectangle is not completely substitutable with Square because Rectangle has some properties that is incompatible with square.
+
+So Liskov Substitution won't Apply here.
+
+
