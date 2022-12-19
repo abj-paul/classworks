@@ -1,0 +1,309 @@
+* Refactoring
+A series of small steps that changes the internal structure of the program without changing its external behavior.
+
+It is done through:
+1. Verify no change in external behavior via testing.
+2. Using IDE to write code (to ensure proper formatting).
+3. Formal code analysis tool.
+** When should you refactor?
+1. To add new features
+2. To find bugs
+3. For code reviews
+** How do we refactor?
+1. We look for smells or
+2. We look for stuffs that might give us pain later on.
+* Readability
+#+begin_src java
+  if(date.before(Summer_Start) || date.after(Summer_End)){
+      charge = quantity * winterRate + winterServiceCharge;
+  }
+  else charge = quantity * summerRate;
+#+end_src
+
+We are having a hard time to understand what the code does. So we can rewrite the code as following.
+
+#+begin_src java
+  if(isWinter(date)) charge = winterCharge(quantity);
+  else charge = summerCharge(quantity);
+#+end_src
+* Inappropriate Naming
+Field name should describe exactly ~what it is.~ e.g. String s --> String monthlySalary
+Method name should describe exactly ~what it does.~ e.g. void calc() --> void calculateMontlySalary()
+* Comments
+Comment is the failure to express an idea using only code. In such cases, the code needs to be refactored.
+More often than not, we use comments to describe a big code segment that follows. So feature extraction to make the code smaller is a choice.
+Also, renaming methods properly makes the code more expressive of its idea. so renaming methods is another fix.
+** Extract Method
+*** Exampe 1 : MyList
+#+begin_src java
+  public class MyList {
+      int INITIAL_CAPACITY = 10;
+      bool m_readOnly;
+      int m_size = 0;
+      int m_capacity;
+
+      string[] listElements;
+
+      public MyList(){
+	  listElements = new string[INITIAL_CAPACITY];
+	  m_capacity = INITIAL_CAPACITY;
+      }
+      int getCapacity(){
+	  return this.capacity;
+      }
+
+      void AddToList(string element){
+	  if(!m_readOnly){
+	      int newSize = m_size + 1;
+	      if(newSize > GetCapacity()){
+		  //Grow the array //!!!! This is the error!
+		  m_capacity += INITIAL_CAPACITY;
+		  string[] elements2 = new string[m_capacity];
+		  for(int i=0; i<m_size; i++){
+		      elements2[i] = listElements[i];
+		  }
+		  listElements = elements2;
+	      }
+	      listElements[m_size++] = element;
+	  }
+      }
+  } 
+#+end_src
+To fix this, we extract method:
+
+#+begin_src java
+    public class MyList {
+	int INITIAL_CAPACITY = 10;
+	bool m_readOnly;
+	int m_size = 0;
+	int m_capacity;
+
+	string[] listElements;
+
+	public MyList(){
+	    this.listElements = new string[INITIAL_CAPACITY];
+	    this.m_capacity = this.INITIAL_CAPACITY;
+	}
+	int getCapacity(){
+	    return this.capacity;
+	}
+
+	void AddToList(string element){
+	    if(!isReadonlylist()){
+		int oldSize = incrementSizeAndReturnOldSize();
+		if(shouldGrow()) growListFromOldSizeToIncrementSize(oldSize);
+		this.listElements[this.getSize()-1] = element;
+	    }
+	}
+    } 
+
+  bool isReadonlylist(){
+      return this.m_readOnly;
+  }
+  bool shouldGrow(int newSize){
+      return (newSize > this.GetCapacity());
+  }
+
+  int incrementSizeAndReturnOldSize(){
+      this.m_size++;
+      return this.m_size-1;
+  }
+
+  void growList(int oldSize){
+      this.m_capacity += this.INITIAL_CAPACITY;
+      string[] newList = new string[this.getCapacity()];
+
+      for(int i=0; i<oldSize; i++){
+	  newList[i] = this.listElements[i];
+      }
+      this.listElements = newList;
+  }
+#+end_src
+
+Perfect Answer:
+
+#+begin_src java
+      public class MyList {
+	  int INITIAL_CAPACITY = 10;
+	  bool m_readOnly;
+	  int m_size = 0;
+	  int m_capacity;
+
+	  string[] listElements;
+
+	  public MyList(){
+	      this.listElements = new string[INITIAL_CAPACITY];
+	      this.m_capacity = this.INITIAL_CAPACITY;
+	  }
+	  int getCapacity(){
+	      return this.capacity;
+	  }
+
+	  void AddToList(string element){
+	      if(isReadonlylist()) return;
+	      if(shouldGrow()) grow(); 
+	      storeElement(element);
+	  }
+      }
+      } 
+  void storeElement(string element){
+      this.listElements[this.getSize()-1] = element;
+  }
+
+  void grow(){
+      int oldSize = incrementSizeAndReturnOldSize();
+      growListFromOldSizeToIncrementSize(oldSize);
+
+  }
+
+    bool isReadonlylist(){
+	return this.m_readOnly;
+    }
+    bool shouldGrow(int newSize){
+	return (newSize > this.GetCapacity());
+    }
+
+    int incrementSizeAndReturnOldSize(){
+	this.m_size++;
+	return this.m_size-1;
+    }
+
+    void growList(int oldSize){
+	this.m_capacity += this.INITIAL_CAPACITY;
+	string[] newList = new string[this.getCapacity()];
+
+	for(int i=0; i<oldSize; i++){
+	    newList[i] = this.listElements[i];
+	}
+	this.listElements = newList;
+    }
+#+end_src
+*** Example 2 : Print
+#+begin_src java
+  void printOwing(double amount){
+      printBanner();
+
+      // Print Details
+      System.console.out.writeLine("name:"+this.getName());
+      System.console.out.writeLine("amount:"+this.getAmount());
+  }
+#+end_src
+Fix:
+#+begin_src java
+  void printOwing(double amount){
+      printBanner();
+      printDetails();
+  }
+  void printDetails(){
+      System.console.out.writeLine("name:"+this.getName());
+      System.console.out.writeLine("amount:"+this.getAmount());
+
+  }
+#+end_src
+
+* TODO Long Method
+** Extract Method
+#+begin_src java
+  private String toStringHelper(StringBuffer result){
+      result.append("<");
+      result.append(name);
+      result.append(attribute.toString());
+      result.append(">");
+      if(!value.equals("")) result.append(value);
+
+      iterator = children().iterator();
+      while(!it.hasNext()){
+	  TagNode node = (TagNode)it.next();
+	  node.toStringHelper(result);
+      }
+
+      result.append("/>");
+      result.append(name);
+      result.append(">");
+
+      return result.toString();
+  }
+#+end_src
+My Solution:
+#+begin_src java
+  private String toStringHelper(StringBuffer result){
+      prependNode(result);
+      addNode(result);
+      appendNode(result);
+      return result.toString();
+  }
+
+  void prependNode(StringBuffer result){
+      result.append("<");
+      result.append(name);
+      result.append(attribute.toString());
+      result.append(">");
+      if(!value.equals("")) result.append(value);
+  }
+
+  void appendNode(StringBuffer result){
+      result.append("/>");
+      result.append(name);
+      result.append(">");
+  }
+
+  void addNode(StringBuffer result){
+      iterator = children().iterator();
+      while(!it.hasNext()){
+	  TagNode node = (TagNode)it.next();
+	  node.toStringHelper(result);
+      }
+  }
+#+end_src
+Book Result:
+
+#+begin_src java
+  private String toStringHelper(StringBuffer result){
+      appendOpenTagTo(result);
+      appendValues(result);
+      appendChildNode(result);
+      appendCloseTagTo(result);
+
+      return result.toString();
+  }
+  void appendOpenTagTo(StrngBuffer result){
+      result.append("<");
+      result.append(name);
+      result.append(attribute.toString());
+      result.append(">");
+  }
+  void appendValues(StringBuffer result){
+      if(!value.equals("")) result.append(value);
+  }
+  void appendCloseTagTo(StringBuffer result){
+      result.append("/>");
+      result.append(name);
+      result.append(">");
+  }
+  void appendChildNode(StringBuffer result){
+      iterator = children().iterator();
+      while(!it.hasNext()){
+	  TagNode node = (TagNode)it.next();
+	  node.toStringHelper(result);
+      }
+  }
+#+end_src
+** TODO Replace temp with query
+#+begin_src java
+  double basePrice = this.quanity * this.itemPrice;
+  if(basePrice > 1000) return basePrice * 0.95;
+#+end_src
+* Question
+1. Which method name is better?
+#+begin_src java
+  if(shouldGrow()) growListFromOldSizeToIncrementSize(oldSize);
+  if(shouldGrow()) growList(oldSize);
+#+end_src
+1. Introduce Assertion (from comment smell)
+2. Can we mix camel case and snake case?
+* Tricks
+1. There should be nothing but functions in the top level. example: [[#Extract Method][Extract Method]] in comment smell.
+
+** Fixes
+1. Extract Method
+2. Replace temp with query
