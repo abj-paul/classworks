@@ -1,0 +1,62 @@
+* Relationship between IT Worker and other professionals
+Issues: Resume inflation, inappropriate sharing of corporate infromation
+
+1. Professionals often feel a degree of loyalty to the other members of their profession.
+2. Resume inflation is an issue in this relationship.
+3. Inappropriate sharing of corporate information should be avoided.
+4. Doing constructive criticism on the work of fellow professionals.
+* Relationship between IT Worker and Client
+A client can be a coworker or someone from different organization. They agree to provide something of value to each other. Usually. IT Worker provides hardware, software or services and the client provides cost, requirements list and even workspace. The relationship is usually documented in contractual terms.
+
+1. Although there are often vast disparity in technical expertise between IT Workers and their clients, the two parties must work together to be successful.
+2. The relationship is usually documented in contractual terms - who does what, when the work begins, how long it will take, how much the client pays and so on.
+3. The client trusts the IT worker to use their expertise to the best of client's interstes. The IT worker must trust that the client will provide relevant information, listen to and understand what the IT worker says, ask questions to understand impact of key decisions and use the infromation to make wise choices among vario0us alternatives. Thus, the responsibility for decision making is shared between client and IT worker. 
+4. Responsibility for decision making is shared between client and IT worker.
+* Relationship between IT Worker and Suppliers
+1. Dealing fairly with suppliers
+2. Not making unreasonable demands.
+3. Being careful about bribes from supplier. No gift should be hidden. If a gift can not be declared to the company then it is a bribe.
+4. Effective communication that encourages the flow of useful supplies along with the sharing of ideas.
+* Relationship between IT Worker and IT Users
+IT user refers to a person who uses a hardware or software product. They use the software or hardware product.
+
+1. Understand a user's needs and capabilities
+2. Deliver products and services that best meets IT User's needs
+3. To meet budget and time constraints
+4. Establishing an environment that supports ethical behavior by users. Such environment discourages software piracy, minimizes inappropriate use of corporate mining etc.
+* Relationship between IT Worker and Society
+1. Regulatory laws cannot safeguard against all negative side effects of a product or process. So IT workers must be responsible.
+2. Take actions to eliminate potential ublic risk.
+3. Not causing harm to the people through their actions
+4. Establish and maintain professional standards that protect the public.
+
+* Relationship between IT Worker and Employer
+1. A critical multi-faceted relationship that requires ongoing efforts by both parties to keep it strong.
+2. Some agreements are reached before the IT worker is employed. They should be maintained.
+3. Piracy can often be traced back to IT worker. So maintaining a good relationship is necessary.
+4. Following industry guidelines to resolve potential confusion and conflicts.
+* How to complete Zerina Madam's assignment
+
+You should write on the relationships between IT Worker and 6 types of people. They are:
+1. Client
+2. Supplier
+3. IT User
+4. Other Professional
+5. Employer
+6. Society
+
+How to find answers?
+
+Do it part by part. First, lets work on "Relationship between IT Worker and Employer". Read on it from the book. List 3-4 points on the relationship. Like:
+1. Value each other
+2. Good communication
+3. Dynamic Requirements should be accommodated via communication
+4. Time & Cost should be negotiated properly and openly.
+
+
+After listing the options, now you are ready to write those answers! Madam suggested a tabular format.
+| Type of People | Relationship Points |
+
+This is the book. You can get everything from here. Madam also follows it in class.
+https://rakib3004.github.io/Tech-Edu-Assistant/doc/Pdf3/DatabaseEthicsSlides/Chapter%202.pdf
+
