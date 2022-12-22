@@ -298,6 +298,11 @@ Book Result:
 #+begin_src java
   if(shouldGrow()) growListFromOldSizeToIncrementSize(oldSize);
   if(shouldGrow()) growList(oldSize);
+
+  //or
+
+  ConvertEncodedLineListToString();
+  ConvertEncodedLineListToStringAndResetEncodedLineList();
 #+end_src
 1. Introduce Assertion (from comment smell)
 2. Can we mix camel case and snake case?
