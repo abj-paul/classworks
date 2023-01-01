@@ -1,0 +1,48 @@
+* PrintMode (abstract)
+** Fields
+- number of pages
+- Page Size
+- Orientation
+- Color Intensity
+- Cost per page
+** Methods
+- saveToner
+- savePage
+- boost
+* TonerSaveMode (extend PrintMode)
+** Fields
+- tonerSavingLevel
+** Method
+*** saveToner(inherited) 
+if (tonserSavingLevel is high): reduce colorIntensity using some standard algorithm
+if (tonserSavingLevel is medium): reduce colorIntensity using some standard algorithm
+if (tonserSavingLevel is low): reduce colorIntensity using some standard algorithm
+* PageSaveMode (extend PrintMode)
+** Methods
+*** algorithm
+adjust page size and orietntation to reduce number of pages required.
+*** renderPreview
+shows a preview of updated document (perhaps updated by the above algorithm.)
+* BoosterSaveMode (extend PrintMode)
+** Methods
+*** Algorithm
+increases color intensity up to a maximum acceptable level that is set via its intensityThreshold field.
+
+* PrintJob 
+** Field
+- queue of PrintRequest Objects
+- object of priority setting class
+* Methods
+- pullJob
+- changePriority
+
+* PrintRequest
+** Field
+- reference of document class
+- reference of TonerSaveMode/PageSaveMode/BoosterSaveMode
+* PrioritySetting
+
+
+* Output
+- Comments
+- ??
