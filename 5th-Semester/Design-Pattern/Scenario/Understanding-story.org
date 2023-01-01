@@ -24,6 +24,8 @@ adjust page size and orietntation to reduce number of pages required.
 *** renderPreview
 shows a preview of updated document (perhaps updated by the above algorithm.)
 * BoosterSaveMode (extend PrintMode)
+** Fields
+intensityThreshold field.
 ** Methods
 *** Algorithm
 increases color intensity up to a maximum acceptable level that is set via its intensityThreshold field.
@@ -32,16 +34,15 @@ increases color intensity up to a maximum acceptable level that is set via its i
 ** Field
 - queue of PrintRequest Objects
 - object of priority setting class
-* Methods
-- pullJob
-- changePriority
+** Methods
+ - pullJob
+ - changePriority
 
 * PrintRequest
 ** Field
 - reference of document class
 - reference of TonerSaveMode/PageSaveMode/BoosterSaveMode
 * PrioritySetting
-
 
 * Output
 - Comments
