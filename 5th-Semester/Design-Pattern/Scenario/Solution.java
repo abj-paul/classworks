@@ -62,6 +62,7 @@ class DefaultConstant {
     public static double COST_PER_PAGE = 0.54;
     public static int PAGE_SIZE = 231;
     public static int DESCENDING = 100;
+    public static String RIGHT_ORIENTATION = "RIGHT";
 }
 
 class TonerSaveMode implements PrintMode {
@@ -116,7 +117,7 @@ class PageSaveMode implements PrintMode {
 	System.out.println("Showing doc preview.");
     }
 	
-    PageSaveMode(Document document) {
+    PageSaveMode(Document document) { // Long Parameter List
 	this.numberOfPages = document.getNumberOfPages();
 	this.pageSize = document.getPageSize();
 	this.orientation = document.getOrientation();
@@ -156,7 +157,7 @@ class PageSaveMode implements PrintMode {
 }
 
 class BoosterSaveMode implements PrintMode {
-    private double intensityThreshold; // Primite obsession
+    private double intensityThreshold; // Primitive obsession
     private double costPerPage;
     private double colorIntensity;
 
@@ -257,7 +258,7 @@ class Document {
     }
 
     private String extractOrientation() {
-	return "RIGHT"; // Constant smell
+	return DefaultConstant.RIGHT_ORIENTATION;
     }
 
 	public double getColorIntensity() {
@@ -266,9 +267,13 @@ class Document {
     
 }
 
-class PrioritySetting { // Lazy class
+class PrioritySetting {
+    String priorityOrder;
     int order() {
-	return DefaultConstant.DESCENDING;
+	return this.priorityOrder;
+    }
+    void doSomeMoreStuffsIdkAbout(){
+	priorityOrder = DefaultConstant.DESCENDING;
     }
 }
 

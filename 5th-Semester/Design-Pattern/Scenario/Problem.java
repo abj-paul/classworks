@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 
-abstract class PrintMode {
+abstract class PrintMode { // Refused Bequest
     int numberOfPages;
     int pageSize;
     String orientation;
@@ -13,12 +13,12 @@ abstract class PrintMode {
     abstract void boost();
 }
 
-class TonerSaveMode extends PrintMode {
+class TonerSaveMode extends PrintMode { 
     int tonerSavingLevel;
     int HIGH, MEDIUM, LOW;
 
     @Override
-    void saveToner(){ //DOUBT
+    void saveToner(){ //Duplicate Code, Switch case smell
 	if(tonerSavingLevel==HIGH) reduceColorIntensityStandardAlgorithm();
 	else if(tonerSavingLevel==MEDIUM) reduceColorIntnsityAlgorithmOne();
 	else if(tonerSavingLevel==LOW) reduceColorIntnsityAlgorithmTwo();
