@@ -5,15 +5,19 @@
             div {
                 text-align: center;
             }
+
             .body{
-                width: 1200px;
-                margin: auto;
+                width: 1276px;
                 height: 640px;
-            }
+	    }
             .top {
                 background-color:blueviolet;
                 height: 140px;
             }
+
+	    .top p{
+		    padding-top: 60px;
+	    }
 
             .sidebar {
                 width: 400px;
@@ -23,21 +27,29 @@
 
             .emptySpace {
                 background-color: darkgray;
-                width: 800px;
+                width: 876px;
                 float: left;
                 height: 470px;
             }
 
-            .about, .history, .achievements {
+            .about, .history, .achievements, .smallAchievements {
                 float: left;
                 width: 400px;
-                height: 155px;
+                height: 115px;
                 background-color: bisque;
                 border-bottom: 2px solid black;
             }
 
+	    .about {
+		border-top: 2px solid black;
+	    }
+
+	    .smallAchievements{
+                background-color: gray;
+	    }
+
             .about p, .history p, .achievements p {
-                margin-top: 73px;
+                margin-top: 55px;
             }
 
 
@@ -49,17 +61,16 @@
 
         </style>
     </head>
-    <body>
-    <div class="body">
+    <body > <!-- class=".body"-->
         <div class="top"> <p>Institute of Information Technology</p> </div>
         <div class="sidebar">
             <div class="about"> <p> About </p></div>
             <div class="history"> <p> History </p></div>
             <div class="achievements"><p> Achievements </p></div>
+            <div class="smallAchievements"></div>
         </div>
-        <div class="emptySpace"><p> Empty Space </p></div>
+        <div class="emptySpace"><p> We have six courses.  </p></div>
 
         <div class="bottom"><p> Copyright BSSE 1201 </p></div>
-    </div>
     </body>
 </html>
