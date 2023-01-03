@@ -17,6 +17,10 @@ class TonerSaveMode extends PrintMode {
     int tonerSavingLevel;
     int HIGH, MEDIUM, LOW;
 
+    public TonerSaveMode(String colorIntensity, int tonerSavingLvel) {
+        this.colorIntensity = colorIntensity;
+        this.tonerSavingLevel = tonerSavingLvel;
+    }
     @Override
     void saveToner(){ //Duplicate Code, Switch case smell
 	if(tonerSavingLevel==HIGH) reduceColorIntensityStandardAlgorithm();
@@ -46,16 +50,22 @@ class TonerSaveMode extends PrintMode {
 }
 
 class PageSaveMode extends PrintMode {
+
+    PageSaveMode(int numberOfPages, int pageSize, String orientation, int costPerPage) { // Long Parameter List
+        this.numberOfPages = numberOfPages;
+        this.pageSize = pageSize;
+        this.orientation = orientation;
+        this.costPerPage = costPerPage;
+        }
     void renderPreview(){
-	//shows a preview of updated document (perhaps updated by the above algorithm.)
+        System.out.println("shows a preview of updated document (perhaps updated by the above algorithm.");
     }
     @Override
-    void saveToner(){ //DOUBT
+    void saveToner(){ 
     }
     @Override
     void savePage() {
-	// Adjust page size & Orientation to reduce the number of pages required.
-	System.out.println("Save the page!");
+	System.out.println("Adjust page size & Orientation to reduce the number of pages required.");
     }
     @Override
     void boost() {
@@ -65,17 +75,20 @@ class PageSaveMode extends PrintMode {
 
 class BoosterSaveMode extends PrintMode {
     int intensityThreshold;
+
+    BoosterSaveMode(int intensityThreshold, String colorIntensity) {
+        this.intensityThreshold = intensityThreshold;
+        this.colorIntensity = colorIntensity;
+     }
     @Override
-    void saveToner(){ //DOUBT
+    void saveToner(){ 
     }
     @Override
     void savePage() {
-	// Adjust page size & Orientation to reduce the number of pages required.
-	System.out.println("Save the page!");
+	System.out.println("Adjust page size & Orientation to reduce the number of pages required.");
     }
     @Override
-    void boost() { //increaseColorIntensityAlgorithm
-	//increases color intensity up to a maximum acceptable level that is set via its intensityThreshold field.
+    void boost() { 
 	System.out.println("Boost printing!");
     }
 }
@@ -89,8 +102,8 @@ class PrintJob {
 	this.printRequests = new ArrayList<PrintRequest>();
     }
 
-    public PrintRequest pullJob(){
-	int lastIndex = printRequests.size() - 1;
+    public PrintRequest pullJob(){ 
+	int lastIndex = printRequests.size() - 1; // Primitive Obsession
 	return this.printRequests.remove(lastIndex);
     }
     public void pushJob(PrintRequest printRequest){
@@ -98,11 +111,12 @@ class PrintJob {
     }
 
     void changePriority(){
-
+		this.prioritySetting.doSomeMoreStuffsIdkAbout();
+		System.out.println("Change priority of a job.");
     }
 }
 
-class PrintRequest {
+class PrintRequest { // Lazy Class
     Document document;
     PrintMode mode;
     public PrintRequest(Document document, PrintMode mode) {
@@ -113,7 +127,15 @@ class PrintRequest {
 }
 class Document {}
 
-class PrioritySetting {
+class PrioritySetting { // Feature Envy
+    private int priorityOrder;
+
+    public int order() {
+	return this.priorityOrder;
+    }
+    void doSomeMoreStuffsIdkAbout(){
+	priorityOrder = DefaultConstant.DESCENDING;
+    }
 }
 
 
@@ -123,7 +145,7 @@ public class Problem {
 	PrintJob printJob = new PrintJob(prioritySetting);
 	
 	Document document = new Document();
-	PrintMode mode = new PageSaveMode();
+	PrintMode mode = new PageSaveMode(0, 0, null, 0);
 	PrintRequest printRequest = new PrintRequest(document, mode);
 	
 	printJob.pushJob(printRequest);

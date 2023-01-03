@@ -1,12 +1,11 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 
-interface PrintMode {
+interface PrintMode { // Refeused bequest --> Interface Extraction
 	boolean useModality();
-
 	double getCostPerPage();
 }
 
-interface TonerSavingAlgorithm {
+interface TonerSavingAlgorithm { // Switch Case Smell --> Polymorphism
 	void reduceColorIntensity();
 }
 
@@ -109,7 +108,7 @@ class TonerSaveMode implements PrintMode {
 }
 
 class PageSaveMode implements PrintMode {
-    private double numberOfPages;
+    private double numberOfPages; // Suggestions: Use document class here.
     private double pageSize;
     private String orientation;
     private double costPerPage;
@@ -117,7 +116,7 @@ class PageSaveMode implements PrintMode {
 	System.out.println("Showing doc preview.");
     }
 	
-    PageSaveMode(Document document) { // Long Parameter List
+    PageSaveMode(Document document) { // Long Parameter List --> Parameter Object
 	this.numberOfPages = document.getNumberOfPages();
 	this.pageSize = document.getPageSize();
 	this.orientation = document.getOrientation();
@@ -157,7 +156,7 @@ class PageSaveMode implements PrintMode {
 }
 
 class BoosterSaveMode implements PrintMode {
-    private double intensityThreshold; // Primitive obsession
+    private double intensityThreshold;
     private double costPerPage;
     private double colorIntensity;
 
@@ -187,26 +186,30 @@ class BoosterSaveMode implements PrintMode {
 }
 
 class PrintJob {
-    private ArrayList<PrintRequest> printRequests;
-    private PrioritySetting prioritySetting;
+    private LinkedList<PrintRequest> printRequests;
+	private int priorityOrder;
 
-    PrintJob(PrioritySetting prioritySetting) {
-	this.prioritySetting = prioritySetting;
-	this.printRequests = new ArrayList<PrintRequest>();
+    public int order() {
+	return this.priorityOrder;
+    }
+    private void doSomeMoreStuffsIdkAbout(){ // Feature Envy
+	priorityOrder = DefaultConstant.DESCENDING;
+    }
+
+    PrintJob() {
+	this.printRequests = new LinkedList<PrintRequest>();
     }
 
     public PrintRequest pullJob(){
-	int lastIndex = printRequests.size() - 1;
-	if (prioritySetting.order() == DefaultConstant.DESCENDING) // Replace with polymorphism
-	    lastIndex = 0;
-	return this.printRequests.remove(lastIndex);
+	return this.printRequests.pop(); // Primitive obsession --> STL Class
     }
     public void pushJob(PrintRequest printRequest){
 	this.printRequests.add(printRequest);
     }
 
     void changePriority(){
-	System.out.println("Change priority of a job.");
+		this.doSomeMoreStuffsIdkAbout();
+		System.out.println("Change priority of a job.");
     }
 }
 
@@ -267,21 +270,11 @@ class Document {
     
 }
 
-class PrioritySetting {
-    String priorityOrder;
-    int order() {
-	return this.priorityOrder;
-    }
-    void doSomeMoreStuffsIdkAbout(){
-	priorityOrder = DefaultConstant.DESCENDING;
-    }
-}
 
 
 public class Solution {
     public static void main(String[] args) {
-	PrioritySetting prioritySetting = new PrioritySetting();
-	PrintJob printJob = new PrintJob(prioritySetting);
+	PrintJob printJob = new PrintJob();
 	
 	Document document = new Document("Test Document Contents.");
 	PrintMode mode = new PageSaveMode(document);
