@@ -3,13 +3,18 @@
 using namespace std;
 
 #define max_node 10
-int getNextTransaction(string transactions[], int curr_index, int num_of_transactions);
+int getNextTransaction(vector<string> transactions, int curr_index, int num_of_transactions);
 void printGraph(vector<vector<int>> graph);
+void printVector(vector<string> v);
+vector<string> take_input();
 
 int main(){
-	string transactions[] = {"r2(x)","r3(y)","w3(x)","r1(y)","w2(x)","w1(y)","w1(x)"};
+	//string transactions[] = {"r2(x)","r3(y)","w3(x)","r1(y)","w2(x)","w1(y)","w1(x)"};
 	//string transactions[] = {"r2(x)", "r3(y)", "w3(x)", "r1(y)", "w2(z)", "w1(y)", "w1(x)", "r3(z)"};
-	int num_of_transactions = 7;
+	
+	vector<string> transactions = take_input();
+	printVector(transactions);
+	int num_of_transactions = sizeof(transactions)/sizeof(transactions[0]);
 
 	vector<vector<int>> graph(max_node);
 
@@ -50,7 +55,20 @@ void printGraph(vector<vector<int>> graph){
 	}
 }
 
-int getNextTransaction(string transactions[], int curr_index, int num_of_transactions){
+vector<string> take_input(){
+	vector<string> transactions(100);
+	string data = "";
+
+	int i=0;
+	while(data!="end"){
+		cin>>data;
+		transactions[i]	= data;
+	}
+
+	return transactions;
+}
+
+int getNextTransaction(vector<string> transactions, int curr_index, int num_of_transactions){
 	char data_entity = transactions[curr_index][3];
 	char transaction_type = transactions[curr_index][0];
 
@@ -65,4 +83,7 @@ int getNextTransaction(string transactions[], int curr_index, int num_of_transac
 	}
 
 	return next_transaction;
+}
+void printVector(vector<string> v){
+	for(int i=0; i<v.size(); i++) cout<< v[i] << " " << std::endl;
 }
