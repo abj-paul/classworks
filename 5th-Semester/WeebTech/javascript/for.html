@@ -1,0 +1,27 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<p id="username">Moumita ma'am</p>
+		<p id="email">mou@iit</p>
+		<p id="password">1234</p>
+
+		<script>
+		const EMAIL = "mou@iit";
+		const PASSWORD = "1234";
+
+		let email = document.getElementById('email').innerHTML;
+		let password = document.getElementById('password').innerHTML;
+
+		for(var i=0; i<5; i++){
+				if(EMAIL===email && PASSWORD===password){
+					document.write("You have logged in!");
+					console.log("Home.");
+					break;
+				}
+		}
+		if(i==5) document.write("You have been blocked!");
+		</script>
+
+	</body>
+</html>
