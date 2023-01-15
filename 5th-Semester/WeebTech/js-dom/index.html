@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice</title>
+</head>
+<body>
+  <p id="p1"> WeebTech </p>
+  <button onclick="document.getElementById('p1').innerHTML='Programming'"> Click meeee !</button>
+  <button onclick="showOkay()"> senti message </button>
+  <button onmouseover="mouse_hover()"> Hover the wand! </button>
+
+  <br>
+
+  <p id="p2"> I am shapeshifter! I can change my color anytime I want, just like some human. </p>
+  <button ondblclick="changeColor()"> Change Shape </button>
+  
+
+  <script>
+    let node = document.getElementById('p1');
+    node.style.color='red';
+    node.style.border='2px solid black';
+
+    function showOkay(){
+	alert("i am ok :)");
+    }
+
+    function mouse_hover(){
+	console.log("Mouse is over me~~")
+    }
+
+    function changeColor(){
+	let node = document.getElementById("p2");
+	node.style.color = 'red';
+    }
+  </script>
+</body>
+</html>

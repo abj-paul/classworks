@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p> line one. </p>
+    <p> line two. </p>
+    <ul>
+      <li> Item 1 </li>
+      <li> Item 2 </li>
+      <li> Item 3 </li>
+    </ul>
+  </div>
+  <div> </div>
+
+  <script>
+    let paras = document.getElementsByTagName('p');
+    console.log(paras)
+    console.log(paras[0].innerHTML)
+
+    for(let i=0; i<paras.length; i++){
+	console.log(paras[i])
+    }
+
+
+    let myDiv = document.getElementsByTagName('div');
+    console.log(myDiv[0].parentElement)
+    console.log(myDiv[0].children)
+    console.log(myDiv[0].firstElementChild)
+    console.log(myDiv[0].lastElementChild)
+
+    console.log("Printing children who are lists: ");
+    for(let i=0; i<myDiv[0].children[2].children.length; i++){
+	console.log(myDiv[0].children[2].children[i]);
+    }
+
+    console.log("Using sibling: ");
+    console.log(myDiv[0].children[2].children[0]);
+    console.log(myDiv[0].children[2].children[0].nextElementSibling);
+    console.log(myDiv[0].children[2].children[0].nextElementSibling.nextElementSibling);
+
+  </script>
+</body>
+</html>
+
