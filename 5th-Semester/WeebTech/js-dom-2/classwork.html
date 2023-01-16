@@ -10,8 +10,8 @@
                 height: 50px;
                 margin-bottom: 10px;
 
-                bottom: 0px;
-                position: absolute;
+                /*bottom: 0px;
+                position: absolute;*/
             }
             #frame1, #frame2, #frame3 {
                 width: 300px;
@@ -59,15 +59,11 @@
                 let discFrom = document.getElementById("frame1");
                 let discTo = document.getElementById("frame2");
 
-                let removeOld = discFrom.firstElementChild;
-
                 discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
 
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
-                discFrom.removeChild(removeOld);
-
             }
 
             function moveOneToThree(){
@@ -145,10 +141,10 @@
                     bottomPosition += 50;
                     console.log("New position: "+bottomPosition+" px");
                 }*/
-                if(frameChildren.length>0) frameChildren[0].style.bottom = "0px";
+                /*if(frameChildren.length>0) frameChildren[0].style.bottom = "0px";
                 if(frameChildren.length>1) frameChildren[1].style.bottom = "50px";
                 if(frameChildren.length>2) frameChildren[2].style.bottom = "100px";
-                if(frameChildren.length>3) frameChildren[3].style.bottom = "150px";
+                if(frameChildren.length>3) frameChildren[3].style.bottom = "150px";*/
             }
         </script>
     </body>
