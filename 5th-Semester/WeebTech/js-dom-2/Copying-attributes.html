@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice</title>
+  <style> 
+    .makeBorder {
+        border: 3px solid black;
+        color: grey;
+    }
+</style>
+</head>
+<body>
+  <div>
+    <p> line one. </p>
+    <p id="p2" class="makeBorder"> line two. </p>
+    <ul>
+      <li> Item 1 </li>
+      <li> Item 2 </li>
+      <li> Item 3 </li>
+    </ul>
+  </div>
+  <div> </div>
+
+  <script>
+    let attr = document.getElementById("p2").getAttribute("class");
+    document.getElementsByTagName("p")[0].setAttribute("class", attr);
+	
+  </script>
+</body>
+</html>
+

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Locale;
 
 interface Ingredient{}
 class Direction{
@@ -13,6 +14,8 @@ class Direction{
 
 class Maze {
     ArrayList<Room> mazeRooms = new ArrayList<>();
+    public ArrayList<Room> roomNo = new ArrayList<>();
+
     // Maze(){
     //     this.mazeRooms = new ArrayList<Room>();
     // }
@@ -164,10 +167,104 @@ class EnchantedMazeGame extends MazeGame {
 }
 
 // We are done creating stuffs for maze. But now, creating a maze becomes complex.
-interface MazeBuilder {
-	void buildMaze();
-	void buildRoom(int roomNumber);
-	void buildDoor(int roomFrom, int roomTo);
+interface IMazeBuilder {
+    Maze getMaze();
+}
+
+ interface IMazeBuilderUtils{
+      void buildMaze();
+      void buildRoom(int roomNumber);
+      void buildDoor(int roomFrom, int roomTo);
+}
+
+class StandardMazeBuilder implements IMazeBuilderUtils, IMazeBuilder{
+    private Maze curentMaze;
+
+    StandardMazeBuilder(){
+        this.curentMaze = null;
+    }
+    private int commonWall(Room a, Room b){
+        return Direction.East;
+    }
+    public void buildMaze(){
+        this.curentMaze = new Maze();
+    }
+
+    @Override
+    public void buildRoom(int roomNumber) {
+        Room room = new Room(3);
+        this.curentMaze.addRoom(room);
+
+        room.setSide(Direction.North, new Wall());
+        room.setSide(Direction.East, new Wall());
+        room.setSide(Direction.West, new Wall());
+        room.setSide(Direction.South, new Wall());
+
+    }
+
+    @Override
+    public void buildDoor(int roomFrom, int roomTo) {
+        Room r1 = curentMaze.roomNo.get(roomFrom);
+        Room r2 = curentMaze.roomNo.get(roomTo);
+
+        Door d = new Door(r1, r2);
+
+        r1.setSide(commonWall(r1, r2), d);
+        r2.setSide(commonWall(r1, r2), d);
+    }
+
+    @Override
+    public Maze getMaze() {
+        return this.curentMaze;
+    }
+}
+
+class Game {
+    void createMaze(IMazeBuilder builder){
+
+    }
+}
+
+class CountingMazeBuilder implements IMazeBuilder, IMazeBuilderUtils{
+    private Maze curentMaze;
+
+    CountingMazeBuilder(){
+        this.curentMaze = null;
+    }
+    private int commonWall(Room a, Room b){
+        return Direction.East;
+    }
+    public void buildMaze(){
+        this.curentMaze = new Maze();
+    }
+
+    @Override
+    public void buildRoom(int roomNumber) {
+        Room room = new Room(3);
+        this.curentMaze.addRoom(room);
+
+        room.setSide(Direction.North, new Wall());
+        room.setSide(Direction.East, new Wall());
+        room.setSide(Direction.West, new Wall());
+        room.setSide(Direction.South, new Wall());
+
+    }
+
+    @Override
+    public void buildDoor(int roomFrom, int roomTo) {
+        Room r1 = curentMaze.roomNo.get(roomFrom);
+        Room r2 = curentMaze.roomNo.get(roomTo);
+
+        Door d = new Door(r1, r2);
+
+        r1.setSide(commonWall(r1, r2), d);
+        r2.setSide(commonWall(r1, r2), d);
+    }
+
+    @Override
+    public Maze getMaze() {
+        return this.curentMaze;
+    }
 }
 
 class Solution {
@@ -175,6 +272,20 @@ class Solution {
         MazeGame enchantedMazeGame = new EnchantedMazeGame();
         Maze maze = enchantedMazeGame.createMaze();
         maze.printLayout();
-
     }
+    public static void fun1(String[] args){
+        Game game = new Game();
+        StandardMazeBuilder builder = new StandardMazeBuilder();
+
+        game.createMaze(builder);
+        Maze maze = builder.getMaze();
+    }
+    public static void fun2(String[] args){
+        Game game = new Game();
+        CountingMazeBuilder builder = new CountingMazeBuilder();
+
+        game.createMaze(builder);
+        Maze maze = builder.getMaze();
+    }
+
 }

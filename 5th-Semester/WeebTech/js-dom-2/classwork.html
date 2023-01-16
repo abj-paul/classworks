@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tower of Hanoi</title>
+        <style>
+            .disc{
+                width: 290px;
+                display: block;
+                margin: auto;
+                height: 50px;
+                margin-bottom: 10px;
+
+                bottom: 0px;
+                position: absolute;
+            }
+            #frame1, #frame2, #frame3 {
+                width: 300px;
+                border: 3px solid black;
+                float: left;
+                margin-right: 10px;
+                height: 250px;
+                position: relative;
+            }
+
+            #guiButton button {
+                width: 100px;
+                margin-left:20px;
+                height: 50px;
+                margin-bottom: 10px;
+            }
+            #guiButton {
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="frame1">
+            <button class="disc">C</button>
+            <button class="disc">B</button>
+            <button class="disc">A</button>
+            <button class="disc">D</button>
+        </div>
+        <div id="frame2"></div>
+        <div id="frame3"></div>
+
+        <br>
+        <div id="guiButton">
+            <button onclick="moveOneToTwo()">1->2</button>
+            <button onclick="moveOneToThree()">1->3</button>
+            <button onclick="moveTwoToOne()">2->1</button>
+            <button onclick="moveTwoToThree()">2->3</button>
+            <button onclick="moveThreeToOne()">3->1</button>
+            <button onclick="moveThreeToTwo()">3->2</button>
+        </div>
+
+        <script>
+            function moveOneToTwo(){
+                let discFrom = document.getElementById("frame1");
+                let discTo = document.getElementById("frame2");
+
+                let removeOld = discFrom.firstElementChild;
+
+                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+
+                bottomAligned('frame1');
+                bottomAligned('frame2');
+                bottomAligned('frame3')
+                discFrom.removeChild(removeOld);
+
+            }
+
+            function moveOneToThree(){
+                let discFrom = document.getElementById("frame1");
+                let discTo = document.getElementById("frame3");
+
+                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+                bottomAligned('frame1');
+                bottomAligned('frame2');
+                bottomAligned('frame3')
+
+                //discFrom.removeChild(discFrom.firstElementChild);
+            }
+
+            function moveTwoToOne(){
+                let discFrom = document.getElementById("frame2");
+                let discTo = document.getElementById("frame1");
+                let removeOld = discFrom.firstElementChild;
+
+
+                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+                bottomAligned('frame1');
+                bottomAligned('frame2');
+                bottomAligned('frame3')
+                discFrom.removeChild(removeOld);
+
+                //discFrom.removeChild(discFrom.firstElementChild);
+            }
+
+            function moveTwoToThree(){
+                let discFrom = document.getElementById("frame2");
+                let discTo = document.getElementById("frame3");
+
+                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+                bottomAligned('frame1');
+                bottomAligned('frame2');
+                bottomAligned('frame3')
+
+                //discFrom.removeChild(discFrom.firstElementChild);
+            }
+
+            function moveThreeToOne(){
+                let discFrom = document.getElementById("frame3");
+                let discTo = document.getElementById("frame1");
+
+                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+                bottomAligned('frame1');
+                bottomAligned('frame2');
+                bottomAligned('frame3')
+
+                //discFrom.removeChild(discFrom.firstElementChild);
+            }
+
+            function moveThreeToTwo(){
+                let discFrom = document.getElementById("frame3");
+                let discTo = document.getElementById("frame2");
+
+                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+                bottomAligned('frame1');
+                bottomAligned('frame2');
+                bottomAligned('frame3')
+
+                //discFrom.removeChild(discFrom.firstElementChild);
+            }
+
+            function bottomAligned(frameId){
+                let frameChildren = document.getElementById(frameId).children;
+
+                /*
+                let bottomPosition = 0;
+                console.log("AA"+frameChildren[0]);
+                for(let i=frameChildren.length - 1; i>=0; i--){
+                    frameChildren[i].style.color = "red";
+                    frameChildren[i].style.bottom = bottomPosition + "px";
+                    bottomPosition += 50;
+                    console.log("New position: "+bottomPosition+" px");
+                }*/
+                if(frameChildren.length>0) frameChildren[0].style.bottom = "0px";
+                if(frameChildren.length>1) frameChildren[1].style.bottom = "50px";
+                if(frameChildren.length>2) frameChildren[2].style.bottom = "100px";
+                if(frameChildren.length>3) frameChildren[3].style.bottom = "150px";
+            }
+        </script>
+    </body>
+</html>

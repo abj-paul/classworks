@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice</title>
+</head>
+<body>
+  <div>
+    <p> line one. </p>
+    <p id="p2"> line two. </p>
+    <ul>
+      <li> Item 1 </li>
+      <li> Item 2 </li>
+      <li> Item 3 </li>
+    </ul>
+  </div>
+  <div> </div>
+
+  <script>
+    let para = document.createElement('p');
+    para.innerText = "dun dun dun!";
+    para.setAttribute("id", "p3");
+    para.style.border = "2px solid black";
+    document.body.appendChild(para);
+    console.log(para)
+ 
+
+    let para2 = document.getElementById("p2");
+    para2.remove();
+
+    let div = document.getElementsByTagName("div");
+    div[0].removeChild(div[0].firstElementChild);
+
+    let newNode = document.createElement('p');
+    newNode.innerText = "This is new node";
+    //document.body.appendChild(newNode);
+    div[0].insertBefore(newNode, div[0].children[0]);
+
+    let para3 = document.getElementById("p3");
+    para3.style.color = "red";
+	
+  </script>
+</body>
+</html>
+
