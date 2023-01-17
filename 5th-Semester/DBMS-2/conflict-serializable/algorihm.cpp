@@ -1,9 +1,11 @@
 #include<bits/stdc++.h>
-#include "dfs.h"
 using namespace std;
 
 #define max_node 10
 int getNextTransaction(vector<string> transactions, int curr_index, int num_of_transactions);
+bool detectCycle(vector<vector<int>>& adj, int typeOfNode, int numOfTransaction);
+
+// Utility
 void printGraph(vector<vector<int>> graph);
 void printVector(vector<string> v);
 vector<string> take_input();
@@ -12,9 +14,11 @@ int main(){
 	//string transactions[] = {"r2(x)","r3(y)","w3(x)","r1(y)","w2(x)","w1(y)","w1(x)"};
 	//string transactions[] = {"r2(x)", "r3(y)", "w3(x)", "r1(y)", "w2(z)", "w1(y)", "w1(x)", "r3(z)"};
 	
+	int typeOfNode;
+	cin>>typeOfNode;
 	vector<string> transactions = take_input();
-	printVector(transactions);
-	int num_of_transactions = sizeof(transactions)/sizeof(transactions[0]);
+	//printVector(transactions);
+	int num_of_transactions = transactions.size();
 
 	vector<vector<int>> graph(max_node);
 
@@ -28,16 +32,9 @@ int main(){
 
 	printGraph(graph);
 
-	Graph g(max_node);
-
-	for(int i=0; i<graph.size(); i++){
-		for(int j=0; j<graph[i].size(); j++){
-			g.addEdge(i,graph[i][j]);
-		}
-	}
-
-	if(g.isCyclic()) printf("Conflict not serializable.\n");
-	else printf("Conflict serializable.\n");
+	bool cycle = detectCycle(graph, typeOfNode, num_of_transactions-1);
+	if(cycle==true) cout<<"Conflict Not serializable."<<endl;
+	else cout << "Conflict serializable"<<endl ;
 
 return 0;
 }
@@ -56,13 +53,12 @@ void printGraph(vector<vector<int>> graph){
 }
 
 vector<string> take_input(){
-	vector<string> transactions(100);
+	vector<string> transactions;
 	string data = "";
 
-	int i=0;
 	while(data!="end"){
 		cin>>data;
-		transactions[i]	= data;
+		transactions.push_back(data);
 	}
 
 	return transactions;
@@ -85,5 +81,35 @@ int getNextTransaction(vector<string> transactions, int curr_index, int num_of_t
 	return next_transaction;
 }
 void printVector(vector<string> v){
-	for(int i=0; i<v.size(); i++) cout<< v[i] << " " << std::endl;
+	for(int i=0; i<v.size(); i++) cout<<i<<")"<< v[i] << " " << std::endl;
+}
+
+bool iscycle(int src, vector<vector<int>>& adj, vector<bool>&visited, vector<int>&stack){
+	stack[src] = true;
+	if(!visited[src]){
+		visited[src] = true;
+		for(auto i:adj[src]){
+			if(!visited[i] && iscycle(i, adj, visited, stack)) return true;
+			if(stack[i]) return true;
+		}
+	}
+
+	stack[src] = false;
+	return false;
+}
+
+bool detectCycle(vector<vector<int>>& adj, int typeOfNode, int numOfTransaction){
+	int n = typeOfNode;
+	int m = numOfTransaction;
+
+	//cout<<n<<m<<endl;
+
+	bool cycle = false;
+	vector<int> stack(n,0);
+	vector<bool> visited(n,0);
+
+	for(int i=0; i<n; i++){
+		if(!visited[i] && iscycle(i,adj,visited,stack)) cycle=true;
+	}
+	return cycle;
 }
