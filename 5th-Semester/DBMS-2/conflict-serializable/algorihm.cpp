@@ -2,8 +2,14 @@
 using namespace std;
 
 #define max_node 10
+
+bool Cycle=false;
+int visited[max_node];
+vector<vector<int>> graph(max_node);
+
+
 int getNextTransaction(vector<string> transactions, int curr_index, int num_of_transactions);
-bool detectCycle(vector<vector<int>>& adj, int typeOfNode, int numOfTransaction);
+void dfs(int node);
 
 // Utility
 void printGraph(vector<vector<int>> graph);
@@ -20,7 +26,7 @@ int main(){
 	//printVector(transactions);
 	int num_of_transactions = transactions.size();
 
-	vector<vector<int>> graph(max_node);
+
 
 	for(int i=0; i<num_of_transactions; i++){
 		int current_transaction = (int)transactions[i][1] - 48;
@@ -32,8 +38,15 @@ int main(){
 
 	printGraph(graph);
 
-	bool cycle = detectCycle(graph, typeOfNode, num_of_transactions-1);
-	if(cycle==true) cout<<"Conflict Not serializable."<<endl;
+	   for(int i=1;i<typeOfNode;i++)
+	    {
+		if(visited[i]==0)
+		{
+		    dfs(i);
+		}
+	    }
+
+	if(Cycle==true) cout<<"Conflict Not serializable."<<endl;
 	else cout << "Conflict serializable"<<endl ;
 
 return 0;
@@ -84,32 +97,15 @@ void printVector(vector<string> v){
 	for(int i=0; i<v.size(); i++) cout<<i<<")"<< v[i] << " " << std::endl;
 }
 
-bool iscycle(int src, vector<vector<int>>& adj, vector<bool>&visited, vector<int>&stack){
-	stack[src] = true;
-	if(!visited[src]){
-		visited[src] = true;
-		for(auto i:adj[src]){
-			if(!visited[i] && iscycle(i, adj, visited, stack)) return true;
-			if(stack[i]) return true;
-		}
-	}
-
-	stack[src] = false;
-	return false;
-}
-
-bool detectCycle(vector<vector<int>>& adj, int typeOfNode, int numOfTransaction){
-	int n = typeOfNode;
-	int m = numOfTransaction;
-
-	//cout<<n<<m<<endl;
-
-	bool cycle = false;
-	vector<int> stack(n,0);
-	vector<bool> visited(n,0);
-
-	for(int i=0; i<n; i++){
-		if(!visited[i] && iscycle(i,adj,visited,stack)) cycle=true;
-	}
-	return cycle;
+void dfs(int node){
+    visited[node]=1;
+    for(auto x: graph[node]){   
+        if(visited[x]==0)dfs(x);
+        if(visited[x]==1){
+            Cycle=true;
+            return;
+        }
+        if(visited[x]==2)continue;
+    }
+    visited[node]=2;
 }
