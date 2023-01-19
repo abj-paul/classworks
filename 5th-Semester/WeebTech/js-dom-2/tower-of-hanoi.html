@@ -5,13 +5,14 @@
         <style>
             .disc{
                 width: 290px;
-                display: block;
-                margin: auto;
                 height: 50px;
-                margin-bottom: 10px;
+                display: block;
 
-                /*bottom: 0px;
-                position: absolute;*/
+                margin: auto;
+                margin-top: 10px;
+
+                bottom: 0px;
+                position: absolute;
             }
             #frame1, #frame2, #frame3 {
                 width: 300px;
@@ -33,16 +34,14 @@
             }
         </style>
     </head>
-    <body>
+    <body> 
 
-        <div id="frame1">
-            <button class="disc">C</button>
-            <button class="disc">B</button>
-            <button class="disc">A</button>
-            <button class="disc">D</button>
-        </div>
+      
+        <div id="frame1"></div>
         <div id="frame2"></div>
         <div id="frame3"></div>
+
+
 
         <br>
         <div id="guiButton">
@@ -53,6 +52,13 @@
             <button onclick="moveThreeToOne()">3->1</button>
             <button onclick="moveThreeToTwo()">3->2</button>
         </div>
+
+	<input type="text" id="discCountTextbox">
+	<button onclick="generateDiscs(); bottomAligned('frame1'); bottomAligned('frame2'); bottomAligned('frame3');"> Generate Discs </button>
+	<button onclick="clearDisc('frame1');clearDisc('frame2');clearDisc('frame3');"> Clear discs </button>
+	<button onclick="checkSuccess()"> Check </button>
+
+	<p id="resultPara"> Status: Match just started! </p>
 
         <script>
             function moveOneToTwo(){
@@ -74,8 +80,6 @@
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
-
-                //discFrom.removeChild(discFrom.firstElementChild);
             }
 
             function moveTwoToOne(){
@@ -88,9 +92,8 @@
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
-                discFrom.removeChild(removeOld);
+                //discFrom.removeChild(removeOld);
 
-                //discFrom.removeChild(discFrom.firstElementChild);
             }
 
             function moveTwoToThree(){
@@ -102,7 +105,6 @@
                 bottomAligned('frame2');
                 bottomAligned('frame3')
 
-                //discFrom.removeChild(discFrom.firstElementChild);
             }
 
             function moveThreeToOne(){
@@ -113,8 +115,6 @@
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
-
-                //discFrom.removeChild(discFrom.firstElementChild);
             }
 
             function moveThreeToTwo(){
@@ -125,27 +125,98 @@
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
-
-                //discFrom.removeChild(discFrom.firstElementChild);
             }
 
             function bottomAligned(frameId){
                 let frameChildren = document.getElementById(frameId).children;
 
-                /*
-                let bottomPosition = 0;
-                console.log("AA"+frameChildren[0]);
-                for(let i=frameChildren.length - 1; i>=0; i--){
-                    frameChildren[i].style.color = "red";
+                let bottomPosition = (frameChildren.length-1)*50 + frameChildren.length*5;
+                for(let i=0; i<frameChildren.length; i++){
                     frameChildren[i].style.bottom = bottomPosition + "px";
-                    bottomPosition += 50;
-                    console.log("New position: "+bottomPosition+" px");
-                }*/
-                /*if(frameChildren.length>0) frameChildren[0].style.bottom = "0px";
-                if(frameChildren.length>1) frameChildren[1].style.bottom = "50px";
-                if(frameChildren.length>2) frameChildren[2].style.bottom = "100px";
-                if(frameChildren.length>3) frameChildren[3].style.bottom = "150px";*/
+                    bottomPosition -= 55;
+                    console.log("New position: "+bottomPosition+"px");
+                }
             }
+
+	  function generateRandomNumberArray(arraySize){
+	      const arr = [];
+	      for(let i=1; i<=arraySize; i++){
+		  arr[i-1] = i;
+	      }
+	      
+	      for (let i = arr.length -1; i > 0; i--) { //Shuffling array
+		  let j = Math.floor(Math.random() * (i+1));
+		  let k = arr[i];
+		  arr[i] = arr[j];
+		  arr[j] = k;
+	      }
+	      return arr;
+	  }
+
+
+	  function generateDiscs(){
+	      let numOfDisc = document.getElementById("discCountTextbox").value;
+	      console.log(numOfDisc+"were requested to be built.");
+
+	      randNum = generateRandomNumberArray(numOfDisc);
+
+	      for(let i=1; i<=numOfDisc; i++){
+		  const newDisc = document.createElement("button");
+		  newDisc.innerHTML = randNum[i-1];
+		  newDisc.setAttribute("id",randNum[i-1]);
+		  newDisc.setAttribute("class","disc");
+		  document.getElementById("frame1").appendChild(newDisc);
+	      }
+
+	      let frameSize = 50*numOfDisc + 70 + "px";
+	      document.getElementById("frame1").style.height = frameSize;
+	      document.getElementById("frame2").style.height = frameSize;
+	      document.getElementById("frame3").style.height = frameSize;
+	  }
+
+	  function clearDisc(frameId){
+	      let disc = document.getElementById(frameId).children;
+	      while(disc.length!=0) disc[0].remove();
+	      console.log("After deleing all discs, we now have "+disc.length + "discs remaining in "+frameId);
+	  }
+	  function removeItem(item){
+	      item.remove();
+	  }
+
+	  function checkSuccess(){
+	      let bool1 = checkSuccessInFrame("frame1");
+	      let bool2 = checkSuccessInFrame("frame2");
+	      let bool3 = checkSuccessInFrame("frame3");
+	      let win = bool1 || bool2 || bool3;
+	      
+	      const para = document.getElementById("resultPara");
+
+	      if(win){
+		  console.log("You have won!");
+		  para.innerHTML = "You have won!";
+	      }else{
+		  console.log("You have lost!");
+		  para.innerHTML = "You have lost!";
+	      }
+	      para.setAttribute("id","resultPara");
+	      para.setAttribute("class","");
+	      document.getElementsByTagName("body")[0].appendChild(para);
+	  }
+
+	  function checkSuccessInFrame(frameId){
+	      let discList = document.getElementById(frameId).children;
+	      let totalDisc = document.getElementById("discCountTextbox").value;
+
+	      if(discList.length!=totalDisc) return false;
+	      
+	      for(let i=1; i<discList.length; i++) {
+		  if(parseInt(discList[i].innerHTML) <= parseInt(discList[i-1].innerHTML)){
+		      return false;
+		  }
+	      }
+
+	      return true;
+	  }
         </script>
     </body>
 </html>
