@@ -2,70 +2,128 @@
 <html>
     <head>
         <title>Tower of Hanoi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <style>
+			.alert{
+				display: none;
+			}
+		h1 {
+			text-align: center;
+		}
+	    body{
+		background-color: ivory;
+	    }
             .disc{
-                width: 290px;
-                height: 50px;
                 display: block;
 
                 margin: auto;
-                margin-top: 10px;
+                margin-top: 5px;
 
                 bottom: 0px;
                 position: absolute;
+
+		width: 100%;
+		height: 50px;
+		background-color: yellow;
             }
             #frame1, #frame2, #frame3 {
-                width: 300px;
+		margin-top: 10px;
                 border: 3px solid black;
                 float: left;
                 margin-right: 10px;
-                height: 250px;
                 position: relative;
+		width: 100%;
             }
 
+	    .inputs{
+		    margin-top: 30px;
+		background-color: gray;
+	    }
+
+	    .inputs button {
+		width: 33%;	
+		margin-top: 10px;
+	    }
+
+	    #resultPara {
+		padding: 10px;
+		color: white;
+	    }
+
             #guiButton button {
-                width: 100px;
-                margin-left:20px;
-                height: 50px;
-                margin-bottom: 10px;
+		    width: 100%;
+		    padding: 5px;
+		    margin-top:10px;
             }
             #guiButton {
-                margin-top: 300px;
+                margin-top: 30px;
+		display: left;
             }
+
         </style>
     </head>
     <body> 
+	<div class="container">
+		<div class="row">
+			<h1> Tower of Hanoi </h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="row">
+					<div class="col-sm-4"><div id="frame1" ></div></div>
+       					<div class="col-sm-4"><div id="frame2"></div></div>
+	        			<div class="col-sm-4"><div id="frame3"></div></div>
+				</div>
+			</div>
 
-      
-        <div id="frame1"></div>
-        <div id="frame2"></div>
-        <div id="frame3"></div>
 
+        		<div id="guiButton" class="col-sm-2">
+				<div class="row">
+            				<button onclick="moveOneToTwo()" class="btn">1->2</button>
+            				<button onclick="moveOneToThree()">1->3</button>
+            				<button onclick="moveTwoToOne()">2->1</button>
+            				<button onclick="moveTwoToThree()">2->3</button>
+            				<button onclick="moveThreeToOne()">3->1</button>
+            				<button onclick="moveThreeToTwo()">3->2</button>
+        			</div>
+			</div>
+		</div>
 
+		<div class="inputs row" id="resultSegment">
+			<input type="text" id="discCountTextbox" class="form-control">
+			<button onclick="generateDiscs(); bottomAligned('frame1'); bottomAligned('frame2'); bottomAligned('frame3');" class="btn"> Generate Discs </button>
+			<button onclick="clearDisc('frame1');clearDisc('frame2');clearDisc('frame3');" class="btn"> Clear discs </button>
+			<button onclick="checkSuccess()" class="btn"> Check </button>
 
-        <br>
-        <div id="guiButton">
-            <button onclick="moveOneToTwo()">1->2</button>
-            <button onclick="moveOneToThree()">1->3</button>
-            <button onclick="moveTwoToOne()">2->1</button>
-            <button onclick="moveTwoToThree()">2->3</button>
-            <button onclick="moveThreeToOne()">3->1</button>
-            <button onclick="moveThreeToTwo()">3->2</button>
-        </div>
+			<p id="resultPara"> Status: Match just started! </p>
+		</div>
+	</div>
+	<div class="alert alert-success">
+		<strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.	
+	</div>
 
-	<input type="text" id="discCountTextbox">
-	<button onclick="generateDiscs(); bottomAligned('frame1'); bottomAligned('frame2'); bottomAligned('frame3');"> Generate Discs </button>
-	<button onclick="clearDisc('frame1');clearDisc('frame2');clearDisc('frame3');"> Clear discs </button>
-	<button onclick="checkSuccess()"> Check </button>
-
-	<p id="resultPara"> Status: Match just started! </p>
 
         <script>
             function moveOneToTwo(){
                 let discFrom = document.getElementById("frame1");
                 let discTo = document.getElementById("frame2");
 
-                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+				if(checkValidMove(discFrom.firstElementChild, discTo.firstElementChild)==false) {
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Invalid move!";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+                else {
+					discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Valid move.";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
 
                 bottomAligned('frame1');
                 bottomAligned('frame2');
@@ -76,7 +134,20 @@
                 let discFrom = document.getElementById("frame1");
                 let discTo = document.getElementById("frame3");
 
-                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+				if(checkValidMove(discFrom.firstElementChild, discTo.firstElementChild)==false) {
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Invalid move!";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+                else {
+					discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Valid move.";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
@@ -88,19 +159,44 @@
                 let removeOld = discFrom.firstElementChild;
 
 
-                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+				if(checkValidMove(discFrom.firstElementChild, discTo.firstElementChild)==false) {
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Invalid move!";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+                else {
+					discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Valid move.";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
                 //discFrom.removeChild(removeOld);
-
             }
 
             function moveTwoToThree(){
                 let discFrom = document.getElementById("frame2");
                 let discTo = document.getElementById("frame3");
 
-                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+				if(checkValidMove(discFrom.firstElementChild, discTo.firstElementChild)==false) {
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Invalid move!";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+                else {
+					discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Valid move.";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
@@ -111,7 +207,20 @@
                 let discFrom = document.getElementById("frame3");
                 let discTo = document.getElementById("frame1");
 
-                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+				if(checkValidMove(discFrom.firstElementChild, discTo.firstElementChild)==false) {
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Invalid move!";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+                else {
+					discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Valid move.";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
@@ -120,8 +229,20 @@
             function moveThreeToTwo(){
                 let discFrom = document.getElementById("frame3");
                 let discTo = document.getElementById("frame2");
+				if(checkValidMove(discFrom.firstElementChild, discTo.firstElementChild)==false) {
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Invalid move!";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
+                else {
+					discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
+					const para = document.getElementById("resultPara");
+					para.innerHTML = "Valid move.";
+					para.setAttribute("id","resultPara");
+					document.getElementById("resultSegment").appendChild(para);
+				}
 
-                discTo.insertBefore(discFrom.firstElementChild, discTo.firstElementChild);
                 bottomAligned('frame1');
                 bottomAligned('frame2');
                 bottomAligned('frame3')
@@ -134,7 +255,7 @@
                 for(let i=0; i<frameChildren.length; i++){
                     frameChildren[i].style.bottom = bottomPosition + "px";
                     bottomPosition -= 55;
-                    console.log("New position: "+bottomPosition+"px");
+                    //console.log("New position: "+bottomPosition+"px");
                 }
             }
 
@@ -173,6 +294,20 @@
 	      document.getElementById("frame2").style.height = frameSize;
 	      document.getElementById("frame3").style.height = frameSize;
 	  }
+	
+	  function checkValidMove(from, to){
+		let fromDigit = parseInt(from.innerHTML);
+		if(to==null) return true;
+		let toDigit = parseInt(to.innerHTML);
+
+		console.log("Check Valid Move: "+fromDigit+"<"+toDigit);
+
+		if(fromDigit > toDigit) {
+			document.getElementsByClassName("alert")[0].style.display = "block";
+			return false;
+		}
+		else return true;
+	  }
 
 	  function clearDisc(frameId){
 	      let disc = document.getElementById(frameId).children;
@@ -199,8 +334,8 @@
 		  para.innerHTML = "You have lost!";
 	      }
 	      para.setAttribute("id","resultPara");
-	      para.setAttribute("class","");
-	      document.getElementsByTagName("body")[0].appendChild(para);
+		console.log("Win? "+win);
+	      document.getElementById("resultSegment").appendChild(para);
 	  }
 
 	  function checkSuccessInFrame(frameId){
