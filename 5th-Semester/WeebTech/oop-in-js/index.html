@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script>
+      class Student {
+	  constructor(name, roll){
+	      this.name = name;
+	      this.roll = roll;
+	  }
+
+	  printStudent(){
+	      console.log(this.name + " "+ this.roll);
+	  }
+      }
+
+      let myStudent = new Student("Abhijit Paul", 1201);
+      myStudent.printStudent();
+      console.log(myStudent.name)
+      console.log(myStudent["name"])
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

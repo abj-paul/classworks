@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+  </head>
+  <body>
+    <form name="basicForm">
+      <label for="userName"> Your name: </label> 
+      <input name="userName" type="text">
+      <br>
+
+      <label for="userAge"> Your age: </label> 
+      <input name="userAge" type="text">
+      <br>
+
+      <label for="userPassword"> Your Password: </label> 
+      <input name="userPassword" type="password"> 
+      <br>
+
+      <button onclick="valdiate()"> Submit Form </button>
+
+    </form>
+
+    <script>
+      let username = document.forms["basicForm"]["userName"].value
+      let userage = document.forms["basicForm"]["userAge"].value
+      let userpassword = document.forms["basicForm"]["userPassword"].value;
+
+      if(userage<13) alert("You must be at least 13 to register for the program!");
+      if(userpassword.length<8) alert("Password should be at least 8 characters long!");
+      
+    </script>
+  </body>
+</html>
+
