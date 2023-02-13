@@ -1,0 +1,7 @@
+public static Transformer createTransformer(){
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+            transformer.setOutputProperty(OutputKeys.INDENT, "no");
+            transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+	    return transformer;
+        }
