@@ -12,8 +12,6 @@ public class Factory {
 		DatabaseFile databaseFile = new DatabaseFile(path);
 		return databaseFile;
 	}
-    /*	
-	    */
 
         public static void createDirectoryForPath(String path){
             new File(constants.DB_DIR_PATH).mkdir(); // create `db` directory if it doesn't exist
