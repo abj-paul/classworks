@@ -1,0 +1,33 @@
+
+class Product {
+    private String name, description, inventory;
+    private Integer price;
+    private Image image;
+}
+
+class Image {
+    private String fileLocation;
+    private String fileMetaData;
+
+    Image(fileLocation, fileMetaData){
+	this.fileLocation = fileLocation;
+	this.fileMetaData = fileMetaData;
+    }
+}
+
+class User {
+    private String name, email, password, address;
+}
+
+class Payment {
+    private String credit_card, PayPal, cryptocurrency;
+
+
+    String generatePaymentReceipt(){
+	return "Date + Payment Amount + Payment Method + Product List";
+    }
+
+    boolean notifyOrderConfirmation(){
+	return "User's order for Product has been confirmed.";
+    }
+}
