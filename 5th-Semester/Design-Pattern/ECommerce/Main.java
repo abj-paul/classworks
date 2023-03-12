@@ -223,8 +223,8 @@ public class Main {
 						System.out.println("Notification has been sent to product owner. Wait for order Confirmation!");
 					}
 					else if(userInput.toUpperCase().equals("N")) continue;
-					//System.out.println("Order Confirmation Notification ");
-					//System.out.println("Payment Receipt");
+					//System.out.println("Order Confirmation Notification "); TODO
+					//System.out.println("Payment Receipt"); TODO
 				}
 				else if(userInput.toUpperCase().equals(Constant.SELLER_ROLE)){
 					System.out.println(currSessionUser.getUserName()+"### Product List: ");
