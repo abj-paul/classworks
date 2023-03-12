@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RandomNumberComponent } from './random-number/random-number.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RandomNumberComponent
+    RandomNumberComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule
