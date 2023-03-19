@@ -1,4 +1,5 @@
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 class Product {
@@ -15,6 +16,10 @@ class Product {
 		this.image = image;
 		this.owner = owner;
     }
+
+	public String getName() {
+		return name;
+	}
 
     public String getOwner(){
 	return this.owner;
@@ -34,6 +39,10 @@ class Product {
     public String toString(){
 	return "----"+this.name+"----\n"+ this.description + "\nPrice" + String.valueOf(price) +"\nInventory: "+ String.valueOf(inventory) + "\n Image: "+image+"\n";
     }
+
+	public Double getPrice() {
+		return price;
+	}
 }
 
 class Image {
@@ -50,6 +59,7 @@ class User {
     private String username, email, password, address;
 	private ArrayList<String> notifications = null;
 	private ArrayList<Order> orders = null; // Only for product owner
+	private ArrayList<Order> ordersOnDelivery = null; // customer
 
     User(String username, String email, String password, String address){
 		this.username = username;
@@ -58,6 +68,7 @@ class User {
 		this.address = address;
 		this.notifications = new ArrayList<>();
 		this.orders = new ArrayList<>();
+		this.ordersOnDelivery = new ArrayList<>();
     }
 
     public String getUserName(){
@@ -95,20 +106,41 @@ class User {
 
 		return notifications_msg;
 	}
+	public void putOrderForPayment(Order order){
+		ordersOnDelivery.add(order);
+	}
+	public void payment(Order order){
+		ordersOnDelivery.remove(order);
+	}
 
+	public ArrayList<Order> getOrdersWaitingForPayment(){
+		return ordersOnDelivery;
+	}
 }
 
 class Payment {
     private String credit_card, PayPal, cryptocurrency;
+	private double money = 1000;
+	private String payment_method;
 
+	Payment(String payment_method){
+		this.payment_method = payment_method;
+	}
 
-    String generatePaymentReceipt(){
-	return "Date + Payment Amount + Payment Method + Product List";
+    public String generatePaymentReceipt(Order order){
+		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+		return timeStamp +": "+ order.getAmount()*order.getProduct().getPrice() +" taka has been paid for "+order.getProduct().getName() + " using "+payment_method;
     }
 
-    String notifyOrderConfirmation(){
-	return "User's order for Product has been confirmed.";
-    }
+	// How do I differentiate notificaitons?
+
+	public boolean pay(Order order){
+		System.out.println("Contacting with "+ payment_method +" to perform payment.");
+		Double purchaseAmount = order.getProduct().getPrice() * order.getAmount();
+		if(purchaseAmount>money) return false;
+		else money -= purchaseAmount;
+		return true;
+	}
 }
 
 class Order {
@@ -117,6 +149,7 @@ class Order {
 	private Product product;
 	private int amount;
 	private boolean orderConfirmed;
+	private boolean paid;
 
 	Order(Product product, User buyer, int amount, User owner){
 		this.product = product;
@@ -124,6 +157,7 @@ class Order {
 		this.amount = amount;
 		this.owner = owner;
 		this.orderConfirmed = false;
+		this.paid = false;
 	}
 
 	public void placeOrder(){
@@ -148,10 +182,25 @@ class Order {
 	public void confirmOrder(){
 		this.orderConfirmed = true;
 		buyer.notify(buyer.getUserName() + ", Your order for "+product.getProductName()+" has been confirmed!");
+		buyer.putOrderForPayment(this);
 	}
 
 	public Product getProduct() {
 		return product;
+	}
+	public void pay(Payment paymentMethod){
+		if(paymentMethod.pay(this)==false){
+			System.out.println("Insufficient amount! Can't complete payment.");
+			return;
+		}
+		this.paid = true;
+		buyer.notify(paymentMethod.generatePaymentReceipt(this));
+		buyer.payment(this);
+		System.out.println("Successfully paid for the order "+this.toString());
+	}
+
+	public boolean isPaid(){
+		return paid;
 	}
 }
 
@@ -187,6 +236,8 @@ public class Main {
 						//System.out.println("Select Payment Method");
 					}
 
+					
+
 
 					System.out.println(currSessionUser.getUserName()+"### Product List: ");
 					for(Product product : products) System.out.println(product.toString());
@@ -212,19 +263,36 @@ public class Main {
 						Order order = new Order(product, currSessionUser, amount, productOwner);
 						cart.add(order);
 					}
-					System.out.println("Your cart is ready! Confirm buy...");
-					for(Order order: cart) System.out.println(order.getProduct().toString());
-					System.out.println("Confirm Purchase of all items of the Cart?[Y/n]");
-					userInput = kbd.nextLine();
-					if(userInput.toUpperCase().equals("Y")) {
-						for(Order order: cart){
-							order.placeOrder();
+					if(cart.size()!=0){
+						System.out.println("Your cart is ready! Confirm buy...");
+						for(Order order: cart) System.out.println(order.getProduct().toString()); // BUG FIX
+						System.out.println("Confirm Purchase of all items of the Cart?[Y/n]");
+						userInput = kbd.nextLine();
+						if(userInput.toUpperCase().equals("Y")) {
+							for(Order order: cart){
+								order.placeOrder();
+							}
+							System.out.println("Notification has been sent to product owner. Wait for order Confirmation!");
 						}
-						System.out.println("Notification has been sent to product owner. Wait for order Confirmation!");
+						else if(userInput.toUpperCase().equals("N")) continue;
 					}
-					else if(userInput.toUpperCase().equals("N")) continue;
-					//System.out.println("Order Confirmation Notification "); TODO
+
+
 					//System.out.println("Payment Receipt"); TODO
+					ArrayList<Order> ordersWaitingForPayment = currSessionUser.getOrdersWaitingForPayment();
+					for(int i=0; i<ordersWaitingForPayment.size(); i++){
+						Order order = ordersWaitingForPayment.get(i);
+						if(!order.isPaid()) {
+							System.out.print(order.getProduct().toString() + "\nOrder for this product has been confirmed. Payment now?(Y/N)");
+							userInput = kbd.nextLine();
+							if(userInput.toUpperCase().equals("N")) continue;
+
+							System.out.print("Select a Payment method (Paypal, Bkash, Rocket): ");
+							userInput = kbd.nextLine();
+							Payment payment = new Payment(userInput);
+							order.pay(payment);
+						}
+					}
 				}
 				else if(userInput.toUpperCase().equals(Constant.SELLER_ROLE)){
 					System.out.println(currSessionUser.getUserName()+"### Product List: ");
