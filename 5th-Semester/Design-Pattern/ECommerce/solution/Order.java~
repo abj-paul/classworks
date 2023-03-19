@@ -1,0 +1,26 @@
+package solution;
+
+public class Payment {
+    private String credit_card, PayPal, cryptocurrency;
+	private double money = 1000;
+	private String payment_method;
+
+	Payment(String payment_method){
+		this.payment_method = payment_method;
+	}
+
+    public String generatePaymentReceipt(Order order){
+		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+		return timeStamp +": "+ order.getAmount()*order.getProduct().getPrice() +" taka has been paid for "+order.getProduct().getName() + " using "+payment_method;
+    }
+
+	// How do I differentiate notificaitons?
+
+	public boolean pay(Order order){
+		System.out.println("Contacting with "+ payment_method +" to perform payment.");
+		Double purchaseAmount = order.getProduct().getPrice() * order.getAmount();
+		if(purchaseAmount>money) return false;
+		else money -= purchaseAmount;
+		return true;
+	}
+}
