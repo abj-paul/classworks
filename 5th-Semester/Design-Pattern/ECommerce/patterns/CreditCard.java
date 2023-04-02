@@ -20,7 +20,7 @@ public class CreditCard extends PaymentMethod{
         if(this.validateCreditCardInformation())
             if(this.checkIfAmountIsOk(order, amount))
                 return this.generatePaymentReceipt(order, amount);
-        return "Insufficient Amount or Wrong credit card information.";
+        return Constant.WRONG_PAYMENT_CREDENTIALS;
     }
     
 }

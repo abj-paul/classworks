@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Mediator {
     ArrayList<Order> requestedOrders, confirmedOrders, paidOrders;
     ArrayList<Product> registeredProducts;
+    private Integer orderId = 0;
     private static Mediator mediatorInstance = null;
 
     private Mediator(){
@@ -24,6 +25,24 @@ public class Mediator {
         String productListStr = "";
         for(Product product : registeredProducts) productListStr += product.toString()+"\n";
         return productListStr;
+    }
+
+    public Order findOrderFromId(User user, Integer orderId) throws OrderNotFoundException{
+        if(user instanceof Seller){
+           for(Order order : requestedOrders){
+                if(order.getOrderId()==orderId) return order;
+            }
+        }else if(user instanceof Buyer){
+            for(Order order : confirmedOrders){
+                if(order.getOrderId().equals(orderId)) return order;
+            }
+        }
+        throw new OrderNotFoundException(Integer.toString(orderId));
+    }
+
+    public Integer generateNewOrderId(){
+        this.orderId++;
+        return this.orderId;
     }
 
     public Product findProductFromId(Integer productId){
@@ -96,7 +115,7 @@ public class Mediator {
     }
 
     public PaymentMethod createPaymentMethodAccount(User user, String paymentType,Double balance){
-        if(paymentType.toUpperCase().equals("CREDIT_CARd")) return new CreditCard(balance, user.toString());
+        if(paymentType.toUpperCase().equals("CREDITCARD")) return new CreditCard(balance, user.toString());
         else if(paymentType.toUpperCase().equals("BITCOIN")) return new Bitcoin(balance, user.toString());
         else return null;
     }
@@ -107,6 +126,21 @@ public class Mediator {
         
         Authentication authentication = Authentication.getAuthenticationInstance();
         authentication.notifyAllUsers("A new product "+name+" is available now!");
+    }
+
+    public String payment_interactions(Order order, Double amount){
+        if(order.getBuyer().getPaymentMethod()==null) return Constant.SET_PAYMENT_METHOD_FIRST;
+
+        String receipt = order.getBuyer().getPaymentMethod().makePayment(order, amount);
+        if(receipt.equals(Constant.WRONG_PAYMENT_CREDENTIALS)) return receipt;
+
+        this.confirmedOrders.remove(order);
+        this.paidOrders.add(order);
+
+        order.getBuyer().addNotification(receipt);
+        order.getProduct().getOwner().addNotification(receipt);
+
+        return receipt;
     }
 
 }

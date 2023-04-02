@@ -15,10 +15,12 @@ public class Seller extends User{
     public ArrayList<Order> getPlacedOrders(){
         return this.mediator.getOrders(this);
     }
-    public void acceptOrder(Order order){
+    public void acceptOrder(Integer orderId) throws OrderNotFoundException{
+        Order order = mediator.findOrderFromId(this, orderId);
 		super.mediator.addOrder(this, order);
 	}
-    public void rejectOrder(Order order){
+    public void rejectOrder(Integer orderId) throws OrderNotFoundException{
+        Order order = mediator.findOrderFromId(this, orderId);
 		super.mediator.removeOrder(this, order);
 	}
     public void removeOrder(Order order) {

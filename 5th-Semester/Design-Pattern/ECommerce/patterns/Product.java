@@ -39,7 +39,7 @@ public class Product {
 
     @Override
     public String toString(){
-	return "----"+this.name+"----\n"+ this.description + "\nPrice" + String.valueOf(price) +"\nInventory: "+ String.valueOf(inventory) + "\n Image: "+image+"\n";
+	return "----"+this.name+", "+"Id: "+this.productId+"----\n"+ this.description + "\nPrice" + String.valueOf(price) +"\nInventory: "+ String.valueOf(inventory) + "\nImage: "+image.toString()+"\n";
     }
 
     public boolean decreaseInventory(int amount){

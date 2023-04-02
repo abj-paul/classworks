@@ -16,23 +16,20 @@ class Order {
 
     
 
-	Order(Product product, User buyer, int amount){
+	Order(Product product, User buyer, int amount, Integer orderId){
 		this.product = product;
 		this.buyer = buyer;
 		this.amount = amount;
 		this.orderConfirmed = false;
 		this.paid = false;
+		this.orderId = orderId;
 	}
 
-	public void placeOrder(){
-		owner.notify(this.toString());
-		owner.notifyOrder(this);
+	public Integer getOrderId(){
+		return this.orderId;
 	}
 
-	public String toString(){
-		return owner.getUserName()+" has ordered " + String.valueOf(amount) +" of " +  product.getProductName() + " from "+ owner.getUserName(); 
-	}
-
+	 
 	public int getAmount() {
 		return amount;
 	}
@@ -42,6 +39,36 @@ class Order {
 	public User getOwner() {
 		return this.product.getOwner();
 	}
+	public Product getProduct() {
+		return product;
+	}
+
+	public boolean isPaid(){
+		return paid;
+	}
+
+	public String toString(){
+		return "Order Id: "+ orderId + "\n" +
+				"Product: " + product.getProductName() + "\n" +
+				"Owner: " + product.getOwner().getUserName() + "\n" +
+				"Buyer: " + buyer.getUserName() + "\n" +
+				"Quantity: " + this.amount + "\n" +
+				"Total Cost: " + this.amount*this.product.getPrice() + "\n"
+				;
+	}
+
+/* 
+	public void placeOrder(){
+		owner.notify(this.toString());
+		owner.notifyOrder(this);
+	}
+
+
+	public String toString(){
+		return owner.getUserName()+" has ordered " + String.valueOf(amount) +" of " +  product.getProductName() + " from "+ owner.getUserName(); 
+	}
+
+
 
 	public void confirmOrder(){
 		this.orderConfirmed = true;
@@ -49,9 +76,7 @@ class Order {
 		buyer.putOrderForPayment(this);
 	}
 
-	public Product getProduct() {
-		return product;
-	}
+
 	public void pay(Payment paymentMethod){
 		if(paymentMethod.pay(this)==false){
 			System.out.println("Insufficient amount! Can't complete payment.");
@@ -62,10 +87,8 @@ class Order {
 		buyer.payment(this);
 		System.out.println("Successfully paid for the order "+this.toString());
 	}
+	*/
 
-	public boolean isPaid(){
-		return paid;
-	}
 }
 
 

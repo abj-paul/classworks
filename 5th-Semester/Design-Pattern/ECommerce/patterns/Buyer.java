@@ -12,7 +12,7 @@ public class Buyer extends User{
 
     public void buy(Integer productId, Integer amount){
         Product product  = this.mediator.findProductFromId(productId);
-        Order order = new Order(product, this, amount);
+        Order order = new Order(product, this, amount, this.mediator.generateNewOrderId());
         this.addOrder(order);
     }
     public void buy(String productName){
@@ -23,12 +23,21 @@ public class Buyer extends User{
 		this.mediator.addOrder(this, order);;
 	}
 
-    public ArrayList<Order> getConfirmedOrders(){
+    public String getConfirmedOrders(){
         ArrayList<Order> confirmedOrders = this.mediator.getOrders(this);
-        return confirmedOrders;
+        String confirmedOrdersStr = "";
+        for(Order order : confirmedOrders) confirmedOrdersStr += order.toString() +"\n";
+        return confirmedOrdersStr;
     }
 
-    // Pay
+    public String pay(Integer orderId, Double amount){
+        Order order = null;
+        try{
+            order =  mediator.findOrderFromId(this, orderId);
+            return this.mediator.payment_interactions(order, amount);
+        }catch(OrderNotFoundException e){e.printStackTrace();}
+        return "Error occurred when paying for order "+orderId;
+    }
 
     public void removeOrder(Order order) {
 		this.mediator.removeOrder(this, order);
