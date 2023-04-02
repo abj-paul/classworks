@@ -21,6 +21,10 @@ public class Product {
         return this.productId;
     }
 
+	public Integer getInventory() {
+		return inventory;
+	}
+
 	public String getName() {
 		return name;
 	}

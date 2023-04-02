@@ -10,24 +10,29 @@ public class Buyer extends User{
         return this.mediator.getProductListAsString();
     }
 
-    public void buy(Integer productId, Integer amount){
+    public Order buy(Integer productId, Integer amount){
         Product product  = this.mediator.findProductFromId(productId);
+        if(product.getInventory()<amount) return null;
+        product.decreaseInventory(amount);
         Order order = new Order(product, this, amount, this.mediator.generateNewOrderId());
         this.addOrder(order);
-    }
-    public void buy(String productName){
 
+        return order;
     }
 
     private void addOrder(Order order){
 		this.mediator.addOrder(this, order);;
 	}
 
-    public String getConfirmedOrders(){
+    public String getConfirmedOrdersAsString(){
         ArrayList<Order> confirmedOrders = this.mediator.getOrders(this);
         String confirmedOrdersStr = "";
         for(Order order : confirmedOrders) confirmedOrdersStr += order.toString() +"\n";
         return confirmedOrdersStr;
+    }
+
+    public ArrayList<Order> getConfirmedOrders(){
+        return this.mediator.getOrders(this);
     }
 
     public String pay(Integer orderId, Double amount){
