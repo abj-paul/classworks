@@ -1,0 +1,56 @@
+
+* What are some company policies to support & protect whistleblowers?
+
+There are several company policies that can support and protect whistleblowers, including:
+
+    Whistleblower Hotline: Companies can establish a hotline or reporting mechanism for employees to report concerns or suspected violations anonymously. This can encourage employees to speak up without fear of retaliation or retribution.
+
+    Non-Retaliation Policy: Companies can establish a policy that explicitly prohibits retaliation against employees who report misconduct or participate in investigations. This policy should be communicated to all employees and enforced consistently.
+
+    Confidentiality Policy: Companies can establish a policy that protects the confidentiality of whistleblowers and any information they provide. This can help prevent retaliation and ensure that the whistleblower is not subjected to undue scrutiny or negative attention.
+
+    Investigation Policy: Companies can establish a policy for promptly investigating reports of misconduct and taking appropriate action. This policy should include procedures for ensuring that the investigation is thorough and impartial, and that any wrongdoing is addressed.
+
+    Training and Education: Companies can provide training and education to employees on the importance of reporting misconduct and the protections available to whistleblowers. This can help create a culture of transparency and accountability and encourage employees to speak up.
+
+    Legal Assistance: Companies can offer legal assistance to whistleblowers who report misconduct or participate in investigations. This can help protect the whistleblower's rights and ensure that they are not unfairly targeted or punished.
+
+By implementing these policies, companies can create a culture that supports and protects whistleblowers and encourages employees to report misconduct without fear of retaliation or negative consequences.
+
+* Laws in BD regarding whistleblower protection
+In Bangladesh, there are some whistleblower protection laws that provide certain protections to individuals who report corruption or other misconduct. Here are some examples of relevant laws:
+
+    The Right to Information Act 2009: This law allows citizens to request information from government agencies and provides protection to individuals who disclose information that is in the public interest.
+
+    The Prevention of Corruption Act 1947: This law criminalizes bribery and corruption in public and private sectors, and provides protection to whistleblowers who report corruption.
+
+    The Public Interest Disclosure (Protection of Whistleblowers) Act 2011: This law provides protection to individuals who disclose information about corruption, misuse of power, or other illegal activities. It prohibits retaliation against whistleblowers and provides for compensation in case of retaliation.
+
+    The Money Laundering Prevention Act 2012: This law criminalizes money laundering and provides protection to individuals who report money laundering activities.
+
+While these laws provide some protection to whistleblowers, there have been concerns about the effectiveness of the laws and the level of protection provided to whistleblowers. For example, the Public Interest Disclosure (Protection of Whistleblowers) Act 2011 has been criticized for its narrow definition of whistleblowing and lack of adequate safeguards for whistleblowers.
+
+It's important for whistleblowers in Bangladesh to seek legal advice and assistance before disclosing any information, and to be aware of the potential risks and challenges involved. They should also be prepared to face retaliation and harassment, and take steps to protect themselves from such actions.
+* Dhanda
+Unfortunately, no comprehensive federal law protects all whistle-blowers from retaliatory acts.
+Instead, numerous laws protect a certain class of specific whistle-blowing acts in various
+industries. To make things even more complicated, each law has different filing provisions,
+administrative and judicial remedies, and statutes of limitations (which set time limits for
+legal action). Thus, the first step in reviewing a whistle-blower’s claim of retaliation is for
+an experienced attorney to analyze the various laws and determine if and how the
+employee is protected
+
+** TODO Company Level Regulations to protect Whistleblowers
+** Statue of liminations
+State Whistleblower Laws: Many states have their own whistleblower protection laws with varying statutes of limitations, which can range from as little as 90 days to as much as 6 years
+
+** The False Calim Act / Lincoln Act
+The False Claims Act, also known as the Lincoln Law, was enacted during the U.S.
+Civil War to combat fraud by companies that sold supplies to the Union Army. War profit-
+eers sometimes shipped boxes of sawdust instead of guns, for instance, and some swindled
+the Union Army into purchasing the same cavalry horses several times. When it was
+enacted, the act’s goal was to entice whistle-blowers to come forward by offering them a
+share of the money recovered. During 2012, the United States Department of Justice
+recovered $4.9 billion in false claim cases involving fraud against the government.
+** The qui tam provision
+The qui tam provision of the False Claims Act (FCA) is a key feature that encourages private individuals, also known as whistleblowers, to report fraud against the government. Qui tam is derived from the Latin phrase "qui tam pro domino rege quam pro se ipso in hac parte sequitur," which means "he who sues in this matter for the king as well as for himself."
