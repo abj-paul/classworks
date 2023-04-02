@@ -1,0 +1,11 @@
+* Sequence Diagram
+
+* Can a mediator class be used to store variables that are used by multiple classes?
+
+Yes, a mediator class can be used to store variables that are used by multiple classes. In fact, one of the primary purposes of a mediator class is to facilitate communication between multiple classes by acting as an intermediary.
+
+The mediator class can hold and manage shared data that needs to be accessed by multiple classes, and provide methods for accessing and modifying that data. By encapsulating the shared data in a mediator class, you can ensure that it is kept in a centralized location, making it easier to maintain and avoid inconsistencies.
+
+In addition to managing shared data, a mediator class can also coordinate interactions between different classes. This can be particularly useful when multiple classes need to work together to achieve a common goal.
+
+Overall, using a mediator class to store shared data can help improve code organization, reduce code duplication, and simplify communication between classes.
