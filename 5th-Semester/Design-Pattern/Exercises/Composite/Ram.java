@@ -12,4 +12,18 @@ public class Ram extends Composite implements IVersion {
         return this.version;
     }
 
+    @Override
+    public boolean HandleHelp(Topic topic) {
+        if(topic.getHelpTopic().equals("Ram")){
+            System.out.println("Here is the help for Ram.");
+            return true;
+        }
+        for(Equipment component : this.components){
+            boolean successfullyHandled = component.HandleHelp(topic);
+            if(successfullyHandled) return true;
+        }
+
+        return false;
+    }
+
 }

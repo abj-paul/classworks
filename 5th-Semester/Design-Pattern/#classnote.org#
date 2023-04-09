@@ -43,7 +43,8 @@ It is used to reduce ~client-subsystem~ coupling. It can also be used to reduce 
 
   Handling Request: It is good to send a Request object instead of code-string or integers.
 
-  
+  Chain of Responsibility is often applied in conjunction with Composite (163)
+There, a component's parent can act as its successor
 * Sources
 [[https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc][Christopher Okravi Design Pattern Videos]]
 * Question

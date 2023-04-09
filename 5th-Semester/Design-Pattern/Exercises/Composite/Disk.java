@@ -1,3 +1,5 @@
+import java.util.concurrent.CountDownLatch;
+
 public class Disk extends Primitive{
     Disk(String nameOfEquip) {
         super(nameOfEquip);
@@ -21,5 +23,15 @@ public class Disk extends Primitive{
     @Override
     protected void setPrice(Double price){
         this.price = Math.max(price, this.calculateMagnetPrice());
+    }
+
+    @Override
+    public boolean HandleHelp(Topic topic) {
+            if(topic.getHelpTopic().equals("DISK")) {
+                System.out.println("Here is help for DISK");
+                return true;
+            }
+            return false;
+
     }
 }

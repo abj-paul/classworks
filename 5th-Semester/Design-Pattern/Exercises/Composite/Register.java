@@ -22,4 +22,13 @@ public class Register extends Primitive {
     protected void setPrice(Double price){
         this.price = Math.max(price, this.calculateRegisterPrice());
     }
+
+    @Override
+    public boolean HandleHelp(Topic topic) {
+        if(topic.getHelpTopic().equals("REGISTER")) {
+            System.out.println("Here is help for REGISTER");
+            return true;
+        }
+        return false;
+    }
 }

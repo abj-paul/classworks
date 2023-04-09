@@ -1,4 +1,4 @@
-public class Primitive extends Equipment{
+public abstract class Primitive extends Equipment{
 
     Primitive(String nameOfEquip) {
         super(nameOfEquip);

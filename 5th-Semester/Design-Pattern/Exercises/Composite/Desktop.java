@@ -13,4 +13,17 @@ public class Desktop extends Composite{
         totalcost += FramePrice;
         return totalcost;
     }
+    @Override
+    public boolean HandleHelp(Topic topic) {
+        if(topic.getHelpTopic().equals("Desktop")){
+            System.out.println("Here is the help for desktop.");
+            return true;
+        }
+        for(Equipment component : this.components){
+            boolean successfullyHandled = component.HandleHelp(topic);
+            if(successfullyHandled) return true;
+        }
+
+        return false;
+    }
 }

@@ -14,4 +14,13 @@ public class Wire extends Primitive {
         Double tamaPrice = Math.random();
         return Math.max(this.price*tamaPrice, this.price);
     }
+
+    @Override
+    public boolean HandleHelp(Topic topic) {
+        if(topic.getHelpTopic().equals("WIRE")) {
+            System.out.println("Here is help for WIRE");
+            return true;
+        }
+        return false;
+    }
 }

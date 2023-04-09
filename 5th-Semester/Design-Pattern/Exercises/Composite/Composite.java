@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Composite extends Equipment {
+public abstract class Composite extends Equipment {
     protected ArrayList<Equipment> components;
 
     Composite(String nameOfEquip){

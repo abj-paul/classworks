@@ -1,4 +1,4 @@
-public abstract class Equipment {
+public abstract class Equipment implements IHelp {
     protected String nameOfEquip;
     protected Double price, discount, powerCost;
 

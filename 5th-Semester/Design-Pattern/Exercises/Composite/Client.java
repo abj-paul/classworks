@@ -24,6 +24,14 @@ public class Client {
         desktop.addComponent(motherboard);
         desktop.addComponent(disk);
         desktop.addComponent(wire);
+                desktop.addComponent(wire);
+
+
+        HelpHandler helpHandler = new HelpHandler(desktop);
+        helpHandler.HandleHelp(new Topic("WIRE"));
+        helpHandler.HandleHelp(new Topic("Motherboard"));
+        helpHandler.HandleHelp(new Topic("SSD"));
+
 
         System.out.println("The price of your desktop build is: "+ desktop.getNetPrice());
 
