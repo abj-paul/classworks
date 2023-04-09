@@ -6,6 +6,7 @@
 ** Factory Method
 ** Singleton
 ** Builder
+asd
 ** Abstract Factory
 ** Lazy Instantiation
 * Structural Pattern ****
@@ -48,7 +49,51 @@ It is used to reduce ~client-subsystem~ coupling. It can also be used to reduce 
 - ~Layered Structure:~ OSI model shows an interesting example of facade. We provide general interface for each subsystem. The general interfaces should directly communicate with each other to reduce coupling.
 * Behavioral Pattern
 ** Observer
+- Subject
+- Observer
+
+A subject may have multiple observers. All observers are notified when a subject changes. In response, each observer may query the subject to synchronize their states.
+
+~Notification~ system is really an example of observer pattern. The observers subscribe to the system. Whenever a change occurs in system, the subscribed observers are notified.
+
+Template method often goes well with observer methods - to ensure that notify() is the last method to be called, to ensure consistency of subject's state.
+
+*** Aspect Variant
+Observers can subscribe to a certain event/aspect. In this case, subject will notify them only when this particular event occurs.
+#+begin_src C++
+void Subject::Attach(Observer*, Aspects interest);
+#+end_src
+
+*** Change Manager
+Scene 1:
+Teacher sends notice to system.
+Student subscribe to system for notices.
+System notifies students on notices.
+
+Scene 2:
+Notice on Computer free giving.
+Student subscribe to system for notices.
+System notifies students on PC Bought by university.
+
+Scene 3:
+Notice on Computer being bought.
+Student subscribe to system for notices.
+System notifies students on payment receipt of PC bought.
+
+
+These scenarios should happen one after another. Here, an observer, student, is subscribed to multple subjects. When the PC NOTICe event occurs, multiple subjects will be active one after another so change manager is necessary here.
+
 ** Mediator
+- Mediator Class
+- Collegaue Class
+
+  The good part is mediator class centralizes the control & interaction of classes so it is easier to maintain. The bad part is : as system grows, this centralized design scheme becomes large. Soon the mediator class becomes so large and complex that it becomes a monolith.
+
+  Colleagues can communicate with the mediator using the Observer (293) pattern.
+
+*** Collegaue mediator communication are of two types.
+1. Directly sending colleague as an argument to the mediator. Thus mediator can identify the sender of the message.
+2. Colleague classes act as subjects. The mediator acts as an observe. When colleague's state changes, the mediator gets notification and it handles it appropriately e.g. propagating the change to other subjects.
 ** Chain of Responsibility
 - HelpHandler: Parent class or mixing class. 
 - Candidate classes: Possible candidates to provide help. Each class has a successor reference.
@@ -94,6 +139,7 @@ We must ensure to have ~as few primitive operations/abstract methods~ as possibl
 1. Should composite pattern store parent reference or children reference?
 2. Which patterns should we use first? Behavioral or Structural? Which ones last? Crearional?
 3. Can creational pattern really be used in our small 200 line codes?
+4. How to use observer pattern in combination with mediator pattern?
 ** Class suggestions
 - Defining terminology in first day (hooks, concrete classes)
 
