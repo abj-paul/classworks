@@ -1,3 +1,12 @@
+package facade;
+import hierarchy.Desktop;
+import hierarchy.Disk;
+import hierarchy.Equipment;
+import hierarchy.Motherboard;
+import hierarchy.Ram;
+import hierarchy.Register;
+import hierarchy.Wire;
+
 public class PCBuild { //Facade class
     public Equipment getDefaultPCBuilt(){
         Equipment register = new Register("Reg A3");

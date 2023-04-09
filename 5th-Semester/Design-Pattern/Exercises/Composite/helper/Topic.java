@@ -1,7 +1,8 @@
+package helper;
 public class Topic {
     private String helpTopic;
 
-    Topic(String helpTopic){
+    public Topic(String helpTopic){
         this.helpTopic = helpTopic;
     }
 

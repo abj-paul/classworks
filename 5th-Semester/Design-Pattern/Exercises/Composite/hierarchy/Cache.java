@@ -1,3 +1,7 @@
+package hierarchy;
+
+import helper.Topic;
+
 public class Cache extends Composite{
     private final Double cacheFramePrice = 100.0;
 
@@ -6,7 +10,7 @@ public class Cache extends Composite{
     }
 
     @Override
-    protected Double getNetPrice(){
+    public Double getNetPrice(){
         Double totalcost = 0.0;
         for(Equipment e : components){
             totalcost += e.getNetPrice();

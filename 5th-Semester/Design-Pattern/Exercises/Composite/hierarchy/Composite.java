@@ -1,3 +1,4 @@
+package hierarchy;
 import java.util.ArrayList;
 
 public abstract class Composite extends Equipment {
@@ -9,7 +10,7 @@ public abstract class Composite extends Equipment {
     }
 
     @Override
-    protected void addComponent(Equipment e) {
+    public void addComponent(Equipment e) {
         this.components.add(e);
     }
 
@@ -19,7 +20,7 @@ public abstract class Composite extends Equipment {
     }
 
     @Override
-    protected Double getNetPrice(){
+    public Double getNetPrice(){
         Double netprice = 0.0;
         for(Equipment equipment : components){
             netprice += equipment.getNetPrice();
@@ -34,6 +35,11 @@ public abstract class Composite extends Equipment {
         for(Equipment equipment : components) netpowercost += equipment.getPowerCost();
         this.powerCost = netpowercost;
         return this.powerCost;
+    }
+
+    @Override
+    public String toString() {
+        return nameOfEquip+"("+this.getNetPrice()+") ";
     }
     
 }

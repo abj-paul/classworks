@@ -1,5 +1,9 @@
+package hierarchy;
+
+import helper.Topic;
+
 public class Register extends Primitive {
-    Register(String nameOfEquip) {
+    public Register(String nameOfEquip) {
         super(nameOfEquip);
     }
 
@@ -19,7 +23,7 @@ public class Register extends Primitive {
     }
 
     @Override
-    protected void setPrice(Double price){
+    public void setPrice(Double price){
         this.price = Math.max(price, this.calculateRegisterPrice());
     }
 

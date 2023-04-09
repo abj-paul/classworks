@@ -1,3 +1,4 @@
+package hierarchy;
 public abstract class Primitive extends Equipment{
 
     Primitive(String nameOfEquip) {
@@ -12,7 +13,7 @@ public abstract class Primitive extends Equipment{
     }
 
     @Override
-    protected void addComponent(Equipment e) {
+    public void addComponent(Equipment e) {
         // perform no operation. A secueiry loophole, yes. But in composite pattern, we prefer transparency over security.
     }
 

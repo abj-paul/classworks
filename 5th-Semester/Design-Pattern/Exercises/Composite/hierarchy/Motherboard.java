@@ -1,7 +1,11 @@
+package hierarchy;
+
+import helper.Topic;
+
 public class Motherboard extends Composite{
 
 
-    Motherboard(String nameOfEquip) {
+    public Motherboard(String nameOfEquip) {
         super(nameOfEquip);
     }
 

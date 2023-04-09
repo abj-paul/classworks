@@ -1,7 +1,10 @@
+package hierarchy;
 import java.util.concurrent.CountDownLatch;
 
+import helper.Topic;
+
 public class Disk extends Primitive{
-    Disk(String nameOfEquip) {
+    public Disk(String nameOfEquip) {
         super(nameOfEquip);
     }
 
@@ -21,7 +24,7 @@ public class Disk extends Primitive{
     }
 
     @Override
-    protected void setPrice(Double price){
+    public void setPrice(Double price){
         this.price = Math.max(price, this.calculateMagnetPrice());
     }
 

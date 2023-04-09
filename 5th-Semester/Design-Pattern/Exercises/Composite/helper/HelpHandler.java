@@ -1,6 +1,9 @@
+package helper;
+import hierarchy.Equipment;
+
 public class HelpHandler implements IHelp{
     private Equipment successor;
-    HelpHandler(Equipment successor){
+    public HelpHandler(Equipment successor){
         this.successor = successor;
     }
 

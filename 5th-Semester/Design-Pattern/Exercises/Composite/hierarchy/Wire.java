@@ -1,6 +1,10 @@
+package hierarchy;
+
+import helper.Topic;
+
 public class Wire extends Primitive {
 
-    Wire(String nameOfEquip) {
+    public Wire(String nameOfEquip) {
         super(nameOfEquip);
     }
 

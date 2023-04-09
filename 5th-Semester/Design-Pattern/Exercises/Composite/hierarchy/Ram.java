@@ -1,7 +1,11 @@
+package hierarchy;
+
+import helper.Topic;
+
 public class Ram extends Composite implements IVersion {
     private String version;
 
-    Ram(String nameOfEquip) {
+    public Ram(String nameOfEquip) {
         super(nameOfEquip);
     }
     
