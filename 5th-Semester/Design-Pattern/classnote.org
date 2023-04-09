@@ -1,5 +1,7 @@
 [[https://stackoverflow.com/questions/1874049/explanation-of-the-uml-arrows][First, have a look at UML signs. (The second comment)]]
 
+* Terminologies
+- Hooks vs abstract methods
 * Creational Pattern
 ** Factory Method
 ** Singleton
@@ -74,10 +76,24 @@ Define a family of algorithm, encapsulate them and make them interchangable. Str
 
 The obvious drawback of this strategy is the lack of tranparency. That is, the client needs to be aware of the exact concrete strategies in order to pass them to the context. Thus it bullies the client. To resolve this issue, we can make the parameter "algorithm" optional. If the client sets an algorithm, we use that. If they dont, we use a default algorithm. This solves the issue of transparency.
 
-** Template
+** Template Method
+- Primitive Operations/abstract methods
+- Template method/final method
+- Hook operations
+
+  ~Template methods are used in almost all abstract classes.~
+  
+They are heavily used in libraries to mark out codes that must not be overwritten.
+
+Template class must define properly which methods are hooks(may be overwritten) and which methods must be overwritten.
+
+We must ensure to have ~as few primitive operations/abstract methods~ as possible. Because too many abstract methods will cause smell.
 * Sources
 [[https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc][Christopher Okravi Design Pattern Videos]]
 * Question
 1. Should composite pattern store parent reference or children reference?
 2. Which patterns should we use first? Behavioral or Structural? Which ones last? Crearional?
+3. Can creational pattern really be used in our small 200 line codes?
+** Class suggestions
+- Defining terminology in first day (hooks, concrete classes)
 

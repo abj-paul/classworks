@@ -9,15 +9,17 @@ import hierarchy.Ram;
 import hierarchy.Register;
 import hierarchy.Wire;
 import sorting.BubbleSort;
+import sorting.ConcreteMergeSort;
+import sorting.MergeSort;
 import sorting.SortableEquipment;
 
 public class Client {
     public static void main(String[] args) {
-        testStrategyPattern();
+        testStrategyAndTemplatePattern();
     }
 
-    static void testStrategyPattern(){
-        SortableEquipment equipment = new SortableEquipment("Sortable PC Components", new BubbleSort());
+    static void testStrategyAndTemplatePattern(){
+        SortableEquipment equipment = new SortableEquipment("Sortable PC Components", new ConcreteMergeSort());
 
         Equipment register = new Register("Reg A3");
         Equipment wire = new Wire("Tamar Tar");
