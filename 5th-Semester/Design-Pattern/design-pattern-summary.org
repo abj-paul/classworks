@@ -1,7 +1,6 @@
-[[https://stackoverflow.com/questions/1874049/explanation-of-the-uml-arrows][First, have a look at UML signs. (The second comment)]]
-
+[[https://stackoverflow.com/questions/1874049/explanation-of-the-uml-arrows][First, have a look at UML signs. (The second comment)]]. Specially focus on the association sign. It is VERY important. The gist is - Lets say, Class A contains an object of Class B. Then they have an association relationship and the direction is from B to A. This sign is extensively used, for example, in mediator pattern. Because each classes contain an object/reference of mediator.
 * Terminologies
-- Hooks vs abstract methods
+- Hooks vs abstract methods: Abstract methods are methods that must be overriden/implemented in subclass. Hooks are methods that the subclasses ~MAY~ override if necessary. Thus they act as a hook - hooks extend functionality, just like how overriding methods extend functionality.
 
 ~Business Logic~: The logic that is not part of design (e.g. getter, setter, factory methods like createObj() etc). For example, in an ECommerce system, the calculations-notifications etc are business logic.
 * Creational Pattern
