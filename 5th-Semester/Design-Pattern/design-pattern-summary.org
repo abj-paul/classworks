@@ -155,6 +155,16 @@ Abstract Factory can be used in the above scenario in the following way:
 Note that, unlike factory method, abstract factory classes are satisfactorily big. So business logics are not needed here.
 * Structural Pattern ****
 ** Composite
+Composite pattern is used when there is composition - that is, several objects together composes another object. Think about GUI - a button composes of the button, a textbox and border.
+
+A screen have multiple buttons. And they can be part of a window object. And thus, they form a hierarchy/Tree structure.
+
+Composite pattern lets us deal with such composite in a mainatable manner. Without composite pattern, couping increases to a tremendous degree.
+
+[[file:img/2023-04-10-213046_377x147_scrot.png]]
+
+First, lets discuss on the terminologies of composite pattern. 
+
 - Primitives/Leaf
 - Container/Composite
 - Component
