@@ -153,6 +153,8 @@ Abstract Factory can be used in the above scenario in the following way:
 #+end_src
 
 Note that, unlike factory method, abstract factory classes are satisfactorily big. So business logics are not needed here.
+
+Additionally, template method is famously used with abstract factory.
 * Structural Pattern ****
 ** Composite
 Composite pattern is used when there is composition - that is, several objects together composes another object. Think about GUI - a button composes of the button, a textbox and border.
@@ -167,7 +169,7 @@ First, lets discuss on the terminologies of composite pattern.
 
 - Primitives/Leaf
 - Container/Composite
-- Component
+- Component: It is the parent class of primitive & container.
 
 Now each class needs to keep track of which classes are primitives and which classes are container and treat them differently. This adds complexity and duplication to the code, and it also causes the developer to use ~instanceof~ keywords 
 
