@@ -115,7 +115,44 @@ Now lets focus on terminologoes for builder pattern.
 
 In book's texconverter example, an input string is converted token by token and appended to construct the final object.
 ** Abstract Factory
-** Lazy Instantiation
+Abstract factory is an extended version of factory method. A bunch of factory methods together form the abstract factory.
+
+The key idea behind abstract factory is ~Family of Objects~. Some objects occur together during the construction of another object. For example, to create a window, we need menu object, footer object, slider object.
+
+Abstract Factory can be used in the above scenario in the following way:
+#+begin_src java
+  abstract class Window {
+      abstract Widget createMenu();
+      abstract Widget createSlider();
+      abstract Widget createFooter();
+  }
+
+  class FancyWindow extends Window {
+      Widget createMenu(){
+	  return new FancyMenu();
+      }
+      Widget createSlider(){
+	  return new FancySlider();
+      }
+      Widget creteFooter(){
+	  return new FancyFooter();
+      }
+  }
+
+  class MinimalWindow extends Window {
+      Widget createMenu(){
+	  return new MinimalMenu();
+      }
+      Widget createSlider(){
+	  return new MinimalSlider();
+      }
+      Widget creteFooter(){
+	  return new MinimalFooter();
+      }
+  }
+#+end_src
+
+Note that, unlike factory method, abstract factory classes are satisfactorily big. So business logics are not needed here.
 * Structural Pattern ****
 ** Composite
 - Primitives/Leaf
