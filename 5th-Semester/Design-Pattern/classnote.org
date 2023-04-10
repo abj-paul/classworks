@@ -1,0 +1,229 @@
+[[https://stackoverflow.com/questions/1874049/explanation-of-the-uml-arrows][First, have a look at UML signs. (The second comment)]]. Specially focus on the association sign. It is VERY important. The gist is - Lets say, Class A contains an object of Class B. Then they have an association relationship and the direction is from B to A. This sign is extensively used, for example, in mediator pattern. Because each classes contain an object/reference of mediator.
+
+* Terminologies
+- Hooks vs abstract methods
+
+~Business Logic~: The logic that is not part of design (e.g. getter, setter, factory methods like createObj() etc). For example, in an ECommerce system, the calculations-notifications etc are business logic.
+* Creational Pattern
+** Factory Method
+Core features are:
+- Subclassing
+- Business Logic
+
+Business logic is of key importane here. Imagine the following scenario.
+#+begin_src java
+  abstract class DollFactory{
+      abstract Doll createDoll();
+  }
+
+  class MaleDollFactory extends DollFactory {
+      Doll createDoll(){
+	  return new MaleDoll();
+      }
+  }
+  class FemaleDollFactory extends DollFactory {
+	Doll createDoll(){
+	    return new FemaleDoll();
+	}
+    }
+#+end_src
+
+Is the above scenario a good design? No. The classes are too small. Instead if we had some business logic there, like some processing on doll color, gradient, design, then it would have been a good implementation.
+
+There is another ~misconception~ regarding factory method and that is, there should be a separate factory class e.g. DollFactory to create Dolls. That is very wrong. Because this often results in above scenario where the classes do not have much business logic so they create small-class-smell.
+
+An example where "the factory method don't need a factory class" can be found in book. I will also show an example.
+
+#+begin_src java
+  abstract class Window {
+      abstract Menu createMenu(); // Factory method
+      abstract void render(); // Some other random method.
+
+      void someBusinessLogic(){
+	  for(Renderer renderer: rendererList)
+	      detectSystemRenderer();
+	  if(renderer.found== True) {
+	      Widget menu = creteMenu();
+	      menu.render();
+	  }
+      }
+  }
+
+  class FancyWindow extends Window {
+      Menu createMenu(){
+	  return new FancyMenu();
+      }
+  }
+
+  class FancyWindow extends Window {
+      Menu createMenu(){
+	  return new FancyMenu();
+      }
+      void render(){
+	  //blah blah blah
+      }
+  }
+
+  class MinimalWindow extends Window {
+      Menu createMenu(){
+	  return new Minimal();
+      }
+      void render(){
+	  //blah blah blah
+      }
+  }
+
+  class Client { // Client Side Code
+      public static void main(){
+	  Window window = new FancyWindow();
+	  window.render();
+      }
+  }
+#+end_src
+Above is the more common use of factory method.
+
+** Singleton
+** Builder
+- Director
+- Parts Builder
+
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+
+In texconverter example, an input string is converted token by token and appended to construct the final object.
+** Abstract Factory
+** Lazy Instantiation
+* Structural Pattern ****
+** Composite
+- Primitives/Leaf
+- Container/Composite
+- Component
+
+Now each class needs to keep track of which classes are primitives and which classes are container and treat them differently. This adds complexity and duplication to the code, and it also causes the developer to use ~instanceof~ keywords 
+
+As it is a hierarchical structure, each composite must keep a reference of its parent composite. In practice, we keep the childNode field and update it for every addComposite() and deleteComposite() operation.
+
+The component class should contain as much methods as possible because the goal of composite pattern was to allow clients use components without caring whether it is a primitive or composite. If primitives don't support those methods, it can just overwrite those methods to perform no operations.
+- Transparency vs Security Trade-off
+*** Disadvantage
+It is difficult to enforce constraints. Sometimes we want certain composites to have some constraints. But with composite pattern, everything is dealt from the top level component interface so it becomes hard. In those cases, we can only perform runtime checks.
+
+** Decorator
+It keeps the reference of the component it decorates.
+
+Transparency: Decorator Class must inherit the component class. This way, clients can use the components freely without having to bother about the details like "is it a decorator or a component?".
+
+So decorators are kinda like composite components in composite pattern.
+
+Inappropriate use of Decorator pattern can cause "Lots-of-little-objects" scenario. Lets say, we keep all our features(save, edit, search, spell check, auto completion etc) as decorators in our Text Editor application. Then, slowly the number of objects increases and it becomes hard to debug and understand the system.
+#+begin_src java
+  new SpellChecker(new AutoCompletion(new Search(new Edit(new Save(new TextEditor)))))
+#+end_src
+*** Decorator vs Strategy Pattern
+Decorator patterns only adorns the object. If we need to change the behavior of the object itself, then we need to use strategy pattern.
+
+In Strategy pattern, the scenario is no longer transparent. The original component must remain aware of the strategies.
+
+If the component interface has a lot of methods and specially a lot of data, it is impractical if the decorator inherits it. Because it would result in a lot of memory waste. In such cases, it is better to use strategy pattern. Strategy classes are almost always lightweight as they only perform a specific strategy to change the behavior of the class. They also don't inherit the heavyweight component interface, rather their own strategy interface.
+** Facade
+As we apply patterns, the subsystems become complex as more and more classes appear. So for outside systems that don't require customization, we provide a single general interface of our subsystem using facade.
+If an outsider class needs more customized version of a class, they are also free to enter the subsystem.
+It is used to reduce ~client-subsystem~ coupling. It can also be used to reduce subsystem-subsystem coupling.
+
+- ~Layered Structure:~ OSI model shows an interesting example of facade. We provide general interface for each subsystem. The general interfaces should directly communicate with each other to reduce coupling.
+* Behavioral Pattern
+** Observer
+- Subject
+- Observer
+
+A subject may have multiple observers. All observers are notified when a subject changes. In response, each observer may query the subject to synchronize their states.
+
+~Notification~ system is really an example of observer pattern. The observers subscribe to the system. Whenever a change occurs in system, the subscribed observers are notified.
+
+Template method often goes well with observer methods - to ensure that notify() is the last method to be called, to ensure consistency of subject's state.
+
+*** Aspect Variant
+Observers can subscribe to a certain event/aspect. In this case, subject will notify them only when this particular event occurs.
+#+begin_src C++
+void Subject::Attach(Observer*, Aspects interest);
+#+end_src
+
+*** Change Manager
+Scene 1:
+Teacher sends notice to system.
+Student subscribe to system for notices.
+System notifies students on notices.
+
+Scene 2:
+Notice on Computer free giving.
+Student subscribe to system for notices.
+System notifies students on PC Bought by university.
+
+Scene 3:
+Notice on Computer being bought.
+Student subscribe to system for notices.
+System notifies students on payment receipt of PC bought.
+
+
+These scenarios should happen one after another. Here, an observer, student, is subscribed to multple subjects. When the PC NOTICe event occurs, multiple subjects will be active one after another so change manager is necessary here.
+
+** Mediator
+- Mediator Class
+- Collegaue Class
+
+  The good part is mediator class centralizes the control & interaction of classes so it is easier to maintain. The bad part is : as system grows, this centralized design scheme becomes large. Soon the mediator class becomes so large and complex that it becomes a monolith.
+
+  Colleagues can communicate with the mediator using the Observer (293) pattern.
+
+*** Collegaue mediator communication are of two types.
+1. Directly sending colleague as an argument to the mediator. Thus mediator can identify the sender of the message.
+2. Colleague classes act as subjects. The mediator acts as an observe. When colleague's state changes, the mediator gets notification and it handles it appropriately e.g. propagating the change to other subjects.
+** Chain of Responsibility
+- HelpHandler: Parent class or mixing class. 
+- Candidate classes: Possible candidates to provide help. Each class has a successor reference.
+
+  HelpHandler class has a default operation named handleHelp(). This method forwards to its successor by default. The candidates can either overwrite this method or use the default implementation.
+
+  It adds the flexibility of finding the appropriate candidate at ~runtime~, as the Successors are dynamically assigned at the time of candidate object creation.
+
+  We can leverage existing chain instead of making new ones. For example, chains are created in composite pattern. We can use that chain to hangle requests.
+
+  Handling Request: It is good to send a Request object instead of code-string or integers.
+
+  Chain of Responsibility is often applied in conjunction with Composite (163)
+There, a component's parent can act as its successor
+** Strategy
+- Strategy/Algorithm
+- Context
+  
+Define a family of algorithm, encapsulate them and make them interchangable. Strategy pattern lets the software use different algorithms independtly, clients dont need to manually assign them.
+
+- Clients sets the algorithm object. So the strategy class contains a reference to algorithm object selected.
+- Algorithms may require to access the data of the calling class. For that, we can create an ~interface for data sharing~, basically some getter-setter.
+  - If necessary, the context/calling class itself can be passed as a parameter to the algorithms for data access. But that increases ~COUPLING~ between context and strategy.
+
+
+The obvious drawback of this strategy is the lack of tranparency. That is, the client needs to be aware of the exact concrete strategies in order to pass them to the context. Thus it bullies the client. To resolve this issue, we can make the parameter "algorithm" optional. If the client sets an algorithm, we use that. If they dont, we use a default algorithm. This solves the issue of transparency.
+
+** Template Method
+- Primitive Operations/abstract methods
+- Template method/final method
+- Hook operations
+
+  ~Template methods are used in almost all abstract classes.~
+  
+They are heavily used in libraries to mark out codes that must not be overwritten.
+
+Template class must define properly which methods are hooks(may be overwritten) and which methods must be overwritten.
+
+We must ensure to have ~as few primitive operations/abstract methods~ as possible. Because too many abstract methods will cause smell.
+* Sources
+[[https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc][Christopher Okravi Design Pattern Videos]]
+* Question
+1. Should composite pattern store parent reference or children reference?
+2. Which patterns should we use first? Behavioral or Structural? Which ones last? Crearional?
+3. Can creational pattern really be used in our small 200 line codes?
+4. How to use observer pattern in combination with mediator pattern?
+5. Where can we find code refactoring exercises?
+** Class suggestions
+- Defining terminology in first day (hooks, concrete classes)
+
