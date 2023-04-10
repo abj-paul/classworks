@@ -2,8 +2,86 @@
 
 * Terminologies
 - Hooks vs abstract methods
+
+~Business Logic~: The logic that is not part of design (e.g. getter, setter, factory methods like createObj() etc). For example, in an ECommerce system, the calculations-notifications etc are business logic.
 * Creational Pattern
 ** Factory Method
+Core features are:
+- Subclassing
+- Business Logic
+
+Business logic is of key importane here. Imagine the following scenario.
+#+begin_src java
+  abstract class DollFactory{
+      abstract Doll createDoll();
+  }
+
+  class MaleDollFactory extends DollFactory {
+      Doll createDoll(){
+	  return new MaleDoll();
+      }
+  }
+  class FemaleDollFactory extends DollFactory {
+	Doll createDoll(){
+	    return new FemaleDoll();
+	}
+    }
+#+end_src
+
+Is the above scenario a good design? No. The classes are too small. Instead if we had some business logic there, like some processing on doll color, gradient, design, then it would have been a good implementation.
+
+There is another ~misconception~ regarding factory method and that is, there should be a separate factory class e.g. DollFactory to create Dolls. That is very wrong. Because this often results in above scenario where the classes do not have much business logic so they create small-class-smell.
+
+An example where "the factory method don't need a factory class" can be found in book. I will also show an example.
+
+#+begin_src java
+  abstract class Window {
+      abstract Menu createMenu(); // Factory method
+      abstract void render(); // Some other random method.
+
+      void someBusinessLogic(){
+	  for(Renderer renderer: rendererList)
+	      detectSystemRenderer();
+	  if(renderer.found== True) {
+	      Widget menu = creteMenu();
+	      menu.render();
+	  }
+      }
+  }
+
+  class FancyWindow extends Window {
+      Menu createMenu(){
+	  return new FancyMenu();
+      }
+  }
+
+  class FancyWindow extends Window {
+      Menu createMenu(){
+	  return new FancyMenu();
+      }
+      void render(){
+	  //blah blah blah
+      }
+  }
+
+  class MinimalWindow extends Window {
+      Menu createMenu(){
+	  return new Minimal();
+      }
+      void render(){
+	  //blah blah blah
+      }
+  }
+
+  class Client { // Client Side Code
+      public static void main(){
+	  Window window = new FancyWindow();
+	  window.render();
+      }
+  }
+#+end_src
+Above is the more common use of factory method.
+
 ** Singleton
 ** Builder
 - Director
