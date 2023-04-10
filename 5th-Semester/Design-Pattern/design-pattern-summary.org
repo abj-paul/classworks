@@ -82,6 +82,26 @@ An example where "the factory method don't need a factory class" can be found in
 Above is the more common use of factory method.
 
 ** Singleton
+It is a widely used and simple design pattern. It has three properties.
+1. Constructor is private
+2. An private static instance of the object.
+3. A public static class to get the object e.g. getLogger()
+
+A simple implementation is the following.
+#+begin_src java
+  class Logger{
+      private static Logger logger;
+
+      private Logger(){
+	  this.logger = null;
+      }
+
+      public static vod getLogger(){
+	  if(this.logger == null) this.logger = new Logger();
+	  return this.logger;
+      }
+  }
+#+end_src
 ** Builder
 - Director
 - Parts Builder
