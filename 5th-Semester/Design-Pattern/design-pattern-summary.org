@@ -103,12 +103,17 @@ A simple implementation is the following.
   }
 #+end_src
 ** Builder
-- Director
-- Parts Builder
+A very amazing creational design pattern is builder pattern. This pattern is used to build ~complex~ objects. Now a question may arise - what is complex object? Answering this question also shows the difference between abstract factory and builder pattern.
 
-Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+A house can be of many type depending on its parts. For example, BrickHome, ThatchedHome, HomeWithWindow, HomeWithoutWindow etc. Depending on the ~PARTs used to construct the home~, the type varies. And there are uncountable number of combinations of ~parts~ so it is infeasible to have all the classes (HomeWithBrick, HomeWithWindow, HomeWithoutWindow). Such objects that vary greatly depending on the parts used, are called complex objects.
 
-In texconverter example, an input string is converted token by token and appended to construct the final object.
+A familiar example of complex object are composites from composite pattern. And for this reason, builder pattern is famously used to build composites.
+
+Now lets focus on terminologoes for builder pattern.
+- Director: Checks which part is required using a switch case statement and creates the appropriate part using ~Parts Builder~.
+- Parts Builder: The builder of parts e.g. window, door, brick 
+
+In book's texconverter example, an input string is converted token by token and appended to construct the final object.
 ** Abstract Factory
 ** Lazy Instantiation
 * Structural Pattern ****
