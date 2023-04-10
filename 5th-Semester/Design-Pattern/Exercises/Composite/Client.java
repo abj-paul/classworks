@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import builder.Builder;
+import builder.Director;
 import helper.HelpHandler;
 import helper.Topic;
 import hierarchy.ColorfulLaces;
@@ -15,7 +20,7 @@ import sorting.SortableEquipment;
 
 public class Client {
     public static void main(String[] args) {
-        testStrategyAndTemplatePattern();
+        testBuilderPattern();
     }
 
     static void testStrategyAndTemplatePattern(){
@@ -92,10 +97,22 @@ public class Client {
         helpHandler.HandleHelp(new Topic("SSD"));
 
 
-        System.out.println("The price of your desktop build is: "+ desktop.getNetPrice());
 
         ColorfulLaces laces = new ColorfulLaces("Colorful laces");
         laces.addComponent(desktop);
         System.out.println("The price of your laces build is: "+ laces.getNetPrice());
+    }
+
+    static void testBuilderPattern(){
+        ArrayList<String> parts = new ArrayList<>();
+        parts.add("Ram");
+        parts.add("Motherboard");
+        parts.add("Cache");
+
+        Director director = new Director();
+        director.build(parts);
+        Equipment myPc = director.getEquipment();
+        System.out.println("The price of your desktop build is: "+ myPc.getNetPrice());
+        myPc.printTree();
     }
 }

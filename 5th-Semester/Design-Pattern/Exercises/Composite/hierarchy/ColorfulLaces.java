@@ -36,4 +36,9 @@ public class ColorfulLaces extends Equipment {
         this.price  = netprice;
         return this.price;
     }
+
+    public void printTree() {
+        System.out.println(this.toString());
+        System.out.println();
+    }
 }

@@ -5,7 +5,7 @@ import helper.Topic;
 public class Cache extends Composite{
     private final Double cacheFramePrice = 100.0;
 
-    Cache(String nameOfEquip) {
+    public Cache(String nameOfEquip) {
         super(nameOfEquip);
     }
 

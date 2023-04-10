@@ -41,5 +41,12 @@ public abstract class Composite extends Equipment {
     public String toString() {
         return nameOfEquip+"("+this.getNetPrice()+") ";
     }
-    
+
+    @Override
+    public void printTree() {
+        System.out.println(this.toString());
+        System.out.println();
+
+        for(Equipment e : this.components) e.printTree();
+    }
 }

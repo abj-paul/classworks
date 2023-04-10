@@ -6,7 +6,12 @@
 ** Factory Method
 ** Singleton
 ** Builder
-asd
+- Director
+- Parts Builder
+
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+
+In texconverter example, an input string is converted token by token and appended to construct the final object.
 ** Abstract Factory
 ** Lazy Instantiation
 * Structural Pattern ****
@@ -140,6 +145,7 @@ We must ensure to have ~as few primitive operations/abstract methods~ as possibl
 2. Which patterns should we use first? Behavioral or Structural? Which ones last? Crearional?
 3. Can creational pattern really be used in our small 200 line codes?
 4. How to use observer pattern in combination with mediator pattern?
+5. Where can we find code refactoring exercises?
 ** Class suggestions
 - Defining terminology in first day (hooks, concrete classes)
 

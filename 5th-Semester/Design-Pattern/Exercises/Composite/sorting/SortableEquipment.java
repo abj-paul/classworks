@@ -45,4 +45,10 @@ public class SortableEquipment extends Equipment {
             System.out.print(equipment.toString()+",");
         }
     }
+    public void printTree() {
+        System.out.println(this.toString());
+        System.out.println();
+
+        for(Equipment e : this.components) System.out.print(e.toString()+", ");
+    }
 }

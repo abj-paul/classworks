@@ -22,4 +22,9 @@ public abstract class Primitive extends Equipment{
         // perform no operation
     }
 
+    public void printTree() {
+        System.out.println(this.toString());
+        System.out.println();
+    }
+
 }

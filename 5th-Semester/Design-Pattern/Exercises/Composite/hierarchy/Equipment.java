@@ -32,6 +32,7 @@ public abstract class Equipment implements IHelp, Comparable {
     }
 
     public abstract void addComponent(Equipment e);
+    public abstract void printTree();
     protected abstract void removeComponent(Equipment e);
 
     @Override
