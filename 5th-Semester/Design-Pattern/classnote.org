@@ -225,4 +225,7 @@ We must ensure to have ~as few primitive operations/abstract methods~ as possibl
 5. Where can we find code refactoring exercises?
 ** Class suggestions
 - Defining terminology in first day (hooks, concrete classes)
+* TODO Before Exam
+- Revise code smell
+- Download code smell resources
 
