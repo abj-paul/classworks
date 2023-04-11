@@ -228,4 +228,6 @@ We must ensure to have ~as few primitive operations/abstract methods~ as possibl
 * TODO Before Exam
 - Revise code smell
 - Download code smell resources
+- Keep notice of primitive obsession. We still make this smell.
+- Introduce null object instead of testing "if obj==null do something"
 
