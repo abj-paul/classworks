@@ -1,0 +1,42 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/5th-Semester/WeebTech/ecommerce/dist
+/classworks/5th-Semester/WeebTech/ecommerce/tmp
+/classworks/5th-Semester/WeebTech/ecommerce/out-tsc
+/classworks/5th-Semester/WeebTech/ecommerce/bazel-out
+
+# Node
+/classworks/5th-Semester/WeebTech/ecommerce/node_modules
+/classworks/5th-Semester/WeebTech/ecommerce/npm-debug.log
+/classworks/5th-Semester/WeebTech/ecommerce/yarn-error.log
+
+# IDEs and editors
+/classworks/5th-Semester/WeebTech/ecommerce/.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+/classworks/5th-Semester/WeebTech/ecommerce/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/classworks/5th-Semester/WeebTech/ecommerce/.angular/cache
+.sass-cache/
+/classworks/5th-Semester/WeebTech/ecommerce/connect.lock
+/classworks/5th-Semester/WeebTech/ecommerce/coverage
+/classworks/5th-Semester/WeebTech/ecommerce/libpeerconnection.log
+testem.log
+/classworks/5th-Semester/WeebTech/ecommerce/typings
+
+# System files
+.DS_Store
+Thumbs.db
