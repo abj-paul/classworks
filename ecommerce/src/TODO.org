@@ -1,0 +1,7 @@
+- Fetch value from dropwdown, label
+- ngOnInit
+- see item list, add item, edit item 
+- See item list, buy item, pay 
+- get payment notification 
+- access control
+

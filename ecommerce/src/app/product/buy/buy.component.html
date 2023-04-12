@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Available Products :</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList; let i = index" [attr.data-index]="i">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.stock}}</td>
+            <td>
+                <input *ngIf="shouldIShowTextbox(product)==true" type="number" name="purchaseAmount" [(ngModel)]="purchaseAmount" placeholder="Amount(e.g. 10)">
+                <button (click)="buy(product)">Buy</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
