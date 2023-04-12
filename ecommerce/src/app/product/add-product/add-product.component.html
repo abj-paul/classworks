@@ -1,0 +1,19 @@
+
+<div class="container">
+    <h2>Login Page</h2>
+    <form>
+      <div class="form-group">
+        <label>Product Name:</label>
+        <input type="text" class="form-control" placeholder="Enter product name" name="name" [(ngModel)]="name">
+      </div>
+      <div class="form-group">
+          <label>Price:</label>
+          <input type="number" class="form-control" placeholder="Enter price: " name="price" [(ngModel)]="price">
+      </div>
+      <div class="form-group">
+        <label>Stock:</label>
+        <input type="number" class="form-control" placeholder="Enter stock: " name="stock" [(ngModel)]="stock">
+    </div>
+    <button type="submit" class="btn btn-default" (click)="addProduct()">Add Product</button>
+    </form>  
+  </div>

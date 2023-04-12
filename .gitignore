@@ -1,0 +1,43 @@
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/5th-Semester/WeebTech/ecommerce/dist
+/ecommerce/tmp
+/ecommerce/out-tsc
+/ecommerce/bazel-out
+
+# Node
+/ecommerce/node_modules
+/ecommerce/npm-debug.log
+/ecommerce/yarn-error.log
+
+# IDEs and editors
+/ecommerce/.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+/ecommerce/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/ecommerce/.angular/cache
+.sass-cache/
+/ecommerce/connect.lock
+/ecommerce/coverage
+/ecommerce/libpeerconnection.log
+testem.log
+/ecommerce/typings
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Available Products :</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList; let i = index" [attr.data-index]="i">
+            <td *ngIf="isUpdating(product)==false">{{product.name}}</td>
+            <td *ngIf="isUpdating(product)==false">{{product.price}}</td>
+            <td *ngIf="isUpdating(product)==false">{{product.stock}}</td>
+            <td *ngIf="isUpdating(product)==false"><button (click)="incrementStock(i)">+</button>
+            <button (click)="decrementStock(i)">-</button>
+            <button (click)="informUpdate(product)">Update</button></td>
+
+            <td *ngIf="isUpdating(product)==true"><input type="text" name="productName" [(ngModel)]="productName" placeholder={{product.name}}></td>
+            <td *ngIf="isUpdating(product)==true"><input type="number" name="price" [(ngModel)]="price" placeholder={{product.price}}></td>
+            <td *ngIf="isUpdating(product)==true"><input type="number" name="stock" [(ngModel)]="stock" placeholder={{product.stock}}></td>
+            <td *ngIf="isUpdating(product)==true"><button (click)="updateProductInfo()">Update</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<button class="btn btn-primary" (click)="forwardToAddProductPage()">Add Product</button>
