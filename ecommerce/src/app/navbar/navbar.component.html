@@ -22,7 +22,7 @@
         <a class="nav-link" routerLink="buy" *ngIf="whichRole()=='BUYER'">Buy Product</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="profile">Profile</a>
+        <a class="nav-link" routerLink="profile" *ngIf="whichRole()!='None'">Profile</a>
       </li>
     </ul>
    

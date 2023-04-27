@@ -1,0 +1,64 @@
+[[https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y][A good playlist for dbms]]
+
+* KD-Tree, R-Tree
+[[https://www.youtube.com/watch?v=4uWSo8v3iQA][How cloud points are useful in day to day life]]
+
+KD-Tree algorithm from Wikipedia.
+#+begin_src text
+function kdtree (list of points pointList, int depth)
+  {
+      // Select axis based on depth so that axis cycles through all valid values
+      var int axis := depth mod k;
+
+      // Sort point list and choose median as pivot element
+      select median by axis from pointList;
+
+      // Create node and construct subtree
+      node.location := median;
+      node.leftChild := kdtree(points in pointList before median, depth+1);
+      node.rightChild := kdtree(points in pointList after median, depth+1);
+      return node;
+  }
+#+end_src
+K-d tree is efficient for nearest neighbour queries.
+
+The algorithm for ~range search~ in K-d tree can be found in book.
+
+Possible questions:
+1. From the given 2-D tree, construct it in X-Y Plane
+2. From the given X-y Plane dividends, construct the tree.
+3. Difference between k-d tree and r-tree.
+** What is spatial data?
+multidimensional data
+** R-Tree
+#+begin_src text
+[(1,1),(3,4)]
+[(2,2),(4,6)]
+[(4,4),(6,8)]
+[(6,6),(8,9)]
+[(9,1),(10,4)]
+[(8,4),(11,6)]
+[(10,7),(12,9)]
+[(3,8),(6,10)]
+[(4,1),(6,3)]
+[(7,3),(9,5)]
+#+end_src
+
+* Recovery, Concurrency
+[[https://www.youtube.com/watch?v=fCuEd3N9Nrs&list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV&index=92][Recoverable Schedeule]]
+
+** Log Based Recovery in DBMS
+[[https://www.youtube.com/watch?v=0YhOYqPeq0g][Deferred database modification]]
+[[https://www.youtube.com/watch?v=47LvbDGD4cc&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y&index=106][Immediate database modification]]
+* Query Optimization
+1. Types of query & associated costs (union, set, join, linear-binary search, primary ,seconday)
+2. Transformation of linear expression (Join equivalency)
+3. Number of blocks in memory vs number of blocks in I/O
+
+   Ques:
+   1. Find cost using primary-secondary index
+   2. Table join cost
+
+Join equivalency using Tree.
+
+* Apriori, D-Tree, Naive Bayes

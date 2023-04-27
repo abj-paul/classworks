@@ -1,0 +1,11 @@
+
+.myRow {
+padding: 10px;
+background-color: yellow; 
+border-bottom: 2px solid black;
+}
+img{height: 300px;}
+
+#profile div div h1 {
+padding: 2px;
+}

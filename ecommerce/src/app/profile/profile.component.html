@@ -1,2 +1,14 @@
-
-<button class="btn btn-primary" (click)="logout()">Logout</button>
+<div class="row">
+    <div class="col-sm-7">     
+        <h3>Welcome to Ecommerce system! </h3>             
+        <div class='myRow'>Name: {{username}}</div>
+        <div class='myRow'>Age: {{age}}</div>
+        <div class='myRow'>Email: {{email}} </div>
+        <div class='myRow'>Role: {{role}}</div>
+        <br>
+        <button class="btn btn-primary btn-lg d-flex justify-content-center" (click)="logout()">Logout</button>
+    </div>
+    <div class="col-sm-5">
+      <img src="../../assets/default_pfp.png">
+    </div>
+  </div>

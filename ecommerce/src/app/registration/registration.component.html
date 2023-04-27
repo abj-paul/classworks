@@ -17,16 +17,12 @@
         <label>Password:</label>
         <input type="password" class="form-control" placeholder="Enter Password: " name="password" [(ngModel)]="password">
     </div>
+    <select class="form-select" aria-label="Default select example" name="role" [(ngModel)]="role">
+      <option selected>User Role</option>
+      <option value="BUYER">Buyer</option>
+      <option value="SELLER">Seller</option>
+    </select>
     <button type="submit" class="btn btn-primary" (click)="registerNewUser()">Submit</button>
   </form>
-
-  <select class="form-select" aria-label="Default select example" name="role" [(ngModel)]="role">
-    <option selected>User Role</option>
-    <option value="BUYER">Buyer</option>
-    <option value="SELLER">Seller</option>
-  </select>
-
-  <button type="submit" class="btn btn-primary" (click)="test()">Get User List</button>
-
 
 </div>

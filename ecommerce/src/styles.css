@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+button {
+    display: flex;
+    /* margin-top: 400px; */
+    align-items: center;
+}

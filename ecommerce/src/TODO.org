@@ -1,7 +1,10 @@
-- Fetch value from dropwdown, label
-- ngOnInit
-- see item list, add item, edit item 
-- See item list, buy item, pay 
-- get payment notification 
-- access control
+- Fetch value from radio/checkbox
+- Upload image
+- Add global css
 
+- Make a minimal one for exam.
+
+- how to center component 
+- Add global css
+
+col d-flex justify-content-center
