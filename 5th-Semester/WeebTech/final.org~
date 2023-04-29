@@ -1,0 +1,26 @@
+* Syllabus
+HTML r CSS baade shobi thakbe
+1. JavaScript
+2. PHP
+3. Angular
+4. Rest API + Fast API
+5. Web attacks 
+
+* PHP
+
+* Questions
+** Angular
+1. Component diye kivabe interaction kore
+2. Data binding why? Types of data binding
+3. Two way data binding/form data-binding **
+4. Why routing? Routing types
+5. Why we use service? 
+6. What are directives? Ng-if, Ng-for, Ng-switch etc
+7. HTTP and API calls, promises
+8. MVC
+
+* Plan
+1. [[https://www.youtube.com/watch?v=atNrwSTB3-c&list=PL0eyrZgxdwhxhsuT_QAqfi-NNVAlV4WIP&index=3][PHP]] (:10am)
+2. Rest API + Fast API slide 
+3. Angular Slide
+4. JS Slide (:10-11am)
