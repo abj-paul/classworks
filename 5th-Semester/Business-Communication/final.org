@@ -33,6 +33,20 @@ Cross cultural communication থেকে কিছু থাকবে
 
 Cover letter template in chp 9
 
+* Chp 5
+1. Discuss about the writing process
+2. Why formatting matters?
+3. Write some stuffs about business letters
+4. Write some stuffs about memorandums
+5. Write some stuffs about email
+6. Write some stuffs about instant messaging
+7. Write some stuffs about SMS
+8. Write some stuffs about Social network
+9. Disadvantages of email
+10. When you should avoid email
+11. How to write an email
+12. Differences
+13. What are the traits of effective email?
 * Chp 6 - Directness in Good-News & Neutral Message
 
 Direct Order : Directly go to the point. Usually in small messages.
@@ -134,7 +148,7 @@ When we want to persuade people into buying our sus product, we need to add a lo
 
 Here, our goal is to ask for something that the reader is likely to reject. Hence we must develop a strategy that will convince the reader otherwise.
 ** Persuasive Message
-Yes, that's correct. Here is a more detailed explanation of the procedure for writing a persuasive request, as outlined in 8-4:
+Here is a more detailed explanation of the procedure for writing a persuasive request, as outlined in 8-4:
 
 1. Open with attention-grabbing words: Begin the message with words that capture the reader's attention and set the tone for the persuasion that follows. This might be a provocative statement, a surprising fact, or a rhetorical question, for example.
 
@@ -162,7 +176,12 @@ Best regards,
 
 #+end_src
 
+* Chp 9 - Job Search & Interviews
+1. How to prepare for interviews?
+2. How to write a cover letter?
 * Chp 10-11
+1. Explain the makeup of reports relative to length and formality.
+2. Discuss the four major differences involved in writing short and long reports.
 * Chp 13 - Oral & Interpersonal Communication
 Talking = informal oral communication
 
@@ -259,25 +278,47 @@ Reporting orally == presentation.
 
 ** Formal Speech
 
-
-* Chp 15 - Cross Cultural Communication
 * How to prepare
 1. Briefly review previous topics on word choice, sentence construction. e.g. You-viewpoint is very vital for indirect order.
 2. For chapter 6,7,8 memorize the strategy and write one example for each.
 
 * Questions
+** Chp 5
+1. Discuss about the writing process
+2. Why formatting matters?
+3. Write some stuffs about business letters
+4. Write some stuffs about memorandums
+5. Write some stuffs about email
+6. Write some stuffs about instant messaging
+7. Write some stuffs about SMS
+8. Write some stuffs about Social network
+9. Disadvantages of email
+10. When you should avoid email
+11. How to write an email
+12. Differences
+13. What are the traits of effective email?
+** Chp 6
+1. Describe the general plan for direct-order message.
+2. Write clear, well-structured routine requests for information.
+3. Write direct, orderly, and friendly answers to inquiries.
+4. Compose adjustment grants that regain any lost confidence.
+5. Write order acknowledgments and other thank-you messages that build goodwill.
+6. Write clear and effective operational communications.
+
 ** Chp 7
 1. Why are bad news messages usually written in indirect order?
 2. In which cases should a bad news message be written in direct order?
-3. What is the general indirect plan?
+3. What is the general plan for indirect message?
 4. How to refuse a request?
 5. Refuse a request of a student that wants your employee dataset for his project
-6. Adjustment refusal procedure
-7. Write an adjustment refusal procedure for less money given!
-8. Steps for credit refusal
-9. Write an credit refusal message to refuse credit for X company.
+6. Write a Claim Request
+7. Adjustment refusal procedure
+8. Write an adjustment refusal procedure for less money given!
+9. Steps for credit refusal
+10. Write an credit refusal message to refuse credit for X company.
+11. How to announce bad news to customers or employees?
 ** Chp 8
-1. What is the procedure for writing a persuasive message?
+1. What is the general plan for writing a persuasive message?
 2. Write a persuasive message to request an industry leader to give a lecture in your school teachers' meeting.
 3. Why write sales message?
 4. Preliminary Steps to sales writing
@@ -285,11 +326,20 @@ Reporting orally == presentation.
 6. What are the organizations of the Sales message?
 7. AIDA Model
 8. Conventional Organization Pattern of sales message
-9. Write a rational sales message about selling a oil burner, the Catalytic Carburetor Assembly.
-10. Write a sales message on selling quality candy.
+9. How to write a sales message?
+10. Write a rational sales message about selling a oil burner, the Catalytic Carburetor Assembly.
+11. Write a sales message on selling quality candy.
+12. Describe important strategies for writing any persuasive message
+13. Discuss ethical concerns regarding sales messages.
+14. Describe the planning steps for direct mail or email sales message.
+** Chp 9 - Job Search & Interviews
+1. How to prepare for interviews?
+2. How to write a cover letter?
 ** Report (Chp 10-11)
+1. Explain the makeup of reports relative to length and formality.
+2. Discuss the four major differences involved in writing short and long reports.
+3. Structure of report
 ** Chp 13 - Oral & Interpersonal Communication
-
 ** Chp 14
 ** Chp 15
 1. Why is communication across culture is important to business?
@@ -308,3 +358,28 @@ Reporting orally == presentation.
 ** Letter
 ** Email
 ** Cover Letter
+
+
+Please tell the CRs of the respective batches(BSSE13, 14) to move the folders in their own batch accounts. I will be removing these folders in night. While individual pdfs and books do not consume much space, 3 semesters worth of documents do consume significant space.
+
+Edit Access have been given to IIT account.
+
+3rd Semester batch drive:
+https://drive.google.com/drive/folders/17fYx-O6DBcgKB4_ZdkgRs_pc_9cpBPYW?usp=sharing
+
+4th Semester batch drive:
+https://drive.google.com/drive/folders/1UbzYLSeMEs-94HMW5l_wtVEUXB6QyVfs?usp=sharing
+* Mnemonics
+Email should be avoided when: Long soft sensitive
+4 difference between long and short reports: Personal coherence
+
+Direct Order --> 467553
+Indirect Order --> 56653
+Persuasion --> 558
+Refuse Request --> Write an opening that sets up the explanation.
+* Exam Questions
+Important Chapters: 5,8,15
+- Write a memorandum.
+- Describe the general plan for direct-order message. or What is the general plan for indirect message?
+- Three kinds of appeal
+- AIDA Model
