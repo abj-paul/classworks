@@ -251,7 +251,220 @@ ongoing worker input and education is essential to identifying and solving healt
 *** Ethics
 “To meet social responsibilities and to achieve success in the mar- ketplace, participants and their agents are to uphold the highest standards of ethics including: business integrity; no improper advantage; disclosure of information; intellectual property; fair business, advertising, and competition; protection of identity; responsible sourcing of minerals; and privacy.”
 * Chp 6 - Intellectual Property
+Intellectual property is a term used to describe works of the mind—such as art, books, films, formulas, inventions, music, and processes—that are distinct and owned or created by a single person or group.
+
+Copyright law protects authored works, such as art, books, film, and music.
+
+Defining and controlling the appropriate level of access to intellectual property are
+complex tasks. For example, protecting computer software has proven to be difficult because
+it has not been well categorized under the law. Software has sometimes been treated as the
+expression of an idea, which can be protected under copyright law. In other cases, software
+has been treated as a process for changing a computer’s internal structure, making it eligible
+for protection under patent law. At one time, software was even judged to be a series of
+mental steps, making it inappropriate for ownership and ineligible for any form of protectio
+** Copyright
+A copyright is the exclusive right to distribute, display, perform, or reproduce an
+original work in copies or to prepare derivative works based on the work. Copyright
+protection is granted to the creators of “original works of authorship in any tangible
+medium of expression, now known or later developed, from which they can be perceived,
+reproduced, or otherwise communicated, either directly or with the aid of a machine or
+device.
+
+Copyright infringement is a violation of the rights secured by the owner of a copyright.
+Infringement occurs when someone copies a substantial and material part of another’s
+copyrighted work without permission. The courts have a wide range of discretion in award-
+ing damages—from $200 for innocent infringement to $100,000 for willful infringement.
+
+
+The types of work that can be copyrighted include architecture, art, audiovisual works,
+choreography, drama, graphics, literature, motion pictures, music, pantomimes, pictures,
+sculptures, sound recordings, and other intellectual works, as described in Title 17 of the
+U.S. Code. To be eligible for a copyright, a work must fall within one of the preceding
+categories, and it must be original.
+
+However, evaluating the originality of a work is not always a straight-
+forward process, and disagreements over whether or not a work is original sometimes lead
+to litigation
+
+Some works are not eligible for copyright protection, including those that have not
+been fixed in a tangible form of expression (such as an improvisational speech) and those
+that consist entirely of common information that contains no original authorship, such as
+a chart showing conversions between European and American units of measure.
+** Software Copyright Protection Laws
+*** The Prioritizing Resources and Organization for Intellectual Property (PRO-IP) Act of 2008
+This act increased trademark and copyright enforcement and substantially increased penalties for infringement. The law also created the Office of the United States Intellectual Property Enforcement Representative within the U.S. Department of Justice. One of its programs, called CHIP (Computer Hacking and Intellectual Property), is a network of over 150 experienced and specially trained federal prosecutors who focus on computer and intellectual property crimes.
+*** General Agreement on Tariffs and Trade (GATT)
+The General Agreement on Tariffs and Trade (GATT) was a multilateral agreement
+governing international trade.
+
+It includes a section covering copyrights called the Agreement on Trade-Related Aspects of
+Intellectual Property Rights (TRIPS), discussed in the following section.
+
+Despite GATT, however, copyright protection varies greatly from country to country, and an expert should be consulted when considering international usage of any intellectual property.
+*** The WTO and the WTO TRIPS Agreement (1994)
+The World Trade Organization (WTO) is a global organization that deals with rules of international trade based on WTO agreements that are negotiated and signed by representatives of the world’s trading nations.
+
+Many nations recognize that intellectual property has become increasingly important in world trade, yet the extent of protection and enforcement of intellectual property rights varies around the world. As a result, the WTO developed the Agreement on Trade-Related Aspects of Intellectual Property Rights, also known as the TRIPS Agreement, to establish minimum levels of protection that each government must provide to the intellectual property of all WTO members.
+*** The World Intellectual Property Organization (WIPO) Copyright Treaty (1996
+The World Intellectual Property Organization (WIPO), headquartered in Geneva, Switzerland, is an agency of the United Nations established in 1967. WIPO is dedicated to “the use of intellectual property as a means to stimulate innovation and creativity.” It has 185 member nations and administers 25 international treaties. Since the 1990s, WIPO has strongly advocated for the interests of intellectual property owners. Its goal is to ensure that intellectual property laws are uniformly administered.
+*** The Digital Millennium Copyright Act (1998)
+The Digital Millennium Copyright Act (DMCA) was signed into law in 1998 and implements two 1996 WIPO treaties: the WIPO Copyright Treaty and the WIPO Performances and Phonograms Treaty. The act is divided into the following five sections:
+**** Title I (WIPO Copyright and Performances and Phonograms Treaties Implementation Act of 1998)
+This section implements the WIPO treaties by making certain technical amendments to U.S. law in order to provide appropriate references and links to the treaties. It also creates two new prohibitions in the Copyright Act (Title 17 of the U.S. Code)—one on circumvention of technological measures used by copyright owners to protect their works and one on tampering with copyright management information. Title I also adds civil remedies and criminal penalties for violating the prohibitions.
+**** Title II (Online Copyright Infringement Liability Limitation Act)
+This section enables Web site operators that allow users to post content on their Web site (e.g., music, video, and pictures) to avoid copyright infringement liability if certain “safe harbor” provisions are followed.
+**** Title III (Computer Maintenance Competition Assurance Act)
+This section permits the owner or lessee of a computer to make or authorize the making of a copy of a computer program in the course of maintaining or repairing that computer. The new copy cannot be used in any other manner and must be destroyed immediately after the maintenance or repair is completed.
+**** Title IV (Miscellaneous provisions)
+This section adds language to the Copyright Act confirming the Copyright Office’s authority to continue to per- form the policy and international functions that it has carried out for decades
+under its existing general authority.
+**** Title V (Vessel Hull Design Protection Act)
+This section creates a new form of protection for the original design of vessel hulls.
+** Patent
+A patent is a grant of a property right issued by the United States Patent and Trademark Office (USPTO) to an inventor.
+
+A patent permits its owner to exclude the public from making, using, or selling a protected invention, and it allows for legal action against violators. 
+
+Unlike a copyright, a patent prevents independent creation as well as copying. Even if someone else invents the same item independently and with no prior knowledge of the patent holder’s invention, the second inventor is excluded from using the patented device without permission of the original patent holder.
+
+A software patent claims as its invention some feature or process embodied in instructions executed by a computer.
+
+~Patent infringement~, or the violation of the rights secured by the owner of a patent, occurs when someone makes unauthorized use of another’s patent. Unlike copyright infringement, there is no specified limit to the monetary penalty if patent infringement is found. In fact, if a court determines that the infringement is intentional, it can award up to three times the amount of the damages claimed by the patent holder. The most common defense against patent infringement is a counterattack on the claim of infringement and the validity of the patent itself. Even if the patent is valid, the plaintiff must still prove that every element of a claim was infringed and that the infringement caused some sort of damage.
+** Cross-Licensing Agreements
+Many large software companies have cross-licensing agreements in which each party agrees not to sue the other over patent infringement.
+
+Major IT firms usually have little interest in cross-licensing with smaller firms. As a result, small businesses must pay an additional cost from which many larger companies are exempt. Furthermore, small businesses are generally unsuccessful in enforcing their patents against larger companies. Should a small business bring a patent infringement suit against a large firm, the larger firm can overwhelm the small business with multiple patent suits, whether they have merit or not.
+** Trade Secret
+A trade secret was defined as business information that represents something of economic value, has required effort or cost to develop, has some degree of uniqueness or novelty, is generally unknown to the public, and is kept confidential.
+
+Trade secret protection begins by identifying all the information that must be protected—from undisclosed patent applications to market research and business plans and developing a comprehensive strategy for keeping the information secure. 
+
+Trade secret law protects only against the misappropriation of trade secrets. If competitors come up with the same idea on their own, it is not misappropriation; in other words, the law doesn’t prevent someone from using the same idea if it was developed independently.
+*** Employee & Trade Secrets
+Employees are the greatest threat to the loss of company trade secrets—they might accidentally disclose trade secrets or steal them for monetary gain.
+
+1. Organizations must ~educate~ employees about the importance of maintaining the secrecy of corporate information.
+2. Trade secret information should be labeled clearly as confidential and should only be accessible by a limited number of people.
+3. Most organizations have strict policies regarding ~nondisclosure~ of corporate information.
+4. Because organizations can risk losing trade secrets when ~key employees leave~, they often try to prohibit employees from revealing secrets by adding nondisclosure clauses to employment contracts. Thus, departing employees ~cannot take copies of computer programs or reveal the details of software owned by the firm.~
+5. Another option for preserving trade secrets is to have an ~experienced member of the Human Resources Department~ conduct an exit interview with each departing employee. A key step in the interview is to review a checklist that deals with confidentiality issues. At the end of the interview, the departing employee is asked to sign an acknowledgment of responsibility not to divulge any trade secrets.
+*** Steps to protect trade secret
+1. Human resources involved should have sufficient knowledge to understand what is trade secret and waht is not.
+2. Involved personnel should alert the involved in thread circumstances. That is immediate decision.
+3. Internal policy should be well-communicated.
+4. Using non-disclosure or acknowledgement to not divulge trade secret at employee departure.
+** Trade Secret Laws
+*** Uniform Trade Secrets Act (UTSA)
+The Uniform Trade Secrets Act (UTSA) was drafted in the 1970s to bring uniformity to all the United States in the area of trade secret law.
+*** The Economic Espionage Act (EEA) (1996)
+The Economic Espionage Act (EEA) of 1996 imposes penalties of up to $10 million and 15 years in prison for the theft of trade secrets. Before the EEA, there was no specific criminal statute to help pursue economic espionage;
+
+Espionage is the activity of finding out the political, military, or industrial secrets of your enemies or rivals by using spies. 
+** KEY INTELLECTUAL PROPERTY ISSUES
+This section discusses several issues that apply to intellectual property and information technology.
+*** Plagiarism
+Plagiarism is the act of stealing someone’s ideas or words and passing them off as one’s own. The explosion of electronic content and the growth of the Web have made it easy to cut and paste paragraphs into term papers and other documents without proper citation or quotation marks.
+
+Educate people on citations.
+*** Reverse Engineering
+Reverse engineering is the process of taking something apart in order to understand it, build a copy of it, or improve it. Reverse engineering was originally applied to computer hardware but is now commonly applied to software as well.
+The use of reverse engineering, saying it can uncover software designs that someone else has developed at great cost and taken care to protect. Opponents of reverse engineering contend it unfairly robs the creator of future earnings and significantly reduces the business incentive for software development.
+*** Open Source Code
+Open source code is any program whose source code is made available for use or modification, as users or other developers see fit. The basic premise behind open source code is that when many programmers can read, redistribute, and modify a program’s code, the software improves.
+
+A software developer could attempt to make a program open source simply by putting it into the public domain with no copyright. This would allow people to share the program and their improvements, but it would also allow others to revise the original code and then distribute the resulting software as their own proprietary product. Users who received the program in the modified form would no longer have the free- doms associated with the original software. Use of an open source license avoids this scenario.
+*** Competitive Intelligence
+Competitive intelligence (as defined in Chapter 3) is legally obtained information that is gathered to help a company gain an advantage over its rivals. For example, some companies have employees who monitor the public announcements of property transfers to detect any plant or store expansions of competitors. An effective competitive intelligence program requires the continual gathering, analysis, and evaluation of data with controlled dissemination of useful information to decision makers.
+
+Competitive intelligence is not the same as industrial espionage, which is the use of illegal means to obtain business information not available to the general public.
+
+Competitive intelligence analysts must avoid unethical or illegal actions, such as lying,
+misrepresentation, theft, bribery, or eavesdropping with illegal devices.
+*** Trademark Infringement
+A trademark is a logo, package design, phrase, sound, or word that enables a consumer to differentiate one company’s products from another’s
+*** Cybersquatting
+Companies that want to establish an online presence know that the best way to capitalize on the strengths of their brand names and trademarks is to make the names part of the domain names for their Web sites. When Web sites were first established, there was no procedure for validating the legitimacy of requests for Web site names.
+
+The main tactic organizations use to circumvent cybersquatting is to protect a trademark by registering numerous domain names and variations as soon as the organization knows it wants to develop a Web presence.
+* Chp 3 - Computer & Internet Crime
+** Why Computer Incidents Are So Prevalent?
+1. Increasing Complexity Increases Vulnerability
+2. Higher Computer User Expectations
+3. Expanding and Changing Systems Introduce New Risks
+4. Bring Your Own Device
+5. Increased Reliance on Commercial Software with Known Vulnerabilities
+** Prevention
+AST MUN
+1. Conduct vulnerability ~assessment~!
+2. Strong security measures: IDS, access control
+3. Train employees on security best practices
+4. Monitor network activity
+5. Up-to-date softwares
+6. Use network segmentation
+* Chp 2 - 
+** What is professionalism? Are IT Workers Professional?
+Professionalism: A profession is a calling that requires specialized knowledge and often long intensive academic preparation.
+
+IT workers require intensive training, continuous learning with changing techstacks and a key role is in their experience. And so IT Workers are also professionals.
+
+Many business workers have ~duties, backgrounds, and training~ that qualify them to be classified as professionals, including marketing analysts, financial consultants, and IT specialists such as mobile application developers, software engineers, systems analysts, and network administrators.
+
+One could argue, however, that not every IT role requires ~“knowledge of an advanced type in a field of science or learning customarily acquired by a prolonged course of specialized intellectual instruction and study,”~ to quote again from the United States Code. From a legal perspective, IT workers are not recognized as professionals because they are not licensed by the state or federal government. This distinction is important, for example, in malpractice lawsuits, as many courts have ruled that IT workers are not liable for malpractice because they do not meet the legal definition of a professional.
+** Relationship between IT workers and client
+IT workers provide services to clients; sometimes those “clients” are coworkers who are part of the same organization as the IT worker. In other cases, the client is part of a different organization.
+
+Typically, the client makes decisions about a project on the basis of information, alternatives, and recommendations provided by the IT worker. The client trusts the IT worker to use his or her expertise and to act in the client’s best interests. The IT worker must trust that the client will provide relevant information, listen to and understand what the IT worker says, ask questions to understand the impact of key decisions, and use the information to make wise choices among various alternatives. Thus, the responsibility for decision making is shared between client and IT workers.
+
+*** Potential Issues
+- Conflict of Interest
+- Schedeule issues: Problems can also arise during a project if IT workers find themselves unable to provide full and accurate reporting of the project’s status due to a lack of information, tools, or experience needed to perform an accurate assessment. The project manager may want to keep resources flowing into the project and hope that problems can be corrected before anyone notices. The project manager may also be reluctant to share status information because of contractual penalties for failure to meet the schedule or to develop certain sys- tem functions. In such a situation, the client may not be informed about a problem until it has become a crisis.
+- Fraud
+- Misrepresentation
+- Breach of contract
+** Relationships Between IT Workers and Suppliers
+IT workers deal with many different hardware, software, and service providers. Most IT workers understand that building a good working relationship with suppliers encourages the flow of useful communication as well as the sharing of ideas. Such information can lead to innovative and cost-effective ways of using the supplier’s products and services that the IT worker may never have considered.
+IT workers can develop good relationships with suppliers by dealing fairly with them and not making unreasonable demands. Threatening to replace a supplier who can’t deliver needed equipment tomorrow, when the normal industry lead time is one week, is aggressive behavior that does not help build a good working relationship.
+
+Potential Issues:
+- Bribery
+** Relationships Between IT Workers and Other Professionals
+Professionals often feel a degree of loyalty to the other members of their profession. As a result, they are often quick to help each other obtain new positions but slow to criticize each other in public.
+
+- Resume Inflation
+- Preferential Treatment
+** Relationships between IT Workers and IT Users
+IT workers also have a key responsibility to establish an environment that supports ethical behavior by users. Such an environment discourages 
+- software piracy
+- minimizes the inappropriate use of corporate computing resources
+- avoids the inappropriate sharing of information
+** Relationships Between IT Workers and Society
+Societyy expects members of a profession to provide significant benefits and to not cause harm
+through their actions. One approach to meeting this expectation is to establish and maintain professional standards that protect the public.
+** Certification
+Certification indicates that a professional possesses a particular set of skills, knowledge, or abilities, in the opinion of the certifying organization.
+Is certification relevant to your current job or the one to which you aspire? Does the company offering the certification have a good reputation? What is the current and potential future demand for skills in this area of certification?
+*** Vendor Certifications
+Many IT vendors—such as Cisco, IBM, Microsoft, SAP, and Oracle—offer certification programs for those who use their products.
+*** Industry Association Certifications
+There are many available industry certifications in a variety of IT-related subject areas. Their value varies greatly depending on where people are in their career path, what other certifications they possess, and the nature of the IT job market.
+
+CompTIA A+, Red Hat Linux Certification
+** Compliance
+Compliance means to be in accordance with established policies, guidelines, specifications, or legislation.
+
+- Audit Committee
+- Internal Audit Department
 * Questions
 1. What is outsourcing? What is offshore outsouring? What are strategies for successful offshore outsouring?
 2. Definition of contingent worker, H1B worker.
 3. What are the key ethical issues for organizations?
+4. Code of conducts of IT industry
+5. Definition of green computing, out sourcing and offshore outsourcing
+6. Strategy for successful offshore outsourcing
+7. Whistle blowing preparation steps.
+8. Definition of intellectual property, copyright, copyright infringement, patent, patent infringement, cross licensing agreement,
+9. Eligibility for copyright
+10. What are the laws for the proctection of software copyright?
+11. Talk about digitial millenium act
+12. Describe trade secret.
+13. Discuss KEY INTELLECTUAL PROPERTY ISSUES
