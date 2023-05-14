@@ -321,22 +321,21 @@ Reporting orally == presentation.
 ** Chp 8
 1. Describe important strategies/advice for writing any persuasive message.
 2. What are the three common types of persuasive writing?
-3. What is the general plan for writing a persuasive message?
+3. ~What is the general plan for writing a persuasive message?~
 4. Why write sales message?
 5. Discuss ethical concerns regarding sales messages.
 6. General Sales Plan / Describe the planning steps for direct mail or email sales message.
 7. Compose Sales Message
 8. Difference between proposals & reports.
 9. Write well-organized & persuasive proposals.
-10. What is the goal of proposals?
-11. Format & Formality of proposals
-12. Figure out what to propose?
-13. Business Proposal Format
-14. Determining the appeal in sales - rational or emotional?
-15. ~AIDA Model~
-16. Write a rational sales message about selling a oil burner, the Catalytic Carburetor Assembly.
-17. Write a sales message on selling quality candy.
-18. Write a persuasive message to request an industry leader to give a lecture in your school teachers' meeting.
+10. ~Format & Formality of proposals~
+11. Figure out what to propose?
+12. ~Business Proposal Format~
+13. Determining the appeal in sales - rational or emotional?
+14. ~AIDA Model~
+15. Write a rational sales message about selling a oil burner, the Catalytic Carburetor Assembly.
+16. Write a sales message on selling quality candy.
+17. Write a persuasive message to request an industry leader to give a lecture in your school teachers' meeting.
 *** Small Info
 Aristotole identified the three kinds of persuasive appeals.
 ** Chp 9 - Job Search & Interviews
@@ -348,18 +347,16 @@ Aristotole identified the three kinds of persuasive appeals.
 1. Explain the makeup of reports relative to length and formality.
 2. Discuss the four major differences involved in writing short and long reports.
 3. What is a report?
-4. What are the purposes of writing a report?
-5. Outline the components of the prefatory part, the report body, the ending part and the appended parts of a long formal message.
-6. Write down the difference between long report and short report
-7. Write a cover letter for the report.
-8. Defining a report
-9. Effective Title for Report
-10. How to write an executive summary?
-11. Table of Contents writing
-12. Designing Effective Visuals
-13. What is the difference between a long report and a short report?
-14. How to write a cover letter for a report?
-15. Structural Guidelines in report
+4. Outline the components of the prefatory part, the report body, the ending part and the appended parts of a long formal message.
+5. Write down the difference between long report and short report
+6. Write a cover letter for the report.
+8. Effective Title for Report
+9. How to write an executive summary?
+10. Table of Contents writing
+11. Designing Effective Visuals
+12. What is the difference between a long report and a short report?
+13. How to write a cover letter for a report?
+14. ~Structural Guidelines in report~
 
 ** Chp 13 - Oral & Interpersonal Communication
 
@@ -376,23 +373,22 @@ Aristotole identified the three kinds of persuasive appeals.
 11. How to be effective in nonverbal communication?
 12. Using the phone
 13. Dictating (Syllabus e nai mone hoy)
-14. Nonverbal communication
-15. Discuss talking & its key elements
-16. Explain the listening problem and how to solve it
+14. Discuss talking & its key elements
+15. Explain the listening problem and how to solve it
+
 ** Chp 14
-- Define oral reports and differentiate between them and written reports
-- What are the techniques of delivering a good formal speech?
-- What strategies must be followed to deliver a good speech?
-- Select and organize a subject for effective formal presentation to a specific audience.
-- Reporting orally
-- Plan the oral report
-- Mention the techniques of using visuals in a presentation.
-- Techniques of good Formal speeches
-- Preparing to speak / How to improve your speaking skill?
-- Virtual presentations
-- A summary list of speaking practices (Pore rakha bhalo)
-- How does the audience form impressions from appearance and physical actions?
-- Explain the principal differences between face-to-face and virtual presentations
+1. Define oral reports and differentiate between them and written reports
+2. What are the techniques of delivering a good formal speech?
+3. What strategies must be followed to deliver a good speech?
+4. Select and organize a subject for effective formal presentation to a specific audience.
+5. Plan the oral report
+6. Mention the techniques of using visuals in a presentation.
+7. Techniques of good Formal speeches
+8. Preparing to speak / How to improve your speaking skill?
+9. Virtual presentations
+10. A summary list of speaking practices (Pore rakha bhalo)
+11. How does the audience form impressions from appearance and physical actions?
+12. Explain the principal differences between face-to-face and virtual presentations
 
 ** Chp 15
 1. Why is communication across culture is important to business?
@@ -405,9 +401,9 @@ Aristotole identified the three kinds of persuasive appeals.
    - Language equivalency issues
    - Culturally derived words
 5. ~Suggestions for Communicating Across Cultures Successfully~.
-6. What is the role of the you-viewpoint in persuasive requests?
-7. Discuss the differences between solicited and unsolicited proposal
-8. Define culture and explain its effects on cross-cultural communication.
+6. Discuss the differences between solicited and unsolicited proposal
+7. Define culture and explain its effects on cross-cultural communication.
+
 ** Cover Letter
 
 
@@ -428,6 +424,10 @@ Direct Order --> 467553
 Indirect Order --> 56653
 Persuasion --> 558
 Refuse Request --> Write an opening that sets up the explanation.
+Report Body --> BOOS Limitations Methodology Technical Terms
+Uses of Oral Communicaton --> MD COGS
+Mnemonics: Time Space Odor E F I Values
+
 * Exam Questions
 Important Chapters: 5,8,15
 - Write a memorandum. Difference between memo and business letter.
@@ -439,3 +439,7 @@ Important Chapters: 5,8,15
 - What do you understand by audience analysis? How serious is this issue
 - Nonverbal communication ta important
 - How to prepare for interviews?
+
+
+
+12. ~Business Proposal Format~

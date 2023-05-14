@@ -1,0 +1,196 @@
+* Chp 10 - Ethics Of IT Organizations
+** What are the Key Ethical Issues for Organizations?
+This chapter touches on the following ethical topics that are pertinent to organizations in the IT industry, as well as to organizations that make use of IT:
+
+1. The use of nontraditional workers, including temporary workers, contractors, consulting firms, H-1B visa workers, and outsourced offshore workers, gives an organization more flexibility in meeting its staffing needs, often at a lower cost Ethics of IT Organizations than if the organization used traditional workers. The use of nontraditional workers also raises ethical issues for organizations. When should such nontraditional workers be employed, and how does such employment affect an organization’s ability to grow and develop its own employees? How does the use of nontraditional workers impact the wages of the organization’s own employees?
+2. Whistle-blowing, as discussed in Chapter 2, is an effort to attract public attention to a negligent, illegal, unethical, abusive, or dangerous act by a company or some other organization. It is an important ethical issue for individuals and organizations. How can you safely and effectively report mis- conduct, and how should managers handle a whistle-blowing incident?
+3. Green computing is a term applied to a variety of efforts directed toward the efficient design, manufacture, operation, and disposal of IT-related products, including personal computers, laptops, servers, printers, and printer supplies. Computer manufacturers and end users are faced with many questions about when and how to transition to green computing, and at what cost.
+4. The electronics and information and communications technology (ICT) industry recognizes the need for a code to address ethical issues in the areas of worker safety and fairness, environmental responsibility, and business efficiency. What has been done so far, and what still needs to be done.
+
+** Contingent Work
+The Bureau of Labor Statistics defines contingent work as a job situation in which an individual does not have an ~explicit or implicit contract~ for long-term employment.
+*** Additional Information
+- The contingent workforce includes independent contractors, temporary workers hired through employment agencies, on-call or day laborers, and on-site workers whose services are provided through contract firms.
+- A firm is likely to use contingent IT workers if it experiences pronounced fluctuations in its technical staffing needs.
+- Typically, these workers join a team of full-time employees and other contingent workers for the life of the project and then move on to their next assignment.
+- Whether they work, when they work, and how much they work depends on the company’s need for them.
+*** How to obtain contingent workers?
+Organizations can obtain contingent workers in one of the following two ways.
+  
+**** Temporary Staffing Farms
+   Temporary staffing firms recruit, train, and test job seekers in a wide range of job categories and skill levels, and then assign them to clients as needed.
+
+
+- Temporary employees are often used to fill in during staff vacations and illnesses,handle seasonal workloads, and help staff special projects.
+
+- They are not considered official employees of the company, so they are not eligible for company benefits such as vacation, sick pay, and medical insurance
+
+- Because temporary workers do not receive additional compensation through company benefits, they are often paid a higher hourly wage than full-time employees doing equivalent work.
+
+- Temporary working arrangements sometimes appeal to people who want maximum flexibility in their work schedule as well as a variety of work experiences. Other workers take temporary work assignments only because they are unable to find more permanent work.
+
+**** Employee Leasing
+In Employee leasing, a business (called the ~subscribing firm~) transfers all or part of its workforce to another firm (called the ~leasing firm~), which handles all human-resource-related activities and costs, such as payroll, training, and the administration of employee benefits.
+
+- Employee leasing firms operate with minimal administrative, sales, and marketing staff to keep down overall costs, and they pass the savings on to their clients.
+- Employee leasing firms are subject to special regulations regarding workers’ compensation and unemployment insurance. Because the workers are technically employees of the leasing firm, they may be eligible for some company benefits through the firm.
+
+- The subscribing firm leases these workers, but they remain employees of the leasing firm.
+
+***** Coemployment
+Employee leasing is a type of ~coemployment~ relationship, in which ~two employers~ have actual or potential legal rights and duties with respect to the same employee or group of employees.
+
+**** Consulting Firms
+Organizations can also obtain temporary IT employees by hiring a consulting firm. Consulting organizations maintain a staff of employees with a wide range of skills and experience, up to and including world-renowned industry experts; thus, these firms can often provide the exact skills and expertise that an organization requires for a ~particular project~.
+
+Consulting firms work with their clients on engagements for which there are typically well-defined expected results or deliverables that must be produced (e.g., creation of an IT strategic plan, implementation of an enterprise resource planning [ERP] system, or selection of a hardware vendor).
+
+The contract with a consulting firm typically specifies the length of the engagement and the rate of pay for each of the consultants, who are directed on the engagement by a senior manager or director from the consulting firm. 
+
+*** Advantage of Using Contingent Workers
+1. When a firm employs a contingent worker, it does not usually have to provide benefits such as insurance, paid time off, and contributions to a retirement plan.
+
+2. A company can easily adjust the number of contingent workers it uses to meet its business needs, and can release contingent workers when they are no longer needed. An organization cannot usually do the same with full-time employees without creating a great deal of ill will and negatively impacting employee morale.
+
+3. Moreover, because many contingent workers are already specialists in a particular task, a firm does not customarily incur training costs for contingent workers.
+
+ Therefore, the use of contingent workers can enable a firm to meet its staffing needs more efficiently, lower its labor costs, and respond more quickly to changing market conditions.
+
+*** Disadvantages of Using Contingent Workers
+1. One downside to using contingent workers is that they may not feel a strong connection to the company for which they are working. This can result in a low commitment to the company and its projects, along with a high turnover rate.
+
+2. Although contingent workers may already have the necessary technical training for a temporary job, many contingent workers gain additional skills and knowledge while working for a particular company; those assets are lost to the company when a contingent worker departs at a project’s completion.
+
+*** Deciding when to use contingent workers
+The ~trade-off~ between completing a single project quickly and cheaply versus developing people within its own organization.
+
+1. If the project requires unique skills that are probably not necessary for future projects, there may be little reason to invest the additional time and costs required to develop those skills in full-time employees. Or,
+2. if a particular project requires only temporary help that will not be needed for future projects, the use of contingent workers is a good approach.
+
+
+However, organizations should carefully consider whether or not to use contingent workers when those workers are likely to learn ~corporate processes and strategies~ that are key to the company’s success. It is next to impossible to prevent contingent workers from passing on such information to subsequent employers. This can be damaging if the worker’s next employer is a major competitor.
+
+Though using contingent workers is often the most flexible and cost-effective way to get a job done, their use can raise ~ethical and legal issues about the relationships~ among the staffing firm, its employees, and its customers—including the potential liability of a staffing firm’s customers for withholding payroll taxes, payment of employee retirement benefits and health insurance premiums, and administration of workers’ compensation to the staffing firm’s employees.
+
+Additionally, Depending on how closely workers are ~supervised and how the job is structured~, contingent workers may be viewed as permanent employees by the Internal Revenue Service, the Department of Labor, or a state’s workers’ compensation and unemployment agencies.
+
+** H-1B Worker
+An H-1B visa is a temporary work visa granted by the U.S. Citizenship and Immigration Services (USCIS) for people who work in specialty occupations—jobs that require at least a four-year bachelor’s degree in a specific field, or equivalent experience.
+
+A person can work for a U.S. employer as an H-1B employee for a maximum continuous period of six years.
+
+Considerations:
+- English Skills
+- Innovation & Entrepreneurship
+- Heavy reliance on the use of H-1B workers can lessen the incentive for U.S. companies to educate and develop their own workforces.
+
+Potenial Expoitation:
+- Low Wage
+- Fraud
+
+*** Details
+When considering the use of H-1B visa workers, companies should take into account that even highly skilled and experienced H-1B workers may require help with their ~English skills~.
+
+
+The researchers also concluded that “there is substantial evidence that H-1B admissions appear to directly improve levels of innovation and entrepreneurship, which in the long term should create new jobs and raise demand for technology workers in other areas."
+
+**** Using H-1B Workers Instead of U.S. Workers
+In order to compete in the global economy, U.S. firms must be able to attract the best and brightest workers from all over the world. Most H-1B workers are brought to the United States to fill a legitimate gap that cannot be filled from the existing pool of workers.
+
+However, there are some managers who reason that as long as skilled foreign workers can be found to fill critical positions, ~why invest thousands of dollars and months of training to develop their current U.S. workers?~ Heavy reliance on the use of H-1B workers can lessen the incentive for U.S. companies to educate and develop their own workforces.
+
+** Outsourcing
+Outsourcing is a long-term business arrangement in which a company contracts for services with an ~outside organization~ that has expertise in providing a specific function.
+
+Coemployment legal problems with outsourcing are minimal, because the company
+that contracts for the services does not generally supervise or control the contractor’s
+employees. The primary rationale for outsourcing is to lower costs, but companies also
+use it to obtain strategic flexibility and to keep their staff focused on the company’s core
+competencies.
+
+*** Offshore Outsourcing
+Offshore outsourcing is a form of outsourcing in which the services are provided by an
+organization whose employees are in a ~foreign country.~
+
+1. Any work done at a relatively high
+cost in the United States may become a candidate for offshore outsourcing—not just IT
+work. However, IT professionals in particular can do much of their work anywhere
+
+As more businesses move their key processes offshore, U.S. IT service providers are
+forced to lower prices. Many U.S. software firms set up development centers in low-cost
+foreign countries where they have access to a large pool of well-trained candidates
+
+Organizations must consider many factors when deciding where to locate outsourcing
+activities.
+- Political Unrest in foreign country
+- Global Services Location Index
+
+**** Pros of Offshore Outsouring
+- Wages that an American worker might consider low represent an excellent salary in many
+other parts of the world, and some companies feel they would be foolish not to exploit such
+an opportunity. Why pay a U.S. IT worker a six-figure salary, they reason, when they can
+use offshore outsourcing to hire three India-based workers for the same cost? However, this
+attitude might represent a short-term point of view—offshore demand is driving up salaries
+in India by roughly 15 percent per year. Because of this, Indian offshore suppliers have
+begun to charge more for their services. The cost advantage for offshore outsourcing to India
+used to be 6:1 or more—you could hire six Indian IT workers for the cost of one U.S. IT
+worker. The cost advantage is shrinking, and once it reaches about 1.5:1, the cost savings
+will no longer be much of an incentive for U.S. offshore outsourcing to India.
+
+- “24-hour workday”
+- 
+**** Cons of Offshore Outsourcing
+In addition, organizations often find it takes years of
+ongoing effort and a large up-front investment to develop a good working relationship with
+an offshore outsourcing firm. Finding a reputable vendor can be especially difficult for a
+small or midsized firm that lacks experience in identifying and vetting contractors
+
+
+the trade-offs between using offshore outsourcing firms and devoting money and time to
+retain and develop their own staff
+
+Another downside to offshore outsourcing is that a company loses the knowledge and
+experience gained by outsourced workers when those workers are reassigned after a
+project’s completion
+
+Cultural and language differences
+
+The compromising of customer data
+*** Details
+*** Strategies for successful offshore outsouring
+The following list provides several tips for companies that are considering offshore
+outsourcing:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Set clear, firm business specifications for the work to be done.
+Assess the probability of political upheavals or factors that might interfere
+with information flow, and ensure the risks are acceptable.
+Assess the basic stability and economic soundness of the outsourcing vendor
+and what might occur if the vendor encounters a severe financial downturn.
+Establish reliable satellite or broadband communications between your site
+and the outsourcer’s location.
+Implement a formal version-control process, coordinated through a quality
+assurance person.
+Develop and use a dictionary of terms to encourage a common understanding
+of technical jargon.
+Require vendors to have project managers at the client site to overcome cul-
+tural barriers and facilitate communication with offshore programmers.
+Require a network manager at the vendor site to coordinate the logistics of
+using several communications providers around the world.
+Agree in advance on the structure and content of documentation to ensure
+that manuals explain how the system was built, as well as how to maintain it.
+Carefully review a current copy of the outsourcing firm’s SAS No. 70 audit
+report to ascertain its level of control over information technology and
+related processes.
+* Questions
+1. What is outsourcing? What is offshore outsouring? What are strategies for successful offshore outsouring?
+2. Definition of contingent worker, H1B worker.
+3. What are the key ethical issues for organizations?
