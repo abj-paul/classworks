@@ -1,0 +1,1774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-05-16 মঙ্গল 01:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Abhijit Paul" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0676f41">1. Chp 10 - Ethics Of IT Organizations</a>
+<ul>
+<li><a href="#orgc9f15b9">1.1. What are the Key Ethical Issues for Organizations?</a></li>
+<li><a href="#org51b4ccb">1.2. Contingent Work</a>
+<ul>
+<li><a href="#orgd751317">1.2.1. Additional Information</a></li>
+<li><a href="#orgbe38f71">1.2.2. How to obtain contingent workers?</a></li>
+<li><a href="#org44fb07f">1.2.3. Advantage of Using Contingent Workers</a></li>
+<li><a href="#org5021efb">1.2.4. Disadvantages of Using Contingent Workers</a></li>
+<li><a href="#orgc9bc6e9">1.2.5. Deciding when to use contingent workers</a></li>
+</ul>
+</li>
+<li><a href="#org0eafc2e">1.3. H-1B Worker</a>
+<ul>
+<li><a href="#org2bfd98c">1.3.1. Details</a></li>
+</ul>
+</li>
+<li><a href="#org8657b69">1.4. Outsourcing</a>
+<ul>
+<li><a href="#org976e0e9">1.4.1. Details</a></li>
+</ul>
+</li>
+<li><a href="#orgbaa2083">1.5. Strategies for successful offshore outsouring</a></li>
+<li><a href="#org8eea47d">1.6. Whitle-blowing</a>
+<ul>
+<li><a href="#org9624558">1.6.1. Protection of Whistle-blowers</a></li>
+<li><a href="#orgcf523a3">1.6.2. Whistle-blowing in private sectors</a></li>
+<li><a href="#orge80f2fb">1.6.3. Dealing with a whistleblowing situation</a></li>
+</ul>
+</li>
+<li><a href="#org44585fa">1.7. Green Computing</a></li>
+<li><a href="#org82e07f0">1.8. ICT INDUSTRY CODE OF CONDUCT</a>
+<ul>
+<li><a href="#org2608b3c">1.8.1. Labor</a></li>
+<li><a href="#org1fab599">1.8.2. Health and Safety</a></li>
+<li><a href="#orgd342209">1.8.3. Environmental</a></li>
+<li><a href="#orgd2e8b6c">1.8.4. Management System</a></li>
+<li><a href="#orgdc4be2c">1.8.5. Ethics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org074e1de">2. Chp 6 - Intellectual Property</a>
+<ul>
+<li><a href="#org942870d">2.1. Copyright</a></li>
+<li><a href="#orgd5a686a">2.2. Software Copyright Protection Laws</a>
+<ul>
+<li><a href="#org427f227">2.2.1. The Prioritizing Resources and Organization for Intellectual Property (PRO-IP) Act of 2008</a></li>
+<li><a href="#orgf5c8382">2.2.2. General Agreement on Tariffs and Trade (GATT)</a></li>
+<li><a href="#orge977b35">2.2.3. The WTO and the WTO TRIPS Agreement (1994)</a></li>
+<li><a href="#org08365be">2.2.4. The World Intellectual Property Organization (WIPO) Copyright Treaty (1996</a></li>
+<li><a href="#org6c69e16">2.2.5. The Digital Millennium Copyright Act (1998)</a></li>
+</ul>
+</li>
+<li><a href="#orga23257e">2.3. Patent</a></li>
+<li><a href="#org1a20747">2.4. Cross-Licensing Agreements</a></li>
+<li><a href="#org9ba3c27">2.5. Trade Secret</a>
+<ul>
+<li><a href="#orgec71b47">2.5.1. Employee &amp; Trade Secrets</a></li>
+<li><a href="#org7466608">2.5.2. Steps to protect trade secret</a></li>
+</ul>
+</li>
+<li><a href="#orge974c20">2.6. Trade Secret Laws</a>
+<ul>
+<li><a href="#org967416f">2.6.1. Uniform Trade Secrets Act (UTSA)</a></li>
+<li><a href="#org5e2a6cb">2.6.2. The Economic Espionage Act (EEA) (1996)</a></li>
+</ul>
+</li>
+<li><a href="#org2b15f62">2.7. KEY INTELLECTUAL PROPERTY ISSUES</a>
+<ul>
+<li><a href="#org6bb14a5">2.7.1. Plagiarism</a></li>
+<li><a href="#org6203251">2.7.2. Reverse Engineering</a></li>
+<li><a href="#org4cc84ba">2.7.3. Open Source Code</a></li>
+<li><a href="#org7e79b28">2.7.4. Competitive Intelligence</a></li>
+<li><a href="#org987885d">2.7.5. Trademark Infringement</a></li>
+<li><a href="#org04726a1">2.7.6. Cybersquatting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org357bb9a">3. Chp 3 - Computer &amp; Internet Crime</a>
+<ul>
+<li><a href="#orgb344442">3.1. Why Computer Incidents Are So Prevalent?</a></li>
+<li><a href="#org6731d5a">3.2. Prevention</a></li>
+</ul>
+</li>
+<li><a href="#org9049393">4. Chp 2 - forgot name</a>
+<ul>
+<li><a href="#org88d5040">4.1. What is professionalism? Are IT Workers Professional?</a></li>
+<li><a href="#orgece3d47">4.2. Relationship between IT workers and client</a>
+<ul>
+<li><a href="#org9700b5c">4.2.1. Potential Issues</a></li>
+</ul>
+</li>
+<li><a href="#orgcc70a43">4.3. Relationships Between IT Workers and Suppliers</a></li>
+<li><a href="#org0962374">4.4. Relationships Between IT Workers and Other Professionals</a></li>
+<li><a href="#orgb0300c1">4.5. Relationships between IT Workers and IT Users</a></li>
+<li><a href="#org0fe3c15">4.6. Relationships Between IT Workers and Society</a></li>
+<li><a href="#org6dbb765">4.7. Certification</a>
+<ul>
+<li><a href="#orgf5007a3">4.7.1. Vendor Certifications</a></li>
+<li><a href="#org90ba441">4.7.2. Industry Association Certifications</a></li>
+</ul>
+</li>
+<li><a href="#org27c857e">4.8. Compliance</a></li>
+<li><a href="#org3a7196b">4.9. What is professionalism? Are IT Workers professional?</a></li>
+<li><a href="#org8c604d5">4.10. Issues in Employer Relationships/ Relationship between IT Worker &amp; Professional</a>
+<ul>
+<li><a href="#org19a2ba8">4.10.1. Trade Secret</a></li>
+<li><a href="#org1b744a9">4.10.2. Software Business Alliance</a></li>
+<li><a href="#orgb03b937">4.10.3. Whistleblowers</a></li>
+</ul>
+</li>
+<li><a href="#org8844df6">4.11. Professional Relationships that must be maintained</a></li>
+<li><a href="#orgf177b45">4.12. What is a professional code of ethics? Discuss about its 4 fundamental principles.</a></li>
+<li><a href="#org8c1f52b">4.13. What are IT Professional Organizations? List some of the organizations and their roles.</a>
+<ul>
+<li><a href="#org5c8a12d">4.13.1. Association for Computing Machinery (ACM):</a></li>
+<li><a href="#org39b7614">4.13.2. Institute of Electrical and Electronics Engineers Computer Society (IEEE-CS):</a></li>
+<li><a href="#org55a01ae">4.13.3. Association of Information Technology Professionals (AITP):</a></li>
+<li><a href="#org8cc5367">4.13.4. SysAdmin, Audit, Network, Security (SANS) Institute:</a></li>
+</ul>
+</li>
+<li><a href="#org2c1e19b">4.14. Common Ethical Issues of IT Users(Page 61)</a></li>
+<li><a href="#orgd68c83d">4.15. Supporting the Ethical Practices of IT Users</a></li>
+<li><a href="#orga9140cc">4.16. IT Professional Malpractice</a></li>
+<li><a href="#org38fcb76">4.17. SMall Definitions</a></li>
+</ul>
+</li>
+<li><a href="#org390e9f2">5. Chp 7 - Software Development</a>
+<ul>
+<li><a href="#orga8b97f4">5.1. Definition of Quality</a></li>
+<li><a href="#org06a07b9">5.2. Types of Quality</a></li>
+<li><a href="#org6bdb6c9">5.3. Quality Assurance</a></li>
+<li><a href="#orgc01b530">5.4. Quality Control</a></li>
+<li><a href="#org4b70481">5.5. Cost Of Quality</a>
+<ul>
+<li><a href="#orgb3df5a5">5.5.1. Types of Cost of Quality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1254d3d">6. Questions</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0676f41" class="outline-2">
+<h2 id="org0676f41"><span class="section-number-2">1.</span> Chp 10 - Ethics Of IT Organizations</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgc9f15b9" class="outline-3">
+<h3 id="orgc9f15b9"><span class="section-number-3">1.1.</span> What are the Key Ethical Issues for Organizations?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+This chapter touches on the following ethical topics that are pertinent to organizations in the IT industry, as well as to organizations that make use of IT:
+</p>
+
+<ol class="org-ol">
+<li>The use of nontraditional workers, including temporary workers, contractors, consulting firms, H-1B visa workers, and outsourced offshore workers, gives an organization more flexibility in meeting its staffing needs, often at a lower cost Ethics of IT Organizations than if the organization used traditional workers. The use of nontraditional workers also raises ethical issues for organizations. When should such nontraditional workers be employed, and how does such employment affect an organization’s ability to grow and develop its own employees? How does the use of nontraditional workers impact the wages of the organization’s own employees?</li>
+<li>Whistle-blowing, as discussed in Chapter 2, is an effort to attract public attention to a negligent, illegal, unethical, abusive, or dangerous act by a company or some other organization. It is an important ethical issue for individuals and organizations. How can you safely and effectively report mis- conduct, and how should managers handle a whistle-blowing incident?</li>
+<li>Green computing is a term applied to a variety of efforts directed toward the efficient design, manufacture, operation, and disposal of IT-related products, including personal computers, laptops, servers, printers, and printer supplies. Computer manufacturers and end users are faced with many questions about when and how to transition to green computing, and at what cost.</li>
+<li>The electronics and information and communications technology (ICT) industry recognizes the need for a code to address ethical issues in the areas of worker safety and fairness, environmental responsibility, and business efficiency. What has been done so far, and what still needs to be done.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org51b4ccb" class="outline-3">
+<h3 id="org51b4ccb"><span class="section-number-3">1.2.</span> Contingent Work</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Contingent work is a job situation in which an individual does not have an <code>explicit or implicit contract</code> for long-term employment.
+</p>
+</div>
+<div id="outline-container-orgd751317" class="outline-4">
+<h4 id="orgd751317"><span class="section-number-4">1.2.1.</span> Additional Information</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>The contingent workforce includes independent contractors, temporary workers hired through employment agencies, on-call or day laborers, and on-site workers whose services are provided through contract firms.</li>
+<li>A firm is likely to use contingent IT workers if it experiences pronounced fluctuations in its technical staffing needs.</li>
+<li>Typically, these workers join a team of full-time employees and other contingent workers for the life of the project and then move on to their next assignment.</li>
+<li>Whether they work, when they work, and how much they work depends on the company’s need for them.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe38f71" class="outline-4">
+<h4 id="orgbe38f71"><span class="section-number-4">1.2.2.</span> How to obtain contingent workers?</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Organizations can obtain contingent workers in one of the following two ways.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge84d664"></a>Temporary Staffing Farms<br />
+<div class="outline-text-5" id="text-1-2-2-1">
+<p>
+Temporary staffing firms recruit, train, and test job seekers in a wide range of job categories and skill levels, and then assign them to clients as needed.
+</p>
+
+
+<ul class="org-ul">
+<li>Temporary employees are often used to fill in during staff vacations and illnesses,handle seasonal workloads, and help staff special projects.</li>
+
+<li>They are not considered official employees of the company, so they are not eligible for company benefits such as vacation, sick pay, and medical insurance</li>
+
+<li>Because temporary workers do not receive additional compensation through company benefits, they are often paid a higher hourly wage than full-time employees doing equivalent work.</li>
+
+<li>Temporary working arrangements sometimes appeal to people who want maximum flexibility in their work schedule as well as a variety of work experiences. Other workers take temporary work assignments only because they are unable to find more permanent work.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgc2f5a92"></a>Employee Leasing<br />
+<div class="outline-text-5" id="text-1-2-2-2">
+<p>
+In Employee leasing, a business (called the <code>subscribing firm</code>) transfers all or part of its workforce to another firm (called the <code>leasing firm</code>), which handles all human-resource-related activities and costs, such as payroll, training, and the administration of employee benefits.
+</p>
+
+<ul class="org-ul">
+<li>Employee leasing firms operate with minimal administrative, sales, and marketing staff to keep down overall costs, and they pass the savings on to their clients.</li>
+<li>Employee leasing firms are subject to special regulations regarding workers’ compensation and unemployment insurance. Because the workers are technically employees of the leasing firm, they may be eligible for some company benefits through the firm.</li>
+
+<li>The subscribing firm leases these workers, but they remain employees of the leasing firm.</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org121f916"></a>Coemployment<br />
+<div class="outline-text-6" id="text-1-2-2-2-1">
+<p>
+Employee leasing is a type of <code>coemployment</code> relationship, in which <code>two employers</code> have actual or potential legal rights and duties with respect to the same employee or group of employees.
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org0ffdc89"></a>Consulting Firms<br />
+<div class="outline-text-5" id="text-1-2-2-3">
+<p>
+Organizations can also obtain temporary IT employees by hiring a consulting firm. Consulting organizations maintain a staff of employees with a wide range of skills and experience, up to and including world-renowned industry experts; thus, these firms can often provide the exact skills and expertise that an organization requires for a <code>particular project</code>.
+</p>
+
+<p>
+Consulting firms work with their clients on engagements for which there are typically well-defined expected results or deliverables that must be produced (e.g., creation of an IT strategic plan, implementation of an enterprise resource planning [ERP] system, or selection of a hardware vendor).
+</p>
+
+<p>
+The contract with a consulting firm typically specifies the length of the engagement and the rate of pay for each of the consultants, who are directed on the engagement by a senior manager or director from the consulting firm. 
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org44fb07f" class="outline-4">
+<h4 id="org44fb07f"><span class="section-number-4">1.2.3.</span> Advantage of Using Contingent Workers</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ol class="org-ol">
+<li>When a firm employs a contingent worker, it does not usually have to provide benefits such as insurance, paid time off, and contributions to a retirement plan.</li>
+
+<li>A company can easily adjust the number of contingent workers it uses to meet its business needs, and can release contingent workers when they are no longer needed. An organization cannot usually do the same with full-time employees without creating a great deal of ill will and negatively impacting employee morale.</li>
+
+<li><p>
+Moreover, because many contingent workers are already specialists in a particular task, a firm does not customarily incur training costs for contingent workers.
+</p>
+
+<p>
+Therefore, the use of contingent workers can enable a firm to meet its staffing needs more efficiently, lower its labor costs, and respond more quickly to changing market conditions.
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5021efb" class="outline-4">
+<h4 id="org5021efb"><span class="section-number-4">1.2.4.</span> Disadvantages of Using Contingent Workers</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<ol class="org-ol">
+<li>One downside to using contingent workers is that they may not feel a strong connection to the company for which they are working. This can result in a low commitment to the company and its projects, along with a high turnover rate.</li>
+
+<li>Although contingent workers may already have the necessary technical training for a temporary job, many contingent workers gain additional skills and knowledge while working for a particular company; those assets are lost to the company when a contingent worker departs at a project’s completion.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc9bc6e9" class="outline-4">
+<h4 id="orgc9bc6e9"><span class="section-number-4">1.2.5.</span> Deciding when to use contingent workers</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<p>
+The <code>trade-off</code> between completing a single project quickly and cheaply versus developing people within its own organization.
+</p>
+
+<ol class="org-ol">
+<li>If the project requires unique skills that are probably not necessary for future projects, there may be little reason to invest the additional time and costs required to develop those skills in full-time employees. Or,</li>
+<li>if a particular project requires only temporary help that will not be needed for future projects, the use of contingent workers is a good approach.</li>
+</ol>
+
+
+<p>
+However, organizations should carefully consider whether or not to use contingent workers when those workers are likely to learn <code>corporate processes and strategies</code> that are key to the company’s success. It is next to impossible to prevent contingent workers from passing on such information to subsequent employers. This can be damaging if the worker’s next employer is a major competitor.
+</p>
+
+<p>
+Though using contingent workers is often the most flexible and cost-effective way to get a job done, their use can raise <code>ethical and legal issues about the relationships</code> among the staffing firm, its employees, and its customers—including the potential liability of a staffing firm’s customers for withholding payroll taxes, payment of employee retirement benefits and health insurance premiums, and administration of workers’ compensation to the staffing firm’s employees.
+</p>
+
+<p>
+Additionally, Depending on how closely workers are <code>supervised and how the job is structured</code>, contingent workers may be viewed as permanent employees by the Internal Revenue Service, the Department of Labor, or a state’s workers’ compensation and unemployment agencies.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0eafc2e" class="outline-3">
+<h3 id="org0eafc2e"><span class="section-number-3">1.3.</span> H-1B Worker</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+An H-1B visa is a temporary work visa granted by the  (USCIS) for people who work in specialty occupations—jobs that require at least a four-year bachelor’s degree in a specific field, or equivalent experience.
+</p>
+
+<p>
+USCIS = U.S. Citizenship and Immigration Services
+</p>
+
+<p>
+A person can work for a U.S. employer as an H-1B employee for a maximum continuous period of six years.
+</p>
+
+<p>
+Considerations:
+</p>
+<ul class="org-ul">
+<li>English Skills</li>
+<li>Innovation &amp; Entrepreneurship</li>
+<li>Heavy reliance on the use of H-1B workers can lessen the incentive for U.S. companies to educate and develop their own workforces.</li>
+</ul>
+
+<p>
+Potenial Expoitation:
+</p>
+<ul class="org-ul">
+<li>Low Wage</li>
+<li>Fraud</li>
+</ul>
+</div>
+
+<div id="outline-container-org2bfd98c" class="outline-4">
+<h4 id="org2bfd98c"><span class="section-number-4">1.3.1.</span> Details</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+When considering the use of H-1B visa workers, companies should take into account that even highly skilled and experienced H-1B workers may require help with their <code>English skills</code>.
+</p>
+
+
+<p>
+The researchers also concluded that “there is substantial evidence that H-1B admissions appear to directly improve levels of innovation and entrepreneurship, which in the long term should create new jobs and raise demand for technology workers in other areas."
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org88188dd"></a>Using H-1B Workers Instead of U.S. Workers<br />
+<div class="outline-text-5" id="text-1-3-1-1">
+<p>
+In order to compete in the global economy, U.S. firms must be able to attract the best and brightest workers from all over the world. Most H-1B workers are brought to the United States to fill a legitimate gap that cannot be filled from the existing pool of workers.
+</p>
+
+<p>
+However, there are some managers who reason that as long as skilled foreign workers can be found to fill critical positions, <code>why invest thousands of dollars and months of training to develop their current U.S. workers?</code> Heavy reliance on the use of H-1B workers can lessen the incentive for U.S. companies to educate and develop their own workforces.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8657b69" class="outline-3">
+<h3 id="org8657b69"><span class="section-number-3">1.4.</span> Outsourcing</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Outsourcing is a long-term business arrangement in which a company contracts for services with an <code>outside organization</code> that has expertise in providing a specific function.
+</p>
+
+<ul class="org-ul">
+<li>Coemployment legal issues are minimal.</li>
+<li>Speeding up project schedeule.</li>
+</ul>
+
+<p>
+Offshore outsourcing is a form of outsourcing in which the services are provided by an organization whose employees are in a <code>foreign country.</code>
+</p>
+<ul class="org-ul">
+<li>Low-cost foreign countries</li>
+</ul>
+
+<p>
+Organizations must consider many factors when deciding where to locate outsourcing activities.
+</p>
+<ul class="org-ul">
+<li>Political Unrest in foreign country</li>
+<li>Global Services Location Index</li>
+</ul>
+
+<p>
+Pros And Cons of Offshore Outsourcing:
+</p>
+<ol class="org-ol">
+<li>24 hour workday</li>
+<li>Lower cost</li>
+<li>It takes years of ongoing effort and a large upfront investment to develop a good relationship with an offshore outsourcing firm.</li>
+<li>Finding a reputable vendor can be difficult for medium or small firms that lack experience in identifying and vetting contractors.</li>
+<li>The trade-offs between using offshore outsourcing firms and devoting money and time to retain and develop their own staff</li>
+<li>A company loses the knowledge and experience gained by outsourced workers when those workers are reassigned after a project’s completion.</li>
+<li>Cultural and language differences</li>
+<li>The compromising of customer data</li>
+</ol>
+</div>
+
+<div id="outline-container-org976e0e9" class="outline-4">
+<h4 id="org976e0e9"><span class="section-number-4">1.4.1.</span> Details</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+Coemployment legal problems with outsourcing are minimal, because the company that contracts for the services does not generally supervise or control the contractor’s employees. The primary rationale for outsourcing is to lower costs, but companies also use it to obtain strategic flexibility and to keep their staff focused on the company’s core competencies.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org9274dce"></a>Offshore Outsourcing<br />
+<div class="outline-text-5" id="text-1-4-1-1">
+<p>
+Offshore outsourcing is a form of outsourcing in which the services are provided by an organization whose employees are in a <code>foreign country.</code>
+</p>
+
+<ol class="org-ol">
+<li>Any work done at a relatively high cost in the United States may become a candidate for offshore outsourcing—not just IT work. However, IT professionals in particular can do much of their work anywhere.</li>
+</ol>
+
+<p>
+As more businesses move their key processes offshore, U.S. IT service providers are forced to lower prices. Many U.S. software firms set up development centers in low-cost foreign countries where they have access to a large pool of well-trained candidates
+</p>
+
+<p>
+Organizations must consider many factors when deciding where to locate outsourcing
+activities.
+</p>
+<ul class="org-ul">
+<li>Political Unrest in foreign country</li>
+<li>Global Services Location Index</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org4eba21a"></a>Pros of Offshore Outsouring<br />
+<div class="outline-text-6" id="text-1-4-1-1-1">
+<ul class="org-ul">
+<li>Wages that an American worker might consider low represent an excellent salary in many</li>
+</ul>
+<p>
+other parts of the world, and some companies feel they would be foolish not to exploit such
+an opportunity. Why pay a U.S. IT worker a six-figure salary, they reason, when they can
+use offshore outsourcing to hire three India-based workers for the same cost? However, this
+attitude might represent a short-term point of view—offshore demand is driving up salaries
+in India by roughly 15 percent per year. Because of this, Indian offshore suppliers have
+begun to charge more for their services. The cost advantage for offshore outsourcing to India
+used to be 6:1 or more—you could hire six Indian IT workers for the cost of one U.S. IT
+worker. The cost advantage is shrinking, and once it reaches about 1.5:1, the cost savings
+will no longer be much of an incentive for U.S. offshore outsourcing to India.
+</p>
+
+<ul class="org-ul">
+<li>“24-hour workday”</li>
+<li></li>
+</ul>
+</div>
+</li>
+<li><a id="org1087d3a"></a>Cons of Offshore Outsourcing<br />
+<div class="outline-text-6" id="text-1-4-1-1-2">
+<p>
+In addition, organizations often find it takes years of ongoing effort and a large up-front investment to develop a good working relationship with an offshore outsourcing firm. Finding a reputable vendor can be especially difficult for a small or midsized firm that lacks experience in identifying and vetting contractors
+</p>
+
+
+<p>
+The trade-offs between using offshore outsourcing firms and devoting money and time to retain and develop their own staff
+</p>
+
+<p>
+Another downside to offshore outsourcing is that a company loses the knowledge and experience gained by outsourced workers when those workers are reassigned after a project’s completion.
+</p>
+
+<p>
+Cultural and language differences
+</p>
+
+<p>
+The compromising of customer data
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbaa2083" class="outline-3">
+<h3 id="orgbaa2083"><span class="section-number-3">1.5.</span> Strategies for successful offshore outsouring</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+The following list provides several tips for companies that are considering offshore
+outsourcing:
+</p>
+
+<ol class="org-ol">
+<li>Set clear, firm business specifications for the work to be done.</li>
+<li>Assess the probability of political upheavals or factors that might interfere with information flow, and ensure the risks are acceptable.</li>
+<li>Assess the basic stability and economic soundness of the outsourcing vendor and what might occur if the vendor encounters a severe financial downturn.</li>
+<li>Establish reliable satellite or broadband communications between your site and the outsourcer’s location.</li>
+<li>Implement a formal version-control process, coordinated through a quality assurance person.</li>
+<li>Develop and use a dictionary of terms to encourage a common understanding of technical jargon.</li>
+<li>Require vendors to have project managers at the client site to overcome cultural barriers and facilitate communication with offshore programmers.</li>
+<li>Require a network manager at the vendor site to coordinate the logistics of using several communications providers around the world.</li>
+<li>Agree in advance on the structure and content of documentation to ensure that manuals explain how the system was built, as well as how to maintain it.</li>
+<li>Carefully review a current copy of the outsourcing firm’s SAS No. 70 audit report to ascertain its level of control over information technology and related processes.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8eea47d" class="outline-3">
+<h3 id="org8eea47d"><span class="section-number-3">1.6.</span> Whitle-blowing</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+whistle-blowing is an effort to attract public attention to a negligent, illegal, unethical, abusive, or dangerous act by a company or some other organization.
+</p>
+
+<p>
+In some cases, whistle-blowers are employees who act as informants on their company, revealing information to enrich themselves or to gain revenge for a perceived wrong. In most cases, however, whistle-blowers act ethically in an attempt to correct what they think is a major wrongdoing, often at great personal risk.
+</p>
+</div>
+<div id="outline-container-org9624558" class="outline-4">
+<h4 id="org9624558"><span class="section-number-4">1.6.1.</span> Protection of Whistle-blowers</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+Unfortunately, no comprehensive federal law protects all whistle-blowers from retaliatory acts. Instead, numerous laws protect a certain class of specific whistle-blowing acts in various
+industries. To make things even more complicated, each law has different filing provisions, administrative and judicial remedies, and statutes of limitations (which set time limits for
+legal action)
+</p>
+
+<p>
+From the whistle-blower’s perspective, a short statute of limitations is a major weakness of many whistle-blower protection laws. Failure to comply with the statute of limitations is a favorite defense of firms accused of wrongdoing in whistle-blower case
+</p>
+
+<p>
+The <code>qui tam</code> (“who sues on behalf of the king as well as for himself”) provision of the False Claims Act allows a private citizen to file a suit in the name of the U.S. government, charging fraud by government contractors and other entities who receive or use govern- ment funds. In qui tam actions, the government has the right to intervene and join the legal proceedings. If the government declines, the private plaintiff may proceed alone. Some states have passed similar laws concerning fraud in state government contracts.
+</p>
+
+<p>
+The <code>False Claims Act</code> provides strong whistle-blower protection. Any person who is discharged, demoted, harassed, or otherwise discriminated against because of lawful acts of whistle-blowing is entitled to all relief necessary “to make the employee whole.” Such relief may include job reinstatement; double back pay; and compensation for any special damages, including litigation costs and reasonable attorney’s fees.36
+</p>
+</div>
+</div>
+<div id="outline-container-orgcf523a3" class="outline-4">
+<h4 id="orgcf523a3"><span class="section-number-4">1.6.2.</span> Whistle-blowing in private sectors</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<p>
+Under state law, an employee could traditionally be terminated for any reason, or no rea-
+son, in the absence of an employment contract. However, many states have created laws
+that prevent workers from being fired because of an employee’s participation in “pro-
+tected” activities
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge80f2fb" class="outline-4">
+<h4 id="orge80f2fb"><span class="section-number-4">1.6.3.</span> Dealing with a whistleblowing situation</h4>
+<div class="outline-text-4" id="text-1-6-3">
+<p>
+This section provides a general sequence of events, and highlights key issues that a potential whistle-blower should consider.
+</p>
+<ol class="org-ol">
+<li>Assess the Seriousness of the Situation</li>
+<li>Begin Documentation</li>
+<li>Attempt to Address the Situation Internally</li>
+<li>Consider Escalating the Situation Within the Company</li>
+<li>Assess the Implications of Becoming a Whistle-Blower: blow the whistle on the company.</li>
+<li>Use Experienced Resources to Develop an Action Plan</li>
+<li>Execute the Action Plan</li>
+<li>Live with the Consequences</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org44585fa" class="outline-3">
+<h3 id="org44585fa"><span class="section-number-3">1.7.</span> Green Computing</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Green computing, also known as green technology, is the use of computers and other computing devices and equipment in energy-efficient and eco-friendly ways.
+</p>
+<ul class="org-ul">
+<li>Use less electricity</li>
+<li>Less carbon footprint</li>
+<li>Reduce the amount of hazardous materials used to produce hardwares</li>
+<li>Increase the amount of <code>recyclable</code> materials in its manufacturing and packaging process.</li>
+<li>The manufacturers must also help consumers dispose of their products in an environmentally safe manner at the end of their useful life.</li>
+</ul>
+
+<p>
+EPEAT (Electronic Product Environmental Assessment Tool) is a system that enables purchasers to evaluate, compare, and select electronic products based on 51 environmental criteria.
+</p>
+</div>
+</div>
+<div id="outline-container-org82e07f0" class="outline-3">
+<h3 id="org82e07f0"><span class="section-number-3">1.8.</span> ICT INDUSTRY CODE OF CONDUCT</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+The Electronic Industry Citizenship Coalition (EICC) was established to promote a common code of conduct for the electronics and ICT industry. The following are the five areas of social responsi-
+bility and guiding principles covered by the code.
+</p>
+</div>
+<div id="outline-container-org2608b3c" class="outline-4">
+<h4 id="org2608b3c"><span class="section-number-4">1.8.1.</span> Labor</h4>
+<div class="outline-text-4" id="text-1-8-1">
+<p>
+“Participants are committed to uphold the human rights of workers, and to treat them with dignity and respect as understood by the international community.”
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fab599" class="outline-4">
+<h4 id="org1fab599"><span class="section-number-4">1.8.2.</span> Health and Safety</h4>
+<div class="outline-text-4" id="text-1-8-2">
+<p>
+“Participants recognize that in addition to minimizing the incidence of work-related injury and illness, a safe and healthy work environment enhances the quality of products and services, consistency of production and worker retention and morale. Participants also recognize that
+ongoing worker input and education is essential to identifying and solving health and safety issues in the workplace.”
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd342209" class="outline-4">
+<h4 id="orgd342209"><span class="section-number-4">1.8.3.</span> Environmental</h4>
+<div class="outline-text-4" id="text-1-8-3">
+<p>
+“Participants recognize that environmental responsibility is integral to producing world class products. In manufacturing operations, adverse effects on the community, environment, and natural resources are to be minimized while safeguarding the health and safety of the public.”
+</p>
+</div>
+</div>
+<div id="outline-container-orgd2e8b6c" class="outline-4">
+<h4 id="orgd2e8b6c"><span class="section-number-4">1.8.4.</span> Management System</h4>
+<div class="outline-text-4" id="text-1-8-4">
+<p>
+“Participants shall adopt or establish a management system whose scope is related to the content of this Code. The management system shall be designed to ensure (a) compliance with applicable laws, regulations and customer requirements related to the participant’s operations and products; (b) conformance with this Code; and (c) identification and mitigation of operational risks related to this Code. It should also facilitate continual improvement.”
+</p>
+</div>
+</div>
+<div id="outline-container-orgdc4be2c" class="outline-4">
+<h4 id="orgdc4be2c"><span class="section-number-4">1.8.5.</span> Ethics</h4>
+<div class="outline-text-4" id="text-1-8-5">
+<p>
+“To meet social responsibilities and to achieve success in the mar- ketplace, participants and their agents are to uphold the highest standards of ethics including: business integrity; no improper advantage; disclosure of information; intellectual property; fair business, advertising, and competition; protection of identity; responsible sourcing of minerals; and privacy.”
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org074e1de" class="outline-2">
+<h2 id="org074e1de"><span class="section-number-2">2.</span> Chp 6 - Intellectual Property</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Intellectual property is a term used to describe works of the mind—such as art, books, films, formulas, inventions, music, and processes—that are distinct and owned or created by a single person or group.
+</p>
+
+<p>
+Copyright law protects authored works, such as art, books, film, and music.
+</p>
+
+<p>
+Defining and controlling the appropriate level of access to intellectual property are
+complex tasks. For example, protecting computer software has proven to be difficult because
+it has not been well categorized under the law. Software has sometimes been treated as the
+expression of an idea, which can be protected under copyright law. In other cases, software
+has been treated as a process for changing a computer’s internal structure, making it eligible
+for protection under patent law. At one time, software was even judged to be a series of
+mental steps, making it inappropriate for ownership and ineligible for any form of protectio
+</p>
+</div>
+<div id="outline-container-org942870d" class="outline-3">
+<h3 id="org942870d"><span class="section-number-3">2.1.</span> Copyright</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+A copyright is the exclusive right to distribute, display, perform, or reproduce an
+original work in copies or to prepare derivative works based on the work. Copyright
+protection is granted to the creators of “original works of authorship in any tangible
+medium of expression, now known or later developed, from which they can be perceived,
+reproduced, or otherwise communicated, either directly or with the aid of a machine or
+device.
+</p>
+
+<p>
+Copyright infringement is a violation of the rights secured by the owner of a copyright.
+Infringement occurs when someone copies a substantial and material part of another’s
+copyrighted work without permission. The courts have a wide range of discretion in award-
+ing damages—from $200 for innocent infringement to $100,000 for willful infringement.
+</p>
+
+
+<p>
+The types of work that can be copyrighted include architecture, art, audiovisual works,
+choreography, drama, graphics, literature, motion pictures, music, pantomimes, pictures,
+sculptures, sound recordings, and other intellectual works, as described in Title 17 of the
+U.S. Code. To be eligible for a copyright, a work must fall within one of the preceding
+categories, and it must be original.
+</p>
+
+<p>
+However, evaluating the originality of a work is not always a straight-
+forward process, and disagreements over whether or not a work is original sometimes lead
+to litigation
+</p>
+
+<p>
+Some works are not eligible for copyright protection, including those that have not
+been fixed in a tangible form of expression (such as an improvisational speech) and those
+that consist entirely of common information that contains no original authorship, such as
+a chart showing conversions between European and American units of measure.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd5a686a" class="outline-3">
+<h3 id="orgd5a686a"><span class="section-number-3">2.2.</span> Software Copyright Protection Laws</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org427f227" class="outline-4">
+<h4 id="org427f227"><span class="section-number-4">2.2.1.</span> The Prioritizing Resources and Organization for Intellectual Property (PRO-IP) Act of 2008</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+This act increased trademark and copyright enforcement and substantially increased penalties for infringement. The law also created the Office of the United States Intellectual Property Enforcement Representative within the U.S. Department of Justice. One of its programs, called CHIP (Computer Hacking and Intellectual Property), is a network of over 150 experienced and specially trained federal prosecutors who focus on computer and intellectual property crimes.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf5c8382" class="outline-4">
+<h4 id="orgf5c8382"><span class="section-number-4">2.2.2.</span> General Agreement on Tariffs and Trade (GATT)</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+The General Agreement on Tariffs and Trade (GATT) was a multilateral agreement
+governing international trade.
+</p>
+
+<p>
+It includes a section covering copyrights called the Agreement on Trade-Related Aspects of
+Intellectual Property Rights (TRIPS), discussed in the following section.
+</p>
+
+<p>
+Despite GATT, however, copyright protection varies greatly from country to country, and an expert should be consulted when considering international usage of any intellectual property.
+</p>
+</div>
+</div>
+<div id="outline-container-orge977b35" class="outline-4">
+<h4 id="orge977b35"><span class="section-number-4">2.2.3.</span> The WTO and the WTO TRIPS Agreement (1994)</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+The World Trade Organization (WTO) is a global organization that deals with rules of international trade based on WTO agreements that are negotiated and signed by representatives of the world’s trading nations.
+</p>
+
+<p>
+Many nations recognize that intellectual property has become increasingly important in world trade, yet the extent of protection and enforcement of intellectual property rights varies around the world. As a result, the WTO developed the Agreement on Trade-Related Aspects of Intellectual Property Rights, also known as the TRIPS Agreement, to establish minimum levels of protection that each government must provide to the intellectual property of all WTO members.
+</p>
+</div>
+</div>
+<div id="outline-container-org08365be" class="outline-4">
+<h4 id="org08365be"><span class="section-number-4">2.2.4.</span> The World Intellectual Property Organization (WIPO) Copyright Treaty (1996</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+The World Intellectual Property Organization (WIPO), headquartered in Geneva, Switzerland, is an agency of the United Nations established in 1967. WIPO is dedicated to “the use of intellectual property as a means to stimulate innovation and creativity.” It has 185 member nations and administers 25 international treaties. Since the 1990s, WIPO has strongly advocated for the interests of intellectual property owners. Its goal is to ensure that intellectual property laws are uniformly administered.
+</p>
+</div>
+</div>
+<div id="outline-container-org6c69e16" class="outline-4">
+<h4 id="org6c69e16"><span class="section-number-4">2.2.5.</span> The Digital Millennium Copyright Act (1998)</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+The Digital Millennium Copyright Act (DMCA) was signed into law in 1998 and implements two 1996 WIPO treaties: the WIPO Copyright Treaty and the WIPO Performances and Phonograms Treaty. The act is divided into the following five sections:
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org9509e42"></a>Title I (WIPO Copyright and Performances and Phonograms Treaties Implementation Act of 1998)<br />
+<div class="outline-text-5" id="text-2-2-5-1">
+<p>
+This section implements the WIPO treaties by making certain technical amendments to U.S. law in order to provide appropriate references and links to the treaties. It also creates two new prohibitions in the Copyright Act (Title 17 of the U.S. Code)—one on circumvention of technological measures used by copyright owners to protect their works and one on tampering with copyright management information. Title I also adds civil remedies and criminal penalties for violating the prohibitions.
+</p>
+</div>
+</li>
+<li><a id="org9a11f8b"></a>Title II (Online Copyright Infringement Liability Limitation Act)<br />
+<div class="outline-text-5" id="text-2-2-5-2">
+<p>
+This section enables Web site operators that allow users to post content on their Web site (e.g., music, video, and pictures) to avoid copyright infringement liability if certain “safe harbor” provisions are followed.
+</p>
+</div>
+</li>
+<li><a id="org88200b0"></a>Title III (Computer Maintenance Competition Assurance Act)<br />
+<div class="outline-text-5" id="text-2-2-5-3">
+<p>
+This section permits the owner or lessee of a computer to make or authorize the making of a copy of a computer program in the course of maintaining or repairing that computer. The new copy cannot be used in any other manner and must be destroyed immediately after the maintenance or repair is completed.
+</p>
+</div>
+</li>
+<li><a id="orge91ac77"></a>Title IV (Miscellaneous provisions)<br />
+<div class="outline-text-5" id="text-2-2-5-4">
+<p>
+This section adds language to the Copyright Act confirming the Copyright Office’s authority to continue to per- form the policy and international functions that it has carried out for decades
+under its existing general authority.
+</p>
+</div>
+</li>
+<li><a id="orgc30c522"></a>Title V (Vessel Hull Design Protection Act)<br />
+<div class="outline-text-5" id="text-2-2-5-5">
+<p>
+This section creates a new form of protection for the original design of vessel hulls.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga23257e" class="outline-3">
+<h3 id="orga23257e"><span class="section-number-3">2.3.</span> Patent</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+A patent is a grant of a property right issued by the United States Patent and Trademark Office (USPTO) to an inventor.
+</p>
+
+<p>
+A patent permits its owner to exclude the public from making, using, or selling a protected invention, and it allows for legal action against violators. 
+</p>
+
+<p>
+Unlike a copyright, a patent prevents independent creation as well as copying. Even if someone else invents the same item independently and with no prior knowledge of the patent holder’s invention, the second inventor is excluded from using the patented device without permission of the original patent holder.
+</p>
+
+<p>
+A software patent claims as its invention some feature or process embodied in instructions executed by a computer.
+</p>
+
+<p>
+<code>Patent infringement</code>, or the violation of the rights secured by the owner of a patent, occurs when someone makes unauthorized use of another’s patent. Unlike copyright infringement, there is no specified limit to the monetary penalty if patent infringement is found. In fact, if a court determines that the infringement is intentional, it can award up to three times the amount of the damages claimed by the patent holder. The most common defense against patent infringement is a counterattack on the claim of infringement and the validity of the patent itself. Even if the patent is valid, the plaintiff must still prove that every element of a claim was infringed and that the infringement caused some sort of damage.
+</p>
+</div>
+</div>
+<div id="outline-container-org1a20747" class="outline-3">
+<h3 id="org1a20747"><span class="section-number-3">2.4.</span> Cross-Licensing Agreements</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Many large software companies have cross-licensing agreements in which each party agrees not to sue the other over patent infringement.
+</p>
+
+<p>
+Major IT firms usually have little interest in cross-licensing with smaller firms. As a result, small businesses must pay an additional cost from which many larger companies are exempt. Furthermore, small businesses are generally unsuccessful in enforcing their patents against larger companies. Should a small business bring a patent infringement suit against a large firm, the larger firm can overwhelm the small business with multiple patent suits, whether they have merit or not.
+</p>
+</div>
+</div>
+<div id="outline-container-org9ba3c27" class="outline-3">
+<h3 id="org9ba3c27"><span class="section-number-3">2.5.</span> Trade Secret</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+A trade secret was defined as business information that represents something of economic value, has required effort or cost to develop, has some degree of uniqueness or novelty, is generally unknown to the public, and is kept confidential.
+</p>
+
+<p>
+Trade secret protection begins by identifying all the information that must be protected—from undisclosed patent applications to market research and business plans and developing a comprehensive strategy for keeping the information secure. 
+</p>
+
+<p>
+Trade secret law protects only against the misappropriation of trade secrets. If competitors come up with the same idea on their own, it is not misappropriation; in other words, the law doesn’t prevent someone from using the same idea if it was developed independently.
+</p>
+</div>
+<div id="outline-container-orgec71b47" class="outline-4">
+<h4 id="orgec71b47"><span class="section-number-4">2.5.1.</span> Employee &amp; Trade Secrets</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<p>
+Employees are the greatest threat to the loss of company trade secrets—they might accidentally disclose trade secrets or steal them for monetary gain.
+</p>
+
+<ol class="org-ol">
+<li>Organizations must <code>educate</code> employees about the importance of maintaining the secrecy of corporate information.</li>
+<li>Trade secret information should be labeled clearly as confidential and should only be accessible by a limited number of people.</li>
+<li>Most organizations have strict policies regarding <code>nondisclosure</code> of corporate information.</li>
+<li>Because organizations can risk losing trade secrets when <code>key employees leave</code>, they often try to prohibit employees from revealing secrets by adding nondisclosure clauses to employment contracts. Thus, departing employees <code>cannot take copies of computer programs or reveal the details of software owned by the firm.</code></li>
+<li>Another option for preserving trade secrets is to have an <code>experienced member of the Human Resources Department</code> conduct an exit interview with each departing employee. A key step in the interview is to review a checklist that deals with confidentiality issues. At the end of the interview, the departing employee is asked to sign an acknowledgment of responsibility not to divulge any trade secrets.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7466608" class="outline-4">
+<h4 id="org7466608"><span class="section-number-4">2.5.2.</span> Steps to protect trade secret</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<ol class="org-ol">
+<li>Human resources involved should have sufficient knowledge to understand what is trade secret and waht is not.</li>
+<li>Involved personnel should alert the involved in thread circumstances. That is immediate decision.</li>
+<li>Internal policy should be well-communicated.</li>
+<li>Using non-disclosure or acknowledgement to not divulge trade secret at employee departure.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orge974c20" class="outline-3">
+<h3 id="orge974c20"><span class="section-number-3">2.6.</span> Trade Secret Laws</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-org967416f" class="outline-4">
+<h4 id="org967416f"><span class="section-number-4">2.6.1.</span> Uniform Trade Secrets Act (UTSA)</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+The Uniform Trade Secrets Act (UTSA) was drafted in the 1970s to bring uniformity to all the United States in the area of trade secret law.
+</p>
+</div>
+</div>
+<div id="outline-container-org5e2a6cb" class="outline-4">
+<h4 id="org5e2a6cb"><span class="section-number-4">2.6.2.</span> The Economic Espionage Act (EEA) (1996)</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<p>
+The Economic Espionage Act (EEA) of 1996 imposes penalties of up to $10 million and 15 years in prison for the theft of trade secrets. Before the EEA, there was no specific criminal statute to help pursue economic espionage;
+</p>
+
+<p>
+Espionage is the activity of finding out the political, military, or industrial secrets of your enemies or rivals by using spies. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b15f62" class="outline-3">
+<h3 id="org2b15f62"><span class="section-number-3">2.7.</span> KEY INTELLECTUAL PROPERTY ISSUES</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+This section discusses several issues that apply to intellectual property and information technology.
+</p>
+</div>
+<div id="outline-container-org6bb14a5" class="outline-4">
+<h4 id="org6bb14a5"><span class="section-number-4">2.7.1.</span> Plagiarism</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<p>
+Plagiarism is the act of stealing someone’s ideas or words and passing them off as one’s own. The explosion of electronic content and the growth of the Web have made it easy to cut and paste paragraphs into term papers and other documents without proper citation or quotation marks.
+</p>
+
+<p>
+Educate people on citations.
+</p>
+</div>
+</div>
+<div id="outline-container-org6203251" class="outline-4">
+<h4 id="org6203251"><span class="section-number-4">2.7.2.</span> Reverse Engineering</h4>
+<div class="outline-text-4" id="text-2-7-2">
+<p>
+Reverse engineering is the process of taking something apart in order to understand it, build a copy of it, or improve it. Reverse engineering was originally applied to computer hardware but is now commonly applied to software as well.
+The use of reverse engineering, saying it can uncover software designs that someone else has developed at great cost and taken care to protect. Opponents of reverse engineering contend it unfairly robs the creator of future earnings and significantly reduces the business incentive for software development.
+</p>
+</div>
+</div>
+<div id="outline-container-org4cc84ba" class="outline-4">
+<h4 id="org4cc84ba"><span class="section-number-4">2.7.3.</span> Open Source Code</h4>
+<div class="outline-text-4" id="text-2-7-3">
+<p>
+Open source code is any program whose source code is made available for use or modification, as users or other developers see fit. The basic premise behind open source code is that when many programmers can read, redistribute, and modify a program’s code, the software improves.
+</p>
+
+<p>
+A software developer could attempt to make a program open source simply by putting it into the public domain with no copyright. This would allow people to share the program and their improvements, but it would also allow others to revise the original code and then distribute the resulting software as their own proprietary product. Users who received the program in the modified form would no longer have the free- doms associated with the original software. Use of an open source license avoids this scenario.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e79b28" class="outline-4">
+<h4 id="org7e79b28"><span class="section-number-4">2.7.4.</span> Competitive Intelligence</h4>
+<div class="outline-text-4" id="text-2-7-4">
+<p>
+Competitive intelligence (as defined in Chapter 3) is legally obtained information that is gathered to help a company gain an advantage over its rivals. For example, some companies have employees who monitor the public announcements of property transfers to detect any plant or store expansions of competitors. An effective competitive intelligence program requires the continual gathering, analysis, and evaluation of data with controlled dissemination of useful information to decision makers.
+</p>
+
+<p>
+Competitive intelligence is not the same as industrial espionage, which is the use of illegal means to obtain business information not available to the general public.
+</p>
+
+<p>
+Competitive intelligence analysts must avoid unethical or illegal actions, such as lying,
+misrepresentation, theft, bribery, or eavesdropping with illegal devices.
+</p>
+</div>
+</div>
+<div id="outline-container-org987885d" class="outline-4">
+<h4 id="org987885d"><span class="section-number-4">2.7.5.</span> Trademark Infringement</h4>
+<div class="outline-text-4" id="text-2-7-5">
+<p>
+A trademark is a logo, package design, phrase, sound, or word that enables a consumer to differentiate one company’s products from another’s
+</p>
+</div>
+</div>
+<div id="outline-container-org04726a1" class="outline-4">
+<h4 id="org04726a1"><span class="section-number-4">2.7.6.</span> Cybersquatting</h4>
+<div class="outline-text-4" id="text-2-7-6">
+<p>
+Companies that want to establish an online presence know that the best way to capitalize on the strengths of their brand names and trademarks is to make the names part of the domain names for their Web sites. When Web sites were first established, there was no procedure for validating the legitimacy of requests for Web site names.
+</p>
+
+<p>
+The main tactic organizations use to circumvent cybersquatting is to protect a trademark by registering numerous domain names and variations as soon as the organization knows it wants to develop a Web presence.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org357bb9a" class="outline-2">
+<h2 id="org357bb9a"><span class="section-number-2">3.</span> Chp 3 - Computer &amp; Internet Crime</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb344442" class="outline-3">
+<h3 id="orgb344442"><span class="section-number-3">3.1.</span> Why Computer Incidents Are So Prevalent?</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Increasing Complexity Increases Vulnerability</li>
+<li>Higher Computer User Expectations</li>
+<li>Expanding and Changing Systems Introduce New Risks</li>
+<li>Bring Your Own Device</li>
+<li>Increased Reliance on Commercial Software with Known Vulnerabilities</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6731d5a" class="outline-3">
+<h3 id="org6731d5a"><span class="section-number-3">3.2.</span> Prevention</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+AST MUN
+</p>
+<ol class="org-ol">
+<li>Conduct vulnerability <code>assessment</code>!</li>
+<li>Strong security measures: IDS, access control</li>
+<li>Train employees on security best practices</li>
+<li>Monitor network activity</li>
+<li>Up-to-date softwares</li>
+<li>Use network segmentation</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org9049393" class="outline-2">
+<h2 id="org9049393"><span class="section-number-2">4.</span> Chp 2 - forgot name</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://docs.google.com/document/d/1TBkps7-DH7TuaZY-rTWYsV1zgnPnBVwf8500eHXIdLg/edit?usp=sharing">Source</a>
+</p>
+</div>
+<div id="outline-container-org88d5040" class="outline-3">
+<h3 id="org88d5040"><span class="section-number-3">4.1.</span> What is professionalism? Are IT Workers Professional?</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Professionalism: A profession is a calling that requires specialized knowledge and often long intensive academic preparation.
+</p>
+
+<p>
+IT workers require intensive training, continuous learning with changing techstacks and a key role is in their experience. And so IT Workers are also professionals.
+</p>
+
+<p>
+Many business workers have <code>duties, backgrounds, and training</code> that qualify them to be classified as professionals, including marketing analysts, financial consultants, and IT specialists such as mobile application developers, software engineers, systems analysts, and network administrators.
+</p>
+
+<p>
+One could argue, however, that not every IT role requires <code>“knowledge of an advanced type in a field of science or learning customarily acquired by a prolonged course of specialized intellectual instruction and study,”</code> to quote again from the United States Code. From a legal perspective, IT workers are not recognized as professionals because they are not licensed by the state or federal government. This distinction is important, for example, in malpractice lawsuits, as many courts have ruled that IT workers are not liable for malpractice because they do not meet the legal definition of a professional.
+</p>
+</div>
+</div>
+<div id="outline-container-orgece3d47" class="outline-3">
+<h3 id="orgece3d47"><span class="section-number-3">4.2.</span> Relationship between IT workers and client</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+IT workers provide services to clients; sometimes those “clients” are coworkers who are part of the same organization as the IT worker. In other cases, the client is part of a different organization.
+</p>
+
+<p>
+Typically, the client makes decisions about a project on the basis of information, alternatives, and recommendations provided by the IT worker. The client trusts the IT worker to use his or her expertise and to act in the client’s best interests. The IT worker must trust that the client will provide relevant information, listen to and understand what the IT worker says, ask questions to understand the impact of key decisions, and use the information to make wise choices among various alternatives. Thus, the responsibility for decision making is shared between client and IT workers.
+</p>
+</div>
+
+<div id="outline-container-org9700b5c" class="outline-4">
+<h4 id="org9700b5c"><span class="section-number-4">4.2.1.</span> Potential Issues</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>Conflict of Interest</li>
+<li>Schedeule issues: Problems can also arise during a project if IT workers find themselves unable to provide full and accurate reporting of the project’s status due to a lack of information, tools, or experience needed to perform an accurate assessment. The project manager may want to keep resources flowing into the project and hope that problems can be corrected before anyone notices. The project manager may also be reluctant to share status information because of contractual penalties for failure to meet the schedule or to develop certain sys- tem functions. In such a situation, the client may not be informed about a problem until it has become a crisis.</li>
+<li>Fraud</li>
+<li>Misrepresentation</li>
+<li>Breach of contract</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcc70a43" class="outline-3">
+<h3 id="orgcc70a43"><span class="section-number-3">4.3.</span> Relationships Between IT Workers and Suppliers</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+IT workers deal with many different hardware, software, and service providers. Most IT workers understand that building a good working relationship with suppliers encourages the flow of useful communication as well as the sharing of ideas. Such information can lead to innovative and cost-effective ways of using the supplier’s products and services that the IT worker may never have considered.
+IT workers can develop good relationships with suppliers by dealing fairly with them and not making unreasonable demands. Threatening to replace a supplier who can’t deliver needed equipment tomorrow, when the normal industry lead time is one week, is aggressive behavior that does not help build a good working relationship.
+</p>
+
+<p>
+Potential Issues:
+</p>
+<ul class="org-ul">
+<li>Bribery</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0962374" class="outline-3">
+<h3 id="org0962374"><span class="section-number-3">4.4.</span> Relationships Between IT Workers and Other Professionals</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Professionals often feel a degree of loyalty to the other members of their profession. As a result, they are often quick to help each other obtain new positions but slow to criticize each other in public.
+</p>
+
+<ul class="org-ul">
+<li>Resume Inflation</li>
+<li>Preferential Treatment</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb0300c1" class="outline-3">
+<h3 id="orgb0300c1"><span class="section-number-3">4.5.</span> Relationships between IT Workers and IT Users</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+IT workers also have a key responsibility to establish an environment that supports ethical behavior by users. Such an environment discourages 
+</p>
+<ul class="org-ul">
+<li>software piracy</li>
+<li>minimizes the inappropriate use of corporate computing resources</li>
+<li>avoids the inappropriate sharing of information</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0fe3c15" class="outline-3">
+<h3 id="org0fe3c15"><span class="section-number-3">4.6.</span> Relationships Between IT Workers and Society</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+Societyy expects members of a profession to provide significant benefits and to not cause harm
+through their actions. One approach to meeting this expectation is to establish and maintain professional standards that protect the public.
+</p>
+</div>
+</div>
+<div id="outline-container-org6dbb765" class="outline-3">
+<h3 id="org6dbb765"><span class="section-number-3">4.7.</span> Certification</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+Certification indicates that a professional possesses a particular set of skills, knowledge, or abilities, in the opinion of the certifying organization.
+Is certification relevant to your current job or the one to which you aspire? Does the company offering the certification have a good reputation? What is the current and potential future demand for skills in this area of certification?
+</p>
+</div>
+<div id="outline-container-orgf5007a3" class="outline-4">
+<h4 id="orgf5007a3"><span class="section-number-4">4.7.1.</span> Vendor Certifications</h4>
+<div class="outline-text-4" id="text-4-7-1">
+<p>
+Many IT vendors—such as Cisco, IBM, Microsoft, SAP, and Oracle—offer certification programs for those who use their products.
+</p>
+</div>
+</div>
+<div id="outline-container-org90ba441" class="outline-4">
+<h4 id="org90ba441"><span class="section-number-4">4.7.2.</span> Industry Association Certifications</h4>
+<div class="outline-text-4" id="text-4-7-2">
+<p>
+There are many available industry certifications in a variety of IT-related subject areas. Their value varies greatly depending on where people are in their career path, what other certifications they possess, and the nature of the IT job market.
+</p>
+
+<p>
+CompTIA A+, Red Hat Linux Certification
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org27c857e" class="outline-3">
+<h3 id="org27c857e"><span class="section-number-3">4.8.</span> Compliance</h3>
+<div class="outline-text-3" id="text-4-8">
+<p>
+Compliance means to be in accordance with established policies, guidelines, specifications, or legislation.
+</p>
+
+<ul class="org-ul">
+<li>Audit Committee</li>
+<li>Internal Audit Department</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a7196b" class="outline-3">
+<h3 id="org3a7196b"><span class="section-number-3">4.9.</span> What is professionalism? Are IT Workers professional?</h3>
+<div class="outline-text-3" id="text-4-9">
+<p>
+Professionalism: A profession is a calling that requires specialized knowledge and often long intensive academic preparation.
+</p>
+
+<p>
+IT workers require intensive training, continuous learning with changing techstacks and a key role is in their experience. And so IT Workers are also professionals.
+</p>
+</div>
+</div>
+<div id="outline-container-org8c604d5" class="outline-3">
+<h3 id="org8c604d5"><span class="section-number-3">4.10.</span> Issues in Employer Relationships/ Relationship between IT Worker &amp; Professional</h3>
+<div class="outline-text-3" id="text-4-10">
+<p>
+The employer and IT worker have a critical and multifaceted relationship that requires ongoing efforts by both parties to keep it strong. An IT worker and an employer typically agree on fundamental aspects of these relationships before the IT worker accepts an employment offer.
+</p>
+
+<p>
+There are some issues in the employer relationship. These issues may include: Job Title, General performance expectations, specific work responsibilities, drug testing, dress code, location of employment, salary, work hour &amp; company benefits. Some aspects are specific to the role of IT workers and are estimated based on the nature of the work or project. For example, the programming language to be used, the type and amount of documentation to be produced and the extent of testing to be conducted.
+</p>
+
+<p>
+Memorize:
+Job Title
+specific work responsibilities
+salary
+work hour
+General performance expectations
+company benefits.
+drug testing
+dress code
+location of employment
+</p>
+</div>
+<div id="outline-container-org19a2ba8" class="outline-4">
+<h4 id="org19a2ba8"><span class="section-number-4">4.10.1.</span> Trade Secret</h4>
+<div class="outline-text-4" id="text-4-10-1">
+<p>
+IT workers should not divulge company secrets. A secret can be SRS, software design, source code, vulnerability testing report etc. 
+</p>
+</div>
+</div>
+<div id="outline-container-org1b744a9" class="outline-4">
+<h4 id="org1b744a9"><span class="section-number-4">4.10.2.</span> Software Business Alliance</h4>
+<div class="outline-text-4" id="text-4-10-2">
+<p>
+The Business Software Alliance (BSA) is a trade group that represents the world’s largest software and hardware manufacturers. Its mission is to stop the unauthorized copying of software produced by its members. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgb03b937" class="outline-4">
+<h4 id="orgb03b937"><span class="section-number-4">4.10.3.</span> Whistleblowers</h4>
+<div class="outline-text-4" id="text-4-10-3">
+<p>
+Whistle-blowing is an effort by an employee to attract attention to a negligent, illegal, unethical, abusive, or dangerous act by a company that threatens the public interest
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8844df6" class="outline-3">
+<h3 id="org8844df6"><span class="section-number-3">4.11.</span> Professional Relationships that must be maintained</h3>
+<div class="outline-text-3" id="text-4-11">
+<p>
+Software engineering is a people intensive industry so maintaining good relationships is necessary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf177b45" class="outline-3">
+<h3 id="orgf177b45"><span class="section-number-3">4.12.</span> What is a professional code of ethics? Discuss about its 4 fundamental principles.</h3>
+<div class="outline-text-3" id="text-4-12">
+<p>
+A professional code of ethics states the principles and core values that are essential to the work of a particular occupational group. Practitioners in many professions subscribe to a code of ethics that governs their behavior.
+</p>
+
+<p>
+There are 4 fundamental principles of professional code of ethics. They are:
+</p>
+<ol class="org-ol">
+<li>Ethical decision making</li>
+<li>High standard of practice and ethical behavior</li>
+<li>Trust and respect from the general public</li>
+<li>Evaluation Benchmark</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8c1f52b" class="outline-3">
+<h3 id="org8c1f52b"><span class="section-number-3">4.13.</span> What are IT Professional Organizations? List some of the organizations and their roles.</h3>
+<div class="outline-text-3" id="text-4-13">
+<p>
+These organizations disseminate information through email, periodicals, Web sites, meetings, and conferences. Furthermore, in recognition of the need for professional standards of competence and conduct, many of these organizations have developed codes of ethics.
+</p>
+</div>
+
+<div id="outline-container-org5c8a12d" class="outline-4">
+<h4 id="org5c8a12d"><span class="section-number-4">4.13.1.</span> Association for Computing Machinery (ACM):</h4>
+<div class="outline-text-4" id="text-4-13-1">
+<ul class="org-ul">
+<li>publishes over 50 journals and magazines and 30 newsletters</li>
+<li>offers a substantial digital library of bibliographic information, citations, articles, and journals</li>
+<li>37 special-interest groups (SIGs) representing major areas of computing</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39b7614" class="outline-4">
+<h4 id="org39b7614"><span class="section-number-4">4.13.2.</span> Institute of Electrical and Electronics Engineers Computer Society (IEEE-CS):</h4>
+<div class="outline-text-4" id="text-4-13-2">
+<ul class="org-ul">
+<li>covers the broad fields of electrical, electronic, and information technologies and science.</li>
+<li>helps meet the information and career development needs of computing researchers and practitioners with technical journals, magazines, books, conferences, conference publications, and online courses.</li>
+<li>offers a Certified Software Development Professional (CSDP) program for experienced professionals and a Certified Software Development Associate(CSDA) credential for recent college graduates</li>
+<li>Sponsors conferences</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org55a01ae" class="outline-4">
+<h4 id="org55a01ae"><span class="section-number-4">4.13.3.</span> Association of Information Technology Professionals (AITP):</h4>
+<div class="outline-text-4" id="text-4-13-3">
+<ul class="org-ul">
+<li>provides IT-related seminars and conferences, information on IT issues, and forums for networking with other IT workers.</li>
+<li>mission is to provide superior leadership and education in information technology</li>
+</ul>
+<p>
+help members make themselves more marketable within their industry
+</p>
+<ul class="org-ul">
+<li>Has a code of ethics and standards of conducts</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8cc5367" class="outline-4">
+<h4 id="org8cc5367"><span class="section-number-4">4.13.4.</span> SysAdmin, Audit, Network, Security (SANS) Institute:</h4>
+<div class="outline-text-4" id="text-4-13-4">
+<ul class="org-ul">
+<li>train some 12,000 people,</li>
+<li>a weekly security vulnerability digest</li>
+<li>provides information security certification</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2c1e19b" class="outline-3">
+<h3 id="org2c1e19b"><span class="section-number-3">4.14.</span> Common Ethical Issues of IT Users(Page 61)</h3>
+<div class="outline-text-3" id="text-4-14">
+<p>
+Some of the common ethical Issues of IT users are:
+</p>
+<ul class="org-ul">
+<li>Software Piracy</li>
+<li>Inappropriate Use of Computing Resources</li>
+<li>Inappropriate Sharing of Information</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd68c83d" class="outline-3">
+<h3 id="orgd68c83d"><span class="section-number-3">4.15.</span> Supporting the Ethical Practices of IT Users</h3>
+<div class="outline-text-3" id="text-4-15">
+<p>
+As the concerns regarding IT professionals' code of conduct rises, companies have begun adopting policies and methodologies to support ethical practices of IT users.
+</p>
+<ul class="org-ul">
+<li>Defining the Appropriate Use of IT Resources</li>
+<li>Establishing guidelines for Use of Company Software</li>
+<li>Structuring Information Systems to Protect Data and Information</li>
+<li>Installing and Maintaining a Corporate Firewall</li>
+</ul>
+<p>
+Memorize: DESI
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9140cc" class="outline-3">
+<h3 id="orga9140cc"><span class="section-number-3">4.16.</span> IT Professional Malpractice</h3>
+<div class="outline-text-3" id="text-4-16">
+<p>
+Professionals who breach the duty of care are liable for injuries that their negligence causes. This liability is commonly referred to as professional malpractice.
+</p>
+
+<ul class="org-ul">
+<li>Duty of care refers to the obligation to protect people against any unreasonable harm or risk.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org38fcb76" class="outline-3">
+<h3 id="org38fcb76"><span class="section-number-3">4.17.</span> SMall Definitions</h3>
+<div class="outline-text-3" id="text-4-17">
+<p>
+<code>Fraud</code> is the crime of obtaining goods, services, or property through deception or trickery.
+</p>
+
+<p>
+<code>A conflict of interest</code> —a conflict between the IT worker’s (or the IT firm’s) self-interest and the interests of the client.
+</p>
+
+<p>
+<code>Misrepresentation</code> is the misstatement or incomplete statement of a material fact.
+</p>
+
+<p>
+<code>Breach of contract</code> occurs when one party fails to meet the terms of a contract.
+</p>
+
+<p>
+A <code>software patent</code> claims as its invention some feature or process embodied in instructions executed by a computer.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org390e9f2" class="outline-2">
+<h2 id="org390e9f2"><span class="section-number-2">5.</span> Chp 7 - Software Development</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://docs.google.com/document/d/1HFdy68xJJUp1OHd-5r7oob6gQZFAFt_rcoKgP89fubE/edit?usp=sharing">source</a>
+</p>
+</div>
+<div id="outline-container-orga8b97f4" class="outline-3">
+<h3 id="orga8b97f4"><span class="section-number-3">5.1.</span> Definition of Quality</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Quality refers to attributes to estimate the intrinsic characteristics of a product.
+Qualities are:
+</p>
+<ol class="org-ol">
+<li>Measurable Characteristics</li>
+<li>Intrinsic Properties</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org06a07b9" class="outline-3">
+<h3 id="org06a07b9"><span class="section-number-3">5.2.</span> Types of Quality</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Quality is of two types.
+</p>
+<ol class="org-ol">
+<li>Quality of design: The degree to which the requirements for design are fulfilled.</li>
+<li>Quality of conformance: The degree to which a product or service conforms to its requirements.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6bdb6c9" class="outline-3">
+<h3 id="org6bdb6c9"><span class="section-number-3">5.3.</span> Quality Assurance</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Quality assurance is the auditing, reporting of functional management. 
+The goal of Quality Assurance is to assure the company about software quality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc01b530" class="outline-3">
+<h3 id="orgc01b530"><span class="section-number-3">5.4.</span> Quality Control</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+It consists of a series of activities throughout the software development process to ensure that the software meets the requirements of the customer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b70481" class="outline-3">
+<h3 id="org4b70481"><span class="section-number-3">5.5.</span> Cost Of Quality</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Cost of quality is the summarized cost of the whole process. It includes all costs - from requirements gathering to final product, throughout the whole software development process. It includes:
+</p>
+<ol class="org-ol">
+<li>Bundle by bundle cost incurred</li>
+<li>Predict cost by considering future bugs</li>
+</ol>
+</div>
+<div id="outline-container-orgb3df5a5" class="outline-4">
+<h4 id="orgb3df5a5"><span class="section-number-4">5.5.1.</span> Types of Cost of Quality</h4>
+<div class="outline-text-4" id="text-5-5-1">
+<p>
+Quality costs may be divided into costs associated with prevention, appraisal and failure. 
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgb6602cd"></a>Prevention<br />
+<div class="outline-text-5" id="text-5-5-1-1">
+<p>
+This cost includes:
+</p>
+<ul class="org-ul">
+<li>Formal Technical Review</li>
+<li>Training</li>
+<li>Test Equipments</li>
+<li>Quality Planning</li>
+</ul>
+</div>
+</li>
+<li><a id="org4251051"></a>Appraisal Cost<br />
+<div class="outline-text-5" id="text-5-5-1-2">
+<p>
+This cost includes:
+</p>
+<ul class="org-ul">
+<li>Gain insight into product condition</li>
+<li>The “first time through” each process</li>
+<li>In-process and inter-process inspection</li>
+<li>Equipment calibration and maintenance</li>
+</ul>
+</div>
+</li>
+<li><a id="orge746559"></a>Testing<br />
+<div class="outline-text-5" id="text-5-5-1-3">
+<p>
+Failure Cost: Failure costs are costs that would disappear if no defects appear before shipping a product to customers. Failure costs may be divided into internal and external failure.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge6fc656"></a>Internal Failure Cost<br />
+<div class="outline-text-6" id="text-5-5-1-3-1">
+<p>
+Internal Failure Costs are incurred when we detect a defect in our product prior to shipment. Internal failure costs include:
+</p>
+<ol class="org-ol">
+<li>Reward</li>
+<li>Repair</li>
+<li>Failure Mode Analysis</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org064e1f9"></a>External Failure Cost<br />
+<div class="outline-text-6" id="text-5-5-1-3-2">
+<p>
+External failure costs are associated with defects found after the product has been shipped to the customer. External failure costs are:
+</p>
+<ol class="org-ol">
+<li>Complaint Solution</li>
+<li>Product return and replacement</li>
+<li>Helpline support</li>
+<li>Warranty Work</li>
+</ol>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1254d3d" class="outline-2">
+<h2 id="org1254d3d"><span class="section-number-2">6.</span> Questions</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>What is outsourcing? What is offshore outsouring? What are strategies for successful offshore outsouring?</li>
+<li>Definition of contingent worker, H1B worker.</li>
+<li>What are the key ethical issues for organizations?</li>
+<li>Code of conducts of IT industry</li>
+<li>Definition of green computing, out sourcing and offshore outsourcing</li>
+<li>Strategy for successful offshore outsourcing</li>
+<li>Whistle blowing preparation steps.</li>
+<li>Definition of intellectual property, copyright, copyright infringement, patent, patent infringement, cross licensing agreement,</li>
+<li>Eligibility for copyright</li>
+<li>What are the laws for the proctection of software copyright?</li>
+<li>Talk about digitial millenium act</li>
+<li>Describe trade secret.</li>
+<li>Discuss KEY INTELLECTUAL PROPERTY ISSUES</li>
+<li>What are the Key Ethical Issues for Organizations?</li>
+<li>Professionalism, Are IT Workers Professional?</li>
+<li>Professional Relationships that must be maintained</li>
+<li>Relationship between IT Workers &amp; Employer</li>
+<li>Relationship between IT Workers &amp; Clients</li>
+<li>Business Software Alliance: Stop unauthorized trading &amp; manufacturing of product</li>
+<li>Professional Code of Conduct</li>
+<li>IT Professional Organizations</li>
+<li>Certification: Knowledge, Skill, Abilities</li>
+<li>Licensing vs Certification</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Abhijit Paul</p>
+<p class="date">Created: 2023-05-16 মঙ্গল 01:53</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
