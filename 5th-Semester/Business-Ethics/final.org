@@ -508,6 +508,21 @@ As the concerns regarding IT professionals' code of conduct rises, companies hav
 - Installing and Maintaining a Corporate Firewall
 Memorize: DESI
 
+** IT Professional Malpractice
+Professionals who breach the duty of care are liable for injuries that their negligence causes. This liability is commonly referred to as professional malpractice.
+
+- Duty of care refers to the obligation to protect people against any unreasonable harm or risk.
+** SMall Definitions
+~Fraud~ is the crime of obtaining goods, services, or property through deception or trickery.
+
+~A conflict of interest~ —a conflict between the IT worker’s (or the IT firm’s) self-interest and the interests of the client.
+
+~Misrepresentation~ is the misstatement or incomplete statement of a material fact.
+
+~Breach of contract~ occurs when one party fails to meet the terms of a contract.
+
+A ~software patent~ claims as its invention some feature or process embodied in instructions executed by a computer.
+
 * Chp 7 - Software Development
 [[https://docs.google.com/document/d/1HFdy68xJJUp1OHd-5r7oob6gQZFAFt_rcoKgP89fubE/edit?usp=sharing][source]]
 ** Definition of Quality
