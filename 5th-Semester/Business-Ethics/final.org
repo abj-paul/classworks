@@ -8,7 +8,7 @@ This chapter touches on the following ethical topics that are pertinent to organ
 4. The electronics and information and communications technology (ICT) industry recognizes the need for a code to address ethical issues in the areas of worker safety and fairness, environmental responsibility, and business efficiency. What has been done so far, and what still needs to be done.
 
 ** Contingent Work
-The Bureau of Labor Statistics defines contingent work as a job situation in which an individual does not have an ~explicit or implicit contract~ for long-term employment.
+Contingent work is a job situation in which an individual does not have an ~explicit or implicit contract~ for long-term employment.
 *** Additional Information
 - The contingent workforce includes independent contractors, temporary workers hired through employment agencies, on-call or day laborers, and on-site workers whose services are provided through contract firms.
 - A firm is likely to use contingent IT workers if it experiences pronounced fluctuations in its technical staffing needs.
@@ -75,7 +75,9 @@ Though using contingent workers is often the most flexible and cost-effective wa
 Additionally, Depending on how closely workers are ~supervised and how the job is structured~, contingent workers may be viewed as permanent employees by the Internal Revenue Service, the Department of Labor, or a state’s workers’ compensation and unemployment agencies.
 
 ** H-1B Worker
-An H-1B visa is a temporary work visa granted by the U.S. Citizenship and Immigration Services (USCIS) for people who work in specialty occupations—jobs that require at least a four-year bachelor’s degree in a specific field, or equivalent experience.
+An H-1B visa is a temporary work visa granted by the  (USCIS) for people who work in specialty occupations—jobs that require at least a four-year bachelor’s degree in a specific field, or equivalent experience.
+
+USCIS = U.S. Citizenship and Immigration Services
 
 A person can work for a U.S. employer as an H-1B employee for a maximum continuous period of six years.
 
@@ -161,7 +163,7 @@ Another downside to offshore outsourcing is that a company loses the knowledge a
 Cultural and language differences
 
 The compromising of customer data
-*** Strategies for successful offshore outsouring
+** Strategies for successful offshore outsouring
 The following list provides several tips for companies that are considering offshore
 outsourcing:
 
@@ -176,44 +178,24 @@ outsourcing:
 9. Agree in advance on the structure and content of documentation to ensure that manuals explain how the system was built, as well as how to maintain it.
 10. Carefully review a current copy of the outsourcing firm’s SAS No. 70 audit report to ascertain its level of control over information technology and related processes.
 ** Whitle-blowing
-whistle-blowing is an effort to attract public attention to a
-negligent, illegal, unethical, abusive, or dangerous act by a company or some other
-organization
+whistle-blowing is an effort to attract public attention to a negligent, illegal, unethical, abusive, or dangerous act by a company or some other organization.
 
-In some cases, whistle-blowers are employees who act as informants on their
-company, revealing information to enrich themselves or to gain revenge for a perceived
-wrong. In most cases, however, whistle-blowers act ethically in an attempt to correct what
-they think is a major wrongdoing, often at great personal risk
+In some cases, whistle-blowers are employees who act as informants on their company, revealing information to enrich themselves or to gain revenge for a perceived wrong. In most cases, however, whistle-blowers act ethically in an attempt to correct what they think is a major wrongdoing, often at great personal risk.
 *** Protection of Whistle-blowers
-nfor-
-tunately, no comprehensive federal law protects all whistle-blowers from retaliatory acts.
-Instead, numerous laws protect a certain class of specific whistle-blowing acts in various
-industries. To make things even more complicated, each law has different filing provisions,
-administrative and judicial remedies, and statutes of limitations (which set time limits for
+Unfortunately, no comprehensive federal law protects all whistle-blowers from retaliatory acts. Instead, numerous laws protect a certain class of specific whistle-blowing acts in various
+industries. To make things even more complicated, each law has different filing provisions, administrative and judicial remedies, and statutes of limitations (which set time limits for
 legal action)
 
-From the whistle-blower’s perspective, a short statute of limitations is a major
-weakness of many whistle-blower protection laws. Failure to comply with the statute of
-limitations is a favorite defense of firms accused of wrongdoing in whistle-blower case
+From the whistle-blower’s perspective, a short statute of limitations is a major weakness of many whistle-blower protection laws. Failure to comply with the statute of limitations is a favorite defense of firms accused of wrongdoing in whistle-blower case
 
-The qui tam (“who sues on behalf of the king as well as for himself”) provision of the
-False Claims Act allows a private citizen to file a suit in the name of the U.S. government,
-charging fraud by government contractors and other entities who receive or use govern-
-ment funds. In qui tam actions, the government has the right to intervene and join the
-legal proceedings. If the government declines, the private plaintiff may proceed alone.
-Some states have passed similar laws concerning fraud in state government contracts.
+The ~qui tam~ (“who sues on behalf of the king as well as for himself”) provision of the False Claims Act allows a private citizen to file a suit in the name of the U.S. government, charging fraud by government contractors and other entities who receive or use govern- ment funds. In qui tam actions, the government has the right to intervene and join the legal proceedings. If the government declines, the private plaintiff may proceed alone. Some states have passed similar laws concerning fraud in state government contracts.
 
-The False Claims Act provides strong whistle-blower protection. Any person who is
-discharged, demoted, harassed, or otherwise discriminated against because of lawful acts
-of whistle-blowing is entitled to all relief necessary “to make the employee whole.” Such
-relief may include job reinstatement; double back pay; and compensation for any special
-damages, including litigation costs and reasonable attorney’s fees.36
+The ~False Claims Act~ provides strong whistle-blower protection. Any person who is discharged, demoted, harassed, or otherwise discriminated against because of lawful acts of whistle-blowing is entitled to all relief necessary “to make the employee whole.” Such relief may include job reinstatement; double back pay; and compensation for any special damages, including litigation costs and reasonable attorney’s fees.36
 *** Whistle-blowing in private sectors
 Under state law, an employee could traditionally be terminated for any reason, or no rea-
 son, in the absence of an employment contract. However, many states have created laws
 that prevent workers from being fired because of an employee’s participation in “pro-
 tected” activities
-
 
 *** Dealing with a whistleblowing situation
 This section provides a general sequence of events, and highlights key issues that a potential whistle-blower should consider.
@@ -401,7 +383,8 @@ AST MUN
 4. Monitor network activity
 5. Up-to-date softwares
 6. Use network segmentation
-* Chp 2 - 
+* Chp 2 - forgot name
+[[https://docs.google.com/document/d/1TBkps7-DH7TuaZY-rTWYsV1zgnPnBVwf8500eHXIdLg/edit?usp=sharing][Source]]
 ** What is professionalism? Are IT Workers Professional?
 Professionalism: A profession is a calling that requires specialized knowledge and often long intensive academic preparation.
 
@@ -454,6 +437,132 @@ Compliance means to be in accordance with established policies, guidelines, spec
 
 - Audit Committee
 - Internal Audit Department
+** What is professionalism? Are IT Workers professional?
+Professionalism: A profession is a calling that requires specialized knowledge and often long intensive academic preparation.
+
+IT workers require intensive training, continuous learning with changing techstacks and a key role is in their experience. And so IT Workers are also professionals.
+** Issues in Employer Relationships/ Relationship between IT Worker & Professional
+The employer and IT worker have a critical and multifaceted relationship that requires ongoing efforts by both parties to keep it strong. An IT worker and an employer typically agree on fundamental aspects of these relationships before the IT worker accepts an employment offer.
+ 
+There are some issues in the employer relationship. These issues may include: Job Title, General performance expectations, specific work responsibilities, drug testing, dress code, location of employment, salary, work hour & company benefits. Some aspects are specific to the role of IT workers and are estimated based on the nature of the work or project. For example, the programming language to be used, the type and amount of documentation to be produced and the extent of testing to be conducted.
+
+Memorize:
+Job Title
+specific work responsibilities
+salary
+work hour
+General performance expectations
+company benefits.
+drug testing
+dress code
+location of employment
+*** Trade Secret
+IT workers should not divulge company secrets. A secret can be SRS, software design, source code, vulnerability testing report etc. 
+*** Software Business Alliance
+The Business Software Alliance (BSA) is a trade group that represents the world’s largest software and hardware manufacturers. Its mission is to stop the unauthorized copying of software produced by its members. 
+*** Whistleblowers
+Whistle-blowing is an effort by an employee to attract attention to a negligent, illegal, unethical, abusive, or dangerous act by a company that threatens the public interest
+** Professional Relationships that must be maintained
+Software engineering is a people intensive industry so maintaining good relationships is necessary.
+
+** What is a professional code of ethics? Discuss about its 4 fundamental principles.
+A professional code of ethics states the principles and core values that are essential to the work of a particular occupational group. Practitioners in many professions subscribe to a code of ethics that governs their behavior.
+
+There are 4 fundamental principles of professional code of ethics. They are:
+1. Ethical decision making
+2. High standard of practice and ethical behavior
+3. Trust and respect from the general public
+4. Evaluation Benchmark
+** What are IT Professional Organizations? List some of the organizations and their roles.
+These organizations disseminate information through email, periodicals, Web sites, meetings, and conferences. Furthermore, in recognition of the need for professional standards of competence and conduct, many of these organizations have developed codes of ethics.
+
+*** Association for Computing Machinery (ACM): 
+- publishes over 50 journals and magazines and 30 newsletters
+- offers a substantial digital library of bibliographic information, citations, articles, and journals
+- 37 special-interest groups (SIGs) representing major areas of computing
+*** Institute of Electrical and Electronics Engineers Computer Society (IEEE-CS):
+- covers the broad fields of electrical, electronic, and information technologies and science. 
+- helps meet the information and career development needs of computing researchers and practitioners with technical journals, magazines, books, conferences, conference publications, and online courses.
+- offers a Certified Software Development Professional (CSDP) program for experienced professionals and a Certified Software Development Associate(CSDA) credential for recent college graduates
+- Sponsors conferences
+*** Association of Information Technology Professionals (AITP):
+- provides IT-related seminars and conferences, information on IT issues, and forums for networking with other IT workers.
+- mission is to provide superior leadership and education in information technology
+help members make themselves more marketable within their industry
+-  Has a code of ethics and standards of conducts
+*** SysAdmin, Audit, Network, Security (SANS) Institute:
+- train some 12,000 people,
+- a weekly security vulnerability digest
+- provides information security certification
+** Common Ethical Issues of IT Users(Page 61)
+Some of the common ethical Issues of IT users are:
+- Software Piracy
+- Inappropriate Use of Computing Resources
+- Inappropriate Sharing of Information
+
+** Supporting the Ethical Practices of IT Users 
+As the concerns regarding IT professionals' code of conduct rises, companies have begun adopting policies and methodologies to support ethical practices of IT users.
+- Defining the Appropriate Use of IT Resources
+- Establishing guidelines for Use of Company Software
+- Structuring Information Systems to Protect Data and Information
+- Installing and Maintaining a Corporate Firewall
+Memorize: DESI
+
+* Chp 7 - Software Development
+[[https://docs.google.com/document/d/1HFdy68xJJUp1OHd-5r7oob6gQZFAFt_rcoKgP89fubE/edit?usp=sharing][source]]
+** Definition of Quality
+Quality refers to attributes to estimate the intrinsic characteristics of a product.
+Qualities are:
+1. Measurable Characteristics
+2. Intrinsic Properties
+
+** Types of Quality
+Quality is of two types.
+1. Quality of design: The degree to which the requirements for design are fulfilled.
+2. Quality of conformance: The degree to which a product or service conforms to its requirements.
+
+** Quality Assurance
+Quality assurance is the auditing, reporting of functional management. 
+The goal of Quality Assurance is to assure the company about software quality.
+
+** Quality Control
+It consists of a series of activities throughout the software development process to ensure that the software meets the requirements of the customer.
+
+** Cost Of Quality
+Cost of quality is the summarized cost of the whole process. It includes all costs - from requirements gathering to final product, throughout the whole software development process. It includes:
+1. Bundle by bundle cost incurred
+2. Predict cost by considering future bugs
+*** Types of Cost of Quality
+Quality costs may be divided into costs associated with prevention, appraisal and failure. 
+
+**** Prevention
+This cost includes:
+- Formal Technical Review
+- Training
+- Test Equipments
+- Quality Planning
+**** Appraisal Cost
+This cost includes:
+- Gain insight into product condition
+- The “first time through” each process
+- In-process and inter-process inspection
+- Equipment calibration and maintenance
+**** Testing
+Failure Cost: Failure costs are costs that would disappear if no defects appear before shipping a product to customers. Failure costs may be divided into internal and external failure.
+
+***** Internal Failure Cost
+Internal Failure Costs are incurred when we detect a defect in our product prior to shipment. Internal failure costs include:
+1. Reward
+2. Repair
+3. Failure Mode Analysis
+
+***** External Failure Cost
+External failure costs are associated with defects found after the product has been shipped to the customer. External failure costs are:
+1. Complaint Solution
+2. Product return and replacement
+3. Helpline support
+4. Warranty Work
+
 * Questions
 1. What is outsourcing? What is offshore outsouring? What are strategies for successful offshore outsouring?
 2. Definition of contingent worker, H1B worker.
@@ -468,3 +577,14 @@ Compliance means to be in accordance with established policies, guidelines, spec
 11. Talk about digitial millenium act
 12. Describe trade secret.
 13. Discuss KEY INTELLECTUAL PROPERTY ISSUES
+14. What are the Key Ethical Issues for Organizations?
+15. Professionalism, Are IT Workers Professional?
+16. Professional Relationships that must be maintained
+17. Relationship between IT Workers & Employer
+18. Relationship between IT Workers & Clients
+19. Business Software Alliance: Stop unauthorized trading & manufacturing of product
+20. Professional Code of Conduct
+21. IT Professional Organizations
+22. Certification: Knowledge, Skill, Abilities
+23. Licensing vs Certification
+
