@@ -1,0 +1,38 @@
+ABCDF MOPS T (CSF=2)
+BCD FILOP RSS (D=2, L=4)
+* Design Pattern
+** Composite Pattern
+Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+** Decorator Pattern
+Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+** Facade
+Provide a unified interface to a set of interfaces in a subsystem.
+
+Mnemonics: ~Between Communication Centralized Functionality~
+** Chain of Responsibilities
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
+** Observer
+issues: DUS
+Define an one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+** Mediator
+Define an object that encapsulates how a set of objects interact.
+** Template Method
+
+Define the skeleton of an algorithm in an operation while deferring some steps to subclasses. Template method allows subclasses redefine certain algorithmic steps while keeping the structure constant.
+
+** Strategy
+Main point: data passing.
+Define a family of algorithms, encapsulate them and make them interchangable. Strategy lets an algorithm vary indpently from clients that use it.
+** Factory Method Pattern
+Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+** Abstract Factory Pattern
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+** Builder Pattern
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+** Singleton Pattern
+Ensure a class only has one instance, and provide a global point of access to it.
+** Prototype Pattern
+Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+* Code Smell
+* Refactoring
+A series of small steps, each of which changes the program’s  internal structure without changing its external  behavior.

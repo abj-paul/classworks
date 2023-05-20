@@ -3,22 +3,22 @@
 Define a family of algorithms, encapsulate them and make them interchangable. Strategy lets an algorithm vary indpently from clients that use it.
 ** Interesting Facts
 1. Hard-wiring multiple algorithms into classes is bad.
-2. A context maintains a reference to a strategy object.
-3. Client configures the context with a strategy that they want to use.
-4. So client needs to be aware of all the strategies there is. This puts burden on client.
-5. To avoid it, we can make configuring context with strategy optional. Client will set a strategy only if he really needs to change the default behavior. This reduces burden on general clients.
-6. This pattern is useful when
+2. So instead, Client configures the context with a strategy that they want to use.
+3. So client needs to be aware of all the strategies there is. This puts burden on client.
+4. To avoid it, we can make configuring context with strategy optional. Client will set a strategy only if he really needs to change the default behavior. This reduces burden on general clients.
+5. A context maintains a reference to a strategy object.
+6. ~Data Access~: Context and strategy interfaces must define the way data should be passed between them. This greatly affects how effective this pattern will be as it is correlated with degree of coupling.
+   - Pass necessary data as parameters: The context and strategy are ~decoupled~.
+   - Pass itself as parameter: Here, the strategy can callback the context as required. Thus it increases coupling.
+7. This pattern is useful when
    - Many classes differ only in their behavior. Strategy allows to configure a class with one of the many behaviors to customize its behavior.
    - Using different variants of algorithm for time-space trade off.
    - A class may have many behaviors and it uses conditional to maintain which behavior to choose. Instead of many conditionals, ~move related conditional branches~ into their own strategy.
-   - An alternative to subclassing
-7. ~Data Access~: Context and strategy interfaces must define the way data should be passed between them. This greatly affects how effective this pattern will be as it is correlated with degree of coupling.
-   - Pass necessary data as parameters: The context and strategy are ~decoupled~.
-   - Pass itself as parameter: Here, the strategy can callback the context as required. Thus it increases coupling.
 8. Communication Overhead: Data requirements should be considered before deciding on a method of data access.
 9. Increased number of objects: Strategies increase the number of objects in an application. Sometimes you can reduce this overhead by implementing strategies as ~stateless objects that contexts can share~.Shared strategies should not maintain state across invocations. Hence, ~flyweight~ pattern is used for that.
-10. Strategies as template parameter:This technique is only applicable if (1) the Strategy can be selected at compile-time, and (2) it does not have to be changed at run-time. This has the benefit of optimization as everything is known as compile time.
+10. Strategies as template/generics parameter:This technique is only applicable if (1) the Strategy can be selected at compile-time, and (2) it does not have to be changed at run-time. This has the benefit of optimization as everything is known as compile time.
 11. In general, the Strategy and Context interfaces determine how well the pattern achieves its intent.
+
 ** UML Diagrams
 1. Line break strategy: Composition, component, compositor
 
@@ -26,21 +26,21 @@ Define a family of algorithms, encapsulate them and make them interchangable. St
 ** Definition
 Define the skeleton of an algorithm in an operation while deferring some steps to subclasses. Template method allows subclasses redefine certain algorithmic steps while keeping the structure constant.
 ** Interesting Facts
-1. Factory methods are often abstract primitive operations. e.g. DoCreateDocument().
-2. A template method defines an algorithm in terms of abstract operations that subclasses override to provide concrete behavior.
-3. Sets the ordering.
-4. Applicability
+1. Template method is a fundamental technique for code reuse. They are frequently used in class libraries.
+2. Template methods are so fundamental that they can be found in almost ~every abstract class~.
+3. A template method defines an algorithm in terms of abstract operations that subclasses override to provide concrete behavior.
+4. Sets the ordering.
+5. Participants: Abstract Primitive Operations, Template Method
+6. Applicability
    - to implement the ~invariant parts of an algorithm~ once and leave it up to subclasses to implement the behavior that can vary.
    - Refactoring part to generalize
    - To Control Subclasses Extension: Template method can call hook operations at certain points and thereby, Permitting extension only at certain points.
-5. Participants: Abstract Primitive Operations, Template Method
-6. Template method is a fundamental technique for code reuse. They are frequently used in class libraries.
 7. Don't Call Us, We'll call you: This refers to how a parent class calls the operations of a subclass and not the other way around.
-8. Abtract methods are methods that must be overriden. ~Hooks are operations that may be overridden~. Abstract class designers must understand which operations are designed for overriding.
-9. Extend a parent class's operation using hooks and template methods.
-10. Minimizing the number of abtract primitive operations to not overwhelm the subclasses.
-11. Template methods are so fundamental that they can be found in almost ~every abstract class~.
-12. Strategy patterns can be used when we have multiple algorithms.
+8. Extend a parent class's operation using hooks and template methods.
+9. Minimizing the number of abtract primitive operations to not overwhelm the subclasses.
+10. Strategy patterns can be used when we have multiple algorithms.
+11. Factory methods are often abstract primitive operations. e.g. DoCreateDocument().
+12. Abtract methods are methods that must be overriden. ~Hooks are operations that may be overridden~. Abstract class designers must understand which operations are designed for overriding.
 ** UML Diagrams
 - Document and Application: . A Document object represents the information in a document once it's read from the file.
 - Display only after focus.
@@ -50,30 +50,29 @@ Define an one-to-many dependency between objects so that when one object changes
 ** Interesting Facts
 A common side-effect of partitioning a system into a collection of cooperating classes is the need to maintain consistency between related objects.You don't want to achieve consistency by making the classes tightly coupled, because that reduces their reusability.
 1. The subject notifies the observer when its state changes. In response, each observer will query the subject to synchronize its state with the subject's state
-2. publish-subscribe relationship
-3. Applicability:
+2. ConcreteObserver maintains a reference to ConcreteSubject
+3. Notify to trigger updates is not always called by the subject. I mean, subject naturally notifies the observers but that notification may or may not trigger updates in observers.
+   + Subject calls notify that calls update. Advantage is: Less burden on observers. Disadvantage is : cascading or frequent updates
+   + Observers gets the notification and they decide when to update. 
+4. publish-subscribe relationship
+5. Applicability:
    - Abstraction has two aspects, one depenendent on another.
    - don't know how many objects to change
    - don't know what kind of objects they are. Thus less assumptions = less coupling
-4. ConcreteObserver maintains a reference to ConcreteSubject
-5. Query the subject for information
-6. Notify to trigger updates is not always called by the subject. I mean, subject naturally notifies the observers but that notification may or may not trigger updates in observers.
-   + Subject calls notify that calls update. Advantage is: Less burden on observers. Disadvantage is : cascading or frequent updates
-   + Observers gets the notification and they decide when to update. 
-7. ~Abstract coupling~ between subject and observers.
-8. Supports broadcast communication
+6. ~Abstract coupling~ between subject and observers.
+7. Supports broadcast communication
+8. Simple update protocol
 9. Unexpected and ~spurious~ updates
-10. Simple update protocol
+10. Dangling reference
 11. Storage issues
 12. Observing more than one subject
-13. Dangling reference
-14. Making sure that subject state is ~self-consistent~ before notification: Template pattern
-15. Avoiding observer specific update protocols: To avoid coupling, we should not provide specific update protocols for specific set of observers. We should either use pull model or push model for all observers.
+13. Change manager: DAG Manager
+14. Singleton on change manager
+15. Making sure that subject state is ~self-consistent~ before notification: Template pattern
+16. Avoiding observer specific update protocols: To avoid coupling, we should not provide specific update protocols for specific set of observers. We should either use pull model or push model for all observers.
     + Pull Model: Subject sends minimal info so query is required. It is inefficient because client needs to determine what changes in subject, which is a hard task.
     + Push Model: Subject sends abundant information even if observers don't require many of them. It makes subject ~less reusable~ because we can't always provide all the information a particular observer needs. Some observer may require information that is not usually provided.
-16. Modification of interest
-17. Change manager: DAG Manager
-18. Singleton on change manager
+17. Modification of interest
 ** UML Diagrams
 1. Spreadsheet and barcharts depends on data object.
 2. Change manager: if an operation involves changes to several interdependent subjects, you might have to ensure that their observers are notified only after all the subjects have been modified to avoid notifying observers more than once.
@@ -85,27 +84,25 @@ Define an object that encapsulates how a set of objects interact.
 Object-oriented design encourages the distribution of behavior among objects. Such distribution can result in an object structure with many connections between objects; in the worst case, every object ends up knowing about every other.
 
 An important note is that mediator classes are not usually reusable. They are specific. For different needs, different mediator classes are needed. For example, in DialogWidow example, different dialog windows will have differenet communication-interdependencies and hence, will require deifferent mediator classes.
-
-1. It ~Localizes behavior~ so it is useful when a behavior is distributed among many classes.
-2. Many interconnections may reduce a system to ~monolith~. Mediator saves from that.
-3. Makes it less complex to change ~system's behavior~ that depends on multiple objects.
-4. encapsulating collective behavior in a separate mediator object.
-5. Applicability:
+1. Colleague-mediator communication is of two types.
+   + Using observer pattern: Only significant event should be notified for efficiency.
+   + Colleagues pass itself as argument
+2. Each colleague knows its mediator.
+3. Routing requests between colleagues.
+4. Applicability:
+   + Reusing an object is difficult when it communicates with many other objects.
    + Complex subsystem communication
    + A system behavior that is distributed among many class should be customizable without doing a lot of subclassing.
-   + Reusing an object is difficult when it communicates with many other objects.
-6. Each concrete classes knows its mediator.
-7. Routing requests between colleagues.
-8. Decouples colleagues
-9. Simplifies object protocol: Reduces many-to-many relationship into ~one-to-many~ relatinship.
-10. Encapsulates cooperation between objects.
-11. Centralizes control but that can result in the mediator itself becoming a ~monolith~
-12. Ommitting abstrat class mediator when we will have only one mediator.
-13. Colleague-mediator communication is of two types.
-    + Using observer pattern: Only significant event should be notified for efficiency.
-    + Colleagues pass itself as argument
-14. Mediator complexity might mitigate the pattern's benefits in other applications.
-15. Facade Vs Mediator: Unidirectional and bidirectional.
+5. Decouples colleagues
+6. encapsulating collective behavior in a separate mediator object.
+7. It ~Localizes behavior~ so it is useful when a behavior is distributed among many classes.
+8. Many interconnections may reduce a system to ~monolith~. Mediator saves from that.
+9. Makes it less complex to change ~system's behavior~ that depends on multiple objects.
+10. Simplifies object protocol: Reduces many-to-many relationship into ~one-to-many~ relatinship.
+11. Ommitting abstrat class mediator when we will have only one mediator.
+12. Centralizes control but that can result in the mediator itself becoming a ~monolith~
+13. Mediator complexity might mitigate the pattern's benefits in other applications.
+14. Facade Vs Mediator: Unidirectional and bidirectional.
 ** UML Diagrams
 1. A dialog box uses a window to present a collection of widgets. Different dialog boxes will have different dependencies between widgets.
 * Facade Pattern
@@ -118,7 +115,7 @@ Facade defines a higher-level interface that makes the subsystem easier to use.
 3. Layer subsystems. Facade can be the entry point between subsystems.
 4. Reduces the number of objects clients need to deal with.
 5. Weak couping. The internal classes of subsystems can vary independtly without affecting the client.
-6. Saves time by minimizing recompilation as ~depenedencies reuce~ with the use of facade.
+6. Saves time by minimizing recompilation as ~depenedencies reuse~ with the use of facade.
 7. Public Vs Private Subsystem Classes
 *** Differences between mediator and facade
 Mediator is similar to Facade in that it abstracts functionality of existing classes. However, there are some differences.
@@ -136,50 +133,49 @@ Mediator is similar to Facade in that it abstracts functionality of existing cla
 ** Definition
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 ** Interesting Facts
-1. But there's a problem with this approach: Code that uses these classes must treatprimitive and container objects differently. Composite solves this problem.
+1. But there's a problem with this approach: Code that uses these classes must treat primitive and container objects differently. Composite solves this problem.
 2. The key to the Composite pattern is an abstract class that represents both primitives and their containers.
-3. It also declaresoperations that all composite objects share, such as operations for accessing and managing its children.
-4. Applicability:
+3. It also declares operations that all composite objects share, such as operations for accessing and managing its children.
+4. Explicit Parent reference can be necessary to go upward the structure and deleting a component. It also helps support the ~chain of responsiblity~.
+5. Component class should be as big as possible. It should handle all add-remove for children and parent references. Additionally, it should contain as much representative methods of leaf and composites as possible because clients accesses component, not composites or leaf. Clients should be unaware of whether they are accessing a leaf or a component.
+6. Deleting components
+7. Child management: We can define it at root or at composite level. It comes with a ~trade off between transparency and safety~.
+   + Root Level: It increases transparency as clients can treat all components uniformly. However, it comes with less safety as clients can mistakenly add components to a leaf To avoid it, the default implementation of those unsafe functions should throw an exception when client executes them for a leaf.
+   + Composite Level: Increases safety. But decreases transparency as clients can no longer treat all components uniformly.
+8. Child ordering
+9. Applicability:
    + Part whole hierarchy
    + Client needs to access components uniformly
-5. Makes the client simple
-6. Makes it easier to add new kind of components
-7. Makes it harder to add constraints to what kind of components a composite can have. We can only check it at runtime.
-8. Explicit Parent reference can be necessary to go upward the structure and deleting a component. It also helps support the ~chain of responsiblity~.
-9. Component class should be as big as possible. It should handle all add-remove for children and parent references. Additionally, it should contain as much representative methods of leaf and composites as possible because clients accesses component, not composites or leaf. Clients should be unaware of whether they are accessing a leaf or a component.
-10. Storage requirements for list at root level.
-11. Sharing components
-12. Child management: We can define it at root or at composite level. It comes with a ~trade off between transparency and safety~.
-    + Root Level: It increases transparency as clients can treat all components uniformly. However, it comes with less safety as clients can mistakenly add components to a leaf To avoid it, the default implementation of those unsafe functions should throw an exception when client executes them for a leaf.
-    + Composite Level: Increases safety. But decreases transparency as clients can no longer treat all components uniformly.
-13. Transparency is more important than safety for composite pattern.
-14. Child ordering
-15. Caching
-16. Deleting components
+10. Makes the client simple
+11. Makes it easier to add new kind of components
+12. Makes it harder to add constraints to what kind of components a composite can have. We can only check it at runtime.
+13. Storage requirements for list at root level.
+14. Sharing components
+15. Transparency is more important than safety for composite pattern.
+16. Caching
 17. Best data structure for storing components.
-18. So decoratorswill have to support the Component interface with operations like Add, Remove,
-and GetChild.
+18. So decorators will have to support the Component interface with operations like Add, Remove, and GetChild.
 ** UML Diagrams
 1. Graphics Application: build complex diagrams out of simple components.
 2. Computer
 * Decorator Pattern
 ** Definition
-Attach additional responsibilities to an object dynamically. Decorators provide aflexible alternative to subclassing for extending functionality.
+Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 ** Interesting Facts
-1. Decorator can be viewed as a degenerate composite with only one component.
-2. A more flexible approach is to enclose the component in another object that adds the border. The enclosing object is called a decorator.
-3. Decorator conforms to the interface of the component. It forwards requests to the object and may perform additional tasks before or after passing the request.
-4. Applicability:
+1. A more flexible approach is to enclose the component in another object that adds the border. The enclosing object is called a decorator.
+2. Decorator can be viewed as a degenerate composite with only one component.
+3. Component defines the interface for objects that can have responsibilities added to them dynamically. Decorator keeps a reference of component object.
+4. Decorator conforms to the interface of the component. It forwards requests to the object and may perform additional tasks before or after passing the request.
+5. Applicability:
+   + Suclassing becomes impractical due the sheer number of variants.
    + Add responsibilities dybamically/run-time
    + Add responsibilities transparently
    + If responsibilities can be withdrawn
-   + Suclassing becomes impractical due the sheer number of variants.
-5. Component defines the interface for objects that can have responsibilities added tothem dynamically. Decorator keeps a reference of component object.
 6. Pay-as-you-go approach to adding responsibilities.
-7. A decorator and its component aren't identical. You should not rely on object identity when using decorators.
-8. ~Lots of little objects~ that all lool alike.
-9. Omitting the abstract decorator class, specially when we use existing object hierarchy structure.
-10. Keeping component abstract class lightweight (dont keep data in it)
+7. ~Lots of little objects~ that all lool alike.
+8. Omitting the abstract decorator class, specially when we use existing object hierarchy structure.
+9. Keeping component abstract class lightweight (dont keep data in it)
+10. A decorator and its component aren't identical. You should not rely on object identity when using decorators.
 11. ~Clients that rely on the component's identity should refer to it directly as well.~
 ** Changing the skin vs Chaning the guts
 These are two alternative ways of changing an object.
@@ -197,16 +193,16 @@ Avoid coupling the sender of a request to its receiver by giving more than one o
 ** Interesting Facts
 1. The sender of the requests don't know exactly which object will handle the request. So it will have to iterate through many objects to find the intended receiver. That increases heavy coupling. To decouple sender and receiver, we use chain of responsibility. Now sender no longer needs to ~know~ who the receiver is. It simply can pass the request along the chain. The client that issued the request has no direct reference to the object that ultimately fulfills it - the receiver.
 2. Chain of Responsibility is often applied in conjunction with Composite (163). There, a component's parent can act as its successor.
-3. Applicability:
+3. For successor chain, we can define new links or use existing ones.
+4. Handler can implement the successor link.
+5. Request Format: Hard-coded function, request code or request class
+6. Applicability:
    + More than one object can handle the request. We don't know exactly who.
    + More than one object can handle the request. We don't want to specity exactly who.
    + Set of objects that can hadnle the request changes dynamically.
-4. Handler can implement the successor link.
-5. Reduced Coupling: Instead of objects maintaining references to all candidate receivers, they keep a single reference to their successor.
-6. Flexibility
-7. Receipt is not guaranteed.
-8. For successor chain, we can define new links or use existing ones.
-9. Request Format: Hard-coded function, request code or request class
+7. Reduced Coupling: Instead of objects maintaining references to all candidate receivers, they keep a single reference to their successor.
+8. Flexibility
+9. Receipt is not guaranteed.
 10. We can have mixin classes instead of separate helper classes.
 ** UML Diagrams
 1. context-sensitive help facility for a graphical user interface
@@ -214,22 +210,21 @@ Avoid coupling the sender of a request to its receiver by giving more than one o
 ** Definition
 Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 ** Interesting Facts
-1. Director asks builder to build a part. The builder builds them. The director asks for the product built so far at the end. The builder returns the product.
-2. Applicability:
+1. Seaparates the Reader algorithm from how a converted format gets created and represented.
+2. Builder specifies the interface for ~creating parts of a complex object~.
+3. This Builder Class Interface contains the methods that directors call to create different products. Hence, it should be diverse enought to contain different methods for creating different products
+4. Assembly: The builder may simply append parts to a list or may depend on product created so far to assemble the new product. e.g. MazeBuilder checks if the room has been created already. A bottom-up tree building first builds the leaves and then use the leaves constructed to build parents.
+5. The client creates the Director object and configures it with the desired Builder object.
+6. Director asks builder to build a part. The builder builds them. The director asks for the product built so far at the end. The builder returns the product.
+7. There is no interface for ~product~ class because they vary so greatly. Each product is complex and varies from the previous one.
+8. Applicability:
    + Make creation of complex object independent of how its Parts are created and assembled.
    + Construction process may result in different representations of the complex object e.g. if different types of parts are used.
-3. Seaparates the Reader algorithm from how a converted format gets created and represented.
-4. Builder specifies the interface for ~creating parts of a complex object~.
-5. Director constructs an object using the Builder interface.
-6. The client creates the Director object and configures it with the desired Builder object.
-7. There is no interface for ~product~ class because they vary so greatly. Each product is complex and varies from the previous one.
-8. We can easily change a product's internal represenation by simply subclassing the builder. The client depends on builder abstraction so it does not get affected if we use the new subclass.
 9. Encapsulates the way a complex object is built and represented and assembled.
-10. ~Each ConcreteBuilder contains all the code to create and assemble a particular kind of product.~
-11. Fine control over construction process as directory builds the object slowly parts by parts.
-12. Builder Class Interface: It contains the methods that directors call to create different products. Hence, it should be diverse enought to contain different methods for creating different products
-13. Assembly: It may simply append parts to a list or may depend on product created so far to assemble the new product. e.g. MazeBuilder checks if the room has been created already. A bottom-up tree building first builds the leaves and then use the leaves constructed to build parents.
-14. A composite is what the builder often builds.
+10. ~We can easily change a product's internal represenation by simply subclassing the builder.~ The client depends on builder abstraction so it does not get affected if we use the new subclass.
+11. ~Each ConcreteBuilder contains all the code to create and assemble a particular kind of product.~
+12. Fine control over construction process as directory builds the object slowly parts by parts.
+13. A composite is what the builder often builds.
 *** Difference between abstract Factory and Builder
 Abstract Factory (87) is similar to Builder in that it too may construct complex objects.
 
@@ -254,25 +249,26 @@ Define an interface for creating an object, but let subclasses decide which clas
 4. Using templates
 5. Hook
 6. Connects parallel class hierarchies.
-*** Difference between Factory Method and Prototype
+*** TODO Difference between Factory Method and Prototype
 Prototypes (117) don't require subclassing Creator. However, they often require an Initialize operation on the Product class. Creator uses Initialize to initialize the object. Factory Method doesn't require such an operation.
 ** UML Diagrams
 * Abstract Factory Pattern
 ** Definition
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 ** Interesting Facts
-1. Clients don't need to know the details about a family of products. They can easily manipulate them using the simple interface(functions -> createDoor(), createWindow(), createComposite()) provided by AbstractFactory and AbstractProduct without knowing about them.
-2. Applicability:
+1. Abstract factory, at its simplest form, is just a collection of factory methods.
+2. Clients don't need to know the details about a family of products. They can easily manipulate them using the simple interface(functions -> createDoor(), createWindow(), createComposite()) provided by AbstractFactory and AbstractProduct without knowing about them.
+3. So it Isolates concrete class
+4. Can easily change family of objects
+5. Applicability:
    + This pattern automatically enforces the constraints which objects should occur together.
    + A system should be independent of how its objects are composed, represented or created.
    + Create a library of classes but you only want to reveal their interfaces and not their implementation
-3. Isolates concrete class
-4. Can easily change family of objects
-5. consistency among products
-6. Supporting new kinds of product is difficult. To accommodate for such extensible factory, paramatrized factory methods are needed.
-7. Singletons
-8. Abstract factory, at its simplest form, is just a collection of factory methods.
+6. consistency among products
+7. Supporting new kinds of product is difficult. To accommodate for such extensible factory, paramatrized factory methods are needed.
+8. Singletons
 9. PROTOTYPE based approach if there are too many families of products.
+
 ** UML Diagrams
 * Singleton Pattern
 ** Definition
@@ -282,65 +278,167 @@ Ensure a class only has one instance, and provide a global point of access to it
 2. if-else
 3. registry
 ** Code of Prototype
-** DONE UML Diagrams
-* TODO Prototype Pattern
+* Prototype Pattern
 prototypes and abstract factory
 [[https://refactoring.guru/design-patterns/prototype][refactoring guru]]
 [[https://www.youtube.com/watch?v=DcFhITC9v0E][yt video]]
 ** Definition
 Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 ** Interesting Facts
+Applicability:
+1. When classes to instantiate are specified at runtime
+2. To avoid a hierarchy of factories that parallels the hierarchy of classes
+3. When a class can have few states, its a good idea to clone them than instantiating them manually.
+4. Flexible
+5. Registry / prototype manager
+6. Shallow vs Deep copy
+7. Initializing
+8. Saves resource and time.
+
 ** Code of Prototype
 ** UML Diagrams
-* Smell
+* Code Smell
+** What is Refactoring? How to refactor?
 A series of small steps, each of which changes the program’s  internal structure without changing its external  behavior.
+To refactor, we look for:
+1. Code smells
+2. Things that we suspect are not quite right
+3. Things that we cause us severe pain later on if we don't fix them.
+4. Take baby steps
+5. First Do not harm!
 
-Helps us deliver more business value faster
-Improves the design of our software
-Combat’s “bit rot”
-Easier to maintain and understand
-Easier to facilitate change
-More flexibility
-Increased re-usability
+** When to refactor?
+1. To add new functionality
+2. To find bugs
+3. For code reviews
 
+** Why should we refactor?
+1. Helps us deliver more business value faster
+2. Improves the design of our software
+3. Easier to maintain and understand
+4. Easier to facilitate change
+5. More flexibility
+6. Increased re-usability
+7. Keep development at speed
+8. To make the software easier to understand
+9. To help find bugs
+10. refactor while debugging to clarify the code
 
-
-Minimizes technical debt
-Keep development at speed
-To make the software easier to understand
-Write for people, not the compiler
-Understand unfamiliar code
-To help find bugs
-refactor while debugging to clarify the code
-To “Fix broken windows” - Pragmatic Programmers
-** When should you refactor?
-To add new functionality
-refactor existing code until you understand it
-refactor the design to make it simple to add
-To find bugs
-refactor to understand the code
-For code reviews
-immediate effect of code review
-allows for higher level suggestions
-** Code Smell
+** What is code smell?
 Code Smells identify frequently occurring design problems in a  way that is more specific or targeted than general design guidelines  (like “loosely coupled code” or “duplication-free code”). - Joshua K
-** Feature Envy
- A method that seems more interested in some other class than the one it is  in.
-** Code duplication
-1. Literal
-2. Semantic
-3. Data duplication
-4. Logical Steps
-5. Conceptual
+** Types of Smells
+BCD FILOP RSS
+D = 2, L = 4
 
+1. Black sheep (unfit subclass/method.)
+2. Comments
+3. Dead Code
+4. Duplicated Code: Literal, Semantic, Data, Conceptual(We often ignore it!), Logical Steps
+5. Feature Envy
+6. Inappropriate Naming
+7. Large Class
+8. Lazy Class (Don’t create lazy classes by being caught up to follow the philosophy of creating as many classes as possible!)
+9. Long Method
+10. Long Parameter List
+11. Oddball Solution (Do not mix it with blacksheep!) 
+12. Primitive Obsession
+13. Refused Bequest
+14. Speculative Generality
+15. Switch Statements
 
+** Fix Methodologies
+- A variable name should say exactly what it is. A method should say exactly what it does.
+- Collapse Hierarchy
+- Decompose Conditionals
+- Extract Class
+- Extract Interface
+- Extract Method
+- Inline Class(Page 102)
+- Introduce Null Class
+- Introduce Parameter Object
+- Move Field
+- Move method
+- Preserve Whole Object
+- Pull Up Field
+- Remove Parameter
+- Rename Method
+- Replace array with object e.g. ArrayList
+- Replace conditionals with polymorphism
+- Replace data value with object(page 120)
+- Replace parameter with method(It's not what you think it is.)
+- Replace temp with query
+- Replace type code with class (Page 129, VERY IMPORTANT)
+- Replace type code with object
+- Replace type code with polymorphism
+- Replace type code with subclass
+- Substitute Algorithm e.g. replace conditions with Array.
+
+Others:
+- Form Template Method(Page 96)
+- Introduce Assertion
+- Replace method with method object(Page 66)
+  
+** Code Smell Definitions
+*** Black Sheep
+ Sometimes a subclass or method doesn't fit in so well with its family.
+*** Oddball
+ When a problem is solved one way throughout a system and the same  problem is solved another way in the same system, one of the solutions is the  oddball or inconsistent solution.   The presence of this smell usually indicates  subtly duplicated code. 
+
+*** Refused Bequest
+This rather potent odor results when subclasses inherit code that they don’t  want.  
+*** Speculative Generality
+ This odor exists when you have generic or abstract code that isn’t actually  needed today.  Such code often exists to support future behavior, which may  or may not be necessary in the future. 
+*** Feature Envy
+A method that seems more interested in some other class than the one it is in.
+
+Data and behavior that acts on that data belong together.  When a method  makes too many calls to other classes to obtain data or functionality, Feature  Envy is in the air.  
+
+*** Code duplication
+1. Literal: same 2 for loops
+2. Semantic: replace conditionals with array
+3. Data duplication: same constants in different class
+4. Logical Steps: same set of logical steps repeat.
+5. Conceptual: 2 sorting algorithm
+*** Comments are often used as deodorant 
+Comments represent a failure to express an idea in the code. Try to make your code self-documenting or intention-revealing.
+*** Lazy Class
+A class that isn't doing enough to carry its weight
+
+* What is design pattern? What are the types of design pattern?
+Design patterns are solutions to general design problems that software developers faced during software development.
+
+** Creational Pattern
+Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented.
+
+1. A class creational pattern uses inheritance to vary the class that's instantiated,
+2. whereas an object creational pattern will delegate instantiation to another object
+
+There are two recurring themes in these patterns. 
+1. They all encapsulate knowledge about which concrete classes the system uses.
+2. They hide how instances of these classes are created and put together.
+
+Sometimes creational patterns are competitors. For example, there are cases when either Prototype (117) or Abstract Factory (87) could be used profitably. At other times they are complementary: Builder (97) can use one of the other patterns to implement which components get built. Prototype (117) can use Singleton (127) in its implementation.
+** Structural Pattern
+Structural patterns are concerned with how classes and objects are composed to form
+larger structures. This pattern is particularly useful for making independently developed class
+libraries work together.
+
+Rather than composing interfaces or implementations, structural object patterns describe ways to compose objects to realize new functionality. The added flexibility of object composition comes from the ability to change the composition at run-time, which is impossible with static class composition.
+** Behavioral Pattern
+Behavioral patterns are concerned with algorithms and the assignment of responsibili-
+ties between objects. Behavioral patterns describe not just patterns of objects or classes
+but also the patterns of communication between them. These patterns characterize
+complex control flow that's difficult to follow at run-time
+
+1. Behavioral class patterns use inheritance to distribute behavior between classes.
+2. Behavioral object patterns use object composition rather than inheritance.
 * Refactoring Guru
 ABCDF MOPS T
 1. Abstract Factory: Furniture Factory, GUI Factory, MazeFactory
 2. Builder: House Builder, Car-Manual Builder, RTF Reader, MazeBuilder
 3. Chain of Responsibility: Authurozation, Customer care for tech. GUI Help, 
 4. Composite: Box-Product, Army Rank, Graphics, PC Build
-5. Decorator: notifier, Data encryption/compression, VisualComponent(border)
+5. Decorator: notifier, Data encryption/compression, VisualComponent(border), Stream Decorator
 6. Facade: Customer care of walmart, 
 7. Factory method: Transport Logistics, cross platform UI, File Editor, Line Manipulator, MazeGame
 8. Mediator: Air Traffic Control, Authentication Dialog, Font Dialog, 
@@ -355,6 +453,10 @@ ABCDF MOPS T
 3. Difference between builder and abstract factory
 4. Write about singleton
 5. Write about behavioral pattern in general.
+6. What is design pattern? What are its types?
 * Basic
 1. Coupling is when a object needs to know/assumes some stuffs about other object.
 2. Template method pattern can be used in all pattern.
+3. A object is a composition of many other objects --> composite. Object may change in run time --> decorator
+4. template + builder
+5. ~Answer three patterns for each question --? creational, structural and behavioral~
