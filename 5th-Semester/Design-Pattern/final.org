@@ -285,6 +285,8 @@ Ensure a class only has one instance, and provide a global point of access to it
 ** DONE UML Diagrams
 * TODO Prototype Pattern
 prototypes and abstract factory
+[[https://refactoring.guru/design-patterns/prototype][refactoring guru]]
+[[https://www.youtube.com/watch?v=DcFhITC9v0E][yt video]]
 ** Definition
 Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 ** Interesting Facts
@@ -332,7 +334,21 @@ Code Smells identify frequently occurring design problems in a  way that is more
 5. Conceptual
 
 
-
+* Refactoring Guru
+ABCDF MOPS T
+1. Abstract Factory: Furniture Factory, GUI Factory, MazeFactory
+2. Builder: House Builder, Car-Manual Builder, RTF Reader, MazeBuilder
+3. Chain of Responsibility: Authurozation, Customer care for tech. GUI Help, 
+4. Composite: Box-Product, Army Rank, Graphics, PC Build
+5. Decorator: notifier, Data encryption/compression, VisualComponent(border)
+6. Facade: Customer care of walmart, 
+7. Factory method: Transport Logistics, cross platform UI, File Editor, Line Manipulator, MazeGame
+8. Mediator: Air Traffic Control, Authentication Dialog, Font Dialog, 
+9. Observer: Product delivery status, news mailing, ~Event Listener~, PIE Chart, DAG, ClockTimner
+10. Prototype: Graphic Tool, Maze
+11. Singleton: Govt, MazeFactory
+12. Strategy: PlanRouter app, Transportation choice, Line Breaking Algorithm, 
+13. Template Method: Data Miner, Build house following a process, File Editor,  
 * Important Question
 1. Prototype pattern: It was taught last and it is big. So it will come in exam.
 2. Write down 10 lines about a pattern with its UML diagram.
