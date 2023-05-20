@@ -1,5 +1,6 @@
 ABCDF MOPS T (CSF=2)
 BCD FILOP RSS (D=2, L=4)
+ACD EI MP R S
 * Design Pattern
 ** Composite Pattern
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
