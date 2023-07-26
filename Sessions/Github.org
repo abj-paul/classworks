@@ -1,0 +1,45 @@
+* Git Installation
+Git is available in all system. So simply google on how to install git for your system. We will demonstrate for ubuntu system.
+#+begin_src bash
+  sudo apt update && sudo apt upgrade
+  sudo apt install git
+#+end_src
+Sometimes you may get a prompt like "package manager is locked". It usually means that you have opened the ubuntu system after a long time so the system is syncing with the repository online. It will take 20-30min to finish. Grab a cup of coffee and wait.
+* Git Initialization
+There are ways to initialize git locally but it is complex. So we will demonstrate creating git repository remotely and then, cloning that empty github repository locally.
+Note: Repository is just a fancy word for folder.
+
+1. Create a new repository in by going to your github home.
+2. Name the project something meaningful.
+3. Now copy the url of the github repository.
+4. In your terminal, write the following command.
+#+begin_src bash
+  git clone YOUR_COPIED_GITHUB_REPOSITORY_ADDRESS
+#+end_src
+
+Now you can simply open your file explorer and see that your github repository is now a folder in your system!
+* Git Commit
+Now write some code in your folder/project repository. After you are done, it is time to push the code to github.
+#+begin_src bash
+  git status
+  git add --all
+  git commit -m "my first commit!"
+#+end_src
+
+Lets discuss the commands one by one.
+1. ~git status~: It lists all the new changes.
+2. ~git add --all~: It adds all file for committing. We can manually write file names here if we want to commit only those specific files.
+3. ~git commit -m "my first commit~: Here,  ~-m~ means message. We usually add a commit message for better understanding.
+* Git Push
+Before pushing to git, we need to generate an authentication token. Since 2022, github recommends using github authentication token instead of your github account password to push the commits. To generate a code, simply go to github profile --> Setting --> Develop Option --> Generate a token --> Generate a new token.
+
+Copy the token and store it somewhere safe. You will need it everyday.
+
+Now in your terminal, simply write ~git push~. It will ask for username and password. Add your username and for password, insert your authentication token you just copied.
+
+If you did everything fine, the local files and changes should be pushed to remote github repository. Open your browser and check!
+* Next..
+When working with github, you will face ~merge conflict~ a lot. In our next session, we will see how to handle merge conflict easily.
+* Tips
+- Use linux. In courses like distributed system in third year, you simply can't use windows. Linux is kind of the de-facto default for such courses.
+- Use git from terminal: Start by learning from scratch. Use gui tools for github only after you understand the underlying concepts.
