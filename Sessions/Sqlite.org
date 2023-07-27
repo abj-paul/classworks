@@ -1,0 +1,47 @@
+* Downloand and install
+
+1. Go this page [[https://www.sqlite.org/howtocompile.html][Link]] and download the zip file.
+2. Unzip it
+3. Compile it using:
+   #+begin_src bash
+     gcc -DSQLITE_THREADSAFE=0 shell.c sqlite3.c -ldl -lm -o sqlite3
+   #+end_src
+
+* Test
+1. Open a database using ~./sqlite3 test.db~.
+2. Create a table in the database.
+   #+begin_src sqlite
+     CREATE TABLE contacts (
+	contact_id INTEGER PRIMARY KEY,
+	first_name TEXT NOT NULL,
+	last_name TEXT NOT NULL,
+	email TEXT NOT NULL UNIQUE,
+	phone TEXT NOT NULL UNIQUE
+);
+   #+end_src
+3. Type ~.tables~ to see all the created tables in your database.
+4. Insert some data in the table.
+   #+begin_src sqlite
+	     INSERT INTO contacts(contact_id, first_name, last_name, email, phone) VALUES(2, "abhijit", "paul", "bsse1201@iit.du.ac.bd", "01968399154");
+   #+end_src
+5. See the table data.
+   #+begin_src sqlite
+	     SELECT * FROM contacts;
+   #+end_src
+
+* Extra - Installation from github
+First , clone the git repository.
+#+begin_src bash
+ git clone https://github.com/sqlite/sqlite.git
+#+end_src
+
+Now install it.
+#+begin_src bash
+  mkdir bld                ;#  Build will occur in a sibling directory
+  cd bld                   ;#  Change to the build directory
+  ../configure      ;#  Run the configure script
+  make                     ;#  Run the makefile.
+  ./sqlite3
+#+end_src
+
+Done! You are good to go.
