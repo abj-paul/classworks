@@ -6,7 +6,17 @@
    #+begin_src bash
      gcc -DSQLITE_THREADSAFE=0 shell.c sqlite3.c -ldl -lm -o sqlite3
    #+end_src
-
+** Bash Script
+First do, ~gedit my_installation_script.sh~ and paste the following content in the file.
+#+begin_src bash
+  mkdir installation
+  cd installation
+  wget https://www.sqlite.org/2023/sqlite-amalgamation-3420000.zip
+  unzip *.zip
+  gcc -DSQLITE_THREADSAFE=0 shell.c sqlite3.c -ldl -lm -o sqlite3
+  echo "Done installating sqlite!"
+#+end_sr
+Now make the file executable using ~sudo chmod u+x my_installation_script.sh~.
 * Test
 1. Open a database using ~./sqlite3 test.db~.
 2. Create a table in the database.
