@@ -38,8 +38,23 @@ Copy the token and store it somewhere safe. You will need it everyday.
 Now in your terminal, simply write ~git push~. It will ask for username and password. Add your username and for password, insert your authentication token you just copied.
 
 If you did everything fine, the local files and changes should be pushed to remote github repository. Open your browser and check!
-* Next..
-When working with github, you will face ~merge conflict~ a lot. In our next session, we will see how to handle merge conflict easily.
+* Merge Conflict
+Ideally, you would ~git push~ your code from university, ~git pull~ it in your home before working and after completing your work, ~git push~ from home. But sometime, we forget to ~git pull~ and then, this merge conflict occurs. (There are many other scenarios that can create merge conflict but for SPL1, this scenario should suffice). Now lets go right into practicing and create a merge conflict!
+
+** Create Conflict
+Follow the steps to create a merge conflict.
+1. git clone your_repo_address
+2. Edit a file locally.
+3. Edit a file in your github from your browser by clicking on the file and then clicking the edit icon from top-right corner.
+Now you have two changes. You have made a change at github that the local repository does not know of. So when you try to ~git push~, you get a error message saying - it can not resolve a conflict so it can not push the content. There you go - merge conflict!
+
+** Resolve Conflict
+There are many branches in a github project. All projects by default have a ~main~ branch.
+
+First, lets create a branch using ~git checkout -b mybranch~. Now ~git push --set-upstream origin mybranch~. The contents will be pushed to github in a seaparate branch called ~mybranch~.
+
+[[https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github][This guide]] shows how to resolve the merge conflict. It shows the manual process. For our case, the github should be able to resolve the conflict automatically by itself.
+
 * Tips
 - Use linux. In courses like distributed system in third year, you simply can't use windows. Linux is kind of the de-facto default for such courses.
 - Use git from terminal: Start by learning from scratch. Use gui tools for github only after you understand the underlying concepts.
