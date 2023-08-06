@@ -102,30 +102,53 @@ function isNotVisisted(state){
   hashOfState = hashList(state);
   return !VISITED_NODES.includes(hashOfState);
 }
-
 function expand(state) {
   VISITED_NODES.push(hashList(state));
   console.log(state);
-  let move_up = f_move_up([...state]);
-  let move_down = f_move_down([...state]);
-  let move_left = f_move_left([...state]);
-  let move_right = f_move_right([...state]);
 
-  console.log(`It got: Swap Up: ${move_up}`);
+  // Queue to store states to be expanded
+  let queue = [state];
 
-  if (
-    isGoalState(move_up) ||
-    isGoalState(move_down) ||
-    isGoalState(move_left) ||
-    isGoalState(move_right)
-  ) {
-    return "Reached End!";
+  while (queue.length > 0) {
+    let currentState = queue.shift();
+
+    let move_up = f_move_up([...currentState]);
+    let move_down = f_move_down([...currentState]);
+    let move_left = f_move_left([...currentState]);
+    let move_right = f_move_right([...currentState]);
+
+    if (
+      isGoalState(move_up) ||
+      isGoalState(move_down) ||
+      isGoalState(move_down) ||
+      isGoalState(move_right)
+    ) {
+      console.log("Reached End!");
+
+      if(isGoalState(move_up)) console.log(move_up);
+      else if(isGoalState(move_down)) console.log(move_down);
+      else if(isGoalState(move_down)) console.log(move_down);
+      else if(isGoalState(move_right)) console.log(move_right);
+      return;
+    }
+
+    if (move_up && isNotVisisted(move_up)) {
+      VISITED_NODES.push(hashList(move_up));
+      queue.push(move_up);
+    }
+    if (move_down && isNotVisisted(move_down)) {
+      VISITED_NODES.push(hashList(move_down));
+      queue.push(move_down);
+    }
+    if (move_left && isNotVisisted(move_left)) {
+      VISITED_NODES.push(hashList(move_left));
+      queue.push(move_left);
+    }
+    if (move_right && isNotVisisted(move_right)) {
+      VISITED_NODES.push(hashList(move_right));
+      queue.push(move_right);
+    }
   }
-
-  if (move_up && isNotVisisted(move_up)) expand(move_up);
-  if (move_down && isNotVisisted(move_down)) expand(move_down);
-  if (move_left && isNotVisisted(move_left)) expand(move_left);
-  if (move_right && isNotVisisted(move_right)) expand(move_right);
 }
 
 let initial_state = [1, 2, 3, 4, 0, 5, 6, 7, 8];
