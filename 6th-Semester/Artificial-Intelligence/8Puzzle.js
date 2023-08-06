@@ -7,7 +7,7 @@ function hashList(list) {
 }
 
 VISITED_NODES = [];
-
+const PARENT_MAP = {};
 
 
 function f_move_up(curr_state) {
@@ -97,7 +97,7 @@ function isGoalState(state) {
   return true;
 }
 
-function isNotVisisted(state){
+function isNotVisited(state){
   
   hashOfState = hashList(state);
   return !VISITED_NODES.includes(hashOfState);
@@ -120,36 +120,52 @@ function expand(state) {
     if (
       isGoalState(move_up) ||
       isGoalState(move_down) ||
-      isGoalState(move_down) ||
+      isGoalState(move_left) ||
       isGoalState(move_right)
     ) {
       console.log("Reached End!");
-
-      if(isGoalState(move_up)) console.log(move_up);
-      else if(isGoalState(move_down)) console.log(move_down);
-      else if(isGoalState(move_down)) console.log(move_down);
-      else if(isGoalState(move_right)) console.log(move_right);
+      printPath(currentState);
       return;
     }
 
-    if (move_up && isNotVisisted(move_up)) {
+    if (move_up && isNotVisited(move_up)) {
       VISITED_NODES.push(hashList(move_up));
       queue.push(move_up);
+      PARENT_MAP[hashList(move_up)] = currentState;
     }
-    if (move_down && isNotVisisted(move_down)) {
+    if (move_down && isNotVisited(move_down)) {
       VISITED_NODES.push(hashList(move_down));
       queue.push(move_down);
+      PARENT_MAP[hashList(move_down)] = currentState;
     }
-    if (move_left && isNotVisisted(move_left)) {
+    if (move_left && isNotVisited(move_left)) {
       VISITED_NODES.push(hashList(move_left));
       queue.push(move_left);
+      PARENT_MAP[hashList(move_left)] = currentState;
     }
-    if (move_right && isNotVisisted(move_right)) {
+    if (move_right && isNotVisited(move_right)) {
       VISITED_NODES.push(hashList(move_right));
       queue.push(move_right);
+      PARENT_MAP[hashList(move_right)] = currentState;
     }
   }
 }
+
+function printPath(state) {
+  let path = [];
+  let currentState = state;
+
+  while (currentState) {
+    path.push(currentState);
+    currentState = PARENT_MAP[hashList(currentState)];
+  }
+
+  console.log("Path:");
+  for (let i = path.length - 1; i >= 0; i--) {
+    console.log(path[i]);
+  }
+}
+
 
 let initial_state = [1, 2, 3, 4, 0, 5, 6, 7, 8];
 expand(initial_state);
