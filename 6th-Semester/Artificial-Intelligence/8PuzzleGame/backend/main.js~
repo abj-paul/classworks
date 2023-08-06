@@ -1,0 +1,26 @@
+
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+
+
+// Constants
+const PORT = 3000;
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(cors());
+
+
+app.post('/api/v1/save', (req, res) => {
+    console.log("Received request...");
+    console.log(req.body);
+    const annotations = req.body.annotations;
+});
+
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});

@@ -1,0 +1,49 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    margin: auto;
+    width: 340px;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+    background-color: #FFFFFF;
+    border: 2px solid #333;
+    padding: 10px;
+}
+
+.tile , .solution-tile{
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-tile, .solution-empty-tile {
+  background-color: #ddd;
+  cursor: default;
+}
+.shuffle-btn {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: default;
+  border-radius: 5px;
+}
+.solution-section {
+    background-color: #ffffef;
+    margin: auto;
+}

@@ -6,6 +6,8 @@ function hashList(list) {
   return hash;
 }
 
+
+
 VISITED_NODES = [];
 const PARENT_MAP = {};
 
@@ -98,10 +100,10 @@ function isGoalState(state) {
 }
 
 function isNotVisited(state){
-  
   hashOfState = hashList(state);
   return !VISITED_NODES.includes(hashOfState);
 }
+
 function expand(state) {
   VISITED_NODES.push(hashList(state));
   console.log(state);
@@ -124,7 +126,7 @@ function expand(state) {
       isGoalState(move_right)
     ) {
       console.log("Reached End!");
-      printPath(currentState);
+      //printPath(currentState);
       return;
     }
 
@@ -166,7 +168,23 @@ function printPath(state) {
   }
 }
 
+function getPath(inital_state){
+    expand(inital_state);
 
-let initial_state = [1, 2, 3, 4, 0, 5, 6, 7, 8];
-expand(initial_state);
+    let path = [];
+    let currentState = state;
+    
+    while (currentState) {
+	path.push(currentState);
+	currentState = PARENT_MAP[hashList(currentState)];
+    }
+
+    return path;
+}
+
+
+//let initial_state = [1, 2, 3, 4, 0, 5, 6, 7, 8];
+//expand(initial_state);
+
+module.exports = {getPath}
 
