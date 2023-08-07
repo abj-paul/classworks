@@ -80,13 +80,13 @@ function generateGameContainer(stepNumber, state){
     const tile = document.createElement("div");
     tile.classList.add("solution-tile");
     //tile.textContent = i < 8 ? i + 1 : ""; // Set tile number (1 to 8), and leave the last tile empty
+    if(state[i]==0) 
+  	tile.classList.add("solution-empty-tile");
       tile.textContent = state[i];
     tile.setAttribute("data-index", i);
     puzzleBoard.appendChild(tile);
   }
 
-  const emptyTile = puzzleBoard.lastChild;
-  emptyTile.classList.add("solution-empty-tile");
 
   gameContainer.appendChild(stepHeader);
   gameContainer.appendChild(puzzleBoard);
@@ -111,7 +111,7 @@ function generateSolution(){
 
     const url = "http://localhost:3000/api/v1/result";
     const data = {
-	state: [1,2,3,4,0,5,6,7,8]
+	state: current_state
     };
     
     fetch(url, {
