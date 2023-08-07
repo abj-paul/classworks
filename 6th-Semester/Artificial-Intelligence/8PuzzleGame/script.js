@@ -41,8 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function swapTile(index1, index2) {
+    const tiles = document.querySelectorAll(".tile");
+	[tiles[index1].innerText, tiles[index2].innerText] = [tiles[index2].innerText, tiles[index1].innerText];
+    }
+
     
 function shuffleBoard() {
+
+    const tiles = document.querySelectorAll(".tile");
     let currentIndex = tiles.length;
     let randomIndex;
     
@@ -50,7 +57,7 @@ function shuffleBoard() {
 	randomIndex = Math.floor(Math.random() * currentIndex);
 	currentIndex--;
 	
-	swapTiles(currentIndex, randomIndex);
+	swapTile(currentIndex, randomIndex);
 	
 	if (currentIndex === emptyIndex || randomIndex === emptyIndex) {
 	    emptyIndex = currentIndex === emptyIndex ? randomIndex : currentIndex;
