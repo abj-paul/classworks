@@ -28,6 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function swapTiles(index1, index2) {
 	[tiles[index1].innerText, tiles[index2].innerText] = [tiles[index2].innerText, tiles[index1].innerText];
+
+	if(tiles[index1].innerText==""){
+	    tiles[index1].classList.add("empty-tile");
+	    tiles[index2].classList.remove("empty-tile");
+	}else{
+	    tiles[index2].classList.add("empty-tile");
+	    tiles[index1].classList.remove("empty-tile");
+	}
+
     }
     
     function checkWin() {
