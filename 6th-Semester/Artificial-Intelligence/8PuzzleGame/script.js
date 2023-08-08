@@ -59,6 +59,9 @@ function swapTile(index1, index2) {
 function shuffleBoard() {
 
     const tiles = document.querySelectorAll(".tile");
+    const emptyTile = document.querySelector(".empty-tile");
+    let emptyIndex = 8;
+    
     let currentIndex = tiles.length;
     let randomIndex;
     
@@ -114,6 +117,7 @@ function generateGameContainer(stepNumber, state){
 
 
 function generateSolution(){
+    document.querySelectorAll(".shuffle-btn")[1].innerText = "Generating..";
     current_state = [];
 
     let tiles = Array.from(document.querySelectorAll(".tile"));
@@ -145,7 +149,9 @@ function generateSolution(){
 	    for(let stepNumber=1; stepNumber<=steps.length; stepNumber++){
 		const generatedGameContainer = generateGameContainer(stepNumber,steps[stepNumber-1]);
 		document.getElementsByClassName("solution-section")[0].appendChild(generatedGameContainer);
+
 	    }
+	    document.querySelectorAll(".shuffle-btn")[1].innerText = "Generate Solution";
 	})
 	.catch((error) => {
 	    console.error("Error:", error);

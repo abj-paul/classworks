@@ -34,6 +34,7 @@ body {
   cursor: default;
 }
 .shuffle-btn {
+    width: 100%;
   margin-top: 20px;
   font-size: 16px;
   padding: 8px 16px;
@@ -46,4 +47,5 @@ body {
 .solution-section {
     background-color: #ffffef;
     margin: auto;
+    height: 900px;
 }
