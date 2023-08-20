@@ -1,0 +1,39 @@
+* Definition of Intelligence
+
+“The aggregate or global capacity to act purposefully, to think rationally, and to deal
+effectively with its environment” (Wechsler, 1958)
+
+“The study of how to make computers do things at which, at the moment, humans
+are better” (Rich and Knight, 1991)
+
+1. Global Bound: GAI, NI
+2. Purposeful action
+3. Think Rationally
+4. Effectively deal with the environment
+
+* Approaches/Views on AI
+1. Think Humanly: AI that thinks like human
+2. Think Rationally: AI that thinks rationally
+3. Act Humanly: AI that acts like human. Alan Turing
+4. Act Rationally: AI that acts rationally
+
+* Agent
+** What is an Agent?
+Action as intelligence = Agent.
+
+An agent is anything that can be viewed as perceiving its environment through ~sensors~ and acting upon that environment through ~actuators~.
+
+
+- Human, animals, robots are agents.
+- Software can also be an agent. Because it's environment is runtime, file system. The sensors are files and the actuator is also read write operation in files.
+
+* Questions
+** Chp 2
+1. What is Agent? Is Software an agent?
+2. What is a Rational/intelligent Agent?
+3. What is objective performance measure?
+4. What is PEAS?
+5. What are the different environmental types?
+
+* Problems
+[[file:~/Pictures/2023-08-19-135126_644x248_scrot.png]]
