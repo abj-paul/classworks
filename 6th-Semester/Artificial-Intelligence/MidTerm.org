@@ -45,3 +45,28 @@ An agent is anything that can be viewed as perceiving its environment through ~s
 
 * Problems
 [[file:~/Pictures/2023-08-19-135126_644x248_scrot.png]]
+
+* Online Sources
+http://web.cs.wpi.edu/~cs4341/b03/Exams/SolutionsExam1/
+http://web.cs.wpi.edu/~cs4341/b03/Projects/Project2/#homework   solution: Homework2_2.pdf
+http://web.cs.wpi.edu/~cs4341/C02/Exams/solutions_exam1_c02.html
+http://web.cs.wpi.edu/~cs4341/D01/Exams/solutions_exam1.html
+http://web.cs.wpi.edu/~cs4341/D01/Exams/exam1_c00.html solution: http://web.cs.wpi.edu/~cs4341/C00/Exams/solutions_exam1.html
+http://web.cs.wpi.edu/~cs4341/C00/Exams/solutions_exam2.html
+http://web.cs.wpi.edu/~cs4341/C00/Exams/solutions_exam1.html
+http://web.cs.wpi.edu/~cs4341/C00/HW/homework1.html solution: http://web.cs.wpi.edu/~cs4341/C00/HW/solutions_homework1.html
+http://web.cs.wpi.edu/~cs4341/C00/HW/homework2.html solution: http://web.cs.wpi.edu/~cs4341/C00/HW/solutions_homework2.html
+http://web.cs.wpi.edu/~cs4341/C00/HW/homework3.html solution: http://web.cs.wpi.edu/~cs4341/C00/HW/HW3/solutions_homework3.html
+http://web.cs.wpi.edu/~cs4341/C00/HW/HW4/homework4.html solution: http://web.cs.wpi.edu/~cs4341/C00/HW/HW4/solutions_homework4.html
+http://web.cs.wpi.edu/~cs4341/b03/Exams/SolutionsExam1/
+http://web.cs.wpi.edu/~cs4341/b03/Projects/Project1/Solutions/solutions_hw1.html
+http://web.cs.wpi.edu/~cs4341/C02/Exams/solutions_exam1_c02.html
+http://web.cs.wpi.edu/~cs4341/D01/Exams/solutions_exam1.html
+http://web.cs.wpi.edu/~cs4341/D01/Exams/solutions_exam2_d01.html
+http://web.cs.wpi.edu/~cs4341/C00/Exams/solutions_exam2.html
+http://web.cs.wpi.edu/~cs4341/D01/Exams/solutions_exam2_d01.html
+http://web.cs.wpi.edu/~cs4341/D01/HW/solutions_homework.html
+http://web.cs.wpi.edu/~cs4341/C00/HW/HW4/solutions_homework4.html 
+
+
+(mid e nai) http://web.cs.wpi.edu/~cs4341/b03/Exams/SolutionsExam2/
