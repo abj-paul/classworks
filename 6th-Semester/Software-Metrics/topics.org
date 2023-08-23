@@ -1,3 +1,8 @@
+* Chp1
+1. What is metric?
+2. Why neglect metrics in SE?
+3. Eight Steps of Measurement
+4. CMMI Model
 * Chp2
 1. Representational Theory of Measurement
 2. Define Measurement,Model
@@ -6,7 +11,7 @@
 5. Representation Condition
 6. Scale Types & Mathematical Model
 7. Key Stages of Formal Measurement
-8. Admissible Transformation
+8. ~Admissible Transformation~
 
 * Chp3
 1. What software entities are measured?
@@ -15,12 +20,31 @@
 4. GQM Paradigm
 5. What is a measurement goal? What are its types?
 6. GQM Template
-7. Measurement for process improvement
+7. ~Measurement for process improvement~
+
+* Chp4
+1. Define software verification and validation
+2. How are software measurements validated?
+3. What is empirical study?
+4. Empirical Study Type 
+5. Empirical Study Goal
+6. How to define a proper hypothesis?
+7. Maintaining Control Over Variables in Empirical Study
+8. Define threats to Emprical Study. What are the threats to external validity?
+9. Human Subject in Empirical Study
 
 * Figures
 1. Represenation Condition
-2. 
+2. Cause-Effect Relationship
+3. Study Type
 * Exercises
 1. Admissible Transofrmation for measurement statement meanigulness testing
-2. 
+2. CMMI with GQM
+3. GQM Template
    
+* TODO Tomorrow Morning
+1. Exercises
+2. Definition of admissible transormation
+3. List some of the attributes of a software that are usually tested
+4. Push to github
+5. 
