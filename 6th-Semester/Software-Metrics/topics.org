@@ -1,0 +1,26 @@
+* Chp2
+1. Representational Theory of Measurement
+2. Define Measurement,Model
+3. What is measure? What are the types of measure?
+4. Subjectve Rating Formats of ER
+5. Representation Condition
+6. Scale Types & Mathematical Model
+7. Key Stages of Formal Measurement
+8. Admissible Transformation
+
+* Chp3
+1. What software entities are measured?
+2. Types of attributes of a software
+3. List some of the attributes of a software that are usually tested
+4. GQM Paradigm
+5. What is a measurement goal? What are its types?
+6. GQM Template
+7. Measurement for process improvement
+
+* Figures
+1. Represenation Condition
+2. 
+* Exercises
+1. Admissible Transofrmation for measurement statement meanigulness testing
+2. 
+   
