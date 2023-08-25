@@ -1,0 +1,25 @@
+* 1st Chapter
+1. What is distributed system? Give some examples.
+2. Types of distributed system
+3. Is CCTV Camera system a distributed system? Why?
+4. What is software design and system architecture?
+5. What is a monolithic architecture? Give some example.
+6. What are the advantages,disadvantages of monolithic architecture?
+7. What are the advantages, disadvantages of microservice?
+8. What is a microservice architecture? What are the best practices in microservice architecture?
+9. Why does Stackoverflow use monolithic over microservice architecture?
+** Next Section
+1. Issues: Scalability, Fault Tolerance, Transparency
+2. What are the types of transparency in distributed system?
+3. CAP Theorem
+4. Parallel Computing, Multiprocessor, Multicomputer
+5. Shared Memory distributed System
+6. Message Passing
+7. Cluster computing
+8. Grid Computing
+9. Cloud Computing
+* 2nd Chapter
+1. Define Architectural Style.
+2. Layered Architecture
+3. Object Based Style
+4. Layered Architecture
