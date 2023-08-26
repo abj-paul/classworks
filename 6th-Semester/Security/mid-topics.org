@@ -37,14 +37,3 @@ DENN71] and by Harrison et al. [HARR76].
 
 - SetUID, setGID in linux
 - ACL in FreeBSD
-* Syllabus
-chapter 1 er definition, openness, transparency, scaling ar last er 43-50 ase
-
-but, openness, transparency ar scaling er shob nai, just introductory jeshob kotha ase oigula ase
-eigula mainly boi theke dekhe jaite bolse
-
-ar bolse je intro+design slide ta valo vabe porte
-
-rafed vai er theory pora lagbena.
-
-

@@ -24,3 +24,18 @@
 2. Layered Architecture
 3. Object Based Style
 4. Layered Architecture
+* Syllabus
+chapter 1 er definition, openness, transparency, scaling ar last er 43-50 ase
+
+but, openness, transparency ar scaling er shob nai, just introductory jeshob kotha ase oigula ase
+eigula mainly boi theke dekhe jaite bolse
+
+ar bolse je intro+design slide ta valo vabe porte
+
+rafed vai er theory pora lagbena.
+
+
+* Todo
+1. Definitions of chapter 1 : Openness, Transparency, Scaling
+2. Intro Slide
+3. Design Slide
