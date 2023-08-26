@@ -1,8 +1,9 @@
 * 1st Chapter
+** Initial Section
 1. What is distributed system? Give some examples.
 2. Types of distributed system
 3. Is CCTV Camera system a distributed system? Why?
-4. What is software design and system architecture?
+4. ~What is software design and system architecture?~
 5. What is a monolithic architecture? Give some example.
 6. What are the advantages,disadvantages of monolithic architecture?
 7. What are the advantages, disadvantages of microservice?

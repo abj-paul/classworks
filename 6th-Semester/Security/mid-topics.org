@@ -1,0 +1,50 @@
+* 3rd Chapter - User Authentication
+1. NIST Requirements for authentication
+2. Architectural model of E-Auth
+3. The 4 means of authenticating user identity
+4. Static biometric vs dynamic biometric
+5. Risk assessment for user authentication
+6. Attacks on Password based authentication
+7. Salting
+8. Unix Implementation on how they save password
+9. Password Cracking
+10. Modern attacks on password
+11. Password File Access Control
+12. Password Selection Strategy
+13. Smart Token Cards
+14. Biometric Auth
+15. Remote user authentication
+16. Token Based Authentication
+17. Static Biometric Protocol
+18. Dynamic Biometric Protocol
+* 4th Chapter - Access Control
+1. What is Access Control
+2. Principle of least privilege
+3. Access Matrix
+4. Role based access control
+5. Many to many relation
+6. RBAC Versions
+* 5th Chapter - Database Security
+1. Database Access Control
+2. Cascading Revoke
+3. RBAC in database
+4. Inference Attack & Detection in DB
+5. Database Encryption
+* TODO
+The access matrix concept was formulated by
+Lampson [LAMP69, LAMP71], and subsequently refined by Graham and Denning [GRAH72,
+DENN71] and by Harrison et al. [HARR76].
+
+- SetUID, setGID in linux
+- ACL in FreeBSD
+* Syllabus
+chapter 1 er definition, openness, transparency, scaling ar last er 43-50 ase
+
+but, openness, transparency ar scaling er shob nai, just introductory jeshob kotha ase oigula ase
+eigula mainly boi theke dekhe jaite bolse
+
+ar bolse je intro+design slide ta valo vabe porte
+
+rafed vai er theory pora lagbena.
+
+
