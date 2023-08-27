@@ -1,0 +1,2 @@
+* Cause Effect
+A program has been designed to determine the nature of roots of a quadratic equation. The quadratic equation takes three input values from the range [0, 100]. Design the test cases using cause-effect graphing technique.
