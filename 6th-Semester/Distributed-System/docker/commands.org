@@ -1,0 +1,61 @@
+* Containerization
+https://rafed.github.io/devra/posts/docker/useful-docker-commands/
+
+
+git clone https://github.com/rafed/docker-intro
+# Create Docker Image e.g. iso file
+sudo docker build . -t serverrr # t = tag
+
+sudo docker image ls
+
+
+# We will also see a python container because our container runs inside the python runtime.
+
+
+docker run -p 5000:5000 serverr
+
+
+# Upload my image in dockerhub. This way, others can simply download my docker and use it.
+
+
+docker loogin
+sudo docker built . -t abjpaul/serverr
+docker push abjpaul/serverr
+
+
+# Directly run from dockerhub
+sudo docker run -p 5000:5000 rafed123/rafed-server
+
+* Orchestraization
+When your band has 80-90 people, some people will naturally be out of beat. By seeing the movement of the orchestrator, the musicians make the beat. It helps everyone to maintain the rhythm.
+
+In practice, each microservice is a container and we have a lot of microservices. Managing so many containers an be cumbersome - we need to build all the images each time to run them etc.
+
+In orchestration, we write what containers need to be run to run our application, when to run etc.
+
+- Maintainging 50 containers is hard by hand : imagine running all of them one by one.
+
+** docker-compose.yaml
+
+
+It is the orchestrator file. 
+
+version : docker compose version.
+services: nginx , server
+
+restart: unless-stopped (If app crashes, restart it again.)
+ports: host 7000, container 80 because nginx always runs in port 80.
+volumes: nginx configuration
+depends_on: nginx would never run if server is not up.
+
+build: ./server : It will go to server folder and then if it finds the dockerfile, it will build it.
+
+
+*** Nginx
+nginx is a reverse proxy. It hides the server. 
+
+Proxy: When govt turns down fb access in BD, we install VPN. VPN is a proxy server. 
+Reverse PRoxy: When backend has multiple servers, a reverse proxy hides that we have multiple server. This way, clients always hit the same server - reverse proxy server.
+
+
+nginx configuration is very easy and thats why it is so popular.
