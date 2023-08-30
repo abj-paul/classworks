@@ -81,6 +81,8 @@
 19. Remote User Authentication
 20. Areas of Risk
 21. Types of threats
+22. Smart Card Tolem Activation
+23. User Authentication with eID
 * TODO
 The access matrix concept was formulated by
 Lampson [LAMP69, LAMP71], and subsequently refined by Graham and Denning [GRAH72,
