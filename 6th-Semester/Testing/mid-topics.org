@@ -1,0 +1,27 @@
+* Chp 1
+1. Myth - Testing is a single phase in SDLC.
+2. Myth - Testing is easy.
+3. Myth - Software development is worth more than testing.
+4. Myth - Complete testing is possible.
+5. Myth - Testing starts after program development.
+6. Myth - ~The purpose of testing is to check the functionality of the software.~
+7. Myth - Anyone can be a tester.
+8. ~Goals of software testing.~
+9. Psychology for software testing.
+10. Definition of software testing
+11. ~Why is effective testing hard?~
+* Chp 2
+1. Definitions: Failure, Fault, Bug, Example, Test Case, Testware, Incident, Test Oracle
+2. Life cycle of a bug.
+3. States of a bug
+4. Why do bugs occur?
+5. Bugs Classification - SDLC & Criticality
+6. Testing Principles
+7. STLC
+* Content
+** Myth - The purpose of testing is to check the functionality of the software.
+While checking the functionalities of all the modules is an important part of testing, it is not the only thing that must be tested. Other things related to the quality of the software, such as performance, security, usability, and compatibility with different platforms and devices, must also be tested. By executing test cases for these aspects of software quality, testers can ensure that the software meets all the requirements and specifications and is ready for release
+** Testing Definitions
+Testing is the process of executing a program with the intent of finding errors.
+Software testing is a process that detects important bugs with the objective of having
+better quality software.
