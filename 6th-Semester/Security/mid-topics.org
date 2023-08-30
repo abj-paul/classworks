@@ -1,4 +1,111 @@
-* 3rd Chapter - User Authentication
+* Topics
+** Chp 1
+1. Definitions: Threat, Vulnerability, Control
+2. Types of threats.
+3. Active vs Passive Attack
+4. Security Goals
+5. Security Services
+6. Security Mechanims
+** Chp 3
+1. What is authentication? What are the stages for user authentication?
+2. What is a token?
+3. NIST Authentication requirements.
+4. General Model of User Auth - NIST
+5. Means of Authentication.
+6. What is MFA?
+7. Risk Assessment for user Authentication
+8. Password Based Authentication
+9. What is a strong password policy?
+10. UNIX Password Scheme
+11. Why use SALT?
+12. Password Cracking Techniques
+13. What are the modern approaches for password cracking?
+14. How to Password File Access Control?
+15. What is the password selection strategy?
+16. What is token based authenitication?
+17. What are the types of tokens?
+18. TODO
+19. What is biometric authentication?
+20. Enrollment, Verification and Identification in Biometric Authentication
+21. Feature Matcher Dilemma
+22. Remote User Authentication - What are the additional threats?
+** Chp 4
+1. What is access control?
+2. Relationship between access control and other security functions
+3. Why Audit security activities?
+4. What is access control policy?
+5. What are the types of access control policy?
+6. What are the basic elements of access control?
+7. Describe Discretionary Access Control.
+8. Decompose a Access Control Matrix. Describe them.
+9. Why do we need authorization table?
+10. Describe UNIX File Access Control.
+11. What data structure would you use for RBAC Reference Model?
+12. Describe RBAC Reference Model
+** Chp 5
+1. Why database security has fallen behing the increased reliance of database?
+2. Definitions : Database, Query Language, DBMS, Relational Database, SQL
+3. DBMS Architecutre
+4. Describe SQLi and show some examples of it.
+5. SQLi attack takes advantage of what things?
+6. What are the types of SQLi?
+7. SQLi countermeasures
+8. What is database access control? How many types are there?
+9. RBAC in DBAC
+10. Cascaded Authorization
+11. What is Inference attack? Show a demonstration.
+12. What are the types of inference attack?
+13. How to deal with inference attack?
+14. What is database encryption? What are the types of Database Encryption? What are its advantages and disadvantages?
+15. Show a database encryption scheme.
+16. Whats a block based encryption?
+** Figures
+1. Relationship between access control and other security functions
+2. Decompose a Access Control Matrix.
+3. Data structure of RBAC
+4. Describe RBAC Reference Model
+5. Why do we need authorization table?
+6. RBAC Table
+7. DBMS Architecutre
+8. Demonstration of Inference Attack
+9. Database Encryption
+10. Non-overlaping partitions
+11. General Model of User Auth - NIST
+12. MFA Figure
+13. Password Based Authentication Attacks & Prevention
+14. UNIX Password Scheme - old and new
+15. Password Cracking
+16. Accuracy vs Cost graph
+17. Enrollment, Verification and Identification in Biometric Authentication
+18. Feature Matcher Dilemma
+19. Remote User Authentication
+20. Areas of Risk
+21. Types of threats
+* TODO
+The access matrix concept was formulated by
+Lampson [LAMP69, LAMP71], and subsequently refined by Graham and Denning [GRAH72,
+DENN71] and by Harrison et al. [HARR76].
+
+- SetUID, setGID in linux
+- ACL in FreeBSD
+- Masquerade
+** Tomorrow
+1. Bloom Filter
+2. Draw Figures
+3. Case Study
+4. Book Questions
+* Important Stuffs
+Database encryption mechanism
+Importance of role base access control
+Access control
+Token authentication mechanism
+Salt er complexity graph
+
+https://docs.google.com/document/d/180y2vxSn5gvAt9Hx_YEkOo9j7M7qX1S4mEVm33hscjA/edit
+
+* Temp
+ Covered Topics in Class
+** 3rd Chapter - User Authentication
 1. NIST Requirements for authentication
 2. Architectural model of E-Auth
 3. The 4 means of authenticating user identity
@@ -17,23 +124,16 @@
 16. Token Based Authentication
 17. Static Biometric Protocol
 18. Dynamic Biometric Protocol
-* 4th Chapter - Access Control
+** 4th Chapter - Access Control
 1. What is Access Control
 2. Principle of least privilege
 3. Access Matrix
 4. Role based access control
 5. Many to many relation
 6. RBAC Versions
-* 5th Chapter - Database Security
+** 5th Chapter - Database Security
 1. Database Access Control
 2. Cascading Revoke
 3. RBAC in database
 4. Inference Attack & Detection in DB
 5. Database Encryption
-* TODO
-The access matrix concept was formulated by
-Lampson [LAMP69, LAMP71], and subsequently refined by Graham and Denning [GRAH72,
-DENN71] and by Harrison et al. [HARR76].
-
-- SetUID, setGID in linux
-- ACL in FreeBSD
