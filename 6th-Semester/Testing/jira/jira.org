@@ -1,0 +1,5 @@
+* Tutorials
+https://www.youtube.com/watch?v=btlY2XotWuM
+* Bug Workflow
+** New --> Open
+Only project leader can make the transition after he inspects the bug.
