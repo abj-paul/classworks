@@ -1,0 +1,11 @@
+import xmlrpc.client
+
+# Create an RPC client
+client = xmlrpc.client.ServerProxy('http://localhost:8000')
+
+# Call remote methods on the Calculator object
+result_add = client.add(5, 3)
+result_subtract = client.subtract(10, 4)
+
+print("Addition Result:", result_add)
+print("Subtraction Result:", result_subtract)
