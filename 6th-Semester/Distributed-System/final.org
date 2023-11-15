@@ -1,0 +1,174 @@
+* Chp 1
+1. What is DS? Give some examples.
+2. What are the benefits of DS?
+3. What are the challenges of DS?
+4. What are the pitfalls of DS?
+5. Describe CAP Theorem.
+6. Describe parallel computing and its types.
+7. Distributed Shared Memory System
+8. Describe Cluster computing
+9. Describe Grid computing
+10. Describe Cloud computing
+11. Tradeoff in distribution transparency
+12. Discuss ways to achieve scalability transparency.
+* Chp 2
+1. What is architectural style? Classify it.
+2. What is layered architecture? Give two example.
+3. Discuss traditional three layered view.
+4. What is Object Based Style?
+5. What is resource oriented architecture? Give example.
+6. Discuss the 4 properties of RESTful architecture.
+7. Discuss Publisher-Subscriber architecture.
+8. What is adapter? How many types of wrapper are there?
+* Chp 3
+1. What is a process?
+2. What is a Thread?
+3. Use of thread in distributed and nondistributed systems.
+4. Multithreaded clients and servers.
+5. Define virtualization, hypervisor, virtual machine, containerization and orchestration
+6. Benefits of virtualization
+7. Benefits of VM
+8. Benefits of container
+9. What is Code migration? Why is it necessary?
+10. Explain "Dynamically downloading client side software".
+11. Types of code migration
+12. What is sender/reciever initiated migration?
+13. Migration in heterogenous system.
+14. Types of code migration through compartmentalization
+* Chp 4
+1. Types of communication in a distributed system.
+2. Difference between persistent and transient communication
+3. Difference between Asynchronous and Synchornous communication
+4. Points where synchronization can take place.
+5. Communication in traditional client server architecture,
+6. Define message oriented communication.
+7. Explain the RPC process.
+* Chp 5
+1. Define name, entity, access point, identifer, address, human friendly name
+2. What are the properties of a true identifier?
+3. Define location independent name.
+4. What is flat naming? What are the types of flat naming?
+   1. Flat naming
+      1. Broadcasting
+      2. Multicasting
+      3. Forwarding pointers
+      4. Home based approach
+   2. Structured naming
+      1. namespace
+      2. absolute, relative, global, local path
+      3. name resolution
+      4. linking and mounting
+5. Advantaged/disadvantages of broadcasting, forwarding pointer, home based approach
+6. Use cases of multicasting
+7. Explain mobile IP naming scheme.
+8. Implementation of a namespace
+* Temp
+** Chp 1
+*** Rafed vai
+1. What is a distributed system? Types of distribution.
+2. What is software architecture? What is system design?
+3. From monolith to microservice architecture.
+4. Give some example where monolith was a better fit.
+5. State the cases where we need microservice.
+6. What is microservice? Benefits of microservice.
+7. Best practices of micrsoervice.
+8. Advantages, disadvantages of microservice and monolith.
+*** Toukir vai
+1. Define distributed system.
+2. What are the necessities for distributed system?
+   - Scalability
+   - Fault Tolerance
+   - Transparency
+3. Types of transparency
+4. CAP Theorem
+5. Parallel Computing
+6. Multiprocessor, Multicomputer
+7. Shared Memory, Message Passing
+8. Distributed shared memoery system
+9. Define cluster computing
+10. Define grid computing
+** Chp 2
+1. Define Architectural Style
+2. Define Layered style. How many types are there?
+   1. Service, Interface and communication protocol
+3. Define Object based style,
+   1. RPC Call.
+   2. CRC diagram and RPC call
+   3. Marshalling
+** Chp 3
+1. Define VM. Advantages and disadvantages of VM.
+2. Define Hypervisor
+3. Can we make VM lighter? Docker.
+4. Container vsGuest OS
+5. Discuss about containers.
+   1. Runtime enginer, configurations, dependencies, code
+6. How are contrainers used in a distributed system?
+7. Define 2 Tier Architecture and its advantages, disadvantages.
+8. Define 3 Tier Architecture and its advantages, disadvantages.
+   1. Layer 2 works both as a client and a server.
+9. Remote Access Model and Upload Download Model
+10. Define multiteri architecture.
+11. Coupling and coordination
+*** A
+1. Define process and thread. Give example.
+2. Threads in a distributed system.
+3. Define dispatcher.
+4. Define virtualization
+*** Communication
+1. Define types of communication in a distributed system.
+2. Types of communication
+   1. based on Data Store
+   2. based on Syncrhonization
+3. Advantage-disadvantage of each type of communication.
+4. Define message oriented middleware.
+5. Demonstrate communication using RPC.
+6. Are RPCs asynchronous?
+*** 3.5 Code Migration
+1. What is code migration? Why do we need code migration?
+2. Types of code migration
+3. Code migration in heterogenous system
+4. Three ways for code migration**
+** Chp 5
+Read it from khata.
+1. What is naming?
+2. Discuss naming schemes.
+3. Flat naming
+4. Namespace
+5. Path
+6. Name resolution
+7. Mount point vs mounting point
+8. Implementation of namespace in DNS
+* Figures
+1. CAP
+2. Multicore multiprocessor multicomputer
+3. Cluster Computing
+4. Grid Computing
+5. Cloud Computing
+6. Layered Architectural Style: Upcall Downcall
+7. Layered Communication Protocol
+8. Traditional Three Layered View
+9. Object Based Style
+10. RPC
+11. Coordination
+12. Wrapper
+13. Thread
+14. Multithreaded client and server
+15. Virtualization, VM, Containerization
+16. Code migration
+17. Types of code migration
+18. Points where synchronization can take place.
+19. RPC Communication
+20. Forwarding pointers
+21. Forwarding pointers shorcut
+22. Mobile IP
+23. Symbolic and hard link
+24. Mounting
+25. DNS Structure
+26. DNS Name resolution using iterative
+27. DNS Name resolution using recursive
+
+* Todo
+1. git push
+2. Draw all figures
+3. Revise your classnote
+   
