@@ -1,2 +1,45 @@
+* Intelligent Agent
+1. What is agent?
+2. What is rational agent?
+3. PEAS Task environment for an agent.
+4. Environment types
+5. Agent Types
 * Blind Search
-- A* Search
+1. Define problem
+2. What is uninformed/blind search? How many types are there?
+3. Math: BFS, DFS, IDFS, UCS, DLS
+4. Time, space, completeness, optimality of above algorithms.
+* Informed Search
+1. Define heuristics.
+2. Math: Best first search, greedy best first search, A*
+3. ~Define admissible heuristics~
+4. Prove ~Optimality of A*~
+* Adversarial Search
+1. Minimax with alpha beta pruning
+2. (cut-off search, move ordering, etc)
+* Logic (7-8)
+1. Define knowledge base
+2. Define logical inference
+3. How many types of inference are there?
+4. Define entailment
+5. Math: Wumpus World Knowledge Base
+6. Forward vs Backward chaining
+* Markov Model
+1. Define markov chain
+2. Define markov model
+3. Define Hidden markov model
+4. List HMM Tasks
+* Figures
+1. Agent
+2. Agent types
+* Math Problems
+1. PEAS description of Parts picking robot, self-driving car
+2. Environment type of table tennis
+3. BFS, DFS, IDFS, UCS, DLS
+2. Best first search, greedy best first search, A*
+1. Minimax with alpha beta pruning
+5. Math: Wumpus World Knowledge Base
+** Forward/backward chaining
+[[https://www.chegg.com/homework-help/questions-and-answers/3-propositional-logic-forward-backward-chaining-2-2-2-4-10-20-question-horn-clauses-well-f-q96105818][chegg problem]]
+* TODO
+- Find maths on markov process.

@@ -170,5 +170,6 @@ Read it from khata.
 * Todo
 1. git push
 2. Draw all figures
-3. Revise your classnote
+3. Packup
+4. Revise your classnote
    
