@@ -24,14 +24,38 @@
 4. Define entailment
 5. Math: Wumpus World Knowledge Base
 6. Forward vs Backward chaining
+7. Resolution vs Chaining
+8. Define horn form
+* Probablity Primers
+1. What is random variable
+2. Joint probablity
+3. Joint Probablity Distribution
+4. Probablity Distribution
+5. PDF PMF
+6. Conditional Probablity
+7. Independence
+8. Full Joint Distribution
+9. Bayes Rule
+* Bayesian Network
+1. Why is BBN a belief network?
+2. Define conditional independence
+3. Define Bayesian Netowek
+4. Two properties of BBN
+5. Define markov condition
+6. Define inference
+7. What is joint probablit factorization? Prove bbn formula from it
 * Markov Model
 1. Define markov chain
-2. Define markov model
-3. Define Hidden markov model
-4. List HMM Tasks
-* Figures
-1. Agent
-2. Agent types
+2. Define temporal system
+3. Define markov model
+4. Define Hidden markov model
+5. List HMM Tasks
+* Machine Learning
+1. Define supervised, unsupervised, semi-supervised model
+2. Explain the learning process
+3. what is feature selection and projection?
+4. Overfitting and underfitting
+5. Occam's Principle
 * Math Problems
 1. PEAS description of Parts picking robot, self-driving car
 2. Environment type of table tennis
@@ -41,5 +65,10 @@
 5. Math: Wumpus World Knowledge Base
 ** Forward/backward chaining
 [[https://www.chegg.com/homework-help/questions-and-answers/3-propositional-logic-forward-backward-chaining-2-2-2-4-10-20-question-horn-clauses-well-f-q96105818][chegg problem]]
+* Remember
+- Discrete / Continuous environment depends on the ability to ~LIST~.
+- ACDEFS(Static)
+- If alpha>=beta then break
 * TODO
-- Find maths on markov process.
+- [ ] Revise question from this theory listing.
+- [ ] Practice math people give you.
