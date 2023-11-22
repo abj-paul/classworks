@@ -1,0 +1,122 @@
+* Chp 1
+1. Myth: Software Development is worth more than testing.
+2. Myth: The purpose of testing is to check the functionality of a software.
+3. Goals of testing.
+4. Describe long term goals.
+5. Psychology of a software testing
+6. Model for software testing
+7. Effective vs exhaustive testing
+8. Why effective testing is hard
+* Chp 2
+1. What is error? bug? failure? test case? testware? incident? test oracle?
+2. ~Life cycle of a bug~
+3. ~States of a bug~
+4. Why do bugs occur? Discuss the economics of software testing.
+5. Bug classification
+6. Types of design bugs
+7. Software testing life cycle
+8. What is test design?
+9. What is test execution?
+10. ~Describe test mehodology~
+11. STLC Model
+12. What is static and dynamic testing?
+13. Consideration in develoong testing method
+14. What is test factor?
+* TODO Chp 3
+1. Verification and Validation activities in SDLC
+2. What is verification? What is validation?
+3. Discuss on ~unit verification.~
+4. What is TDD?
+5. Difference between Validation and Verification.
+6. V&V Diagram.
+7. Insights from V Diagram.
+* Chp 4
+1. What is blackbox testing?
+* Chp 5
+1. What is development testing?
+2. Necessity for white box testing
+3. What is logic coverage?
+4. What is basis path testing?
+5. What is control flow graph?
+6. What is link?
+7. Guidelines for Basis path testing.
+8. Applications for basis path testing.
+9. What is data flow testing.
+10. What is static data flow testing?
+11. What is dynamic data flow testing?
+12. What is mutation testing? What are its types?
+* Chp 7
+1. Are there one-to-one correspondence between development and testing process?
+2. What is test plan? Test Procedure?
+3. What is unit validation?
+4. What is driver?
+5. What is stub?
+6. Difference between driver and stub.
+7. What are the advantages, disadvantages of drivers/stubs?
+8. What is integration testing? What are its types?
+9. What kind of issues does it identify?
+10. What is the taxonomy for Decomposition based integration testing?
+11. ~Comparison between top-down and bottom-up approach.~
+12. What is the number of integration testing scenarios?
+13. What is functionality testing? Describe its process.
+14. What is system testing? How many types are there?
+15. What is acceptance testing?
+16. What are the tasks for performance test?
+17. ~Describe the phaes in acceptance testing.~
+* Chp 8
+1. What is regression?
+2. Consequence of poor regression testing
+3. What are thr problems with regression test?
+4. How to maintain test suite?
+5. What is flaky test?
+6. How to optimize regression testing?
+7. Describe regression test selection strategies.
+8. Describe hybrid approach for regresion test selection.
+9. Describe regression test set minimization.
+10. Describe regression test set prioritization.
+* Chp 9
+1. What are the steps in Test management?
+2. Discuss test organization.
+3. Discuss test plan
+4. What are the skills needed for a tester?
+5. Coverage Metrics, Acceptance Testing,IEEE Std 829 Standard
+6. Describe item to be tested.
+7. Describe features not to be tested.
+8. Describe approach
+9. Describe environment management
+10. Describe risk bitmap
+11. What are the types of master test plan?
+* Math
+1. [X] BVC, Robust Checking, Worst Case Checking (4 maths done)
+2. [X] Equivalence Class (4 Done)
+3. [ ] State Table Based Testing (1 Done)
+4. [X] Decision Table Based Testing (3 Done)
+5. [X] Cause effect based graphing (3 Done)
+6. [X] Basis Path Testing (3 Done)
+7. [X] Static Data Flow Testing (1+Coding)
+8. [ ] Dynamic Data Flow Testing (1 Done)
+9. [X] Mutation Testing (1 Done)
+10. [X] PDG (2 Done.)
+11. [X] Regression Test Prioritization
+** Examples for Shuffling
+1. Date Format
+2. Angle
+3. Largest Number
+4. Salary
+5. DGS & D
+6. C++ Java OOAD
+7. Quadratic
+8. Sorting C Code
+* Diagram
+1. V&V
+2. Model for testing software
+3. Life cycle of a bug
+4. States of a bug
+5. STLC
+6. Extended V Testing model
+* TODO
+1. Definition of ADUP ACUP
+2. Logic Table for Cause Effect Graph Signs
+3. Chp 5 du dk definitions
+4. Read book on chp 3
+5. Practice dynamic Data Flow (5.1, 5.4)
