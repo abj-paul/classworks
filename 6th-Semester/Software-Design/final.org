@@ -1,0 +1,11 @@
+1. What are the steps in architectural design?
+2. Describe 7 architectural design patterns.
+3. Write down the three standard formats (message, data type, event)
+4. Describe component level design.
+5. Describe user interface design.
+6. SOLID Principle.
+7. What is software design? What is the necessity of Software design?
+8. What are the design techniques for managing complexity?
+9. Explain the generic design process.
+10. Characteristics of a software design
+11. State chart
