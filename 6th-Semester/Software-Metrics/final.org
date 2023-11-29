@@ -1,0 +1,81 @@
+* Chp 6
+- Steps to draw a box plot
+- Steps to draw a bar chart
+- Steps to draw a control chart
+- Steps to calculate pearson correlation coefficient
+- Steps to calculate linear regression
+- Approaches to use
+- Why do we need these statistical technqiues?
+- What do do when we dont know the distribution of the data?
+- What is hypothesis testing? Explain Type 1, Type 2 error.
+- What is robust statistics and nonparametric methods?
+- What is measure of association? Describe two measures of association.
+- Explain PCA, decision tree, linear regression
+
+* Chp 5
+- What is Anova? Why is it one way? Explain the 6 steps to calculate anova.
+- What is Sum of Squares? What is degree of freedom?
+- Describe Software Metrics Data Collection Process
+- How to define data?
+- What is good data?
+- Data collection techniques
+
+* Chp 1
+- Representational theory of measurement
+- What is measurement? Model?
+- What are the subjective rating formats of empirical relations?
+- What is representation condition?
+- Describe homomorphism
+- Types of mapping.
+- What is measure? Types of measure.
+- Types of scale.
+- Key stages of formal measurement
+- Admissible Transofrmation
+- What is metric?
+- What are the steps of measurement?
+
+* Chp 3
+- What are software entities?
+- What are attributes? What are the types of attributes?
+- GQM
+- Whats a measurement goal?
+- Template for goal definition. Types of goal.
+- CMMI
+- Combining GQM with Process Maturity
+
+* Chp 4
+- What is software validation and verification?
+- How to Software measurement validation
+- What is empirical study? Explain its types.
+- What are the external threats to validity?
+- What are the ethical concerns when working with a human subject?
+
+* Chp 7
+1. What is function point? How to calculate function points?
+2. What is size? What are the properties of size?
+3. What is design size? requirements size?
+4. Explain Halstead's approach
+5. What are the types of comomo?
+6. Explain each software project types in COCOMO.
+
+* Chp 8
+1. What is quality? What are the quality attributes?
+2. Boehm & McCall Software Quality Model
+3. What is six sigma principle? Difference between three sigma and six sigma.
+4. How to achieve 6 sigma?
+5. Difference between DMAIC DMADV
+6. ISO 25010
+7. CVSS Score
+* TODO Things to do morning
+- Practive GQM from slide
+- Environment types, DMAIC DMADV, CVSS
+- Revise theory
+- Practice math
+  
+** Revise
+- Spearman kendell, kruskal wallis
+- Experimenter hawthorne selected sitational history for aptitude test
+- Brain Concept Think Observe Diary
+- MUSR
+- 1.176, 10.41, 99.38
+- Halstead
