@@ -1,0 +1,128 @@
+* Topics
+** Chp 1
+1. Definitions: Threat, Vulnerability, Control
+2. Types of threats.
+3. Active vs Passive Attack
+4. Security Goals
+5. Security Services
+6. Security Mechanims
+** Chp 3
+1. What is authentication? What are the stages for user authentication?
+2. What is a token?
+3. NIST Authentication requirements.
+4. General Model of User Auth - NIST
+5. Means of Authentication.
+6. What is MFA?
+7. Risk Assessment for user Authentication
+8. Password Based Authentication
+9. What is a strong password policy?
+10. UNIX Password Scheme
+11. Why use SALT?
+12. Password Cracking Techniques
+13. What are the modern approaches for password cracking?
+14. How to Password File Access Control?
+15. What is the password selection strategy?
+16. What is token based authenitication?
+17. What are the types of tokens?
+18. TODO
+19. What is biometric authentication?
+20. Enrollment, Verification and Identification in Biometric Authentication
+21. Feature Matcher Dilemma
+22. Remote User Authentication - What are the additional threats?
+** Chp 4
+1. What is access control?
+2. Relationship between access control and other security functions
+3. Why Audit security activities?
+4. What is access control policy?
+5. What are the types of access control policy?
+6. What are the basic elements of access control?
+7. Describe Discretionary Access Control.
+8. Decompose a Access Control Matrix. Describe them.
+9. Why do we need authorization table?
+10. Describe UNIX File Access Control.
+11. What data structure would you use for RBAC Reference Model?
+12. Describe RBAC Reference Model
+** Chp 5
+1. Why database security has fallen behing the increased reliance of database?
+2. Definitions : Database, Query Language, DBMS, Relational Database, SQL
+3. DBMS Architecutre
+4. Describe SQLi and show some examples of it.
+5. SQLi attack takes advantage of what things?
+6. What are the types of SQLi?
+7. SQLi countermeasures
+8. What is database access control? How many types are there?
+9. RBAC in DBAC
+10. Math: Cascaded Authorization 
+11. What is Inference attack? Show a demonstration.
+12. What are the types of inference attack?
+13. How to deal with inference attack?
+14. What is database encryption? What are the types of Database Encryption? What are its advantages and disadvantages?
+15. Show a database encryption scheme.
+16. Whats a block based encryption?
+** Touchpoints
+- Explain 7 security touchpoints
+- What is XSS?
+- Types of XSS
+- How to launch XSS attacks?
+- What are the counter measures?
+** CSRF
+1. What is the Same Site & Cross Site request?
+2. What is CSRF?
+3. What is the difference between CSRF and XSS?
+4. How to launch CSRF attacks?
+5. Damages Caused By CSRF
+6. What are the countermeasures?	
+** XSS Attack
+1. What is XSS?
+2. Why is XSS cross site?
+3. Types of XSS	
+4. How to launch XSS attacks?	
+5. Damages Caused by XSS	
+6. What are the countermeasures?	
+** Buffer Overflow
+1. What is buffer overflow? Types of buffer overflow.	
+2. Explain the PCB/Stack Structure.	
+3. What is eax ebx ecx edx esp registers?	
+4. ~What is stack overflow? Show an example~.	
+5. What are the consequences of Buffer Overflow	
+6. What are the Countermeasures for buffer overflow?	
+** Figures
+1. Relationship between access control and other security functions
+2. Decompose a Access Control Matrix.
+3. Data structure of RBAC
+4. Describe RBAC Reference Model
+5. Why do we need authorization table?
+6. RBAC Table
+7. DBMS Architecutre
+8. Demonstration of Inference Attack
+9. Database Encryption
+10. Non-overlaping partitions
+11. General Model of User Auth - NIST
+12. MFA Figure
+13. Password Based Authentication Attacks & Prevention
+14. UNIX Password Scheme - old and new
+15. Password Cracking
+16. Accuracy vs Cost graph
+17. Enrollment, Verification and Identification in Biometric Authentication
+18. Feature Matcher Dilemma
+19. Remote User Authentication
+20. Areas of Risk
+21. Types of threats
+22. Smart Card Tolem Activation
+23. User Authentication with eID
+24. Security touchpoints
+25. Cross site
+* TODO tomorrow
+- Bloom filter
+- active passive attacks
+- Revise khata
+- What is the difference between CSRF and XSS?
+* Important Stuffs
+Database encryption mechanism
+Importance of role base access control
+Access control
+Token authentication mechanism
+Salt er complexity graph
+
+[[https://docs.google.com/document/d/180y2vxSn5gvAt9Hx_YEkOo9j7M7qX1S4mEVm33hscjA/edit][mid term question 2022]]
+

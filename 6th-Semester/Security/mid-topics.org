@@ -52,7 +52,7 @@
 7. SQLi countermeasures
 8. What is database access control? How many types are there?
 9. RBAC in DBAC
-10. Cascaded Authorization
+10. Math: Cascaded Authorization 
 11. What is Inference attack? Show a demonstration.
 12. What are the types of inference attack?
 13. How to deal with inference attack?
@@ -91,6 +91,8 @@ DENN71] and by Harrison et al. [HARR76].
 - SetUID, setGID in linux
 - ACL in FreeBSD
 - Masquerade
+- Blood filter
+- active passive attacks
 ** Tomorrow
 1. Bloom Filter
 2. Draw Figures
@@ -103,7 +105,7 @@ Access control
 Token authentication mechanism
 Salt er complexity graph
 
-https://docs.google.com/document/d/180y2vxSn5gvAt9Hx_YEkOo9j7M7qX1S4mEVm33hscjA/edit
+[[https://docs.google.com/document/d/180y2vxSn5gvAt9Hx_YEkOo9j7M7qX1S4mEVm33hscjA/edit][mid term question 2022]]
 
 * Temp
  Covered Topics in Class
