@@ -1,0 +1,12 @@
+- [ ] Complete Syllabus
+- [ ] Practice Coding assignment
+- [ ] Practice Selenium IDE
+- [ ] List famous techstacks and practice them.
+
+Scheduling:
+chp 7 - 10:30
+Chp 8 - 11:30
+Chp 9 - 12:00
+Chp 1,2,3 - 1:00
+Chp 4 - 3:00
+Chp 5 - 5:00

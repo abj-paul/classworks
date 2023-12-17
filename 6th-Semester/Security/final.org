@@ -113,10 +113,11 @@
 24. Security touchpoints
 25. Cross site
 * TODO tomorrow
+- eid
+- What is the difference between CSRF and XSS?
+- Revise khata
 - Bloom filter
 - active passive attacks
-- Revise khata
-- What is the difference between CSRF and XSS?
 * Important Stuffs
 Database encryption mechanism
 Importance of role base access control
