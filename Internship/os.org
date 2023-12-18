@@ -1,0 +1,40 @@
+1. Write three responsibilities of OS.
+2. What is deadlock?
+3. Why OS is extra complex in mobile phone?
+4. Why is OS extra simpler in IoT?
+5. What is system call? How to pass parameters in system call?
+6. Why are applications sometime OS specific?
+7. Describe monolithic , layered and hybrid OS architecture.
+8. What architecture does modern linux use? Why?
+9. Draw the structure of PCB.
+10. How many queues does OS maintain for scheduling ? Why?
+11. What are I/O bound and CPU bound processes?
+12. What is context switching? How is PCB used for easy context switching?
+13. Describe some child process creation and termination approaches.
+14. Does chrome use multi-process or multi-thread?
+15. Describe inter-process communication strategy.
+16. What is producer consumer relationship?
+17. How does fork(), fork() work? (2N)
+18. Preemptive vs non-preemtive scheduling.
+19. Describe some process scheduling algorithms.
+20. How can you evaluate scheduling algorithm to find out which one is better? [average waiting time, average turnaround time]
+21. Describe Multilevel scheduling in multilevel priority queues of state queues in OS.
+22. What is a zombie process? What is a daemon?
+23. Multilevel Feedback Queue Scheduling.
+24. What is the priority of real tiem and interactive process?
+25. What is data parallelism and task parallelism
+26. Describe one to one, one to many and many to one OS architectures.
+27. What is a resource allocation graph?
+28. What are the conditions for deadlock?
+29. What is deadlock avoidance? What is safe/unsafe state?
+30. Resource allocation using bankers algorithm.
+31. Write some strategies for deadlock recovery.
+32. Logical vs physical memory addressing.
+33. What are the memory allocation schemes used by MMU?
+34. What is internal and external fragmentation?
+35. What are the types of partitioning?
+36. What is paging?
+37. Page table resides in primary memory(RAM), pages may remain in secondary memory.
+38. How to make it fast to find page in a page table?
+39. What is thrashing and page fault?
+40. Mutex vs Semaphore

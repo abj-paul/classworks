@@ -4,9 +4,20 @@
 - [ ] List famous techstacks and practice them.
 
 Scheduling:
-chp 7 - 10:30
-Chp 8 - 11:30
-Chp 9 - 12:00
-Chp 1,2,3 - 1:00
-Chp 4 - 3:00
-Chp 5 - 5:00
+1. [X] Reddit for typical testing tasks: 30 min
+2. [X] Information Security note read: 1 hour
+3. [X] Softwre Security note read: 1 hour
+4. [X] OS note read: 1 hour
+5. [X] DBMS note read: 1 hour
+6. [X] Design Pattern: 30 min
+7. [X] Foundational tester certification
+8. [X] Combine & revise
+9. [X] Practice Maths: 2 hour
+10. [ ] Question solve
+11. [X] Revise
+12. [X] Review chatGPT stuffs
+13. [X] Code & Jira revision (30min)
+14. [X] Organize stuffs to bring tomorrow
+
+* Morning todo
+- [ ] Download 5 questions and solve them

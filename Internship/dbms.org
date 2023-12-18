@@ -1,0 +1,12 @@
+* Query Optimization
+1. Number of blocks that needs to be accessed when the keys are equal.
+2. Number of blocks that needs to be accessed when the keys are not equal.
+3. Number of tuples from join
+* Trees (KD, R, B+)
+1. KD tree construction
+2. KD Tree Searching
+* Procedure
+* Normalization
+* ER Diagram
+* SQL
+1. DDL vs DML
