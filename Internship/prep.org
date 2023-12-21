@@ -1,3 +1,4 @@
+* Initial
 - [ ] Complete Syllabus
 - [ ] Practice Coding assignment
 - [ ] Practice Selenium IDE
@@ -21,3 +22,12 @@ Scheduling:
 
 * Morning todo
 - [ ] Download 5 questions and solve them
+
+* Interview Prep
+- [X] Golden rules
+- [X] UI Checklist review (9:00PM)
+- [X] Practice LIVE site test case (9:30PM)
+- [X] Selenium IDE (7:00 PM)
+- [ ] Postman (8:30PM)
+- [X] JMeter (7:30PM)
+- [X] testing course revision (10:30PM)
