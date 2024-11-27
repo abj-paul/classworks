@@ -1,0 +1,18 @@
+// Data Flow Diagram
+digraph {
+	user [color=lightblue shape=rectangle style=filled]
+	"log.txt" [color=lightgreen shape=cylinder style=filled]
+	main [color=yellow shape=ellipse style=filled]
+	main -> list_files
+	main -> search_file
+	main -> copy_file
+	main -> delete_file
+	list_files [color=yellow shape=ellipse style=filled]
+	list_files -> log
+	search_file [color=yellow shape=ellipse style=filled]
+	search_file -> log
+	copy_file [color=yellow shape=ellipse style=filled]
+	copy_file -> log
+	delete_file [color=yellow shape=ellipse style=filled]
+	delete_file -> log
+}
