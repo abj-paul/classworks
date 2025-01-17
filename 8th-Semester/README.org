@@ -1,0 +1,46 @@
+* Digital Image Processing ToC
+** Intensity Transformation and Spatial Filtering
+1. What is spatial domain? What is transform domain?
+2. The Transformation ToC in khata
+   1. Intensity Transformation
+      1. Log, inverse log, power law, gamma , inverse
+      2. thresholding
+   2. Piecewise Linear Transofrm
+      1. Constrast Stretching
+      2. Intensity Level Slicing
+      3. Bit Plane Slicing
+3. Math: Histogram Equalization
+4. Is Histogram Equalization always good?
+5. Correlation vs Convolution
+6. Smoothing
+   1. Weighted Averaging Filter
+   2. Median
+   3. Min
+   4. Max
+7. Sharpening
+   1. 1st order and 2nd order derivative
+   2. Image Sharpening
+   3. Unsharp masking
+   4. Highboost Filtering
+   5. Unsharp masking in signal
+8. Show that 1st order and 2nd order derivatives are sensitive to noise.
+   1. 1st order derivative operators
+   2. 2nd order derivative operators
+9. Where is robert cross-gradient operator used? Where is robert operator used?
+10. Case study of XRay skeleton image 
+
+** Image Segmentation
+1. Definition
+2. Discontinuity
+   1. Point
+   2. Line
+   3. Edge
+      1. Step
+      2. Ramp
+	 1. 1st order
+	 2. 2nd order
+	 3. Noise
+      3. Roof
+3. When to use 1st order, when to use 2nd order
+4. Image segmentation workflow
+5. Two examples
