@@ -1,4 +1,10 @@
 * Digital Image Processing ToC
+** Image Introduction
+1. Image Acquisition Process
+2. Image Sampling and quantization
+3. Image Interpolation/resampling
+4. Relationship between pixels
+5. Measures of distance
 ** Intensity Transformation and Spatial Filtering
 1. What is spatial domain? What is transform domain?
 2. The Transformation ToC in khata
@@ -44,3 +50,57 @@
 3. When to use 1st order, when to use 2nd order
 4. Image segmentation workflow
 5. Two examples
+6. N ways for image segmentation (THAT hierarchy)
+
+** Thresholding
+1. Basic Global Thresholding
+2. Basic Adaptive Thresholding
+3. Math: Otsu thresholding
+4. Thresholding and noise
+** Canny Edge
+1. What is hysteresis?
+2. Explain the algorithm in details
+
+** Template Matching
+1. What is template matching? Where is it used? How can we do template matching?
+2. What are the estimates used for finding matching between templates?
+3. What is Image Pyramid? Describe the process
+
+** MIP
+1. What is MIP? Basic workflow of MIP
+2. Math: Dilation, Erosion
+3. Padding in Dilation, Erosion
+4. Opening and its usage
+5. Closing and its usage
+6. Case study: Fingerprint
+7. How is boundary extracted?
+8. How does region filling work?
+9. What is skeletonization?
+** Image Restoration
+1. What is image restoration?
+2. What are noise sources?
+3. What are noise models? What are the assumptions?
+4. Write famous noise models and where they occur from
+5. Case study: Example image and the impacts of noise types
+6. Write famous noise removal strategies
+7. How do you evaluate noise removal strategies?
+8. Discuss how to remove gaussian, salt-pepper noise
+9. Discuss inverse filtering
+10. Discuss adaptive filter and its types
+* Pattern Matching
+** Genetic Algorithm
+1. What is Evolution? Basic terminology of evolution
+2. Explain Genetic Algorithm process
+3. Math: GA
+4. Properties of GA, GP, EA, ES
+** Feature Extraction
+1. What are the steps of feature extraction?
+2. Algorithm of HoG
+3. Application and limitations of HoG
+4. Algorithm of Hough
+5. Application and limitation of Hough
+6. Algorithm of LBP
+7. What are the textures LBP can detect?
+8. uLBP, LBPri, RLBP
+9. Limitations of LBP, Hough, HoG
+10. Person detection using HoG
