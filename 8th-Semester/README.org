@@ -11,17 +11,17 @@
 1. Proof: OLS
 2. TODO: Gradient Descent Math from First part
 3. What is MLE?
-4. MLE Proof for Gaussian
+4. Proof: MLE for Gaussian
 5. Definition: Loss Function, Error Function, Average Loss
-6. Loss Function of Logistic Regression (vs Linear Regression)
+6. Proof: Loss Function of Logistic Regression (vs Linear Regression)
 ** Backpropagation
 1. Definition of AI, ML, DL, ANN, Perceptron
-2. Error function in backpropagation
+2. ~REMEMBER~ 1/2 in Error function in backpropagation
 3. ~REMEMBER~ to consider bias.
 4. Backpropagation math
 ** CNN
 1. CNN Steps
-2. Memorize formula
+2. ~REMEMBER~ formula and bias
 3. AlexNet
 ** Decision Tree
 1. Discuss Pruning and missing value handling techniques
@@ -38,8 +38,8 @@
 3. Minkowski Distance, Hamming Distance, Jaccard Distance, Cosine Distance
 4. Some properties of k-NN
 ** SVM
-1. Proof: Linear Classifier
-2. SVM
+1. Proof: Find m and objective function
+2. SVM Definition
 3. 5 types of kernels
 ** pValue
 1. Coin math
@@ -57,6 +57,16 @@
 1. RNN
 2. Problems with RNN
 3. LSTM
+4. How LSTM solves gradient vanishing and explosion.
+** All Maths
+1. Logistic Regression
+2. Gradient Descent
+3. Back-propagation
+4. CNN Parameter count (alexnet asbe)
+5. Decision Tree math (entropy, gini, numerical)
+6. Clustering (KMeans, Agglomerative, Divisive)
+7. pValue, confusion matrix
+8. Linear Regression, Correlation Coefficient
 * Digital Image Processing ToC
 ** Image Introduction
 1. Image Acquisition Process
