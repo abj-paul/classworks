@@ -1,3 +1,62 @@
+* ML
+** Functional Forms and Transformation
+1. Hierarchy 
+2. Equations
+3. Explanations (6 cases)
+** Logistic Regression
+1. Proof: Ln(odd) equation formulation
+2. Explanation
+3. Curve
+** OLS, Gradient Descent
+1. Proof: OLS
+2. TODO: Gradient Descent Math from First part
+3. What is MLE?
+4. MLE Proof for Gaussian
+5. Definition: Loss Function, Error Function, Average Loss
+6. Loss Function of Logistic Regression (vs Linear Regression)
+** Backpropagation
+1. Definition of AI, ML, DL, ANN, Perceptron
+2. Error function in backpropagation
+3. ~REMEMBER~ to consider bias.
+4. Backpropagation math
+** CNN
+1. CNN Steps
+2. Memorize formula
+3. AlexNet
+** Decision Tree
+1. Discuss Pruning and missing value handling techniques
+2. 3 Decision Tree math (entropy, gini, numerical)
+3. Random forest and Ensemble Learning
+** Clustering
+1. Types of clustering algorithm, Post-processing
+2. Limitations and benefits of KMeans, ~DBScan~
+3. Considerations for cluster analysis
+4. Math: KMeans, Agglomerative, Divisive
+** KNN
+1. What is needed for NN?
+2. Why is NN lazy learner?
+3. Minkowski Distance, Hamming Distance, Jaccard Distance, Cosine Distance
+4. Some properties of k-NN
+** SVM
+1. Proof: Linear Classifier
+2. SVM
+3. 5 types of kernels
+** pValue
+1. Coin math
+2. Height math
+** ML Metrics
+1. Confusion Matrix
+2. Elbow method
+3. Maths
+** Regression
+1. Calculator use
+2. r, m, c formula
+3. Linear Regression with Linear Algebra
+4. Interpretation
+** RNN
+1. RNN
+2. Problems with RNN
+3. LSTM
 * Digital Image Processing ToC
 ** Image Introduction
 1. Image Acquisition Process
@@ -104,3 +163,4 @@
 8. uLBP, LBPri, RLBP
 9. Limitations of LBP, Hough, HoG
 10. Person detection using HoG
+11. SIFT Algorithm
